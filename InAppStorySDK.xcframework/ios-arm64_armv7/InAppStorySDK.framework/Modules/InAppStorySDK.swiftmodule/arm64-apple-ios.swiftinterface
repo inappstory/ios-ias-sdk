@@ -1,0 +1,209 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
+import CommonCrypto
+import Foundation
+@_exported import InAppStorySDK
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+public protocol StoryViewDeleagate : ObjectiveC.NSObjectProtocol {
+  func storyViewUpdated(storyView: InAppStorySDK.StoryView)
+  func storyView(_ storyView: InAppStorySDK.StoryView, getLinkWith target: Swift.String)
+  func storyReaderWillShow()
+  func storyReaderDidClose()
+  func favoriteCellDidSelect()
+}
+public protocol StoryViewDeleagateFlowLayout : ObjectiveC.NSObjectProtocol {
+  func sizeForItem() -> CoreGraphics.CGSize
+  func insetForSection() -> UIKit.UIEdgeInsets
+  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+  func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
+}
+public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setTitle(_ text: Swift.String)
+  func setSource(_ text: Swift.String)
+  func setImageURL(_ url: Foundation.URL)
+  func setOpened(_ value: Swift.Bool)
+  func setHighlight(_ value: Swift.Bool)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+  func setTitleColor(_ color: UIKit.UIColor)
+}
+@objc public enum ClosePosition : Swift.Int {
+  case left, right, bottomLeft, bottomRight
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ScrollStyle : Swift.Int {
+  case flat, cover, cube
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PresentationStyle : Swift.Int {
+  case crossDissolve, modal
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
+  weak public var delegate: InAppStorySDK.StoryViewDeleagate? {
+    get
+    set
+  }
+  weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDeleagateFlowLayout? {
+    get
+    set
+  }
+  public var isFavoriteView: Swift.Bool
+  public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  public var storyCell: InAppStorySDK.StoryCellProtocol {
+    get
+    set
+  }
+  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol {
+    get
+    set
+  }
+  public var isContent: Swift.Bool {
+    get
+  }
+  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @objc deinit
+}
+extension StoryView {
+  public func create()
+  public func refresh()
+  public func closeStory()
+}
+public let StoriesLoaded: Foundation.Notification.Name
+public let ClickOnStory: Foundation.Notification.Name
+public let ShowStory: Foundation.Notification.Name
+public let CloseStory: Foundation.Notification.Name
+public let ClickOnButton: Foundation.Notification.Name
+public let ShowSlide: Foundation.Notification.Name
+public let LikeStory: Foundation.Notification.Name
+public let DislikeStory: Foundation.Notification.Name
+public let FavoriteStory: Foundation.Notification.Name
+public let ClickOnShareStory: Foundation.Notification.Name
+public let SessionFailure: Foundation.Notification.Name
+public let StoryFailure: Foundation.Notification.Name
+public let CurrentStoryFailure: Foundation.Notification.Name
+public let NetworkFailure: Foundation.Notification.Name
+public struct Settings : Swift.Equatable {
+  public var userID: Swift.String
+  public var tags: [Swift.String]
+  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String]())
+  public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
+  public static var shared: InAppStorySDK.InAppStory
+  public static var frameworkInfo: Swift.String {
+    get
+  }
+  public var settings: InAppStorySDK.Settings? {
+    get
+    set
+  }
+  public var showCellTitle: Swift.Bool
+  public var showCellSource: Swift.Bool
+  public var cellBorderColor: UIKit.UIColor
+  public var cellFont: UIKit.UIFont
+  public var cellTitleColor: UIKit.UIColor
+  public var cellSourceFont: UIKit.UIFont
+  public var cellSourceTitleColor: UIKit.UIColor
+  public var swipeToClose: Swift.Bool
+  public var overScrollToClose: Swift.Bool
+  public var placeholderElementColor: UIKit.UIColor
+  public var placeholderBackgroundColor: UIKit.UIColor
+  public var likeImage: UIKit.UIImage
+  public var likeSelectedImage: UIKit.UIImage
+  public var dislikeImage: UIKit.UIImage
+  public var dislikeSelectedImage: UIKit.UIImage
+  public var favoriteImage: UIKit.UIImage
+  public var favoriteSelectedImag: UIKit.UIImage
+  public var shareImage: UIKit.UIImage
+  public var shareSelectedImage: UIKit.UIImage
+  public var refreshImage: UIKit.UIImage
+  public var likePanel: Swift.Bool
+  public var favoritePanel: Swift.Bool
+  public var sharePanel: Swift.Bool
+  public var placeholderView: InAppStorySDK.PlaceholderProtocol?
+  public var closeButtonPosition: InAppStorySDK.ClosePosition
+  public var scrollStyle: InAppStorySDK.ScrollStyle
+  public var presentationStyle: InAppStorySDK.PresentationStyle
+  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil, sandBox: Swift.Bool = false)
+  public func addTags(_ addedTags: Swift.Array<Swift.String>)
+  public func removeTags(_ removingTags: Swift.Array<Swift.String>)
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension InAppStory {
+  public func clearCache()
+}
+extension InAppStory {
+  public func showOnboarding(from target: UIKit.UIViewController, delegate: InAppStorySDK.OnboardingDelegate, complete: @escaping () -> Swift.Void)
+  public func closeOnboarding()
+}
+extension InAppStory {
+  public func showSingeStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func closeSingleStory()
+}
+public enum ReaderType : Swift.Int {
+  case onboarding, single, list
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol OnboardingDelegate : ObjectiveC.NSObjectProtocol {
+  func onboardingUpdated(isContent: Swift.Bool)
+  func onboardingReader(getLinkWith target: Swift.String)
+  func onboardingReaderWillShow()
+  func onboardingReaderDidClose()
+}
+public protocol SingleStoryDelegate : ObjectiveC.NSObjectProtocol {
+  func singleStoryUpdated(isContent: Swift.Bool)
+  func singleStory(getLinkWith target: Swift.String)
+  func singleStoryReaderWillShow()
+  func singleStoryReaderDidClose()
+}
+public protocol PlaceholderProtocol : UIKit.UIView {
+  var isAnimate: Swift.Bool { get }
+  func start()
+  func stop()
+}
+public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setHighlight(_ value: Swift.Bool)
+  func setImages(_ urls: Swift.Array<Foundation.URL?>)
+  func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+}
+extension InAppStorySDK.ClosePosition : Swift.Equatable {}
+extension InAppStorySDK.ClosePosition : Swift.Hashable {}
+extension InAppStorySDK.ClosePosition : Swift.RawRepresentable {}
+extension InAppStorySDK.ScrollStyle : Swift.Equatable {}
+extension InAppStorySDK.ScrollStyle : Swift.Hashable {}
+extension InAppStorySDK.ScrollStyle : Swift.RawRepresentable {}
+extension InAppStorySDK.PresentationStyle : Swift.Equatable {}
+extension InAppStorySDK.PresentationStyle : Swift.Hashable {}
+extension InAppStorySDK.PresentationStyle : Swift.RawRepresentable {}
+extension InAppStorySDK.ReaderType : Swift.Equatable {}
+extension InAppStorySDK.ReaderType : Swift.Hashable {}
+extension InAppStorySDK.ReaderType : Swift.RawRepresentable {}
