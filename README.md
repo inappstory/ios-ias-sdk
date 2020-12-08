@@ -42,7 +42,7 @@
 
 | InAppStory version | Build version | iOS version |
 |-------------------|---------------|-------------|
-| 1.0.0             | 766           | >= 10.0     |
+| 1.0.1             | 788           | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -268,6 +268,8 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 
 * `reuseIdentifier: <String> { get }` - возвращает идентификатор ячейки;
 * `nib: <UINib?> { get }` - возвращает nib визуального представления ячейки;  
+
+* `favoritesCount: Int { get set }` - общее колличество сторис в избранном;
 
 ---
 * `setHighlight(_ value: <Bool>)` - зажатие ячейки из списка;

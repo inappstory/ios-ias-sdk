@@ -227,6 +227,17 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+@class NSCoder;
+@protocol UITextFieldDelegate;
+
+/// UITextField subclass to handle phone numbers formats
+SWIFT_CLASS("_TtC13InAppStorySDK23PhoneFormattedTextField")
+@interface PhoneFormattedTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
+@end
+
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
@@ -238,7 +249,6 @@ typedef SWIFT_ENUM(NSInteger, ScrollStyle, open) {
   ScrollStyleCube = 2,
 };
 
-@class NSCoder;
 
 SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface StoryView : UIView
@@ -492,6 +502,17 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+@class NSCoder;
+@protocol UITextFieldDelegate;
+
+/// UITextField subclass to handle phone numbers formats
+SWIFT_CLASS("_TtC13InAppStorySDK23PhoneFormattedTextField")
+@interface PhoneFormattedTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
+@end
+
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
@@ -503,7 +524,6 @@ typedef SWIFT_ENUM(NSInteger, ScrollStyle, open) {
   ScrollStyleCube = 2,
 };
 
-@class NSCoder;
 
 SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface StoryView : UIView

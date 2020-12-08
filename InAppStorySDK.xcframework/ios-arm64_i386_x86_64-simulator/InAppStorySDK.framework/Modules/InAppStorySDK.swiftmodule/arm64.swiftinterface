@@ -21,6 +21,12 @@ public protocol StoryViewDeleagateFlowLayout : ObjectiveC.NSObjectProtocol {
   func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
   func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
 }
+public struct PhoneFormat {
+  public let phoneFormat: Swift.String
+  public let regexp: Swift.String
+  public init(defaultPhoneFormat: Swift.String)
+  public init(phoneFormat: Swift.String, regexp: Swift.String)
+}
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
@@ -88,6 +94,39 @@ extension StoryView {
   public func create()
   public func refresh()
   public func closeStory()
+}
+@_hasMissingDesignatedInitializers final public class ConfigurationRepo {
+  final public var defaultConfiguration: InAppStorySDK.PhoneFormat
+  final public func add(format: InAppStorySDK.PhoneFormat)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PhoneFormattedTextField : UIKit.UITextField {
+  final public let config: InAppStorySDK.ConfigurationRepo
+  public var hasPredictiveInput: Swift.Bool {
+    get
+    set
+  }
+  public var prefix: Swift.String? {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+    @objc get
+    @objc set
+  }
+  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
+    get
+    set
+  }
+  public func phoneNumber() -> Swift.String?
+  public func phoneNumberWithoutPrefix() -> Swift.String?
+  public var formattedText: Swift.String? {
+    get
+    set
+  }
+  @objc deinit
 }
 public let StoriesLoaded: Foundation.Notification.Name
 public let ClickOnStory: Foundation.Notification.Name
@@ -190,6 +229,7 @@ public protocol PlaceholderProtocol : UIKit.UIView {
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
+  var favoritesCount: Swift.Int { get set }
   func setHighlight(_ value: Swift.Bool)
   func setImages(_ urls: Swift.Array<Foundation.URL?>)
   func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
