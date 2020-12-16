@@ -42,7 +42,7 @@
 
 | InAppStory version | Build version | iOS version |
 |-------------------|---------------|-------------|
-| 1.0.1             | 788           | >= 10.0     |
+| 1.1.0             | 942           | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -99,6 +99,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ### Параметры и свойства
 * `onboardingDelegate` - должен реализовывать протокол *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
 * `singleStoryDelegate` - должен реализовывать протокол *<[SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)>*;
+* `favoritesCount` - количество избранных сториз у пользователя
 
 ### Кастомизация
 Настройка внешнего вида ячеек и ридера происходит через синглтон класса `InAppStory.shared`:
