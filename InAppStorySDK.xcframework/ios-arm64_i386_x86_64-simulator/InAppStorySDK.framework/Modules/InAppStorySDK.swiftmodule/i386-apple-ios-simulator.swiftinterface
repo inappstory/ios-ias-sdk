@@ -194,6 +194,7 @@ public struct Settings : Swift.Equatable {
   @objc override dynamic public init()
 }
 extension InAppStory {
+  public func clearMemory()
   public func clearCache()
 }
 extension InAppStory {
