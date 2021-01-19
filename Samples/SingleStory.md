@@ -44,11 +44,11 @@ extension ViewController: SingleStoryDelegate
     // получение ссылки из сторис
     func singleStory(getLinkWith target: String) {
         // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
-        InAppStory.shared.closeOnboarding()
-        
-        // далее обработать ссылку, например для перехода по ней в safari
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        InAppStory.shared.closeOnboarding {
+            // далее обработать ссылку, например для перехода по ней в safari
+            if let url = URL(string: target) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
     }
     

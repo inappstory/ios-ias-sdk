@@ -37,6 +37,7 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setHighlight(_ value: Swift.Bool)
   func setBackgroundColor(_ color: UIKit.UIColor)
   func setTitleColor(_ color: UIKit.UIColor)
+  func setSound(_ value: Swift.Bool)
 }
 @objc public enum ClosePosition : Swift.Int {
   case left, right, bottomLeft, bottomRight
@@ -93,7 +94,7 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
 extension StoryView {
   public func create()
   public func refresh()
-  public func closeStory()
+  public func closeStory(complete: @escaping () -> Swift.Void)
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK.PhoneFormat
@@ -179,6 +180,8 @@ public struct Settings : Swift.Equatable {
   public var favoriteSelectedImag: UIKit.UIImage
   public var shareImage: UIKit.UIImage
   public var shareSelectedImage: UIKit.UIImage
+  public var soundImage: UIKit.UIImage
+  public var soundSelectedImage: UIKit.UIImage
   public var refreshImage: UIKit.UIImage
   public var likePanel: Swift.Bool
   public var favoritePanel: Swift.Bool
@@ -199,11 +202,11 @@ extension InAppStory {
 }
 extension InAppStory {
   public func showOnboarding(from target: UIKit.UIViewController, delegate: InAppStorySDK.OnboardingDelegate, complete: @escaping () -> Swift.Void)
-  public func closeOnboarding()
+  public func closeOnboarding(complete: @escaping () -> Swift.Void)
 }
 extension InAppStory {
   public func showSingeStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
-  public func closeSingleStory()
+  public func closeSingleStory(complete: @escaping () -> Swift.Void)
 }
 public enum ReaderType : Swift.Int {
   case onboarding, single, list

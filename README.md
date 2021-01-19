@@ -42,7 +42,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.1.5              | 1012          | >= 10.0     |
+| 1.1.6              | 1022          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -165,7 +165,7 @@ override func viewDidLoad() {
 * `create` - запускает открытие сессии и получения списка сторис;
 * `refresh` - служит для обновления списка сторис;
 * `clear` - служит для очистки кэша изображений;
-* `close` - служит для закрытия ридера сторис.
+* `closeStory(complete: () -> Void)` - служит для закрытия ридера сторис, `complete` вызывается после закрытия ридера.
 
 ### Параметры и свойства
 * `delegate` - должен реализовывать протокол *<[StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)>*;
@@ -194,6 +194,8 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 InAppStory.shared.showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: <()->Void>)
 ```
 
+Для закрытия ридера онбординга необходимо вызвать `closeOnboarding(complete: () -> Void)`. Это может понадобиться, например, при обработки открытия ссылки по нажатию кнопки. `complete` вызывается после закрытия ридера.
+
 ## SingleStory
 Используются для отображения сторис по её id или слагу
 ### Отображение
@@ -211,6 +213,8 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```swift
 InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <String>, delegate: <SingleStoryDelegate>, complete: <()->Void>)
 ```
+
+Для закрытия ридера единичной сторис необходимо вызвать `closeSingleStory(complete: () -> Void)`. Это может понадобиться, например, при обработки открытия ссылки по нажатию кнопки. `complete` вызывается после закрытия ридера.
 
 ## Протоколы
 

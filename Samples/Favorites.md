@@ -62,11 +62,11 @@ extension FavoritesController: StoryViewDeleagate
     // получение ссылки из сторис
     func storyView(_ storyView: StoryView, getLinkWith target: String) {
         // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
-        storyView.closeStory()
-        
-        // далее обработать ссылку, например для перехода по ней в safari
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        storyView.closeStory {
+            // далее обработать ссылку, например для перехода по ней в safari
+            if let url = URL(string: target) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
     }
     
