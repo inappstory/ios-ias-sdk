@@ -63,6 +63,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     InAppStory.shared.shareImage = <UIImage>
     InAppStory.shared.shareSelectedImage = <UIImage>
     
+    // Изменение иконок звука
+    InAppStory.shared.soundImage = <UIImage> // Звук включён
+    InAppStory.shared.soundSelectedImage = <UIImage> // Звук отключён
+    
     return true
 }
 ```

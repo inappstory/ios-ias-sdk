@@ -42,7 +42,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.1.6              | 1022          | >= 10.0     |
+| 1.1.7              | 1028          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -117,6 +117,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `overScrollToClose` - закрытия рида при пролистывании последней сторис *\<Bool>*;
 * `placeholderElementColor` - цвет предзагрузчика слайда *\<UIColor>*;
 * `placeholderBackgroundColor` - цвет фона предзагрузчика слайда *\<UIColor>*;
+* `muted` - отключение/влючение звука в сторис *\<Bool>*; (*[Подробнее](Samples/Sound.md)*)
 * `likePanel` - отображение нижней панели с лайками (должно быть включенов в консоли) *\<Bool>*;
 * `favoritePanel` - отображение нижней панели с избранным (должно быть включенов в консоли) *\<Bool>*;
 * `sharePanel` - отображение нижней панели с шарингом (должно быть включенов в консоли) *\<Bool>*;
