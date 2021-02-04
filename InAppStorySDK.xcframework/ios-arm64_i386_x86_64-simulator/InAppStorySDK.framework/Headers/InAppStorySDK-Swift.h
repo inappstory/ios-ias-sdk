@@ -210,6 +210,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+@protocol UITextFieldDelegate;
+
+/// UITextField subclass to handle phone numbers formats
+SWIFT_CLASS("_TtC13InAppStorySDK25CSPhoneFormattedTextField")
+@interface CSPhoneFormattedTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
 typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionLeft = 0,
   ClosePositionRight = 1,
@@ -226,17 +238,6 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
-
-@class NSCoder;
-@protocol UITextFieldDelegate;
-
-/// UITextField subclass to handle phone numbers formats
-SWIFT_CLASS("_TtC13InAppStorySDK23PhoneFormattedTextField")
-@interface PhoneFormattedTextField : UITextField
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
-@end
 
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
@@ -485,6 +486,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+@protocol UITextFieldDelegate;
+
+/// UITextField subclass to handle phone numbers formats
+SWIFT_CLASS("_TtC13InAppStorySDK25CSPhoneFormattedTextField")
+@interface CSPhoneFormattedTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
 typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionLeft = 0,
   ClosePositionRight = 1,
@@ -501,17 +514,6 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
-
-@class NSCoder;
-@protocol UITextFieldDelegate;
-
-/// UITextField subclass to handle phone numbers formats
-SWIFT_CLASS("_TtC13InAppStorySDK23PhoneFormattedTextField")
-@interface PhoneFormattedTextField : UITextField
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
-@end
 
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
@@ -760,6 +762,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+@protocol UITextFieldDelegate;
+
+/// UITextField subclass to handle phone numbers formats
+SWIFT_CLASS("_TtC13InAppStorySDK25CSPhoneFormattedTextField")
+@interface CSPhoneFormattedTextField : UITextField
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
+
 typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionLeft = 0,
   ClosePositionRight = 1,
@@ -776,17 +790,6 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
-
-@class NSCoder;
-@protocol UITextFieldDelegate;
-
-/// UITextField subclass to handle phone numbers formats
-SWIFT_CLASS("_TtC13InAppStorySDK23PhoneFormattedTextField")
-@interface PhoneFormattedTextField : UITextField
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) id <UITextFieldDelegate> _Nullable delegate;
-@end
 
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,

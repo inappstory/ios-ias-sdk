@@ -101,7 +101,8 @@ extension StoryView {
   final public func add(format: InAppStorySDK.PhoneFormat)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class PhoneFormattedTextField : UIKit.UITextField {
+@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
+  public var isSelectable: Swift.Bool
   final public let config: InAppStorySDK.ConfigurationRepo
   public var hasPredictiveInput: Swift.Bool {
     get
@@ -127,6 +128,7 @@ extension StoryView {
     get
     set
   }
+  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc deinit
 }
 public let StoriesLoaded: Foundation.Notification.Name
@@ -186,11 +188,14 @@ public struct Settings : Swift.Equatable {
   public var likePanel: Swift.Bool
   public var favoritePanel: Swift.Bool
   public var sharePanel: Swift.Bool
-  public var placeholderView: InAppStorySDK.PlaceholderProtocol?
   public var closeButtonPosition: InAppStorySDK.ClosePosition
   public var scrollStyle: InAppStorySDK.ScrollStyle
   public var presentationStyle: InAppStorySDK.PresentationStyle
   public var muted: Swift.Bool {
+    get
+    set
+  }
+  public var placeholders: [Swift.String : Swift.String] {
     get
     set
   }
