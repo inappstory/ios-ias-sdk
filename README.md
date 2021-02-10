@@ -42,7 +42,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.1.10             | 1042          | >= 10.0     |
+| 1.2.0              | 1102          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -100,6 +100,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `onboardingDelegate` - должен реализовывать протокол *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
 * `singleStoryDelegate` - должен реализовывать протокол *<[SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)>*;
 * `favoritesCount` - количество избранных сториз у пользователя
+* `isLoggingEnabled` - вывод в консоль запросов к серверу
 
 ### Кастомизация
 Настройка внешнего вида ячеек и ридера происходит через синглтон класса `InAppStory.shared`:
@@ -265,6 +266,7 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 * `setTitle(_ text: <String>)` - заголовок сторис;
 * `setSource(_ text: <String>)` - источник сторис;
 * `setImageURL(_ url: <URL>)` - адрес картинки для ячейки;
+* `setVideoURL(_ url: <URL>)` - адрес видео для ячейки;
 * `setOpened(_ value: <Bool>)` - открывалась ли сторис;
 * `setHighlight(_ value: <Bool>)` - зажатие ячейки из списка;
 * `setBackgroundColor(_ color: <UIColor>)` - цвет фона ячейки, если картинка не задана;

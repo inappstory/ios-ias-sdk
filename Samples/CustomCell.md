@@ -193,8 +193,12 @@ extension CustomStoryCell: StoryCellProtocol
         // установка значения источника
     }
     
-      func setImageURL(_ url: URL) {
+    func setImageURL(_ url: URL) {
         // ссылка на обложку ячеки
+    }
+    
+    func setVideoURL(_ url: URL) {
+        // ссылка на видео обложку
     }
     
     func setOpened(_ value: Bool) {
@@ -202,19 +206,19 @@ extension CustomStoryCell: StoryCellProtocol
     }
     
     func setHighlight(_ value: Bool) {
-         // значение зажатие ячекив списке пальцем
+        // значение зажатие ячекив списке пальцем
     }
     
     func setBackgroundColor(_ color: UIColor) {
-           // установка цвета фона картинки
+        // установка цвета фона картинки
     }
     
     func setBack(_ color: UIColor) {
-           // установка цвета фона ячеки
+        // установка цвета фона ячеки
     }
     
     func setTitleColor(_ color: UIColor) {
-           // установка цвета заголовка
+        // установка цвета заголовка
     }
 }
 ```
