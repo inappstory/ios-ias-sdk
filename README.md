@@ -311,8 +311,8 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 ### Settings
 
 #### Параметры
-* `userID` - уникальный идентификатор пользователя;
-* `testKey` - тестовый ключ, для отображения не опубликованых сторис;
+* `userID` - уникальный идентификатор пользователя *\<String>*;
+* `tags` - список тэгов, для фильтрации контента *\<Array\<String>>*;
 
 ## NotificationCenter
 
