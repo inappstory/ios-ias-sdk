@@ -9,8 +9,14 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+public struct WidgetStory {
+  public let id: Swift.String
+  public let title: Swift.String
+  public let image: Swift.String
+  public let color: Swift.String
+}
 public protocol StoryViewDeleagate : ObjectiveC.NSObjectProtocol {
-  func storyViewUpdated(storyView: InAppStorySDK.StoryView)
+  func storyViewUpdated(storyView: InAppStorySDK.StoryView, widgetStories: Swift.Array<InAppStorySDK.WidgetStory>?)
   func storyView(_ storyView: InAppStorySDK.StoryView, getLinkWith target: Swift.String)
   func storyReaderWillShow()
   func storyReaderDidClose()
@@ -75,7 +81,7 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
     set
   }
   public var isFavoriteView: Swift.Bool
-  public var target: UIKit.UIViewController? {
+  weak public var target: UIKit.UIViewController? {
     get
     set
   }
@@ -97,6 +103,7 @@ extension StoryView {
   public func create()
   public func refresh()
   public func closeStory(complete: @escaping () -> Swift.Void)
+  public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK.PhoneFormat
@@ -206,6 +213,7 @@ public struct Settings : Swift.Equatable {
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil, sandBox: Swift.Bool = false)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
+  public func getWidgetStories(complete: @escaping (Swift.Array<InAppStorySDK.WidgetStory>?) -> Swift.Void)
   @objc deinit
   @objc override dynamic public init()
 }
@@ -216,10 +224,12 @@ extension InAppStory {
 extension InAppStory {
   public func showOnboarding(from target: UIKit.UIViewController, delegate: InAppStorySDK.OnboardingDelegate, complete: @escaping () -> Swift.Void)
   public func closeOnboarding(complete: @escaping () -> Swift.Void)
+  public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStory {
   public func showSingeStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
   public func closeSingleStory(complete: @escaping () -> Swift.Void)
+  public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 public enum ReaderType : Swift.Int {
   case onboarding, single, list

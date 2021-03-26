@@ -11,3 +11,4 @@
 ### 9. [Тэги](Tags.md)
 ### 10. [Избранное](Favorites.md)
 ### 11. [Управление звуком](Sound.md)
+### 12. [Widget iOS 14](Widget.md)

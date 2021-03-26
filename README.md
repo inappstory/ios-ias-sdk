@@ -33,6 +33,7 @@
 	* [ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)
 * [Объекты](https://github.com/inappstory/ios-sdk#Объекты)
 	* [Settings](https://github.com/inappstory/ios-sdk#Settings)
+	* [WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)
 * [NotificationCenter](https://github.com/inappstory/ios-sdk#NotificationCenter)
 	* [События](https://github.com/inappstory/ios-sdk#События)
 	* [Ошибки](https://github.com/inappstory/ios-sdk#Ошибки)
@@ -42,7 +43,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.2.3              | 1128          | >= 10.0     |
+| 1.3.0              | 1158          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -95,6 +96,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ### Методы
 * `addTags(<Array<String>>)` - добавление тэгов;
 * `removeTags(<Array<String>>)` - удаление тэгов;
+* `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - получения списка сторис для виджета;
 
 ### Параметры и свойства
 * `onboardingDelegate` - должен реализовывать протокол *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
@@ -222,7 +224,7 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 
 ### StoryViewDeleagate
 
-* `storyViewUpdated(storyView: <StoryView>)` - вызывается при обновлении списка;
+* `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - вызывается при обновлении списка;
 * `storyView(_ storyView: <StoryView>, getLinkWith target: <String>)` - вызывается при получении ссылки из сторис;
 * `storyReaderWillShow()` - вызывается перед открытием ридера сторис;
 * `storyReaderDidClose()` - вызывается после закрытия ридера сторис;
@@ -309,10 +311,16 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 
 ## Объекты
 ### Settings
-
 #### Параметры
 * `userID` - уникальный идентификатор пользователя *\<String>*;
 * `tags` - список тэгов, для фильтрации контента *\<Array\<String>>*;
+
+### WidgetStory
+#### Параметры
+* `id` - уникальный идентификатор истории *\<String>*;
+* `title` - заголовок истории *\<String>*;
+* `image` - ссылка на изображение обложки *\<String>*;
+* `color` - цвет вона истории в HEX формате *\<String>*;
 
 ## NotificationCenter
 

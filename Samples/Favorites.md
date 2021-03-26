@@ -55,7 +55,7 @@ class FavoritesController: UIViewController {
 
 extension FavoritesController: StoryViewDeleagate
 {
-    func storyViewUpdated(storyView: StoryView) {
+    func storyViewUpdated(storyView: StoryView, widgetStories: Array<WidgetStory>?) {
         //обновление списка сторис
     }
     
