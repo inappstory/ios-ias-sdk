@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		oxW6AHwJdd4KjQ/igwoIxmCOGGI=
+		vHVdrqdW9zLJXIhN1ywvgGOT2wE=
 		</data>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<data>
-		e8cClbRW+OvPY5qgahNYgF3QP9U=
+		faG4YvW+lfUvRBw7eV9dl9qzXaI=
 		</data>
 		<key>FavoriteCell.nib/runtime.nib</key>
 		<data>
-		J7HiLmKSPPiJUXWnwhSaPt9+uC8=
+		GLboFoBoKFz3SUQp53ZHk2GVn9s=
 		</data>
 		<key>Headers/CSPlaceholderView.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6huv2iOMPCcASoGMaZeVMg+VCDM=
+		G6iZM3osxW/n+PlWy8cnDNYhSJ8=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -98,15 +98,15 @@
 		</data>
 		<key>StoryCell.nib/objects-12.3+.nib</key>
 		<data>
-		CW1HlpW/ZBxy8V4utahKJZaR45Q=
+		WbHtqfufBF5Ndkj6ue1DEJ6El04=
 		</data>
 		<key>StoryCell.nib/runtime.nib</key>
 		<data>
-		Ffaou03cL4EWwmG1LwscZDksnfY=
+		x/+yBM04sFMakf6f3EO2qEwgYZE=
 		</data>
 		<key>StoryInput.nib</key>
 		<data>
-		wegAiR8IMJ9qfjFmLdUCYsBU1CY=
+		B+jL6+x7/Y5bIu0fvOV0N61XrKc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -115,33 +115,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oxW6AHwJdd4KjQ/igwoIxmCOGGI=
+			vHVdrqdW9zLJXIhN1ywvgGOT2wE=
 			</data>
 			<key>hash2</key>
 			<data>
-			FYxsO26l31k/ttjrAed/5LgMdkHU14nVS8GzSP/kKgk=
+			uhz+FnyWL6qLxbyWj6P+f/rsDosVyqIr3NWiLqrTFmI=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e8cClbRW+OvPY5qgahNYgF3QP9U=
+			faG4YvW+lfUvRBw7eV9dl9qzXaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			jlLbmUm6eBYVW3M89YyR6o4kGl5ejI+zaYEBNif4UMQ=
+			Z0XGYejSnmsNouNkeweg/GhYf+4jxdi1S2jbib99OrQ=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			J7HiLmKSPPiJUXWnwhSaPt9+uC8=
+			GLboFoBoKFz3SUQp53ZHk2GVn9s=
 			</data>
 			<key>hash2</key>
 			<data>
-			P61SUahX6ImxIxt0znA/Ok01C8qSrjQ0554KGYZ3K/s=
+			WXS+JZIxLIHo5lSvwGdLI2LI7nos5P/sAXCVoZyUvnE=
 			</data>
 		</dict>
 		<key>Headers/CSPlaceholderView.h</key>
@@ -357,33 +357,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CW1HlpW/ZBxy8V4utahKJZaR45Q=
+			WbHtqfufBF5Ndkj6ue1DEJ6El04=
 			</data>
 			<key>hash2</key>
 			<data>
-			zxMBRiqJDXDFE9vxrrNwY29EKMxxKRsNiUkISRfoXyY=
+			oDcJg9ZYZ1yryFklKxcGO0D6XTnS1tStXrHr/5wgoiQ=
 			</data>
 		</dict>
 		<key>StoryCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ffaou03cL4EWwmG1LwscZDksnfY=
+			x/+yBM04sFMakf6f3EO2qEwgYZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			2nshmv9INB+I3Qf/NPTEuQbwIsFmNmoKfR+3xv9K6c0=
+			w/itFkISs3G+JZocfG4HW4BpTlf9cjo7o67ylxggrJA=
 			</data>
 		</dict>
 		<key>StoryInput.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wegAiR8IMJ9qfjFmLdUCYsBU1CY=
+			B+jL6+x7/Y5bIu0fvOV0N61XrKc=
 			</data>
 			<key>hash2</key>
 			<data>
-			jBWzYHJUNR0Z4r8pX5yVIl/J5uuFiI9iLID5d+31SLc=
+			NI93oXmkDZ13/v5ZkcnLNI7kNWHzdSe4kjFGfvvFyN8=
 			</data>
 		</dict>
 	</dict>
