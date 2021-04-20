@@ -43,7 +43,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.3.4              | 1182          | >= 10.0     |
+| 1.4.0              | 1242          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -103,6 +103,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `singleStoryDelegate` - должен реализовывать протокол *<[SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)>*;
 * `favoritesCount` - количество избранных сториз у пользователя
 * `isLoggingEnabled` - вывод в консоль запросов к серверу
+* `placeholders` - список замен персонализации *Dictionary\<String, String\>*
 
 ### Кастомизация
 Настройка внешнего вида ячеек и ридера происходит через синглтон класса `InAppStory.shared`:
@@ -120,6 +121,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `overScrollToClose` - закрытия рида при пролистывании последней сторис *\<Bool>*;
 * `placeholderElementColor` - цвет предзагрузчика слайда *\<UIColor>*;
 * `placeholderBackgroundColor` - цвет фона предзагрузчика слайда *\<UIColor>*;
+* `gamePlaceholderTint` - цвет заливки загрузчика игры по умолчанию *\<UIColor>*;
 * `muted` - отключение/влючение звука в сторис *\<Bool>*; (*[Подробнее](Samples/Sound.md)*)
 * `likePanel` - отображение нижней панели с лайками (должно быть включенов в консоли) *\<Bool>*;
 * `favoritePanel` - отображение нижней панели с избранным (должно быть включенов в консоли) *\<Bool>*;
@@ -133,6 +135,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `shareImage` - изображения для кнопки шаринга *\<UIImage>*;
 * `shareSelectedImage` - изображения для выделеной кнопки шаринга *\<UIImage>*;
 * `placeholderView` - кастомный загрузчик, должен реализовывать протокол *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
+* `gamePlaceholderView` - кастомный загрузчик для игры с прогрессом, должен реализовывать протокол *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
 * `closeButtonPosition` - положения кнопки закрытия относительно таймеров *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
 * `scrollStyle` - стиль переходов между слайдами *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
 * `presentationStyle` - стиль появления ридера *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
@@ -259,6 +262,9 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 * `start` - запуск анимации
 * `stop` - остановка анимации
 
+### GamePlaceholderProtocol  
+* `func setProgress(progress: Double)` - Установка значение прогресса (0.0 - 1.0)
+
 ### StoryCellProtocol
 
 * `reuseIdentifier: <String> { get }` - возвращает идентификатор ячейки;
@@ -337,6 +343,9 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 * `DislikeStory` - дизлайк сториз (доп параметры - `index`, `value`)
 * `FavoriteStory` - добавление сториз в избранное (доп параметры - `index`, `value`)
 * `ClickOnShareStory` - нажатие на кнопку поделиться (доп параметр - `index`)
+* `StartGame` - открытие ридера с игрой (доп параметр - `index`)
+* `CloseGame` - закрытие ридера с игрой (доп параметр - `index`)
+* `FinishGame` - закрытие игры по окончании (доп параметр - `index`, `result<Dictionary<String, Any>?>`)
 
 ### Ошибки
 В уведомлениях об ошибке так же приходит `userInfo` в виде словаря `["errorMessage" : <Error_message_string>]`

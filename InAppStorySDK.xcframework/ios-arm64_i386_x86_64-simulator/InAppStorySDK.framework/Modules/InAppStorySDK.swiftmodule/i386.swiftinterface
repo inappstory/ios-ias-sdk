@@ -3,6 +3,8 @@
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
 import CommonCrypto
+import Compression
+import CoreFoundation
 import Foundation
 @_exported import InAppStorySDK
 import Swift
@@ -46,6 +48,9 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setBackgroundColor(_ color: UIKit.UIColor)
   func setTitleColor(_ color: UIKit.UIColor)
   func setSound(_ value: Swift.Bool)
+}
+public protocol GamePlaceholderProtocol : UIKit.UIView {
+  func setProgress(progress: Swift.Double)
 }
 @objc public enum ClosePosition : Swift.Int {
   case left, right, bottomLeft, bottomRight
@@ -150,6 +155,9 @@ public let LikeStory: Foundation.Notification.Name
 public let DislikeStory: Foundation.Notification.Name
 public let FavoriteStory: Foundation.Notification.Name
 public let ClickOnShareStory: Foundation.Notification.Name
+public let StartGame: Foundation.Notification.Name
+public let CloseGame: Foundation.Notification.Name
+public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
@@ -183,6 +191,7 @@ public struct Settings : Swift.Equatable {
   public var overScrollToClose: Swift.Bool
   public var placeholderElementColor: UIKit.UIColor
   public var placeholderBackgroundColor: UIKit.UIColor
+  public var gamePlaceholderTint: UIKit.UIColor
   public var likeImage: UIKit.UIImage
   public var likeSelectedImage: UIKit.UIImage
   public var dislikeImage: UIKit.UIImage
@@ -198,6 +207,7 @@ public struct Settings : Swift.Equatable {
   public var favoritePanel: Swift.Bool
   public var sharePanel: Swift.Bool
   public var placeholderView: InAppStorySDK.PlaceholderProtocol?
+  public var gamePlaceholderView: InAppStorySDK.GamePlaceholderProtocol?
   public var closeButtonPosition: InAppStorySDK.ClosePosition
   public var scrollStyle: InAppStorySDK.ScrollStyle
   public var presentationStyle: InAppStorySDK.PresentationStyle
