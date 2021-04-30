@@ -90,11 +90,11 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
     get
     set
   }
-  public var storyCell: InAppStorySDK.StoryCellProtocol {
+  public var storyCell: InAppStorySDK.StoryCellProtocol! {
     get
     set
   }
-  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol {
+  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
     get
     set
   }

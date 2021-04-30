@@ -43,7 +43,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.4.2              | 1258          | >= 10.0     |
+| 1.4.3              | 1284          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -180,8 +180,8 @@ override func viewDidLoad() {
 * `tags` - список тэгов, для фильтрации контента *\<Array\<String>>*;
 * `target` - контроллер для отображения ридера *\<UIViewController>*;
 * `isContent` - отслеживание наполнения списка сторис *\<Bool>*;
-* `storyCell` - кастомная ячейка, должена реализовывать протокол *<[StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
-* `favoriteCell` - кастомная ячейка избранного, должена реализовывать протокол *<[FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
+* `storyCell` - кастомная ячейка, должена реализовывать протокол *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
+* `favoriteCell` - кастомная ячейка избранного, должена реализовывать протокол *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
 
 ## OnboardingStory
 Онбординг используются для отображения сторис не представленных в основном списке
