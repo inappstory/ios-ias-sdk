@@ -9,7 +9,7 @@
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
     //инициализация библиотеки
-     InAppStory.shared.initWith(serviceKey: <String>, sandBox: <Bool>)
+     InAppStory.shared.initWith(serviceKey: <String>)
     
     // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
@@ -44,12 +44,22 @@ extension ViewController: OnboardingDelegate
     }
     
     // получение ссылки из сторис
-    func onboardingReader(getLinkWith target: String) {
-        // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
-        InAppStory.shared.closeOnboarding {
-            // далее обработать ссылку, например для перехода по ней в safari
-            if let url = URL(string: target) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    func onboardingReader(actionWith target: String, for type: ActionType) {
+        if type == .swipe { // ссылка получена по действию swipeUP
+           if let url = URL(string: target) {
+               let swipeContentController = SwipeContentController()
+               // передача ссылки контроллеру с WebView
+               swipeContentController.linkURL = url
+               // открытие контроллера поверх ридера
+               InAppStory.shared.onboardingPresent(controller: swipeContentController)
+           }
+       } else {
+            // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
+            InAppStory.shared.closeOnboarding {
+                // далее обработать ссылку, например для перехода по ней в safari
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             }
         }
     }

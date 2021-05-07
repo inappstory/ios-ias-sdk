@@ -9,7 +9,7 @@
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
     //инициализация библиотеки
-    InAppStory.shared.initWith(serviceKey: <String>, sandBox: Bool)
+    InAppStory.shared.initWith(serviceKey: <String>)
      
     // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
@@ -103,7 +103,7 @@ func minimumInteritemSpacingForSection() -> CGFloat
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
     //инициализация библиотеки
-    InAppStory.shared.initWith(serviceKey: <String>, sandBox: Bool)
+    InAppStory.shared.initWith(serviceKey: <String>)
     
     // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)

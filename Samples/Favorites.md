@@ -60,12 +60,22 @@ extension FavoritesController: StoryViewDeleagate
     }
     
     // получение ссылки из сторис
-    func storyView(_ storyView: StoryView, getLinkWith target: String) {
-        // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
-        storyView.closeStory {
-            // далее обработать ссылку, например для перехода по ней в safari
-            if let url = URL(string: target) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    func storyView(_ storyView: StoryView, actionWith type: ActionType, for target: String) {
+       if type == .swipe { // ссылка получена по действию swipeUP
+           if let url = URL(string: target) {
+               let swipeContentController = SwipeContentController()
+               // передача ссылки контроллеру с WebView
+               swipeContentController.linkURL = url
+               // открытие контроллера поверх ридера
+               storyView.present(controller: swipeContentController)
+           }
+       } else {
+            // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
+            storyView.closeStory {
+                // далее обработать ссылку, например для перехода по ней в safari
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
 import CommonCrypto
@@ -11,6 +11,14 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+public enum ActionType {
+  case button, swipe
+  public static func == (a: InAppStorySDK.ActionType, b: InAppStorySDK.ActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct WidgetStory {
   public let id: Swift.String
   public let title: Swift.String
@@ -19,7 +27,7 @@ public struct WidgetStory {
 }
 public protocol StoryViewDeleagate : ObjectiveC.NSObjectProtocol {
   func storyViewUpdated(storyView: InAppStorySDK.StoryView, widgetStories: Swift.Array<InAppStorySDK.WidgetStory>?)
-  func storyView(_ storyView: InAppStorySDK.StoryView, getLinkWith target: Swift.String)
+  func storyView(_ storyView: InAppStorySDK.StoryView, actionWith type: InAppStorySDK.ActionType, for target: Swift.String)
   func storyReaderWillShow()
   func storyReaderDidClose()
   func favoriteCellDidSelect()
@@ -54,24 +62,24 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
 }
 @objc public enum ClosePosition : Swift.Int {
   case left, right, bottomLeft, bottomRight
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc public enum ScrollStyle : Swift.Int {
   case flat, cover, cube
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @objc public enum PresentationStyle : Swift.Int {
   case crossDissolve, modal
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -224,8 +232,8 @@ public struct Settings : Swift.Equatable {
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
   public func getWidgetStories(complete: @escaping (Swift.Array<InAppStorySDK.WidgetStory>?) -> Swift.Void)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 extension InAppStory {
   public func clearMemory()
@@ -243,21 +251,21 @@ extension InAppStory {
 }
 public enum ReaderType : Swift.Int {
   case onboarding, single, list
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 public protocol OnboardingDelegate : ObjectiveC.NSObjectProtocol {
   func onboardingUpdated(isContent: Swift.Bool)
-  func onboardingReader(getLinkWith target: Swift.String)
+  func onboardingReader(actionWith target: Swift.String, for type: InAppStorySDK.ActionType)
   func onboardingReaderWillShow()
   func onboardingReaderDidClose()
 }
 public protocol SingleStoryDelegate : ObjectiveC.NSObjectProtocol {
   func singleStoryUpdated(isContent: Swift.Bool)
-  func singleStory(getLinkWith target: Swift.String)
+  func singleStory(actionWith target: Swift.String, for type: InAppStorySDK.ActionType)
   func singleStoryReaderWillShow()
   func singleStoryReaderDidClose()
 }
@@ -275,6 +283,8 @@ public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
   func setBackgroundColor(_ color: UIKit.UIColor)
 }
+extension InAppStorySDK.ActionType : Swift.Equatable {}
+extension InAppStorySDK.ActionType : Swift.Hashable {}
 extension InAppStorySDK.ClosePosition : Swift.Equatable {}
 extension InAppStorySDK.ClosePosition : Swift.Hashable {}
 extension InAppStorySDK.ClosePosition : Swift.RawRepresentable {}

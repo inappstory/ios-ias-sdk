@@ -43,7 +43,7 @@
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.4.3              | 1284          | >= 10.0     |
+| 1.5.0              | 1328          | >= 10.0     |
 
 Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
 
@@ -83,20 +83,24 @@ import InAppStorySDK
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool 
 {
-	InAppStory.shared.initWith(serviceKey: <String>, testKey: <String>, settings: <Settings?>, sandBox: <Bool?>)
+	InAppStory.shared.initWith(serviceKey: <String>, testKey: <String>, settings: <Settings?>)
 	return true
 }
 ```
 
 * `serviceKey` - ключ авторизации в сервисе (\<*String*>); 
 * `testKey ` - тестовый ключ авторизации в сервисе (\<*String*>);  
-* `settings` - объект настроек (*<[Settings?](https://github.com/inappstory/ios-sdk#Settings)>* - *optional*);
-* `sandBox` - сервер - Prod/Dev (\<*Bool?*> - *optional*).
+* `settings` - объект настроек (*<[Settings?](https://github.com/inappstory/ios-sdk#Settings)>* - *optional*).
+
+>**Внимание!**  
+>Если передать *testKey*, то в приложении будут показаны сторис только в статусе **"Проверка"**
 
 ### Методы
 * `addTags(<Array<String>>)` - добавление тэгов;
 * `removeTags(<Array<String>>)` - удаление тэгов;
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - получения списка сторис для виджета;
+* `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх онбординга;
+* `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх одиночной истории;
 
 ### Параметры и свойства
 * `onboardingDelegate` - должен реализовывать протокол *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
@@ -172,7 +176,8 @@ override func viewDidLoad() {
 * `create` - запускает открытие сессии и получения списка сторис;
 * `refresh` - служит для обновления списка сторис;
 * `clear` - служит для очистки кэша изображений;
-* `closeStory(complete: () -> Void)` - служит для закрытия ридера сторис, `complete` вызывается после закрытия ридера.
+* `closeStory(complete: () -> Void)` - служит для закрытия ридера сторис, `complete` вызывается после закрытия ридера;
+* `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх ридера историй.
 
 ### Параметры и свойства
 * `delegate` - должен реализовывать протокол *<[StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)>*;
@@ -228,7 +233,8 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 ### StoryViewDeleagate
 
 * `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - вызывается при обновлении списка;
-* `storyView(_ storyView: <StoryView>, getLinkWith target: <String>)` - вызывается при получении ссылки из сторис;
+* `storyView(_ storyView: <StoryView>, actionWith type: <ActionType>, for target: <String>)
+` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
 * `storyReaderWillShow()` - вызывается перед открытием ридера сторис;
 * `storyReaderDidClose()` - вызывается после закрытия ридера сторис;
 * `favoriteCellDidSelect()` - вызывается при нажатии на ячейку избранного;
@@ -244,14 +250,14 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 ### OnboardingDelegate
 
 * `onboardingUpdated(isContent: <Bool>)` - вызывается при получении списка сторис;
-* `onboarding(getLinkWith target: <String>)` - вызывается при получении ссылки из сторис;
+* `onboardingReader(actionWith target: <String>, for type: <ActionType>)` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
 * `onboardingReaderWillShow()` - вызывается перед открытием ридера сторис;
 * `onboardingReaderDidClose()` - вызывается после закрытия ридера сторис;
 
 ### SingleStoryDelegate
 
 * `singleStoryUpdated(isContent: <Bool>)` - вызывается при получении единичной сторис;
-* `singleStory(getLinkWith target: <String>)` - вызывается при получении ссылки из сторис;
+* `singleStory(actionWith target: <String>, for type: <ActionType>)` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
 * `singleStoryReaderWillShow()` - вызывается перед открытием ридера сторис;
 * `singleStoryReaderDidClose()` - вызывается после закрытия ридера сторис;
 
@@ -298,6 +304,7 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 
 ### ScrollStyle
 Стиль перелистывания сторис в ридере:  
+
 * `.flat` - обычноеб друг за другом;
 * `.cover` - с накрытием следующим слайдом;
 * `.cube` - в виде трёхмерного куба;
@@ -305,15 +312,24 @@ InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <Str
 
 ### PresentationStyle
 Стиль анимации отображения ридера:
+
 * `.crossDissolve` - проявление ридера из прозрачности;
 * `.modal` - выезжание рида из под нижнего края экрана;
 
 ### ClosePosition
 Позиция кнопки закрыть на карточке в ридер
+
 * `.left` - слева от таймеров;
 * `.right` - справа от таймеров;
 * `.bottomLeft` - слева под таймерами;
 * `.bottomRight` - справа под таймерами;
+
+### ActionType
+
+Действие по которому была получена ссылка
+
+* `.button` - нажатие кнопки;
+* `.swipe` - свайп по слайду вверх.
 
 ## Объекты
 ### Settings
