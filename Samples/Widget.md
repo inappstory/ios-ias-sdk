@@ -1,22 +1,25 @@
-# Использвание InAppStorySDK в виджете iOS 14
+# InAppStorySDK in iOS 14 Widget
 
-В новых виджетах iOS 14 можно использовать данные из **InAppStorySDK**, для этого была добавлена упрощённая модель истории *[WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)*, содержащая в себе основные поля для представления истории в виджете.
+IOS 14 widgets can use data from **InAppStorySDK**, for this a simplified story model *[WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)*, was added. This model contains the main fields for presentation stories in the widget.
 
-Виджеты для iOS 14 создаются на чистом SwiftUI и имеют ряд ограницений по сравнению с обычным приложением на том же языке:  
+IOS 14 widgets are created in pure SwiftUI and have a number of limitations compared to a regular application in the same language: 
 
-* нельзя использовать **Scroll**
-* Нельзя использовать видео и анимированые изображения
-* для связи с приложением и отслеживания нажатия определённых компонентов виджета необходимо использвать **Deeplink**
+* **Scroll** cannot be used
+* video and animated images cannot be used
+* to communicate with the main application and track the actions of components, you should use **Deeplink**
 
-Далее на примере реализации разберём как сделать простой виджет со списком из 4 историй и связать его с основным приложением.
->**Примечание**  
->SwiftUI достаточно гибок и вы можете найти более элегантный ипростой способ построения данного виджета.
+Using the example of implementing a simple widget, we will analyze how to display a list of 4 stories and link it to the main application.
+>**Remark**  
+>SwiftUI is flexible enough that you can find a more elegant and simpler way to build this widget.
 
-### Создание таргета виджета в проекте  
-Для создание таргета виджета необходимо, в *FileInspector* выбрать проект и в поле *TARGETS* нажать *"+"*. Далее в выпадающем окне выбрать *Widget Extension* и задать ему все необходимые параметры.
-После выполненных действий создастся папка содержащая файл **SwiftUI** с параметрами по умолчанию.
+### Creating a widget target in a project 
+ 
+1. To create a widget target, select a project in *FileInspector* and press *"+"* in the *TARGETS* field. 
+2. Then select *Widget Extension* in the drop-down window and set all the necessary parameters to it. 
+1. **XCode** will automatically create a folder containing a **SwiftUI** file with default parameters.
 
-Изначально виджет создайтся с размером `.systemSmall` и в превью отображается только он. Для добавления нескольких размеров можно добавить их в представление виджета с помощю `.supportedFamilies(Array<WidgetFamily>)`
+Initially, the widget is created with the size of `.systemSmall` and only it is displayed in the preview.
+To add multiple sizes, you can add them to the widget view using `.supportedFamilies(Array<WidgetFamily>)`
 
 ```swift
 @main
@@ -29,45 +32,46 @@ struct StoryWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
-        .supportedFamilies([.systemSmall, .systemMedium]) // размеры виджета
+        .supportedFamilies([.systemSmall, .systemMedium]) // widget sizes
     }
 }
 ```
 
-Для того, что бы в превью отобразились оба представления необходимо *Widget_Previews* добавить группу всех необходимых размеров
+In order for the preview to display all sizes, you need to add a group of all required sizes to *Widget_Previews*
 
 ```swift
 struct StoryWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             StoryWidgetEntryView(entry: SimpleEntry(date: Date()))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
+                .previewContext(WidgetPreviewContext(family: .systemSmall)) //small square 2x2
             StoryWidgetEntryView(entry: SimpleEntry(date: Date()))
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .previewContext(WidgetPreviewContext(family: .systemMedium)) //rectangle 4x2
         }
     }
 }
 ```
 
-Теперь в превью можно увидетьт все доступные размеры виджета.
->**Примечание**  
-> Для использования превью лучше использовать новый проект или **Playground**, т.к. на его генерацию XCode периодически пересобирает весь проект.
+Now in the preview you can see all the available sizes of the widget.
+>**Remark**  
+> To use the preview, it is better to create a new project or **Playground**. To generate the view, XCode periodically rebuilds the entire project.
 
 
-### Структура виджета
-Для создания структуры виджета необходимо использовать *WidgetEntryView*
+### Widget structure
+
+1) To create the structure of the widget, you should use *WidgetEntryView*
 
 ```swift
 struct StoryWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        // тело виджета
+        // widget body
     }
 }
 ```
 
-Виджет будет состоятьт из заголовка и списка первых 4-х сторис, для этого необходимо создать *HStack* и в нём создать заголовок
+2) The widget will consist of a title and a list of the first 4 stories, for this you need to create *HStack* and create a title in it
 
 ```swift
 struct StoryWidgetEntryView : View {
@@ -75,20 +79,20 @@ struct StoryWidgetEntryView : View {
 
     var body: some View {
         VStack(spacing: 12.0) {
-            Text("Истории")
+            Text("Stories")
                 .foregroundColor(.black)
         }
     }
 }
 ```
 
-Далее необходимо создать элементы списка виджета *StoryCard* для отображения самих историй
+3) Next, you need to create list items *StoryCard* to display stories
 
 ```swift
 struct StoryCard : View {
-    let storyID: String //id истории
-    let imageURL: String // ссылка на изображение
-    let color: String // цвет фона в формате HEX
+    let storyID: String  //source id
+    let imageURL: String //image link
+    let color: String    //background color in HEX format
     
     var body: some View {
         ZStack {
@@ -101,7 +105,8 @@ struct StoryCard : View {
     }
 }
 ```
-Для конвертации цвета из HEX формата необходимо добавить расширение для **Color** 
+
+4) For convert color from HEX format, you need to add an extension for **Color** 
 
 ```swift
 extension Color {
@@ -132,7 +137,7 @@ extension Color {
 }
 ```
 
-Так же необходимо создать структуру для загрузки картинок по ссылке *NetworkImage*
+5) It is necessary to create a structure for loading images using the link *NetworkImage*
 
 ```swift
 struct NetworkImage: View {
@@ -155,7 +160,7 @@ struct NetworkImage: View {
 }
 ```
 
-В карточке так же необходимо отображать заголовок истории, для этого создадим структуру заголовка *CardTitle*
+6) In the card, you need to display the title of the story, for this we will create the title structure *CardTitle*
 
 ```swift
 struct CardTitle : View {
@@ -177,12 +182,13 @@ struct CardTitle : View {
 }
 ```
 
-Теперь есть все элементы, что бы собрать список.
-Стандартные размеры виджета могут отличаться для разных размеров размеров экрана устройства, по этому необходимо так же добавить размеры карты стори в зависимости от размера виджета в пикселях. 
+Now you have all the elements to put together the list.
+
+The physical dimensions of the widget can change for different screen sizes of the device, for this you need to add the dimensions of the story cards depending on the size of the widget in pixels.
 
 ```swift
 struct StoryList : View {
-    let list: Array<Dictionary<String, String>> // список сторис полученных из приложения
+    let list: Array<Dictionary<String, String>> // list of stories received from the application
     
     var body: some View {
         GeometryReader { geometry in
@@ -196,7 +202,7 @@ struct StoryList : View {
                             .frame(width: width, height: width / ratio, alignment: .center)
                             .overlay(CardTitle(title: story["title"]!), alignment: .bottomLeading)
                             .clipShape(ContainerRelativeShape())
-                    } else { // если элементов меньше четырёх, то ставим заглушку
+                    } else { // if there are less than four elements, then we put a placeholder
                         Color.gray
                             .frame(width: width, height: width / ratio, alignment: .center)
                             .clipShape(ContainerRelativeShape())
@@ -208,10 +214,13 @@ struct StoryList : View {
     }
 }
 ```
-Для отслеживания размеров геометрии родительского элемента используется `GeometryReader` из которого можно получить размеры. Так же, для закруглений карточек используется `.clipShape(ContainerRelativeShape())` с привязкой радиуса к размерам и радиуса самого виджета и системы (*рек. Apple*).  
-Для отображения заголовка используется наложение (`.overlay`), таким образом обеспечивается выравнивание по нижнему краю и привязка к карточке.
+To get the size of the parent element, use the `GeometryReader`, from it you can get the sizes.
 
-Так же обновим `StoryWidgetEntryView` и добавим в *VStack* `StoryList`
+For rounded cards use `.clipShape(ContainerRelativeShape())`. It is tied to radius and size, widget and system (*rec. Apple*). 
+
+Overlay (`.overlay`) is used to display the header, thus providing bottom alignment and anchoring to the card.
+
+Also update the `StoryWidgetEntryView` and add `StoryList` to *VStack*
 
 ```swift
 struct StoryWidgetEntryView : View {
@@ -219,7 +228,7 @@ struct StoryWidgetEntryView : View {
 
     var body: some View {
         VStack(spacing: 12.0) {
-            Text("Истории")
+            Text("Stories")
                 .foregroundColor(.black)
             StoryList(list: Array<Dictionary<String, String>>)
         }
@@ -227,18 +236,19 @@ struct StoryWidgetEntryView : View {
 }
 ```
 
-### Получение данных
-Для получения данных виджетом, можно использовать
+### Retrieving data
 
-* [Keychain access group](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps) — хорошо подойдет если нужно передать какой-нибудь сервер-сайд токен, ключ или любую другую сенситив информацию.
-* [App group](https://www.appcoda.com/app-group-macos-ios-communication/) — предоставляет больше возможностей, но меньше секьюрити. Можно шарить `UserDefaults`, а также место на диске.
+To get data from a widget, you can use
 
-Т.к. очень ценной информации в списке историй нет, будет использоваться второй способ с **App group**. Для этого необходимо создать группу для приложения на [developer.apple.com](https://developer.apple.com/account/resources/identifiers/list/applicationGroup), указав название и идентификатор группы. Далее в проекте добавить у таргетов проекта и виджета, во вкладке *Signing&Capabilities* добавить *App Group* и указать идентификатор созданной группы.  
-Таким образом при установке приложения будет создана "песочница" для приложения в которую будет доступ для виджета и самого приложения.
+* [Keychain access group](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps) — well suited if you need to transfer some server-side token, key or any other sensitive information.
+* [App group](https://www.appcoda.com/app-group-macos-ios-communication/) — provides more opportunities, but less security. You can share `UserDefaults`, as well as disk space.
 
-Для доступа к песочнице необходимо использовать `UserDefaults(suiteName: <"ID группы">)`, а далее работать как с обычным *UserDefaults*
+There is no valuable information in the list of stories, the second method with **App group** will be used. To do this, you need to create a group for the application at [developer.apple.com](https://developer.apple.com/account/resources/identifiers/list/applicationGroup), specifying the name and ID of the group. Next, you need to add them to the project and widget targets, in the *Signing & Capabilities* tab add *App Group* and specify the ID of the created group.  
+When installing the application, a "sandbox" will be created for the application, which will be accessible for the widget and the parent application.
 
-Добавим получение данных из *UserDefaults* в `StoryWidgetEntryView` и получим из него список сторис
+To access the "sandbox" you need to use `UserDefaults(suiteName: <"group ID">)`, and then work as with the usual *UserDefaults*
+
+Add data retrieval from *UserDefaults* to `StoryWidgetEntryView` and extract the list of stories from it
 
 ```swift
 struct StoryWidgetEntryView : View {
@@ -248,17 +258,17 @@ struct StoryWidgetEntryView : View {
 
     var body: some View {
         VStack(spacing: 12.0) {
-            Text("Истории")
+            Text("Stories")
                 .foregroundColor(.black)
             if defaults != nil,
             let storiesList = defaults?.array(forKey: "widget_stories") as? Array<Dictionary<String, String>> {
                 if storiesList.isEmpty {
-                    // список пуст
+                    // list is empty
                 } else {
                     StoryList(list: storiesList)
                 }
             } else {
-                // не удалось получить список из UserDefaults
+                // failed to get list from UserDefaults
             }
         }
     }
@@ -266,24 +276,24 @@ struct StoryWidgetEntryView : View {
 
 ```
 
-### Обновление данных виджета
+### Updating widget data
 
-Для обновления данных внутри виджета используется метод `getTimeline` сгенерировный при создании таргета. В нём задаётся временые промежутки по окончании которых происходит перересовка виджета. Его можно оставить по умолчанию (принудительное обновление виджета будет происходить в приложении)
+To update the data, use the `getTimeline` method generated when creating the widget. It sets the time intervals after which the widget is updated. It can be left by default (the forced update of the widget will occur in the application).
 
-Для обновления виджета из приложения необходимо использовать **WidgetKit** и `WidgetCenter.shared.reloadAllTimelines()`, который перерисует все виджеты доступные на экране.
+To update the widget from the application, you need to use **WidgetKit** and `WidgetCenter.shared.reloadAllTimelines()`, this method will redraw all the widgets available on the screen.
 
-Для получения данных для виджета в **InAppStorySDK** добавлен метод `getWidgetStories` с замыканием в котором возвращается список моделей *WidgetStory*
+To get data for a widget from **InAppStorySDK**, use the `getWidgetStories` method with a closure in which a list of models *WidgetStory* is returned
 
 ```swift
-// проверка на версию iOS
+// check iOS version
 if #available(iOS 14.0, *) {
     InAppStory.shared.getWidgetStories { (widgetStories) in
         
-        if let stories = widgetStories { // проверка полученого замыкания
+        if let stories = widgetStories { // check data from closure
             var storiesForDefaults: Array<Dictionary<String, String>> = []
-            let defaults = UserDefaults(suiteName: <"ID группы">) // получения доступа к AppGroup
+            let defaults = UserDefaults(suiteName: <"Group ID">) // get access to AppGroup
             
-            // сборка массива для сохранения
+            // assembling an array to save
             for story in stories {
                 storiesForDefaults.append(["id" : story.id,
                                            "title" : story.title,
@@ -291,22 +301,22 @@ if #available(iOS 14.0, *) {
                                            "color" : story.color])
             }
             
-            // сохранение массива в UserDefaults AppGroup
+            // storing array in UserDefaults AppGroup
             defaults?.setValue(storiesForDefaults, forKey: "widget_stories")
             
-            // проверка архитектуры сборки
+            // checking the build architecture
             #if arch(arm64) || arch(i386) || arch(x86_64)
-            WidgetCenter.shared.reloadAllTimelines() // обновление виджетов
+            WidgetCenter.shared.reloadAllTimelines() // updating widgets
             #endif
         }
     }
 }
 ```
-> **Примечание**  
-> Необходимо установить проверку на версию операционной системы, что бы не делать лишние запросы если iOS < 14.0  
-> Так же необходимо поставить проверку на архитектуру сборки для *WidgetCenter*, иначе могут возникнуть ошибки при компиляции
+> **Remark**  
+> It is necessary to check for the version of the operating system, so as not to make unnecessary requests if iOS <14.0  
+> It is also necessary to check the build architecture for *WidgetCenter*, otherwise errors may occur during compilation
 
-Так же список *WidgetStory* можно получить в методе делегата `StoryView` - `storyViewUpdated`, в котором добавился параметр со списком.
+The *WidgetStory* list can also be obtained in the `StoryView` - `storyViewUpdated` delegate method, from the `widgetStories: Array<WidgetStory>?` parametr.
 
 ```swift
 extension ViewController: StoryViewDeleagate
@@ -316,7 +326,7 @@ extension ViewController: StoryViewDeleagate
         if #available(iOS 14.0, *) {
             if let stories = widgetStories {
                 var storiesForDefaults: Array<Dictionary<String, String>> = []
-                let defaults = UserDefaults(suiteName: <"ID группы">)
+                let defaults = UserDefaults(suiteName: <"Group ID">)
                 
                 for story in stories {
                     storiesForDefaults.append(["id" : story.id,
@@ -337,14 +347,17 @@ extension ViewController: StoryViewDeleagate
 }
 ```
 
-### Пустой список или отсутствие данных
-При обновлении виджета список сторис может оказаться пустым или вовсе отсутствовать (*например, при первой установки виджета*), для этого рекомендуется сделать заглушку с предложением зайти в приложение и обновить список. Для этого в виджете создадим структуру `EmptyList` и добавим его в место отрисовки виджета, где возможно получить пустой список или отсутсвие данных.
+### Empty list or no data
+
+When updating the widget, the list of stories may be empty or completely absent (*for example, when installing the widget for the first time*), for this it is recommended to make placeholders with a proposal to go into the application and update the list.
+
+To do this, create an `EmptyList` structure in the widget and add it to the place where the widget is drawn, where it is possible to get an empty list or lack of data.
 
 ```swift
 struct StoryWidgetEntryView : View {
     var entry: Provider.Entry
     
-    var defaults = UserDefaults(suiteName: <"ID группы">)
+    var defaults = UserDefaults(suiteName: <"Group ID">)
 
     var body: some View {
         VStack(spacing: 12.0) {
@@ -353,12 +366,12 @@ struct StoryWidgetEntryView : View {
             if defaults != nil,
             let storiesList = defaults?.array(forKey: "widget_stories") as? Array<Dictionary<String, String>> {
                 if storiesList.isEmpty {
-                    EmptyList() // список пуст
+                    EmptyList() // empty list
                 } else {
                     StoryList(list: storiesList)
                 }
             } else {
-                EmptyList() // не удалось получить список из UserDefaults
+                EmptyList() // failed to get list from UserDefaults
             }
         }
     }
@@ -381,7 +394,7 @@ struct EmptyList : View {
                 .blur(radius: 5.0)
                 .padding(.horizontal, 16.0)
                 VStack(spacing: 8.0) {
-                    Text("Необходимо войти в приложение")
+                    Text("Application must be open")
                         .foregroundColor(.white)
                     Link(destination: URL(string: "storywidget://login")!) {
                         ZStack {
@@ -402,10 +415,11 @@ struct EmptyList : View {
 }
 ```
 
-### Открытие сторис по нажатию
-Для открытия конкретной сторис по нажатию необходимо использовать **Deeplink** и открывать историю как *SingleStory* в приложении по её *ID (slug)* (подробнее [SingleStory](SingleStory.md))
+### Opening stories on touch
 
-Для добавления ссылок на карточки виджета необходимо картинку обернуть в объект `Link`
+To open a specific story by touch, you should use **Deeplink** and open the story as *SingleStory* in the application by its *ID (slug)* (more details [SingleStory](SingleStory.md))
+
+To add links to the cards of the widget, you need to wrap the picture in a `Link` object
 
 ```swift
 struct StoryCard : View {
@@ -418,7 +432,7 @@ struct StoryCard : View {
             if imageURL == "" {
                 Color(hex: color)
             } else {
-                // deeplinnk ссылка стори по её ID
+                // story deeplink with ID
                 Link(destination: URL(string: "storywidget://\(storyID)")!) {
                     NetworkImage(url: URL(string: imageURL))
                 }
@@ -427,13 +441,5 @@ struct StoryCard : View {
     }
 }
 ```
-> **Примечание**  
-> Приложение открывается не зависимо от того была ли нажата ссылка или просто произошёл тап на виджете, а сама ссылка отправляется уже позже.
-
-
-
-
-
-
-
-
+> **Remark**  
+> The application opens regardless of whether the link was clicked or there was just a tap on the widget, and the link is sent later.

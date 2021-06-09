@@ -1,24 +1,24 @@
-# OnboardingStory
+# Onboarding Stories
 
-Данный вид сторис является отдельным списком, который настраивается в консоли. Может служить для отображения преветственных экранов, рекламы и т.п.
+This type of stories is a separate list that is configured in the console. It can be used to display welcome screens, advertisements, etc.
 
-Для отображения онбордингов необходимо инициализировать InAppStory в проекте
+To display onboarding, you need to initialize InAppStory library in the project
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
-     InAppStory.shared.initWith(serviceKey: <String>)
+    // library initialization
+    InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
     return true
 }
 ```
 
-Далее в контроллере, где необходимо показать онбординги нужно вызвать у `InAppStory` метод `showOnboarding`, например при загрузке контроллера
+In the controller, where you want to show onboarding, call the `showOnboarding` method of the `InAppStory`
 
 ##### ViewController.swift
 ```swift 
@@ -28,35 +28,36 @@ override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
     InAppStory.shared.showOnboarding(from: <UIViewController>, delegate: <OnboardingDelegate>) {
-        // замыкание обрабатывающее открытие ридера единичной сторис
+        // the closure is triggered when the onboarding reader is opened
     }
 }
 ...
 ```
 
-Так же, для отслеживания действий ридера онбордингов, необходимо реализовать методы делегата `OnboardingDelegate`
+To track the actions of the onboarding reader, you need to implement the `OnboardingDelegate` methods
 
 ```swift 
 extension ViewController: OnboardingDelegate
 {
     func onboardingUpdated(isContent: Bool) {
-        // обработка получения ответа от сервера
+        // called when the contents of the list are updated
     }
     
-    // получение ссылки из сторис
+    // called when a button or SwipeUp event is triggered in the reader
     func onboardingReader(actionWith target: String, for type: ActionType) {
-        if type == .swipe { // ссылка получена по действию swipeUP
+        if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
-               // передача ссылки контроллеру с WebView
+               // passing link to controller with WebView
                swipeContentController.linkURL = url
-               // открытие контроллера поверх ридера
+               // opening the controller on top of the reader
                InAppStory.shared.onboardingPresent(controller: swipeContentController)
            }
        } else {
-            // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
+            // if the processed link leads to a screen in the application, 
+            // it is recommend to close the reader
             InAppStory.shared.closeOnboarding {
-                // далее обработать ссылку, например для перехода по ней в safari
+                // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
@@ -65,11 +66,11 @@ extension ViewController: OnboardingDelegate
     }
     
     func onboardingReaderWillShow() {
-        // ридер будет показан
+        // called before the reader will show
     }
     
     func onboardingReaderDidClose() {
-        // ридер закрылся
+        // called after closing the story reader
     }
 }
 ```

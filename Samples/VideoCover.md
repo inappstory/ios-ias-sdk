@@ -1,10 +1,16 @@
-# Видео обложки ячеек
-Попмимо изображений обложек для ячейки от библиотеки может приходить видео. После кастомизации ячейки с помощью протокола `StoryCellProtocol` (описание в разделе [Кастомизация ячейки](CustomCell.md)), необходимо реализвать работу с видео, если необходимо.  
->**Обратите внимание**  
->Кэширование видео обложек ячеек, происходит средствами библиотеки и в реализацию метода `setVideoURL(_ url: URL)` приходит адрес на файл из кэша.  
+# Video cover
 
-#### Пример реализации ячейки с видео
+Covers for cells can be rendered as video.
+
+After customizing a cell using `StoryCellProtocol` (description in the [Cell customization] (CustomCell.md) section), you need to implement work with video, if necessary. 
+
+>**Pay atantion** 
+>Caching of video covers is carried out by means of the library and the address to the file (which located  in local storage) comes to the implementation of the `setVideoURL(_ url: URL)` method.
+
+#### Cover video example
+
 ##### CustomStoryCell.swift
+
 ```swift
 import AVFoundation
 
@@ -14,7 +20,7 @@ class CustomStoryCell: UICollectionViewCell
     fileprivate let player = AVPlayer()
     fileprivate var playerLayer: AVPlayerLayer!
     
-    // контейнер для видео
+    // video container
     @IBOutlet weak var videoView: UIView!
     ...
 
@@ -22,14 +28,14 @@ class CustomStoryCell: UICollectionViewCell
         super.prepareForReuse()
         
         ...
-        // при переиспользовании ячейки контейнер скрывается
+        // when reusing a cell, the container is hidden
         videoView.isHidden = true
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
             
-        // создание слоя видеоплеера и добавление его в контейнер
+        // creating a video layer and adding it to the container
         if playerLayer == nil {
             player.isMuted = true
             playerLayer = AVPlayerLayer(player: player)
@@ -42,7 +48,7 @@ class CustomStoryCell: UICollectionViewCell
     override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
         
-        // обновление размеров слоя видеоплеера
+        // update the video layer size
         if playerLayer != nil {
             playerLayer.frame = videoView.frame
         }
@@ -53,15 +59,15 @@ class CustomStoryCell: UICollectionViewCell
     }
 }
 
-// реализация протокола StoryCellProtocol
+// implementation of the StoryCellProtocol
 extension CustomStoryCell: StoryCellProtocol
 {
     ...
     func setVideoURL(_ url: URL) {
-        // установка нового элемента в проигрыватель по url
+        // setting a new element to the player by url
         player.replaceCurrentItem(with: AVPlayerItem(url: url))
 
-        // создание обработчика события на перезапуск проигрывания
+        // creating an event handler to loop video
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { [weak self] _ in
             guard let weakSelf = self, !weakSelf.videoView.isHidden else {
@@ -72,10 +78,10 @@ extension CustomStoryCell: StoryCellProtocol
             weakSelf.player.play()
         }
         
-        // запуск проигрывания
+        // start playback
         player.play()
         
-        // отображение контейнера в ячейке
+        // displaying a container in a cell
         videoView.isHidden = false
     }
     ...

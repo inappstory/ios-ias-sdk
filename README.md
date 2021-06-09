@@ -1,59 +1,65 @@
 # InAppStory
 
-Библиотека для представления Stories с возможностью кастомизации.
+A library for embedding stories into an application with customization.
 
-## Содержание
-* [Установка](https://github.com/inappstory/ios-sdk#установка)
-	* [Ручная установка](https://github.com/inappstory/ios-sdk#ручная-установка)
-	* [Установка с CocoaPods](https://github.com/inappstory/ios-sdk#Установка-с-CocoaPods)
+## Contents
+
+* [Installation](https://github.com/inappstory/ios-sdk#Installation)
+	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
+	* [CocoaPods](https://github.com/inappstory/ios-sdk#CocoaPods)
 	* [Podfile](https://github.com/inappstory/ios-sdk#Podfile)
-	* [Удаление неиспользуемой архитектуры при компиляции](https://github.com/inappstory/ios-sdk#Удаление-неиспользуемой-архитектуры-при-компиляции)
+	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
-	* [Инициализация](https://github.com/inappstory/ios-sdk#Инициализация)
-	* [Параметры и свойства](https://github.com/inappstory/ios-sdk#Параметры-и-свойства)
-	* [Кастомизация](https://github.com/inappstory/ios-sdk#Кастомизация)
+	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
+	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
+	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
+	* [Customization](https://github.com/inappstory/ios-sdk#Customization)
 * [StoryView](https://github.com/inappstory/ios-sdk#StoryView)
-	* [Инициализация](https://github.com/inappstory/ios-sdk#Инициализация)
-	* [Методы](https://github.com/inappstory/ios-sdk#Методы)
-	* [Параметры и свойства](https://github.com/inappstory/ios-sdk#Параметры-и-свойства)
+	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
+	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
+	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
 * [OnboardingStory](https://github.com/inappstory/ios-sdk#OnboardingStory)
-	* [Отображение](https://github.com/inappstory/ios-sdk#Отображение)
+	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation)
 * [SingleStory](https://github.com/inappstory/ios-sdk#SingleStory)
-	* [Отображение](https://github.com/inappstory/ios-sdk#Отображение)
-* [Протоколы](https://github.com/inappstory/ios-sdk#Протоколы)
+	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation)
+* [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
 	* [StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)
 	* [StoryViewDeleagateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDeleagateFlowLayout)
 	* [OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)
 	* [SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)
+	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
+	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)
 * [enum](https://github.com/inappstory/ios-sdk#enum)
 	* [ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)
 	* [PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)
 	* [ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)
-* [Объекты](https://github.com/inappstory/ios-sdk#Объекты)
+	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
+* [Objects](https://github.com/inappstory/ios-sdk#Objects)
 	* [Settings](https://github.com/inappstory/ios-sdk#Settings)
 	* [WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)
 * [NotificationCenter](https://github.com/inappstory/ios-sdk#NotificationCenter)
-	* [События](https://github.com/inappstory/ios-sdk#События)
-	* [Ошибки](https://github.com/inappstory/ios-sdk#Ошибки)
-* [Примеры](Samples/Samples.md)
+	* [Events](https://github.com/inappstory/ios-sdk#Events)
+	* [Errors](https://github.com/inappstory/ios-sdk#Errors)
+* [Samples](Samples/Samples.md)
 
-## Установка
+## Installation
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
 | 1.5.2              | 1348          | >= 10.0     |
 
-Версию библиотеки можно получить из параметра `InAppStory.buildInfo`
+Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
-### Ручная установка
+### Manual installation
 
-Установка осуществляется путём подключения к проекту `InAppStorySDK.xcframework` библиотеки.
+Download `InAppStorySDK.xcframework` from the repository. Connect in the project settings on the *General* tab.
 
-### Установка с CocoaPods
+### CocoaPods
 
-CocoaPods - это менеджер зависимостей для Objective-C, который автоматизирует и упрощает процесс использования сторонних библиотек в ваших проектах. Чтобы установить с CocoaPods, следуйте разделу «Get Started» на [CocoaPods](https://cocoapods.org/).
+CocoaPods is a dependency manager for Objective-C/Swift, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org/).
+
 #### Podfile
 
 ```ruby
@@ -61,7 +67,7 @@ use_frameworks!
 pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 ```
 
-#### Импорт библиотеки
+#### Library import
 
 ##### Objective-C
 
@@ -76,9 +82,12 @@ import InAppStorySDK
 ```
 
 ## InAppStory
-Основной синглтон класс для управления данными и кастомизации отображения списка и ридера
-### Инициализация
-Инициализацию библиотеки желатьельно проводить в `AppDelegate`: 
+
+The main singleton class for managing data and customizing the display of lists and the reader.
+
+### Initialization
+
+Library Initialization is preferably carried out in `AppDelegate`: 
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool 
@@ -88,75 +97,76 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-* `serviceKey` - ключ авторизации в сервисе (\<*String*>); 
-* `testKey ` - тестовый ключ авторизации в сервисе (\<*String*>);  
-* `settings` - объект настроек (*<[Settings?](https://github.com/inappstory/ios-sdk#Settings)>* - *optional*).
+* `serviceKey` - service authorization key (\<*String*>); 
+* `testKey ` - test authorization key in the service (\<*String*>);  
+* `settings` - configuration object (*<[Settings?](https://github.com/inappstory/ios-sdk#Settings)>* - *optional*).
 
->**Внимание!**  
->Если передать *testKey*, то в приложении будут показаны сторис только в статусе **"Проверка"**
+>**Attention!**  
+>If you pass *testKey*, then the library will display the stories only in the **"Moderation"** status.
 
-### Методы
-* `addTags(<Array<String>>)` - добавление тэгов;
-* `removeTags(<Array<String>>)` - удаление тэгов;
-* `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - получения списка сторис для виджета;
-* `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх онбординга;
-* `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх одиночной истории;
+### Methods
+* `addTags(<Array<String>>)` - adding tags;
+* `removeTags(<Array<String>>)` - remove tags;
+* `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
+* `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
+* `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
 
-### Параметры и свойства
-* `onboardingDelegate` - должен реализовывать протокол *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
-* `singleStoryDelegate` - должен реализовывать протокол *<[SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)>*;
-* `favoritesCount` - количество избранных сториз у пользователя
-* `isLoggingEnabled` - вывод в консоль запросов к серверу
-* `placeholders` - список замен персонализации *Dictionary\<String, String\>*
+### Parameters and properties
+* `onboardingDelegate` - should implement the protocol *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
+* `singleStoryDelegate` - should implement the protocol *<[SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)>*;
+* `favoritesCount` - the number of favorite stories a user has
+* `isLoggingEnabled` - displaying requests to the server in the console
+* `placeholders` - personalization substitution list *Dictionary\<String, String\>*
 
-### Кастомизация
-Настройка внешнего вида ячеек и ридера происходит через синглтон класса `InAppStory.shared`:
-#### Список
-* `showCellTitle` - отображения заголовков сторис в ячейке *\<Bool>*;
-* `cellFont` - шрифт заголовка ячейки *\<UIFont>*;
-* `cellTitleColor` - цвет заголовка ячейки *\<UIColor>*;
-* `showCellSource` - отображение источника сторис *\<Bool>*;
-* `cellSourceFont` - шрифт источника сторис *\<UIFont>*;
-* `cellSourceTitleColor` - шрифт источника сторис *\<UIColor>*;
-* `cellBorderColor` - цыет рамки ячейки *\<UIColor>*;
+### Customization
 
-#### Ридер
-* `swipeToClose` - закрытие ридера по свайпу *\<Bool>*;
-* `overScrollToClose` - закрытия рида при пролистывании последней сторис *\<Bool>*;
-* `placeholderElementColor` - цвет предзагрузчика слайда *\<UIColor>*;
-* `placeholderBackgroundColor` - цвет фона предзагрузчика слайда *\<UIColor>*;
-* `gamePlaceholderTint` - цвет заливки загрузчика игры по умолчанию *\<UIColor>*;
-* `muted` - отключение/влючение звука в сторис *\<Bool>*; (*[Подробнее](Samples/Sound.md)*)
-* `likePanel` - отображение нижней панели с лайками (должно быть включенов в консоли) *\<Bool>*;
-* `favoritePanel` - отображение нижней панели с избранным (должно быть включенов в консоли) *\<Bool>*;
-* `sharePanel` - отображение нижней панели с шарингом (должно быть включенов в консоли) *\<Bool>*;
-* `likeImage` - изображения для кнопки лайка *\<UIImage>*;
-* `likeSelectedImage` - изображения для выделеной кнопки лайка *\<UIImage>*;
-* `dislikeImage` - изображения для кнопки дизлайка *\<UIImage>*;
-* `dislikeSelectedImage` - изображения для выделеной кнопки дизлайка *\<UIImage>*;
-* `favoriteImage` - изображения для кнопки избранного *\<UIImage>*;
-* `favoriteSelectedImag` - изображения для выделеной кнопки избранного *\<UIImage>*;
-* `shareImage` - изображения для кнопки шаринга *\<UIImage>*;
-* `shareSelectedImage` - изображения для выделеной кнопки шаринга *\<UIImage>*;
-* `placeholderView` - кастомный загрузчик, должен реализовывать протокол *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
-* `gamePlaceholderView` - кастомный загрузчик для игры с прогрессом, должен реализовывать протокол *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
-* `closeButtonPosition` - положения кнопки закрытия относительно таймеров *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
-* `scrollStyle` - стиль переходов между слайдами *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
-* `presentationStyle` - стиль появления ридера *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
+Customization of the appearance of the cells and the reader occurs through the singleton of the class `InAppStory.shared`:
+
+#### List
+* `showCellTitle` - displaying story titles in a cell *\<Bool>*;
+* `cellFont` - cell title font *\<UIFont>*;
+* `cellTitleColor` - cell title color *\<UIColor>*;
+* `cellBorderColor` - cell border color *\<UIColor>*;
+
+#### Reader
+* `swipeToClose` - closing the reader by swipe *\<Bool>*;
+* `overScrollToClose` - closing the reader when scrolling through the last story *\<Bool>*;
+* `placeholderElementColor` - slide preloader color *\<UIColor>*;
+* `placeholderBackgroundColor` - slide preloader background color *\<UIColor>*;
+* `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
+* `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
+* `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
+* `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
+* `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;
+* `likeImage` - images for the like button *\<UIImage>*;
+* `likeSelectedImage` - images for the selected like button *\<UIImage>*;
+* `dislikeImage` - images for the dislike button *\<UIImage>*;
+* `dislikeSelectedImage` - images for the selected dislike button *\<UIImage>*;
+* `favoriteImage` - images for favorites button *\<UIImage>*;
+* `favoriteSelectedImag` - images for selected favorites button *\<UIImage>*;
+* `shareImage` - images for sharing button *\<UIImage>*;
+* `shareSelectedImage` - images for selected sharing button *\<UIImage>*;
+* `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
+* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
+* `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
+* `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
+* `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
 
 ## StoryView
-Основной класс для работы со списками сторис
-### Инициализация
+
+The main class for working with lists of stories.
+
+### Initialization
 ---
-**Примечание**  
-Если не был задан параметр *settings* у `InAppStory`, перед инициализацией `StoryView`, его необходимо задать:
+**Remark**  
+If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryView`, it should be set:
 
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
 
-Параметр `favorite: <Bool?>` служит для отображении ленты сториз или экрана избранного 
+If the parameter `favorite: <Bool?>` is equal true, the list will be displayed favorite stories.
 
 ```swift
 var storyView: StoryView!
@@ -172,202 +182,214 @@ override func viewDidLoad() {
 	storyView.create()
 }
 ```
-### Методы
-* `create` - запускает открытие сессии и получения списка сторис;
-* `refresh` - служит для обновления списка сторис;
-* `clear` - служит для очистки кэша изображений;
-* `closeStory(complete: () -> Void)` - служит для закрытия ридера сторис, `complete` вызывается после закрытия ридера;
-* `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - служит для отображения кастомного контроллера поверх ридера историй.
 
-### Параметры и свойства
-* `delegate` - должен реализовывать протокол *<[StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)>*;
-* `deleagateFlowLayout` - должен реализовывать протокол *<[StoryViewDeleagateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDeleagateFlowLayout)>*;
-* `tags` - список тэгов, для фильтрации контента *\<Array\<String>>*;
-* `target` - контроллер для отображения ридера *\<UIViewController>*;
-* `isContent` - отслеживание наполнения списка сторис *\<Bool>*;
-* `storyCell` - кастомная ячейка, должена реализовывать протокол *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
-* `favoriteCell` - кастомная ячейка избранного, должена реализовывать протокол *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
+### Methods
+
+* `create` - running internal StoryView logic;
+* `refresh` - refresh stories list;
+* `clear` - clear cache of images;
+* `closeStory(complete: () -> Void)` - closing the story reader with a closure, `complete` is called after the reader is closed;
+* `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - displaying a custom controller on top of the story reader.
+
+### Parameters and properties
+
+* `delegate` - should implement the protocol *<[StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)>*;
+* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDeleagateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDeleagateFlowLayout)>*;
+* `tags` - list of tags for content filtering *\<Array\<String>>*;
+* `target` - controller for reader display *\<UIViewController>*;
+* `isContent` - there is any content in the list of stories *\<Bool>*;
+* `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
+* `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
 
 ## OnboardingStory
-Онбординг используются для отображения сторис не представленных в основном списке
-### Отображение
+
+Onboarding is used to display stories not present in the main list.
+
+### Presentation
 ---
-**Примечание**  
-Если перед показом онбординг сторис не был задан параметр *settings* у `InAppStory`, его необходимо задать:
+**Remark**  
+If the *settings* parameter was not specified for `InAppStory`, before showing onboarding, it should be set:
 
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
 
-Для отображения показа онбординга необходимо задать делегат `onboardingDelegate` и вызвать метод у синглтон класса `InAppStory.shared`:
+To display onboarding, you need to set `onboardingDelegate` and call the `showOnboarding` method of the singleton class `InAppStory.shared`:
 
 ```swift
 InAppStory.shared.showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: <()->Void>)
 ```
 
-Для закрытия ридера онбординга необходимо вызвать `closeOnboarding(complete: () -> Void)`. Это может понадобиться, например, при обработки открытия ссылки по нажатию кнопки. `complete` вызывается после закрытия ридера.
+To close the reader of onboarding, call `closeOnboarding(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 
 ## SingleStory
-Используются для отображения сторис по её id или слагу
-### Отображение
+
+Used to display stories by their id or slug.
+
+### Presentation
 ---
-**Примечание**  
-Если перед показом единичной сторис не был задан параметр *settings* у `InAppStory`, его необходимо задать:
+**Remark**  
+If the *settings* parameter was not specified for `InAppStory`, before showing single story, it should be set:
 
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
 
-Для отображения показа онбординга необходимо задать делегат `singleStoryDelegate ` и вызвать метод у синглтон класса `InAppStory.shared`:
+To display single story, you need to set `singleStoryDelegate` and call the `showSingleStory` method of the singleton class `InAppStory.shared`:
 
 ```swift
 InAppStory.shared.showSingleStory(from target: <UIViewController>, with id: <String>, delegate: <SingleStoryDelegate>, complete: <()->Void>)
 ```
 
-Для закрытия ридера единичной сторис необходимо вызвать `closeSingleStory(complete: () -> Void)`. Это может понадобиться, например, при обработки открытия ссылки по нажатию кнопки. `complete` вызывается после закрытия ридера.
+To close the reader of single story, call `closeSingleStory(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 
-## Протоколы
+## Protocols
 
 ### StoryViewDeleagate
 
-* `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - вызывается при обновлении списка;
+* `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - called after the contents of the list are updated;
 * `storyView(_ storyView: <StoryView>, actionWith type: <ActionType>, for target: <String>)
-` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `storyReaderWillShow()` - вызывается перед открытием ридера сторис;
-* `storyReaderDidClose()` - вызывается после закрытия ридера сторис;
-* `favoriteCellDidSelect()` - вызывается при нажатии на ячейку избранного;
-    
-    
+` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
+* `storyReaderWillShow()` - called before the reader will show;;
+* `storyReaderDidClose()` - called after closing the story reader;
+* `favoriteCellDidSelect()` - called when the favorite cell has been selected;
+
 ### StoryViewDeleagateFlowLayout
 
-* `sizeForItemAt() -> <CGSize>` - возвращает размер ячейки для списка;
-* `insetForSection() -> <UIEdgeInsets>` - возвращает отступы от краёв списка для ячеек;
-* `minimumLineSpacingForSection() -> <CGFloat>` - возвращает отступы по вертикали между ячейками в списке;
-* `minimumInteritemSpacingForSection() -> <CGFloat>` - возвращает отступы по горизонтали между ячеками в списке;
+Methods of delegate, like in UICollectionViewDelegateFlowLayout
+
+* `sizeForItemAt() -> <CGSize>` - returns the cell size for the list;
+* `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
+* `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
+* `minimumInteritemSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
 
 ### OnboardingDelegate
 
-* `onboardingUpdated(isContent: <Bool>)` - вызывается при получении списка сторис;
-* `onboardingReader(actionWith target: <String>, for type: <ActionType>)` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `onboardingReaderWillShow()` - вызывается перед открытием ридера сторис;
-* `onboardingReaderDidClose()` - вызывается после закрытия ридера сторис;
+* `onboardingUpdated(isContent: <Bool>)` - called after the contents of the list are updated;
+* `onboardingReader(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
+* `onboardingReaderWillShow()` - called before the reader will show;
+* `onboardingReaderDidClose()` - called after closing the story reader;
 
 ### SingleStoryDelegate
 
-* `singleStoryUpdated(isContent: <Bool>)` - вызывается при получении единичной сторис;
-* `singleStory(actionWith target: <String>, for type: <ActionType>)` - вызывается при получении ссылки из сторис с типом взаимодействия *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `singleStoryReaderWillShow()` - вызывается перед открытием ридера сторис;
-* `singleStoryReaderDidClose()` - вызывается после закрытия ридера сторис;
+* `singleStoryUpdated(isContent: <Bool>)` - called after a single story is received;
+* `singleStory(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
+* `singleStoryReaderWillShow()` - called before the reader will show;
+* `singleStoryReaderDidClose()` - called after closing the story reader;
 
 ### PlaceholderProtocol  
-* `isAnimate: Bool { get }` - возвращает состояние анимации
 
----
-* `start` - запуск анимации
-* `stop` - остановка анимации
+* `isAnimate: Bool { get }` - returns the state of the animation
+* `start` - start animation
+* `stop` - stop animation
 
 ### GamePlaceholderProtocol  
-* `func setProgress(progress: Double)` - Установка значение прогресса (0.0 - 1.0)
+
+* `func setProgress(progress: Double)` - setting the progress value (0.0 - 1.0)
 
 ### StoryCellProtocol
 
-* `reuseIdentifier: <String> { get }` - возвращает идентификатор ячейки;
-* `nib: <UINib?> { get }` - возвращает nib визуального представления ячейки;  
-
----
-* `setTitle(_ text: <String>)` - заголовок сторис;
-* `setSource(_ text: <String>)` - источник сторис;
-* `setImageURL(_ url: <URL>)` - адрес картинки для ячейки;
-* `setVideoURL(_ url: <URL>)` - адрес видео для ячейки;
-* `setOpened(_ value: <Bool>)` - открывалась ли сторис;
-* `setHighlight(_ value: <Bool>)` - зажатие ячейки из списка;
-* `setBackgroundColor(_ color: <UIColor>)` - цвет фона ячейки, если картинка не задана;
-* `setTitleColor(_ color: <UIColor>)` - цвет заголовка сторис;
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation; 
+* `setTitle(_ text: <String>)` - story title;
+* `setImageURL(_ url: <URL>)` - image url for cover;
+* `setVideoURL(_ url: <URL>)` - video url for animated cover;
+* `setOpened(_ value: <Bool>)` - set new state if story is opened;
+* `setHighlight(_ value: <Bool>)` - set new state if story cell if highlighted;
+* `setBackgroundColor(_ color: <UIColor>)` - background color of cell;
+* `setTitleColor(_ color: <UIColor>)` - title color of cell;
+* `setSound(_ value: Bool)` - does the story have sound;
 
 ### FavoriteCellProtocol
 
-* `reuseIdentifier: <String> { get }` - возвращает идентификатор ячейки;
-* `nib: <UINib?> { get }` - возвращает nib визуального представления ячейки;  
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation;  
 
-* `favoritesCount: Int { get set }` - общее колличество сторис в избранном;
-
----
-* `setHighlight(_ value: <Bool>)` - зажатие ячейки из списка;
-* `setImages(_ urls: <Array<URL?>>)` - список адресов картинок первых четырёх избранных сторис;
-* `setImagesColors(_ colors: <Array<UIColor?>>)` - список фоновых цветов первых четырёх избранных сторис;
-* `setBackgroundColor(_ color: <UIColor>)` - общий фон ячейки;
-
+* `favoritesCount: Int { get set }` - total count of stories in favorites;
+* `setHighlight(_ value: <Bool>)` - set new state if story cell if highlighted;
+* `setImages(_ urls: <Array<URL?>>)` - a list of addresses of the first four images stories in favorites;
+* `setImagesColors(_ colors: <Array<UIColor?>>)` - a list of background colors of the first four stories in favorites;
+* `setBackgroundColor(_ color: <UIColor>)` - main background color of a cell;
 
 ## enum
 
 ### ScrollStyle
-Стиль перелистывания сторис в ридере:  
 
-* `.flat` - обычноеб друг за другом;
-* `.cover` - с накрытием следующим слайдом;
-* `.cube` - в виде трёхмерного куба;
+Story transition animation style in reader:  
+
+* `.flat` - usual, one after another, like UIScrollView;
+* `.cover` - covered with next slide;
+* `.cube` - in the form of a 3D cube;
 
 
 ### PresentationStyle
-Стиль анимации отображения ридера:
 
-* `.crossDissolve` - проявление ридера из прозрачности;
-* `.modal` - выезжание рида из под нижнего края экрана;
+Reader display animation style:
+
+* `.crossDissolve` - showing reader from transparency;
+* `.modal` - modal reader display;
 
 ### ClosePosition
-Позиция кнопки закрыть на карточке в ридер
 
-* `.left` - слева от таймеров;
-* `.right` - справа от таймеров;
-* `.bottomLeft` - слева под таймерами;
-* `.bottomRight` - справа под таймерами;
+Position of the close button on the card in the reader:
+
+* `.left` - to the left of the timers;
+* `.right` - to the right of the timers;
+* `.bottomLeft` - on the left under the timers;
+* `.bottomRight` - on the right under the timers;
 
 ### ActionType
 
-Действие по которому была получена ссылка
+The action by which the link was obtained:
 
-* `.button` - нажатие кнопки;
-* `.swipe` - свайп по слайду вверх.
+* `.button` - push the button;
+* `.swipe` - swipe up slide.
 
-## Объекты
+## Objects
+
 ### Settings
-#### Параметры
-* `userID` - уникальный идентификатор пользователя *\<String>*;
-* `tags` - список тэгов, для фильтрации контента *\<Array\<String>>*;
+
+#### Parameters
+
+* `userID` - unique user identifier *\<String>*;
+* `tags` - list of tags for content filtering *\<Array\<String>>*;
 
 ### WidgetStory
-#### Параметры
-* `id` - уникальный идентификатор истории *\<String>*;
-* `title` - заголовок истории *\<String>*;
-* `image` - ссылка на изображение обложки *\<String>*;
-* `color` - цвет вона истории в HEX формате *\<String>*;
+
+#### Parameters
+
+* `id` - unique identifier of story *\<String>*;
+* `title` - story title *\<String>*;
+* `image` - link to cover image *\<String>*;
+* `color` - background color of the story in HEX format *\<String>*;
 
 ## NotificationCenter
 
-### События
-Во всех событиях, кроме `StoriesLoaded`, в `userInfo` передаются `id`, `title`, `tags`, `slidesCount`
+### Events
 
-* `StoriesLoaded` - список сториз загрузился, виджет готов к работе (срабатывает каждый раз при загрузке списка, в том числе и при refresh). В `userInfo` только count - количество сториз.
-* `ClickOnStory` - клик по сториз в списке (доп параметр `source`)
-* `ShowStory` - показ ридера со сториз (доп параметр `source`)
-* `CloseStory` - закрытие сториз (доп параметры - `index`, `action`, `source`)
-* `ClickOnButton` - клик по кнопке в сториз (доп параметры - `index`, `link`)
-* `ShowSlide` - показ слайда (доп параметр - `index`)
-* `LikeStory` - лайк сториз (доп параметры - `index`, `value`)
-* `DislikeStory` - дизлайк сториз (доп параметры - `index`, `value`)
-* `FavoriteStory` - добавление сториз в избранное (доп параметры - `index`, `value`)
-* `ClickOnShareStory` - нажатие на кнопку поделиться (доп параметр - `index`)
-* `StartGame` - открытие ридера с игрой (доп параметр - `index`)
-* `CloseGame` - закрытие ридера с игрой (доп параметр - `index`)
-* `FinishGame` - закрытие игры по окончании (доп параметр - `index`, `result<Dictionary<String, Any>?>`)
+Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`. The exception is `StoriesLoaded`
 
-### Ошибки
-В уведомлениях об ошибке так же приходит `userInfo` в виде словаря `["errorMessage" : <Error_message_string>]`
+* `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count;
+* `ClickOnStory` - click on story in the list (additional parameter `source`;
+* `ShowStory` - display of the story reader (additional parameter `source`;
+* `CloseStory` - closing story (additional parameters - `index`, `action`, `source`);
+* `ClickOnButton` - click on the button in the story (additional parameters - `index`, `link`);
+* `ShowSlide` - show slide (additional parameters - `index`);
+* `LikeStory` - story like (additional parameters - `index`, `value`);
+* `DislikeStory` - story dislike (additional parameters - `index`, `value`);
+* `FavoriteStory` - adding story to favorites (additional parameters - `index`, `value`);
+* `ClickOnShareStory` - pushing the share button (additional parameters - `index`);
+* `StartGame` - opening the reader with the game (additional parameters - `index`);
+* `CloseGame` - closing the reader with the game (additional parameters - `index`);
+* `FinishGame` - closing the game at the end (additional parameters - `index`, `result<Dictionary<String, Any>?>`);
 
-* `SessionFailure` - ошибка при работе с сессией
-* `StoryFailure` - ошибка при работе с сторис
-* `CurrentStoryFailure` - ошибка при загрузке полной информации по сторис
-* `NetworkFailure` - ошибка при работе сетью (нет интернета)
+### Errors
 
+In error notifications, `userInfo` also comes in the form of a dictionary `["errorMessage": <Error_message_string>]`
+
+* `SessionFailure` - session error;
+* `StoryFailure` - error in story;
+* `CurrentStoryFailure` - error when loading full story information;
+* `NetworkFailure` - network error (no internet);

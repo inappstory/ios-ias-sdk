@@ -1,7 +1,10 @@
-# Смена пользователя
+# User change
 
-После создания и инициализации `StoryView` бывает необходимость заменить пользователя в приложении, например при регистрации или переавторизации.
-В библиотеке предусмотрена уникальность открытой сессии в зависимости от настроек которые были переданы в `InAppStory` и при изменении объекта `Settings` будет открыта новая сессия и запрошин новый контент для списков.
+After creating and initializing the `StoryView`, it may be necessary to replace the user in the application, for example, during registration or re-authorization.
+
+The library provides for the uniqueness of an open session, depending on the settings that were passed to `InAppStory` and when the `Settings` object was changed.
+
+To refresh the data, you need to call `refresh()`, a new session will be opened and new content for the lists will be requested.
 
 ##### ViewController.swift
 ```swift
@@ -9,6 +12,7 @@
 
 func changeUser() {
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
+    storyView.refresh()
 }
 ...
 ```

@@ -1,24 +1,26 @@
-# Кастомизация ячейки
-## Кастомизация через свойства
-Кастомизация через свойства изменяет внешний вид стандартной ячеки с фиксированым загруглением краём и толщиной обводки. Размеры так же распространяются на ячейку избранного. Для изменения внешнего вида, формы и поведения ячейки, необходимо создавать собственную ячейку, реализующую `StoryCellProtocol` и `FavoriteCellProtocol`, подробнее описано [здесь](https://github.com/inappstory/ios-sdk/blob/main/Samples/CustomCell.md#кастомизация-через-storycellprotocol-и-favoritecellprotocol).
+# Cell customization
 
-1) Необходимо инициализировать InAppStory в проекте
+## Customization through properties
+
+Customization through properties changes the appearance of a standard cell with a fixed rounding and border thickness. Sizes also apply to the favorites cell. To change the appearance, shape and behavior of a cell, you need to create your own cell. The cell should implement `StoryCellProtocol` and` FavoriteCellProtocol`, described in more detail [here](https://github.com/inappstory/ios-sdk/blob/main/Samples/CustomCell.md#Customization-via-StoryCellProtocol-and-FavoriteCellProtocol).
+
+1) You need to initialize InAppStory in the project
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    //library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
      
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
     return true
 }
 ```
 
-2) Настроить внешний вид ячейки через параметры
+2) Customizing the appearance of a cell through parameters
 
 ##### AppDelegate.swift
 ```swift
@@ -26,34 +28,30 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {
     ...
     
-    // настройка внещнего вида
-    InAppStory.shared.showCellTitle = true //отображение заголовка
-    InAppStory.shared.showCellSource = true //отображение источника
+    // customization of appearance
+    InAppStory.shared.showCellTitle = true //title display
     
-    InAppStory.shared.cellBorderColor = .purple //цвет рамки вокруг не открытой ячейки 
+    InAppStory.shared.cellBorderColor = .purple //border color around an unopened cell 
     
-    InAppStory.shared.cellFont = UIFont.systemFont(ofSize: 12.0) //шрифт заголовка (можно указать свой, предварительно подключив его в проект)
-    InAppStory.shared.cellTitleColor = .white //цвет заголовка
-    
-    InAppStory.shared.cellSourceFont = UIFont.systemFont(ofSize: 12.0) //шрифт источника (можно указать свой, предварительно подключив его в проект)
-    InAppStory.shared.cellSourceTitleColor = .black //цвет источника
+    InAppStory.shared.cellFont = UIFont.systemFont(ofSize: 12.0) //title font (you can specify your own by first connecting it to the project)
+    InAppStory.shared.cellTitleColor = .white //title color
 }
 ```
 
-3) В `ViewController` где будет находиться `StoryView` необходимо его создать
+3) Should initialize `StoryView` in `ViewController`
 
 ##### ViewController.swift
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
         
-    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //инициализация StoryView
-    view.addSubview(storyView) //добавление объекта на view
+    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
+    view.addSubview(storyView) //adding an object to a view
     
-    storyView.create() //запуск внутренней логики
+    storyView.create() //running internal logic
 }
 ```
-4) Так же необходимо добавить `StoryViewDeleagateFlowLayout` и реализовать его
+4) It is also necessary to add `StoryViewDeleagateFlowLayout` and implement it
 
 ##### ViewController.swift
 ```swift 
@@ -63,70 +61,70 @@ override func viewDidLoad() {
 override func viewDidLoad() {
     super.viewDidLoad()
         
-    storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //инициализация StoryView
-    storyView.deleagateFlowLayout = self //определение делегата отображения списка
+    storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
+    storyView.deleagateFlowLayout = self //defining a list display delegate
     
-    view.addSubview(storyView) //добавление объекта на view
+    view.addSubview(storyView) //adding an object to a view
     
-    storyView.create() //запуск внутренней логики
+    storyView.create() //running internal logic
 }
 ...
-// Реализация методов StoryViewDeleagateFlowLayout
+// Implementing StoryViewDeleagateFlowLayout Methods
 func sizeForItem() -> CGSize
 {
-    return CGSize(width: 160.0, height: 160.0) //размер ячейки
+    return CGSize(width: 160.0, height: 160.0) //cell size
 }
 
 func insetForSection() -> UIEdgeInsets
 {
-    return UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0) //отступы от краёв StoryView
+    return UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0) //padding from the edges of the StoryView
 }
 
 func minimumLineSpacingForSection() -> CGFloat
 {
-    return 4.0 //отступы между ячеками по вертикали
+    return 4.0 //vertical padding between cells
 }
 
 func minimumInteritemSpacingForSection() -> CGFloat
 {
-    return 4.0 //отступы между ячеками по горизонтали
+    return 4.0 //horizontal padding between cells
 }
 
 ```
 
-## Кастомизация через `StoryCellProtocol` и `FavoriteCellProtocol`
+## Customization via `StoryCellProtocol` and `FavoriteCellProtocol`
 
-1) Необходимо инициализировать InAppStory в проекте
+1) You need to initialize InAppStory in the project
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    //library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
     return true
 }
 ```
 
-2) В `ViewController` где будет находиться `StoryView` необходимо его создать
+2) Should initialize `StoryView` in `ViewController`
 
 ##### ViewController.swift
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
         
-    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //инициализация StoryView
-    view.addSubview(storyView) //добавление объекта на view
+    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
+    view.addSubview(storyView) //adding an object to a view
     
-    storyView.create() //запуск внутренней логики
+    storyView.create() //running internal logic
 }
 ```
 
-3) Так же необходимо добавить `StoryViewDeleagateFlowLayout` и реализовать его
+3) It is also necessary to add `StoryViewDeleagateFlowLayout` and implement it
 
 ##### ViewController.swift
 ```swift
@@ -134,152 +132,155 @@ override func viewDidLoad() {
 override func viewDidLoad() {
     super.viewDidLoad()
         
-    storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //инициализация StoryView
-    storyView.deleagateFlowLayout = self //определение делегата отображения списка
+    storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
+    storyView.deleagateFlowLayout = self //defining a list display delegate
     
-    view.addSubview(storyView) //добавление объекта на view
+    view.addSubview(storyView) //adding an object to a view
     
-    storyView.create() //запуск внутренней логики
+    storyView.create() //running internal logic
 }
 ...
-// Реализация методов StoryViewDeleagateFlowLayout
+// implementing StoryViewDeleagateFlowLayout methods 
 func sizeForItem() -> CGSize
 {
-    return CGSize(width: 160.0, height: 160.0) //размер ячейки
+    return CGSize(width: 160.0, height: 160.0) //cell size
 }
 
 func insetForSection() -> UIEdgeInsets
 {
-    return UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0) //отступы от краёв StoryView
+    return UIEdgeInsets(top: 4.0, left: 4.0, bottom: 4.0, right: 4.0) //padding from the edges of the StoryView
 }
 
 func minimumLineSpacingForSection() -> CGFloat
 {
-    return 4.0 //отступы между ячеками по вертикали
+    return 4.0 //vertical padding between cells
 }
 
 func minimumInteritemSpacingForSection() -> CGFloat
 {
-    return 4.0 //отступы между ячеками по горизонтали
+    return 4.0 //horizontal padding between cells
 }
 
 ```
 
-4) для ячейки списка неодходимо создать класс реализующий протокол `StoryCellProtocol`
+4) For the list cell, create a class that implements the `StoryCellProtocol` protocol
 
 ##### CustomStoryCell.swift
 ```swift
 class CustomStoryCell: UICollectionViewCell 
 {
-    // reuseIdentifier ячеки
+    // cell reuse identifier
     static var reuseIdentifier: String {
         return String(describing: self) 
     }
     
-    // nib файл ячеки, если ячека создавалась только кодом необходимо вернуть nil
+    // nib of the cell's visual representation, 
+    // if the cell was created only in the code, it is necessary to return nil
     static var nib: UINib? {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
 }
 
-// реализация протокола StoryCellProtocol
+// implementation of the StoryCellProtocol
 extension CustomStoryCell: StoryCellProtocol
 {
     func setTitle(_ text: String) {
-        // установка значения заголовка
+        // title of cell
     }
     
     func setSource(_ text: String) {
-        // установка значения источника
+        // source title of cell (deprecated soon)
     }
     
     func setImageURL(_ url: URL) {
-        // ссылка на обложку ячеки
+        // image url for cover
     }
     
     func setVideoURL(_ url: URL) {
-        // ссылка на видео обложку
+        // video url for animated cover
     }
     
     func setOpened(_ value: Bool) {
-        // значение открытия сторис
+        // set new state if story is opened
     }
     
     func setHighlight(_ value: Bool) {
-        // значение зажатие ячекив списке пальцем
+        // set new state if story cell if highlighted
     }
     
     func setBackgroundColor(_ color: UIColor) {
-        // установка цвета фона картинки
-    }
-    
-    func setBack(_ color: UIColor) {
-        // установка цвета фона ячеки
+        // set background color of cell
     }
     
     func setTitleColor(_ color: UIColor) {
-        // установка цвета заголовка
+        // set title color of cell
+    }
+    
+    func setSound(_ value: Bool) {
+        // does the story have sound
     }
 }
 ```
 
-5) если в приложении будет включен функционал избранного создать класс реализующий протокол `FavoriteCellProtocol`
+5) If the favorite functionality is enabled in the application, create a class that implements the `FavoriteCellProtocol` protocol
 
 ##### CustomFavoriteCell.swift
 ```swift
 class CustomFavoriteCell: UICollectionViewCell
 {
-    // reuseIdentifier ячеки
-
+    // cell reuse identifier
     static var reuseIdentifier: String {
         return String(describing: self)
     }
     
-    // nib файл ячеки, если ячека создавалась только кодом необходимо вернуть nil
+    // nib of the cell's visual representation, 
+    // if the cell was created only in the code, it is necessary to return nil
     static var nib: UINib? {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
 }
 
-// реализация протокола FavoriteCellProtocol
+// implementation of the FavoriteCellProtocol
 extension StoryFavoriteCell: FavoriteCellProtocol
 {
     func setImages(_ urls: Array<URL?>) {
-        // список ссылок первых четырёх ячеек избранного, может быть меньше 4-х
+        // a list of addresses of the first four images stories in favorites
     }
     
     func setImagesColors(_ colors: Array<UIColor?>) {
-        // список фоновых цветов обложек
+        // a list of background colors of the first four stories in favorites
     }
     
     func setHighlight(_ value: Bool) {
-        // значение зажатие ячекив списке пальцем
+        // set new state if story cell if highlighted
     }
     
     func setBackgroundColor(_ color: UIColor) {
-        // установка цвета фона ячеки
+        // main background color of a cell
     }
 }
 ```
 
-> **Обратите внимание!**  
-> У библиотеки нет доступа к кастомной ячейки, кроме как реализации протокола `FavoriteCellProtocol` и для поддержания отображения актуальной иформации и избежания дублей миниатюр, желательно чистить изображения и цвета при каждом вызове методов `setImages` и `setImagesColors`
+> **Pay attention!**  
+> The library does not have access to the custom cell, except for the implementation of the `FavoriteCellProtocol` protocol. To display the actual information and avoid duplicate thumbnails, it is necessary to clean the images and colors with each call of the `setImages` and `setImagesColors` methods.
 
 
-6) далее необходимо указать данные ячейки у экземпляра класса `StoryView`
+6) It is necessary to specify cell data for an instance of the `StoryView` class
 
 ##### ViewController.swift
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
         
-    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //инициализация StoryView
+    let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
     
-    storyView.storyCell = CustomStoryCell()
-    storyView.favoriteCell = CustomFavoriteCell()
+    storyView.deleagateFlowLayout = self //defining a list display delegate
     
-    view.addSubview(storyView) //добавление объекта на view
+    storyView.storyCell = CustomStoryCell() //custom list cell
+    storyView.favoriteCell = CustomFavoriteCell() //custom favorite cell
     
-    storyView.create() //запуск внутренней логики
+    view.addSubview(storyView) //adding an object to a view
+    
+    storyView.create() //running internal logic
 }
 ```

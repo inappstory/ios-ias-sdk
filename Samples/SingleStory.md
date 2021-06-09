@@ -1,60 +1,64 @@
 # SingleStory
 
-Данный вид сторис открывается по заданому `id`, может использоваться для открытия из push-уведомления или быть привязанным к сущьности в приложении (например опрос или трейлер)
+This type of story is opened by the specified `id` or `slug`. It can be used open from a push notification or be tied to an entity in an app (like a poll or trailer).
 
-Для отображения `SingleStory` необходимо инициализировать InAppStory в проекте
+To display single story, you need to initialize InAppStory library in the project.
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
-     InAppStory.shared.initWith(serviceKey: <String>)
+    // library initialization
+    InAppStory.shared.initWith(serviceKey: <String>)
      
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
     return true
 }
 ```
 
-Далее в контроллере, где необходимо показать единичную сторис, например обработалось PUSH уведомление или была нажата кнопка привязаная к сторис, вызвать у `InAppStory` метод `showSingeStory`
+In the controller, where it is necessary to show a single story, call the `showSingeStory` method on `InAppStory`.
 
 ##### ViewController.swift
+
 ```swift 
 ... 
 
 func pushNotification() {
     InAppStory.shared.showSingeStory(with: <String>, from: <UIViewController>, delegate: <SingleStoryDelegate>) {
-        // замыкание обрабатывающее открытие ридера единичной сторис
+        // the closure is triggered when the single story reader is opened
     }
 }
 ...
 ```
-Так же, для отслеживания действий ридера с единичной сторис, необходимо реализовать методы делегата `SingleStoryDelegate`
+
+To track the actions of the single story reader, you need to implement the `SingleStoryDelegate ` methods
 
 ##### ViewController.swift
+
 ```swift 
 extension ViewController: SingleStoryDelegate
 {
     func singleStoryUpdated(isContent: Bool) {
-        // обработка получения ответа от сервера
+        // called when the contents of the list are updated
     }
     
-    // получение ссылки из сторис
+    // called when a button or SwipeUp event is triggered in the reader
     func onboardingReader(actionWith target: String, for type: ActionType) {
-        if type == .swipe { // ссылка получена по действию swipeUP
+        if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
-               // передача ссылки контроллеру с WebView
+               // passing link to controller with WebView
                swipeContentController.linkURL = url
-               // открытие контроллера поверх ридера
-               InAppStory.shared.singleStoryPresent(controller: swipeContentController)
+               // opening the controller on top of the reader
+               InAppStory.shared.onboardingPresent(controller: swipeContentController)
            }
        } else {
-            // если обрабатываемыя ссылка ведёт на экран в приложении, желательно закрыть ридер
-            InAppStory.shared.closeSingleStory {
-                // далее обработать ссылку, например для перехода по ней в safari
+            // if the processed link leads to a screen in the application, 
+            // it is recommend to close the reader
+            InAppStory.shared.closeOnboarding {
+                // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
@@ -63,11 +67,11 @@ extension ViewController: SingleStoryDelegate
     }
     
     func singleStoryReaderWillShow() { 
-        // ридер будет показан
+        // called before the reader will show
     }
     
     func singleStoryReaderDidClose() { 
-        // ридер закрылся
+        // called after closing the story reader
     }
 }
 ```

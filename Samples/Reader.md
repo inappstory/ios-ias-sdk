@@ -1,58 +1,61 @@
-# Кастомизация ридера
+# Reader customization
 
-#### Изменение внешноего види ридера:
+#### Change the appearance of the reader:
 
-1. [Полжение кнопки "Закрыть"](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#полжение-кнопки-закрыть)
-2. [Изменение иконок в нижней панеле](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#изменение-иконок-в-нижней-панеле)
-3. [Изменение прелоадера на не загруженных карточках](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#изменение-прелоадера-на-не-загруженных-карточках)
-4. [Анимация появления](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#анимация-появления)
-5. [Анимация перелистывания](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#анимация-перелистывания)
+1. [Close button position](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Close-button-position)
+2. [Changing icons in the bottom panel](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Changing-icons-in-the-bottom-panel)
+3. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
+4. [Presentation style](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Presentation-style)
+5. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Swipe-animation)
 
-### Полжение кнопки "Закрыть"
+### Close button position
 
-При инициализации библиотеки в приложении необходимо указать `closeButtonPosition`. По умолчанию выставлено положение `right`.  
-В библиотеке пердусмотрено 4 положения кнопки "Закрыть": 
+When initializing a library in an application, you can specify `closeButtonPosition`. The default is `.right`.
+There are 4 positions of the "Close" button in the library:
 
-* right - справа, на уровне таймеров
-* left - слева, на уровне таймеров
-* bottomRight - справа, под таймера
-* bottomLeft - слева, под таймерами
+* right - on the right, at the timer level
+* left - to the left, at the timer level
+* bottomRight - on the right, under the timer level
+* bottomLeft - on the left, under the timer level
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    // library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
+    // close button position
     InAppStory.shared.closeButtonPosition = <ClosePosition>
     
     return true
 }
 ```
+
 --
-### Изменение иконок в нижней панеле
+### Changing icons in the bottom panel
 
-Иконки нижней панели можно заменять на любые изображения. У каждй кнопки имеется 2 состаяния, обычное и выделенное. Размер изображения желательно использовать 24x24 pt.
+The bottom panel icons can be replaced with any images. Each button has 2 states, normal and highlighted. It is desirable to use the image size 24x24 pt.
 
-Для отображения нижней панели с кнопками необходимо после инициализации библиотеки указать функционал панели и убедится, что данный функционал доступен и включён в консоли. Далее указать все варианты необходимых картинок.
+To display the bottom panel with buttons, after initializing the library, specify the panel functionality and make sure that this functionality is available and enabled in the console. Next, indicate all the options for the required pictures.
 
 ##### AppDelegate.swift
+
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    // library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     
-    InAppStory.shared.likePanel = <Bool> // включение панели кнопок с лайками
-    InAppStory.shared.favoritePanel = <Bool> // включение панели кнопок с избранным
-    InAppStory.shared.sharePanel = <Bool> // включение панели кнопок с шарингом
+    InAppStory.shared.likePanel = <Bool> // enable button bar with likes
+    InAppStory.shared.favoritePanel = <Bool> // enable button bar with favorites
+    InAppStory.shared.sharePanel = <Bool> // enable button bar with sharing
     
     InAppStory.shared.likeImage = <UIImage>
     InAppStory.shared.likeSelectedImage = <UIImage>
@@ -63,18 +66,20 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     InAppStory.shared.shareImage = <UIImage>
     InAppStory.shared.shareSelectedImage = <UIImage>
     
-    // Изменение иконок звука
-    InAppStory.shared.soundImage = <UIImage> // Звук включён
-    InAppStory.shared.soundSelectedImage = <UIImage> // Звук отключён
+    // change sound icons
+    InAppStory.shared.soundImage = <UIImage> // Sound on
+    InAppStory.shared.soundSelectedImage = <UIImage> // Sound off
     
     return true
 }
 ```
 --
 
-### Изменение прелоадера на не загруженных карточках
+### Changing the preloader on unloaded cards
 
-Во время первой загрузки и последующем пролистывании может отображаться прелоадер, пока не будет загружен контент сторис. Анимацию прелоадера можно изменить, для этого необходимо создать `UIView` и реализовать в нём протокол `PlaceholderProtocol` и после инициализации библиотеки указать его библиотеке.
+During the first download and when swiping, a preloader may be displayed until the story content is loaded.
+
+The animation of the preloader can be changed, for this you need to create a `UIView` and implement the `PlaceholderProtocol` protocol in it. After initializing the library, point it to the library.
 
 ##### CustomPlaceholderView.swift
 ```swift
@@ -82,16 +87,16 @@ class CustomPlaceholderView: UIView, PlaceholderProtocol
 {
     var isAnimate: Bool {
         get {
-            return <Bool> // значение состаяния анимации
+            return <Bool> // animation state value
         }
     }
     
     func start() {
-        // запуск анимации
+        // start animation
     }
     
     func stop() {
-        // остановка анимации
+        // stop animation
     }
 }
 ```
@@ -100,63 +105,66 @@ class CustomPlaceholderView: UIView, PlaceholderProtocol
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    // library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
 
+    // seting custom placeholder view to InAppStory
     InAppStory.shared.placeholderView = CustomPlaceholderView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0))
     
     return true
 }
 ```
 --
-### Анимация появления
+### Presentation style
 
-Показ ридера может осуществлятся двумя видами анимации:
+The reader can be shown in two types of animation:
 
-* crossDissolve - анимация alpha от 0 до 1
-* modal - выезд ридера из под нижней части экрана
+* crossDissolve - alpha animation from 0 to 1
+* modal - reader show from under the bottom of the screen
 
-Установка вида анимации осуществляется после инициализации библиотеки в приложении.
+Setting the type of animation is carried out after initializing the library in the application.
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    // library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories  
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
 
+    // setting reader animation style
     InAppStory.shared.presentationStyle = <PresentationStyle>
     
     return true	
 }
 ```
 --
-### Анимация перелистывания
+### Swipe animation
 
-Перелистывание сторис в ридере может сопровождаться несколькими анимациями:
+Scrolling through stories in the reader can be represented by several animations:
 
-* flat - простое последовательное замощение 
-* cover - наезжание следующей сторис на предыдущую с эфектом паралакса
-* cube - каждая сторис находится на грани куба (like instagram)
+* flat - simple sequential tiling
+* cover - overlapping the previous story with the next one with the effect of parallax
+* cube - each story is on the side of the cube (like instagram)
 
-Установка вида анимации осуществляется после инициализации библиотеки в приложении.
+Setting the type of animation is carried out after initializing the library in the application.
 
 ##### AppDelegate.swift
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 {
-    //инициализация библиотеки
+    // library initialization
     InAppStory.shared.initWith(serviceKey: <String>)
     
-    // настроки так же можно указать в любой момент до создания StoryView или вызова отдельных сторис 
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
     InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
 
+    // setting swipe animation style
     InAppStory.shared.scrollStyle = <ScrollStyle>
     
     return true
