@@ -373,36 +373,36 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`. The exception 
 
 * `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count;
 * `ClickOnStory` - click on story in the list with additional parameters:
-	1. 	place where the click came from (`list` or `favorite`);
+    * place where the click came from (`list` or `favorite`);
 * `ShowStory` - display of the story reader with additional parameters:
-	1. `source` - place where the showing came from (`direct`, `onboarding`, `list` or `favorite`);
+    * `source` - place where the showing came from (`direct`, `onboarding`, `list` or `favorite`);
 * `CloseStory` - closing story with additional parameters:
-	1. 	`index` - index of the slide from which the closure occurred,
-	2. `action` - closing action (`swipe`, `click`, `auto` or `custom`),
-	3. `source` - place where the closing came from (`direct`, `onboarding`, `list` or `favorite`);
+    * `index` - index of the slide from which the closure occurred,
+    * `action` - closing action (`swipe`, `click`, `auto` or `custom`),
+    * `source` - place where the closing came from (`direct`, `onboarding`, `list` or `favorite`);
 * `ClickOnButton` - click on the button in the story with additional parameters:
-	1. `index` - index of the slide from which the get link,
-	2. `link` - string link;
+    * `index` - index of the slide from which the get link,
+    * `link` - string link;
 * `ShowSlide` - show slide with additional parameters:
-	1. 	`index` - index of the slide that now show;
+    * `index` - index of the slide that now show;
 * `LikeStory` - story like with additional parameters:
-	1. `index` - index of the slide which "like" pressed,
-	2. `value` - value of "like" position (`true` - is like, `false` - isn't like);
+    * `index` - index of the slide which "like" pressed,
+    * `value` - value of "like" position (`true` - is like, `false` - isn't like);
 * `DislikeStory` - story dislike with additional parameters:
-	1. `index` - index of the slide which "dislike" pressed,
-	2. `value` - value of "dislike" position (`true` - is dislike, `false` - isn't dislike);
+    * `index` - index of the slide which "dislike" pressed,
+    * `value` - value of "dislike" position (`true` - is dislike, `false` - isn't dislike);
 * `FavoriteStory` - adding story to favorites with additional parameters:
-	1. `index` - index of the slide which "favorite" pressed,
-	2. `value` - value of "favorite" position (`true` - is favorite, `false` - isn't favorite);
+    * `index` - index of the slide which "favorite" pressed,
+    * `value` - value of "favorite" position (`true` - is favorite, `false` - isn't favorite);
 * `ClickOnShareStory` - pushing the share button with additional parameters:
-	1. `index` - index of the slide which "share" pressed;
+    * `index` - index of the slide which "share" pressed;
 * `StartGame` - opening the reader with the game with additional parameters:
-	1. `index` - index of the slide which game start;
+    * `index` - index of the slide which game start;
 * `CloseGame` - closing the reader with the game with additional parameters:
-	1. `index` - index of the slide which game closed;
+    * `index` - index of the slide which game closed;
 * `FinishGame` - closing the game at the end with additional parameters:
-	1. 	`index` - index of the slide which game finished,
-	2. `result<Dictionary<String, Any>?>` - game end results;
+    * `index` - index of the slide which game finished,
+    * `result<Dictionary<String, Any>?>` - game end results;
 
 ### Errors
 
