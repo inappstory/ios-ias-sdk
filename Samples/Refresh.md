@@ -4,7 +4,7 @@ To refresh the list of stories, call `refresh()` from `StoryView`, for example, 
 
 When calling `refresh()`, the data for the list corresponding to the current user session and the list of tags will be re-requested.
   
-See also - [Change user] (UserChange.md), [Change tags] (Tags.md)
+See also - [Change user](UserChange.md), [Change tags](Tags.md)
 
 ##### ViewController.swift
 ```swift
