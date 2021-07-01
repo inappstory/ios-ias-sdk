@@ -2,7 +2,7 @@
 
 Covers for cells can be rendered as video.
 
-After customizing a cell using `StoryCellProtocol` (description in the [Cell customization] (CustomCell.md) section), you need to implement work with video, if necessary. 
+After customizing a cell using `StoryCellProtocol` (description in the [Cell customization](CustomCell.md) section), you need to implement work with video, if necessary. 
 
 >**Pay atantion** 
 >Caching of video covers is carried out by means of the library and the address to the file (which located  in local storage) comes to the implementation of the `setVideoURL(_ url: URL)` method.
