@@ -25,12 +25,15 @@ public struct WidgetStory {
   public let image: Swift.String
   public let color: Swift.String
 }
-public protocol StoryViewDeleagate : ObjectiveC.NSObjectProtocol {
+public protocol StoryViewDelegate : ObjectiveC.NSObjectProtocol {
   func storyViewUpdated(storyView: InAppStorySDK.StoryView, widgetStories: Swift.Array<InAppStorySDK.WidgetStory>?)
   func storyView(_ storyView: InAppStorySDK.StoryView, actionWith type: InAppStorySDK.ActionType, for target: Swift.String)
   func storyReaderWillShow()
   func storyReaderDidClose()
   func favoriteCellDidSelect()
+}
+@available(*, deprecated, renamed: "StoryViewDelegate", message: "The protocol renamed to StoryViewDelegate")
+public protocol StoryViewDeleagate : InAppStorySDK.StoryViewDelegate {
 }
 public protocol StoryViewDeleagateFlowLayout : ObjectiveC.NSObjectProtocol {
   func sizeForItem() -> CoreGraphics.CGSize
@@ -85,7 +88,7 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
   }
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
-  weak public var delegate: InAppStorySDK.StoryViewDeleagate? {
+  weak public var delegate: InAppStorySDK.StoryViewDelegate? {
     get
     set
   }
@@ -245,7 +248,9 @@ extension InAppStory {
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStory {
+  @available(*, deprecated, renamed: "showSingleStory", message: "The method renamed to showSingleStory(with id:, from target:, delegate:, complete:)")
   public func showSingeStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showSingleStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
   public func closeSingleStory(complete: @escaping () -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
