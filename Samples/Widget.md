@@ -319,7 +319,7 @@ if #available(iOS 14.0, *) {
 The *WidgetStory* list can also be obtained in the `StoryView` - `storyViewUpdated` delegate method, from the `widgetStories: Array<WidgetStory>?` parametr.
 
 ```swift
-extension ViewController: StoryViewDeleagate
+extension ViewController: StoryViewDelegate
 {
     func storyViewUpdated(storyView: StoryView, widgetStories: Array<WidgetStory>?)
     {

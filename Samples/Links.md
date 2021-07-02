@@ -43,7 +43,7 @@ override func viewDidLoad() {
 
 ##### ViewController.swift
 ```swift
-extension ViewController: StoryViewDeleagate
+extension ViewController: StoryViewDelegate
 {
     ...
     

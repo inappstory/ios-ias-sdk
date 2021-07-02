@@ -19,7 +19,7 @@ override func viewDidLoad() {
     storyView.create() //running internal logic
 }
 
-// MARK: - StoryViewDeleagate
+// MARK: - StoryViewDelegate
 // triggered when clicking on the favorites cell
 func favoriteCellDidSelect()
 {
@@ -54,7 +54,7 @@ class FavoritesController: UIViewController {
     }
 }
 
-extension FavoritesController: StoryViewDeleagate
+extension FavoritesController: StoryViewDelegate
 {
     func storyViewUpdated(storyView: StoryView, widgetStories: Array<WidgetStory>?) {
         //called when the data in the StoryView is updated

@@ -5,9 +5,10 @@ A library for embedding stories into an application with customization.
 ## Contents
 
 * [Installation](https://github.com/inappstory/ios-sdk#Installation)
-	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [CocoaPods](https://github.com/inappstory/ios-sdk#CocoaPods)
-	* [Podfile](https://github.com/inappstory/ios-sdk#Podfile)
+	* [Carthage](https://github.com/inappstory/ios-sdk#Carthage)
+	* [Swift Package Manager](https://github.com/inappstory/ios-sdk#Swift-Package-Manager)
+	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
@@ -23,8 +24,8 @@ A library for embedding stories into an application with customization.
 * [SingleStory](https://github.com/inappstory/ios-sdk#SingleStory)
 	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation-1)
 * [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
-	* [StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)
-	* [StoryViewDeleagateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDeleagateFlowLayout)
+	* [StoryViewDelegate](https://github.com/inappstory/ios-sdk#StoryViewDelegate)
+	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
 	* [OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)
 	* [SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)
 	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
@@ -48,26 +49,46 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.5.5              | 1370          | >= 10.0     |
+| 1.6.0              | 1436          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
-### Manual installation
-
-Download `InAppStorySDK.xcframework` from the repository. Connect in the project settings on the *General* tab.
 
 ### CocoaPods
 
-CocoaPods is a dependency manager for Objective-C/Swift, which automates and simplifies the process of using 3rd-party libraries in your projects. To install with cocoaPods, follow the "Get Started" section on [CocoaPods](https://cocoapods.org/).
-
-#### Podfile
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate InAppStory into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 use_frameworks!
 pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 ```
 
-#### Library import
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "inappstory/ios-sdk" ~> 1.6.0
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but InAppStory does support its use on supported platforms.
+
+Once you have your Swift package set up, adding InAppStory as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.6.0"))
+]
+```
+
+### Manual installation
+
+Download `InAppStorySDK.xcframework` from the repository. Connect in the project settings on the *General* tab.
+
+
+### Library import
 
 ##### Objective-C
 
@@ -193,8 +214,8 @@ override func viewDidLoad() {
 
 ### Parameters and properties
 
-* `delegate` - should implement the protocol *<[StoryViewDeleagate](https://github.com/inappstory/ios-sdk#StoryViewDeleagate)>*;
-* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDeleagateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDeleagateFlowLayout)>*;
+* `delegate` - should implement the protocol *<[StoryViewDelegate](https://github.com/inappstory/ios-sdk#StoryViewDelegate)>*;
+* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
@@ -247,7 +268,7 @@ To close the reader of single story, call `closeSingleStory(complete: () -> Void
 
 ## Protocols
 
-### StoryViewDeleagate
+### StoryViewDelegate
 
 * `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - called after the contents of the list are updated;
 * `storyView(_ storyView: <StoryView>, actionWith type: <ActionType>, for target: <String>)
@@ -256,7 +277,7 @@ To close the reader of single story, call `closeSingleStory(complete: () -> Void
 * `storyReaderDidClose()` - called after closing the story reader;
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected;
 
-### StoryViewDeleagateFlowLayout
+### StoryViewDelegateFlowLayout
 
 Methods of delegate, like in UICollectionViewDelegateFlowLayout
 

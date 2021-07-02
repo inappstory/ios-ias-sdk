@@ -51,7 +51,7 @@ override func viewDidLoad() {
     storyView.create() //running internal logic
 }
 ```
-4) It is also necessary to add `StoryViewDeleagateFlowLayout` and implement it
+4) It is also necessary to add `StoryViewDelegateFlowLayout` and implement it
 
 ##### ViewController.swift
 ```swift 
@@ -69,7 +69,7 @@ override func viewDidLoad() {
     storyView.create() //running internal logic
 }
 ...
-// Implementing StoryViewDeleagateFlowLayout Methods
+// Implementing StoryViewDelegateFlowLayout Methods
 func sizeForItem() -> CGSize
 {
     return CGSize(width: 160.0, height: 160.0) //cell size
@@ -124,7 +124,7 @@ override func viewDidLoad() {
 }
 ```
 
-3) It is also necessary to add `StoryViewDeleagateFlowLayout` and implement it
+3) It is also necessary to add `StoryViewDelegateFlowLayout` and implement it
 
 ##### ViewController.swift
 ```swift
@@ -140,7 +140,7 @@ override func viewDidLoad() {
     storyView.create() //running internal logic
 }
 ...
-// implementing StoryViewDeleagateFlowLayout methods 
+// implementing StoryViewDelegateFlowLayout methods 
 func sizeForItem() -> CGSize
 {
     return CGSize(width: 160.0, height: 160.0) //cell size

@@ -18,7 +18,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-In the controller, where it is necessary to show a single story, call the `showSingeStory` method on `InAppStory`.
+In the controller, where it is necessary to show a single story, call the `showSingleStory` method on `InAppStory`.
 
 ##### ViewController.swift
 
@@ -26,7 +26,7 @@ In the controller, where it is necessary to show a single story, call the `showS
 ... 
 
 func pushNotification() {
-    InAppStory.shared.showSingeStory(with: <String>, from: <UIViewController>, delegate: <SingleStoryDelegate>) {
+    InAppStory.shared.showSingleStory(with: <String>, from: <UIViewController>, delegate: <SingleStoryDelegate>) {
         // the closure is triggered when the single story reader is opened
     }
 }

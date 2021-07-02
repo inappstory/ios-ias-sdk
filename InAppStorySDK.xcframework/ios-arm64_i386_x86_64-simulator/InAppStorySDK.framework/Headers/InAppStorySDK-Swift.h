@@ -232,6 +232,7 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
 
 
 
+
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -513,6 +514,7 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
 
 
 
+
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -791,6 +793,7 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionBottomLeft = 2,
   ClosePositionBottomRight = 3,
 };
+
 
 
 
