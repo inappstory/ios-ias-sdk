@@ -49,7 +49,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.6.0              | 1436          | >= 10.0     |
+| 1.6.1              | 1440          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -144,6 +144,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 Customization of the appearance of the cells and the reader occurs through the singleton of the class `InAppStory.shared`:
 
 #### List
+* `coverQuality` - quality of cover images in cells *\<[Quality](https://github.com/inappstory/ios-sdk#Quality)>*;
 * `showCellTitle` - displaying story titles in a cell *\<Bool>*;
 * `cellFont` - cell title font *\<UIFont>*;
 * `cellTitleColor` - cell title color *\<UIColor>*;
@@ -367,6 +368,13 @@ The action by which the link was obtained:
 
 * `.button` - push the button;
 * `.swipe` - swipe up slide.
+
+### Quality
+
+Quality of cover images in cells
+
+* `medium`;
+* `high`.
 
 ## Objects
 

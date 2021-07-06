@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
 import CommonCrypto
@@ -84,6 +84,14 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
 }
 @objc public enum PresentationStyle : Swift.Int {
   case crossDissolve, modal
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Quality : Swift.Int {
+  case medium, high
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -194,6 +202,7 @@ public struct Settings : Swift.Equatable {
   public var favoritesCount: Swift.Int {
     get
   }
+  public var coverQuality: InAppStorySDK.Quality
   public var showCellTitle: Swift.Bool
   public var showCellSource: Swift.Bool
   public var cellBorderColor: UIKit.UIColor
@@ -302,6 +311,9 @@ extension InAppStorySDK.ScrollStyle : Swift.RawRepresentable {}
 extension InAppStorySDK.PresentationStyle : Swift.Equatable {}
 extension InAppStorySDK.PresentationStyle : Swift.Hashable {}
 extension InAppStorySDK.PresentationStyle : Swift.RawRepresentable {}
+extension InAppStorySDK.Quality : Swift.Equatable {}
+extension InAppStorySDK.Quality : Swift.Hashable {}
+extension InAppStorySDK.Quality : Swift.RawRepresentable {}
 extension InAppStorySDK.ReaderType : Swift.Equatable {}
 extension InAppStorySDK.ReaderType : Swift.Hashable {}
 extension InAppStorySDK.ReaderType : Swift.RawRepresentable {}
