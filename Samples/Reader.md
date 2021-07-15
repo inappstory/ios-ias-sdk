@@ -7,6 +7,7 @@
 3. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
 4. [Presentation style](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Presentation-style)
 5. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Swipe-animation)
+6. [Timers gradient](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#timers-gradient)
 
 ### Close button position
 
@@ -166,6 +167,27 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
     // setting swipe animation style
     InAppStory.shared.scrollStyle = <ScrollStyle>
+    
+    return true
+}
+```
+--
+### Timers gradient
+    
+If you need to remove the gradient at the top of the story (below the timers), you can use the `timerGradientEnable` parameter. By default, the gradient is on.
+
+##### AppDelegate.swift
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+{
+    // library initialization
+    InAppStory.shared.initWith(serviceKey: <String>)
+    
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
+    InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
+
+    // enable gradient shadow under timers
+    InAppStory.shared.timerGradientEnable = <Bool>
     
     return true
 }

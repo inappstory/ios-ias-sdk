@@ -49,7 +49,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.6.1              | 1440          | >= 10.0     |
+| 1.6.2              | 1462          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -157,6 +157,7 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `placeholderBackgroundColor` - slide preloader background color *\<UIColor>*;
 * `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
 * `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
+* `timerGradientEnable` - enable gradient shadow under timers in story *\<Bool>*;
 * `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
 * `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
 * `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;

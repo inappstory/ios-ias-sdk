@@ -210,6 +210,7 @@ public struct Settings : Swift.Equatable {
   public var cellTitleColor: UIKit.UIColor
   public var cellSourceFont: UIKit.UIFont
   public var cellSourceTitleColor: UIKit.UIColor
+  public var timerGradientEnable: Swift.Bool
   public var swipeToClose: Swift.Bool
   public var overScrollToClose: Swift.Bool
   public var placeholderElementColor: UIKit.UIColor
