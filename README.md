@@ -131,6 +131,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
 * `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
 * `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
+* `clearCache` - clear all cache of library;
 
 ### Parameters and properties
 * `onboardingDelegate` - should implement the protocol *<[OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)>*;
