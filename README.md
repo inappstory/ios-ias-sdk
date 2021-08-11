@@ -148,7 +148,6 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `coverQuality` - quality of cover images in cells *\<[Quality](https://github.com/inappstory/ios-sdk#Quality)>*;
 * `showCellTitle` - displaying story titles in a cell *\<Bool>*;
 * `cellFont` - cell title font *\<UIFont>*;
-* `cellTitleColor` - cell title color *\<UIColor>*;
 * `cellBorderColor` - cell border color *\<UIColor>*;
 
 #### Reader

@@ -34,7 +34,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     InAppStory.shared.cellBorderColor = .purple //border color around an unopened cell 
     
     InAppStory.shared.cellFont = UIFont.systemFont(ofSize: 12.0) //title font (you can specify your own by first connecting it to the project)
-    InAppStory.shared.cellTitleColor = .white //title color
     
     InAppStory.shared.coverQuality = .high // quality of cover images
 }
