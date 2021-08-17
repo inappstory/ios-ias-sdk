@@ -207,7 +207,6 @@ public struct Settings : Swift.Equatable {
   public var showCellSource: Swift.Bool
   public var cellBorderColor: UIKit.UIColor
   public var cellFont: UIKit.UIFont
-  public var cellTitleColor: UIKit.UIColor
   public var cellSourceFont: UIKit.UIFont
   public var cellSourceTitleColor: UIKit.UIColor
   public var timerGradientEnable: Swift.Bool

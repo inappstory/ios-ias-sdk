@@ -34,6 +34,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 3) Also, tags can be added or removed in portions after creating the `StoryView`. For the changes to take effect, you need to update the list (see [Refresh](Refresh.md))
 
+> **Remark**  
+> Onboarding can also be displayed depending on tags, but you don't need to call `refresh()` on the list to update them
+
 ##### ViewController.swift
 ```swift
 var storyView: StoryView!
