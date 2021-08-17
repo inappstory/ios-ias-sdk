@@ -189,10 +189,6 @@ extension CustomStoryCell: StoryCellProtocol
         // title of cell
     }
     
-    func setSource(_ text: String) {
-        // source title of cell (deprecated soon)
-    }
-    
     func setImageURL(_ url: URL) {
         // image url for cover
     }
