@@ -247,6 +247,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
+  PresentationStyleZoom = 2,
 };
 
 typedef SWIFT_ENUM(NSInteger, Quality, open) {
@@ -534,6 +535,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
+  PresentationStyleZoom = 2,
 };
 
 typedef SWIFT_ENUM(NSInteger, Quality, open) {
@@ -821,6 +823,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
+  PresentationStyleZoom = 2,
 };
 
 typedef SWIFT_ENUM(NSInteger, Quality, open) {

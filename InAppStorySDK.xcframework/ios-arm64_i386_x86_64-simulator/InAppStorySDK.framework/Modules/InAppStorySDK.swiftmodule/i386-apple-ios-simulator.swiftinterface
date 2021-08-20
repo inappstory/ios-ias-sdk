@@ -54,7 +54,6 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
   func setTitle(_ text: Swift.String)
-  func setSource(_ text: Swift.String)
   func setImageURL(_ url: Foundation.URL)
   func setVideoURL(_ url: Foundation.URL)
   func setOpened(_ value: Swift.Bool)
@@ -83,7 +82,7 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
   }
 }
 @objc public enum PresentationStyle : Swift.Int {
-  case crossDissolve, modal
+  case crossDissolve, modal, zoom
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -204,11 +203,8 @@ public struct Settings : Swift.Equatable {
   }
   public var coverQuality: InAppStorySDK.Quality
   public var showCellTitle: Swift.Bool
-  public var showCellSource: Swift.Bool
   public var cellBorderColor: UIKit.UIColor
   public var cellFont: UIKit.UIFont
-  public var cellSourceFont: UIKit.UIFont
-  public var cellSourceTitleColor: UIKit.UIColor
   public var timerGradientEnable: Swift.Bool
   public var swipeToClose: Swift.Bool
   public var overScrollToClose: Swift.Bool
