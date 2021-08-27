@@ -12,7 +12,7 @@ import SystemConfiguration
 import UIKit
 import WebKit
 public enum ActionType {
-  case button, swipe
+  case button, swipe, game
   public static func == (a: InAppStorySDK.ActionType, b: InAppStorySDK.ActionType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
