@@ -133,10 +133,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `addTags(<Array<String>>)` - adding tags;
 * `removeTags(<Array<String>>)` - remove tags;
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
-* `showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: @escaping () -> Void)` - show onboarding reader (**The method deprecated and will be removed in v1.11.x; Use showOnboardings**, [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md));
+* `showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: @escaping () -> Void)` - show onboarding reader (**The method deprecated and will be removed in v1.11.x; Use showOnboardings**, [Migration guide](Migration.md));
 * `showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
-* `showSingleStory(with id: <String>, from target: <UIViewController>, delegate: <SingleStoryDelegate>, complete: @escaping () -> Void)` - show single reader (**The method deprecated and will be removed in v1.11.x; Use showSingle**, [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md));
+* `showSingleStory(with id: <String>, from target: <UIViewController>, delegate: <SingleStoryDelegate>, complete: @escaping () -> Void)` - show single reader (**The method deprecated and will be removed in v1.11.x; Use showSingle**, [Migration guide](Migration.md));
 * `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
 * `clearCache` - clear all cache of library;
@@ -224,7 +224,7 @@ override func viewDidLoad() {
 
 ### Parameters and properties
 
-* `delegate` - should implement the protocol (**The property deprecated and will be removed in v1.11.x; Use storiesDelegate** [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md));
+* `delegate` - should implement the protocol (**The property deprecated and will be removed in v1.11.x; Use storiesDelegate** [Migration guide](Migration.md));
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
@@ -296,7 +296,7 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected;
 
 > **Pay attention!**  
-> StoryViewDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md)
+> StoryViewDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
 
 ### StoryViewDelegateFlowLayout
 
@@ -315,7 +315,7 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `onboardingReaderDidClose()` - called after closing the story reader;
 
 > **Pay attention!**  
-> OnboardingDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md)
+> OnboardingDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
 
 ### SingleStoryDelegate
 
@@ -325,7 +325,7 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `singleStoryReaderDidClose()` - called after closing the story reader;
 
 > **Pay attention!**  
-> SingleStoryDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](https://github.com/inappstory/ios-sdk/Migration.md)
+> SingleStoryDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
 
 ### PlaceholderProtocol  
 
