@@ -11,7 +11,7 @@ A library for embedding stories into an application with customization.
 	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
-	* [Migration to 1.9.0](https://github.com/inappstory/ios-sdk/Migration.md)
+	* [Migration to 1.9.0](Migration.md)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
