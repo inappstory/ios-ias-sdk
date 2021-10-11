@@ -12,7 +12,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
         
     storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //initialize StoryView
-    storyView.delegate = self //set StoryView delegate
+    storyView.storiesDelegate = self //set InAppStoryDelegate delegate
     
     view.addSubview(storyView) //add object to the view
     
@@ -54,26 +54,29 @@ class FavoritesController: UIViewController {
     }
 }
 
-extension FavoritesController: StoryViewDelegate
+extension FavoritesController: InAppStoryDelegate
 {
-    func storyViewUpdated(storyView: StoryView, widgetStories: Array<WidgetStory>?) {
+    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {
         //called when the data in the StoryView is updated
     }
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyView(_ storyView: StoryView, actionWith type: ActionType, for target: String) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
        if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
                // passing link to controller from WebView
                swipeContentController.linkURL = url
-               // opening the controller over of the reader
-               storyView.present(controller: swipeContentController)
+               
+               if storyType == .list {
+	               // opening the controller over of the reader
+	               storyView.present(controller: swipeContentController)
+               }
            }
        } else {
             // if the processed link leads to a screen in the application, 
             // recommend to close the reader
-            storyView.closeStory {
+            storyView.closeReader {
                 // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -82,11 +85,11 @@ extension FavoritesController: StoryViewDelegate
         }
     }
     
-    func storyReaderWillShow() {
+    func storyReaderWillShow(with storyType: StoriesType) {
         // called before the reader will show
     }
     
-    func storyReaderDidClose() {
+    func storyReaderDidClose(with storyType: StoriesType) {
         // called after closing the story reader
     }
 }

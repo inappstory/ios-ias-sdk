@@ -27,36 +27,39 @@ In the controller, where you want to show onboarding, call the `showOnboarding` 
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    InAppStory.shared.showOnboarding(from: <UIViewController>, delegate: <OnboardingDelegate>) {
+    InAppStory.shared.showOnboardings(from: <UIViewController>, delegate: <InAppStoryDelegate>) {
         // the closure is triggered when the onboarding reader is opened
     }
 }
 ...
 ```
 
-To track the actions of the onboarding reader, you need to implement the `OnboardingDelegate` methods
+To track the actions of the onboarding reader, you need to implement the `InAppStoryDelegate` methods
 
 ```swift 
-extension ViewController: OnboardingDelegate
+extension ViewController: InAppStoryDelegate
 {
-    func onboardingUpdated(isContent: Bool) {
+    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {
         // called when the contents of the list are updated
     }
     
     // called when a button or SwipeUp event is triggered in the reader
-    func onboardingReader(actionWith target: String, for type: ActionType) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
         if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
                // passing link to controller with WebView
                swipeContentController.linkURL = url
-               // opening the controller on top of the reader
-               InAppStory.shared.onboardingPresent(controller: swipeContentController)
+               
+               if storyType == .onboarding {
+	               // opening the controller on top of the reader
+	               InAppStory.shared.onboardingPresent(controller: swipeContentController)
+               }
            }
        } else {
             // if the processed link leads to a screen in the application, 
             // it is recommend to close the reader
-            InAppStory.shared.closeOnboarding {
+            InAppStory.shared.closeReader {
                 // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -65,11 +68,11 @@ extension ViewController: OnboardingDelegate
         }
     }
     
-    func onboardingReaderWillShow() {
+    func storyReaderWillShow(with storyType: StoriesType) {
         // called before the reader will show
     }
     
-    func onboardingReaderDidClose() {
+    func storyReaderDidClose(with storyType: StoriesType) {
         // called after closing the story reader
     }
 }

@@ -31,7 +31,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
         
     let storyView = StoryView(frame: CGRect(x: 0.0, y: 100.0, width: 320.0, height: 160.0)) //StoryView initialization
-    storyView.delegate = self
+    storyView.storiesDelegate = self
     
     view.addSubview(storyView) //adding an object to a view
     
@@ -43,24 +43,27 @@ override func viewDidLoad() {
 
 ##### ViewController.swift
 ```swift
-extension ViewController: StoryViewDelegate
+extension ViewController: InAppStoryDelegate
 {
     ...
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyView(_ storyView: StoryView, actionWith type: ActionType, for target: String) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
        if type == .swipe { //link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
                // passing link to controller with WebView
                swipeContentController.linkURL = url
-               // opening the controller on top of the reader
-               storyView.present(controller: swipeContentController)
+               
+               if storyType == .list {
+	               // opening the controller on top of the reader
+	               storyView.present(controller: swipeContentController)
+               }
            }
        } else {
             // if the processed link leads to a screen in the application, 
             // recommend to close the reader
-            storyView.closeStory {
+            storyView.closeReader {
                 // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)

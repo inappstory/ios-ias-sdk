@@ -26,38 +26,41 @@ In the controller, where it is necessary to show a single story, call the `showS
 ... 
 
 func pushNotification() {
-    InAppStory.shared.showSingleStory(with: <String>, from: <UIViewController>, delegate: <SingleStoryDelegate>) {
+    InAppStory.shared.showSingle(with: <String>, from: <UIViewController>, delegate: <InAppStoryDelegate>) {
         // the closure is triggered when the single story reader is opened
     }
 }
 ...
 ```
 
-To track the actions of the single story reader, you need to implement the `SingleStoryDelegate ` methods
+To track the actions of the single story reader, you need to implement the `InAppStoryDelegate ` methods
 
 ##### ViewController.swift
 
 ```swift 
-extension ViewController: SingleStoryDelegate
+extension ViewController: InAppStoryDelegate
 {
-    func singleStoryUpdated(isContent: Bool) {
+    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {
         // called when the contents of the list are updated
     }
     
     // called when a button or SwipeUp event is triggered in the reader
-    func onboardingReader(actionWith target: String, for type: ActionType) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
         if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
                // passing link to controller with WebView
                swipeContentController.linkURL = url
-               // opening the controller on top of the reader
-               InAppStory.shared.onboardingPresent(controller: swipeContentController)
+               
+               if storyType == .single {
+	               // opening the controller on top of the reader
+	               InAppStory.shared.singlePresent(controller: swipeContentController)
+               }
            }
        } else {
             // if the processed link leads to a screen in the application, 
             // it is recommend to close the reader
-            InAppStory.shared.closeOnboarding {
+            InAppStory.shared.closeReader {
                 // processing a link, for example, to follow it in safari
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -66,11 +69,11 @@ extension ViewController: SingleStoryDelegate
         }
     }
     
-    func singleStoryReaderWillShow() { 
+    func storyReaderWillShow(with storyType: StoriesType) { 
         // called before the reader will show
     }
     
-    func singleStoryReaderDidClose() { 
+    func storyReaderDidClose(with storyType: StoriesType) { 
         // called after closing the story reader
     }
 }

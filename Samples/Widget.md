@@ -316,36 +316,7 @@ if #available(iOS 14.0, *) {
 > It is necessary to check for the version of the operating system, so as not to make unnecessary requests if iOS <14.0  
 > It is also necessary to check the build architecture for *WidgetCenter*, otherwise errors may occur during compilation
 
-The *WidgetStory* list can also be obtained in the `StoryView` - `storyViewUpdated` delegate method, from the `widgetStories: Array<WidgetStory>?` parametr.
-
-```swift
-extension ViewController: StoryViewDelegate
-{
-    func storyViewUpdated(storyView: StoryView, widgetStories: Array<WidgetStory>?)
-    {
-        if #available(iOS 14.0, *) {
-            if let stories = widgetStories {
-                var storiesForDefaults: Array<Dictionary<String, String>> = []
-                let defaults = UserDefaults(suiteName: <"Group ID">)
-                
-                for story in stories {
-                    storiesForDefaults.append(["id" : story.id,
-                                               "title" : story.title,
-                                               "image" : story.image,
-                                               "color" : story.color])
-                }
-                
-                defaults?.setValue(storiesForDefaults, forKey: "widget_stories")
-                
-                #if arch(arm64) || arch(i386) || arch(x86_64)
-                WidgetCenter.shared.reloadAllTimelines()
-                #endif
-            }
-        }
-    }
-    ...
-}
-```
+The *WidgetStory* list can also be obtained in the `InAppStory.shared`, from the `widgetStories: Array<WidgetStory>` parametr.
 
 ### Empty list or no data
 
