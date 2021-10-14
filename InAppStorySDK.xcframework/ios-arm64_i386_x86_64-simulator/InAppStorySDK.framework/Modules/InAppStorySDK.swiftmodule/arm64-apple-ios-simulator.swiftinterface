@@ -5,6 +5,7 @@ import AVFoundation
 import CommonCrypto
 import Compression
 import CoreFoundation
+import CoreText
 import Foundation
 @_exported import InAppStorySDK
 import Swift
