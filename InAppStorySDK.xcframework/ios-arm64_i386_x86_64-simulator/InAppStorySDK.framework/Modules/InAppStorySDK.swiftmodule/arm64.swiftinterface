@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
 import CommonCrypto
@@ -12,7 +12,6 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-import _Concurrency
 @available(*, deprecated, message: "The protocol deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
 public protocol StoryViewDelegate : ObjectiveC.NSObjectProtocol {
   func storyViewUpdated(storyView: InAppStorySDK.StoryView, widgetStories: Swift.Array<InAppStorySDK.WidgetStory>?)
@@ -80,80 +79,80 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
+  weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
     get
     set
   }
   @available(*, deprecated, message: "The property deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-  @_Concurrency.MainActor(unsafe) weak public var delegate: InAppStorySDK.StoryViewDelegate? {
+  weak public var delegate: InAppStorySDK.StoryViewDelegate? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+  weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var isFavoriteView: Swift.Bool
-  @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
+  public var isFavoriteView: Swift.Bool
+  weak public var target: UIKit.UIViewController? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
+  public var storyCell: InAppStorySDK.StoryCellProtocol! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
+  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
+  public var isContent: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
   @objc deinit
 }
-extension InAppStorySDK.StoryView {
-  @_Concurrency.MainActor(unsafe) public func create()
-  @_Concurrency.MainActor(unsafe) public func refresh()
-  @_Concurrency.MainActor(unsafe) public func closeReader(complete: @escaping () -> Swift.Void)
+extension StoryView {
+  public func create()
+  public func refresh()
+  public func closeReader(complete: @escaping () -> Swift.Void)
   @available(*, deprecated, renamed: "closeReader")
-  @_Concurrency.MainActor(unsafe) public func closeStory(complete: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
+  public func closeStory(complete: @escaping () -> Swift.Void)
+  public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK.PhoneFormat
   final public func add(format: InAppStorySDK.PhoneFormat)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CSPhoneFormattedTextField : UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public var isSelectable: Swift.Bool
-  @_Concurrency.MainActor(unsafe) final public let config: InAppStorySDK.ConfigurationRepo
-  @_Concurrency.MainActor(unsafe) public var hasPredictiveInput: Swift.Bool {
+@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
+  public var isSelectable: Swift.Bool
+  final public let config: InAppStorySDK.ConfigurationRepo
+  public var hasPredictiveInput: Swift.Bool {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var prefix: Swift.String? {
+  public var prefix: Swift.String? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+    @objc get
+    @objc set
   }
-  @_Concurrency.MainActor(unsafe) public var textDidChangeBlock: ((_ textField: UIKit.UITextField?) -> Swift.Void)? {
+  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public func phoneNumber() -> Swift.String?
-  @_Concurrency.MainActor(unsafe) public func phoneNumberWithoutPrefix() -> Swift.String?
-  @_Concurrency.MainActor(unsafe) public var formattedText: Swift.String? {
+  public func phoneNumber() -> Swift.String?
+  public func phoneNumberWithoutPrefix() -> Swift.String?
+  public var formattedText: Swift.String? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc deinit
 }
 public struct WidgetStory {
@@ -245,12 +244,12 @@ public struct Settings : Swift.Equatable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension InAppStorySDK.InAppStory {
+extension InAppStory {
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
-extension InAppStorySDK.InAppStory {
+extension InAppStory {
   public func showOnboardings(from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   @available(*, deprecated, message: "The method deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
   public func showOnboarding(from target: UIKit.UIViewController, delegate: InAppStorySDK.OnboardingDelegate, complete: @escaping () -> Swift.Void)
@@ -258,7 +257,7 @@ extension InAppStorySDK.InAppStory {
   public func closeOnboarding(complete: @escaping () -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
-extension InAppStorySDK.InAppStory {
+extension InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   @available(*, deprecated, message: "The method deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
   public func showSingleStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
@@ -317,13 +316,13 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   func favoriteCellDidSelect()
 }
-extension InAppStorySDK.InAppStoryDelegate {
+extension InAppStoryDelegate {
   public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
   public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   public func favoriteCellDidSelect()
 }
-extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
+extension UIView {
+  public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
 }
 extension InAppStorySDK.ClosePosition : Swift.Equatable {}
 extension InAppStorySDK.ClosePosition : Swift.Hashable {}
