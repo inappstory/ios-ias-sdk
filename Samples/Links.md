@@ -48,7 +48,7 @@ extension ViewController: InAppStoryDelegate
     ...
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType, storyView: StoryView?) {
        if type == .swipe { //link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
@@ -63,10 +63,19 @@ extension ViewController: InAppStoryDelegate
        } else {
             // if the processed link leads to a screen in the application, 
             // recommend to close the reader
-            storyView.closeReader {
-                // processing a link, for example, to follow it in safari
-                if let url = URL(string: target) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            if let storiesView = storyView {
+	            storiesView.closeReader {
+	                // processing a link, for example, to follow it in safari
+	                if let url = URL(string: target) {
+	                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+	                }
+	            }
+            } else {
+                InAppStory.shared.closeReader {
+                    // processing a link, for example, to follow it in safari
+	                if let url = URL(string: target) {
+	                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+	                }
                 }
             }
         }

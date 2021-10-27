@@ -12,3 +12,4 @@
 ### 10. [Favorites](Favorites.md)
 ### 11. [Sound control](Sound.md)
 ### 12. [Widget iOS 14](Widget.md)
+### 13. [GoodsWidget](GoodsWidget.md)

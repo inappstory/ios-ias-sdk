@@ -10,8 +10,8 @@ A library for embedding stories into an application with customization.
 	* [Swift Package Manager](https://github.com/inappstory/ios-sdk#Swift-Package-Manager)
 	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
+* [Migration](https://github.com/inappstory/ios-sdk#Migration)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
-	* [Migration to 1.9.0](Migration.md)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
@@ -26,6 +26,7 @@ A library for embedding stories into an application with customization.
 	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation-1)
 * [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
 	* [InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)
+	* [GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)
 	* [StoryViewDelegate](https://github.com/inappstory/ios-sdk#StoryViewDelegate)
 	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
 	* [OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)
@@ -41,9 +42,11 @@ A library for embedding stories into an application with customization.
 	* [PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)
 	* [ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)
 	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
+	* [GoodsFailure](https://github.com/inappstory/ios-sdk#GoodsFailure)
 * [Objects](https://github.com/inappstory/ios-sdk#Objects)
 	* [Settings](https://github.com/inappstory/ios-sdk#Settings)
 	* [WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)
+	* [CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView)
 * [NotificationCenter](https://github.com/inappstory/ios-sdk#NotificationCenter)
 	* [Events](https://github.com/inappstory/ios-sdk#Events)
 	* [Errors](https://github.com/inappstory/ios-sdk#Errors)
@@ -53,7 +56,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.9.2              | 1762          | >= 10.0     |
+| 1.10.0             | 1762          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -72,7 +75,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.9.2
+github "inappstory/ios-sdk" ~> 1.10.0
 ```
 
 ### Swift Package Manager
@@ -83,7 +86,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.9.2"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.10.0"))
 ]
 ```
 
@@ -105,6 +108,10 @@ Download `InAppStorySDK.xcframework` from the repository. Connect in the project
 ```swift
 import InAppStorySDK
 ```
+## Migration
+
+* from InAppStorySDK - v 1.8.x -> [Migration guide](Migration-1.8.0.md)
+* from InAppStorySDK - v 1.9.x -> [Migration guide](Migration-1.9.0.md)
 
 ## InAppStory
 
@@ -156,6 +163,22 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `showCellTitle` - displaying story titles in a cell *\<Bool>*;
 * `cellFont` - cell title font *\<UIFont>*;
 * `cellBorderColor` - cell border color *\<UIColor>*;
+
+#### Goods widget
+
+* `goodsCellMainTextColor` - default goods item cell text color *\<UIColor>*;
+* `goodsCellDiscountTextColor` - default goods item cell discount text color *\<UIColor>*;
+* `goodCellTitleFont` - default goods item cell title font *\<UIFont>*;
+* `goodCellSubtitleFont` - default goods item cell subtitle font *\<UIFont>*;
+* `goodCellPriceFont` - default goods item cell price font *\<UIFont>*;
+* `goodCellDiscountFont` - default goods item cell discount font *\<UIFont>*;
+* `goodsCloseBackgroundColor` - close button background color *\<UIColor>*;
+* `goodsSubstrateColor` - backround color under goods list *\<UIColor>*;
+* `refreshGoodsImage` - images for refresh button *\<UIImage>*;
+* `goodsCloseImage` - images for close button *\<UIImage>*;
+* `goodCell` - custom cell, should implement the protocol *<[GoodsCellProtocol](https://github.com/inappstory/ios-sdk#GoodsCellProtocol)>*;
+* `goodsView` - custom goods view, should inherit from *<[CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView)>*;
+* `goodsDelegateFlowLayout` - should implement the protocol *<[GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)>*;
 
 #### Reader
 * `swipeToClose` - closing the reader by swipe *\<Bool>*;
@@ -219,7 +242,7 @@ override func viewDidLoad() {
 * `refresh` - refresh stories list;
 * `clear` - clear cache of images;
 * `closeStory(complete: () -> Void)` - closing the story reader with a closure, `complete` is called after the reader is closed; *(renamed to 'closeReader')*
-* `closeReader(complete: () -> Void)` - closing the story reader with a closure, `complete` is called after the reader is closed;
+* `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
 * `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - displaying a custom controller on top of the story reader.
 
 ### Parameters and properties
@@ -280,11 +303,21 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 ## Protocols
 
 ### InAppStoryDelegate
-* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
-* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>* and *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
-* `storyReaderWillShow(with storyType: <StoriesType>)` - called before the reader will show *(optional)*;
-* `storyReaderDidClose(with storyType: <StoriesType>)` - called after closing the story reader *(optional)*;
+* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
+* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>* and *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
+* `storyReaderWillShow(with storyType: <StoriesType>, storyView: <StoryView>?)` - called before the reader will show *(optional)*;
+* `storyReaderDidClose(with storyType: <StoriesType>, storyView: <StoryView>?)` - called after closing the story reader *(optional)*;
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
+* `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
+* `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
+
+### GoodsDelegateFlowLayout
+
+Methods of delegate, like in UICollectionViewDelegateFlowLayout
+
+* `sizeForItemAt() -> <CGSize>` - returns the cell size for the list;
+* `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
+* `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 
 ### StoryViewDelegate
 
@@ -350,6 +383,12 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `setTitleColor(_ color: <UIColor>)` - title color of cell;
 * `setSound(_ value: Bool)` - does the story have sound;
 
+### GoodsCellProtocol
+
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation; 
+* `setGoodObject(_ object: <Any>!)` - object that comes from `getGoodsObject(...)`;
+
 ### FavoriteCellProtocol
 
 * `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
@@ -360,6 +399,12 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `setImages(_ urls: <Array<URL?>>)` - a list of addresses of the first four images stories in favorites;
 * `setImagesColors(_ colors: <Array<UIColor?>>)` - a list of background colors of the first four stories in favorites;
 * `setBackgroundColor(_ color: <UIColor>)` - main background color of a cell;
+
+## Closure
+
+### GoodsComplete
+
+Closure for contine `getGoodsObject(...)` method in *InAppStoryDelegate* - `(Result<Array<Any>, GoodsFailure>) -> Void`
 
 ## enum
 
@@ -412,6 +457,13 @@ Quality of cover images in cells
 * `medium`;
 * `high`.
 
+### GoodsFailure
+
+Failure that return in `Result` from `getGoodsObject(...)` closure
+
+* `refresh` - show refresh button in the *GoodsView*;
+* `close` - close *GoodsView*.
+
 ## Objects
 
 ### Settings
@@ -429,6 +481,14 @@ Quality of cover images in cells
 * `title` - story title *\<String>*;
 * `image` - link to cover image *\<String>*;
 * `color` - background color of the story in HEX format *\<String>*;
+
+### CustomGoodsView
+
+To create your own goods widget, you need to inherit from CustomGoodsView.
+
+* `setSKUItems(_ items: Array<String>)` - set SKUs of goods from InAppStory reader;
+* `setReaderFrame(_ frame: CGRect)` - set StoryReader frame;
+* `final close()` - needs call from *superclass*, for close widget;
 
 ## NotificationCenter
 
