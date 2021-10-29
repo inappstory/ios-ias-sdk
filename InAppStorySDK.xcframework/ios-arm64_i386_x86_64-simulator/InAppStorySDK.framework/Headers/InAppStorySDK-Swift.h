@@ -231,6 +231,13 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
 };
 
 
+SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
+@interface CustomGoodsView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
@@ -519,6 +526,13 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
 };
 
 
+SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
+@interface CustomGoodsView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
@@ -805,6 +819,13 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionBottomLeft = 2,
   ClosePositionBottomRight = 3,
 };
+
+
+SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
+@interface CustomGoodsView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
