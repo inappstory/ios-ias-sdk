@@ -240,6 +240,13 @@ SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
 
 
 
+SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
+@interface GoodObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -535,6 +542,13 @@ SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
 
 
 
+SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
+@interface GoodObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -828,6 +842,13 @@ SWIFT_CLASS("_TtC13InAppStorySDK15CustomGoodsView")
 @end
 
 
+
+
+SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
+@interface GoodObject : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")

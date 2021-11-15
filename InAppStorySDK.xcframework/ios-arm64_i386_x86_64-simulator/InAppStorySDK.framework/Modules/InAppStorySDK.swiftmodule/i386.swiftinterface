@@ -35,7 +35,7 @@ public struct PhoneFormat {
 public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
-  func setGoodObject(_ object: Any!)
+  func setGoodObject(_ object: InAppStorySDK.GoodsObjectProtocol!)
 }
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
@@ -286,12 +286,16 @@ extension InAppStory {
 @objc @_inheritsConvenienceInitializers open class CustomGoodsView : UIKit.UIView {
   open func setSKUItems(_ items: Swift.Array<Swift.String>)
   open func setReaderFrame(_ frame: CoreGraphics.CGRect)
+  final public func goodsItemClick(with sku: Swift.String)
   final public func close()
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-public struct GoodObject {
+public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
+  var sku: Swift.String! { get set }
+}
+@objc public class GoodObject : ObjectiveC.NSObject, InAppStorySDK.GoodsObjectProtocol {
   public var sku: Swift.String!
   public var title: Swift.String?
   public var subtitle: Swift.String?
@@ -299,6 +303,8 @@ public struct GoodObject {
   public var price: Swift.String?
   public var discount: Swift.String?
   public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, discount: Swift.String?)
+  @objc override dynamic public init()
+  @objc deinit
 }
 public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
   func sizeForItem() -> CoreGraphics.CGSize
@@ -347,7 +353,7 @@ public enum GoodsFailure : Swift.Error {
     get
   }
 }
-public typealias GoodsComplete = (Swift.Result<Swift.Array<Any>, InAppStorySDK.GoodsFailure>) -> Swift.Void
+public typealias GoodsComplete = (Swift.Result<Swift.Array<InAppStorySDK.GoodsObjectProtocol>, InAppStorySDK.GoodsFailure>) -> Swift.Void
 public enum ActionType {
   case button, swipe, game
   public static func == (a: InAppStorySDK.ActionType, b: InAppStorySDK.ActionType) -> Swift.Bool
@@ -371,14 +377,14 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
   func favoriteCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
-  func goodItemSelected(_ item: Any, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
 }
 extension InAppStoryDelegate {
   public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
   public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
   public func favoriteCellDidSelect()
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
-  public func goodItemSelected(_ item: Any, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
 }
 extension UIView {
   public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
