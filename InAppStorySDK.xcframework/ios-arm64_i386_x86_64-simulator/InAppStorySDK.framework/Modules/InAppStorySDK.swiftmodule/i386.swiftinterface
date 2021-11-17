@@ -115,6 +115,7 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
     get
   }
   public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 extension StoryView {

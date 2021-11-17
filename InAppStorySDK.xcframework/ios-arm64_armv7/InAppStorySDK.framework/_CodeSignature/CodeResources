@@ -6,27 +6,27 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		z2pQuSAXpHQISKQ1CqbBw0I65lk=
+		3gt/m+9m1nRbVdnxrYy+dL5oxp0=
 		</data>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<data>
-		zICbDH6F7REjIbr9mH9YjUVrvF0=
+		/pAu4C4TigfWK7qnjrpY8DMlWIc=
 		</data>
 		<key>FavoriteCell.nib/runtime.nib</key>
 		<data>
-		497MJ6Grf4cmdc30EXY3v8gvaMw=
+		brL8MhRjHQHfHMVbPoVttnb6CgU=
 		</data>
 		<key>GamePlaceholder.nib</key>
 		<data>
-		SQ50H3f2r1PvkW1A/c7DJrx9iuc=
+		14Y1Fl5W4DxrktuxAqpCHubSUO0=
 		</data>
 		<key>GoodCell.nib/objects-12.3+.nib</key>
 		<data>
-		uqxBscIFt+PTk+K2m9RpM1nJZYY=
+		V62GgKMr8ErL4VNxFrhZiPeUp2o=
 		</data>
 		<key>GoodCell.nib/runtime.nib</key>
 		<data>
-		e0Fgx7rOnGMKJz3Lo4pU7NSD7B8=
+		j26z2rc507Uir6eip7zXUGHzW0Q=
 		</data>
 		<key>Headers/CSPlaceholderView.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/InAppStorySDK-Swift.h</key>
 		<data>
-		fsS8SK32tJ1hkoDSrwolzjWYq4k=
+		i6u49SgZ7BCATlqU+iuTWDpanGU=
 		</data>
 		<key>Headers/InAppStorySDK.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7v/WeiM7LD0l0MTtdhoS52Asaew=
+		NjgeEphWORfVMZ0DTdJP0cJ+EN8=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftinterface</key>
 		<data>
-		Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+		kkDlHzrQ67NwtjfpkYS14VcEhag=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		R5UOwHSLBgNM0yD0g6tj84BvEBU=
+		Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		akVCc3BMx15sTQ75x9G41Rm4zZ4=
+		2EeV4jn3buKeyF7HoQ1ym5CAPOE=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		gxPqEX+PVDgOvRLhVcp4CWrB6vA=
+		sV8bc4aF48InstldFeLS8sBoUr4=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		akVCc3BMx15sTQ75x9G41Rm4zZ4=
+		2EeV4jn3buKeyF7HoQ1ym5CAPOE=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		gxPqEX+PVDgOvRLhVcp4CWrB6vA=
+		sV8bc4aF48InstldFeLS8sBoUr4=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+		kkDlHzrQ67NwtjfpkYS14VcEhag=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		R5UOwHSLBgNM0yD0g6tj84BvEBU=
+		Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+		kkDlHzrQ67NwtjfpkYS14VcEhag=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		R5UOwHSLBgNM0yD0g6tj84BvEBU=
+		Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>StoryCell.nib/objects-12.3+.nib</key>
 		<data>
-		cInS2ICJ0zl/6NN5WnbsM+oK314=
+		D+7KDg4fB7BuZJNSjVDwwt2ilxI=
 		</data>
 		<key>StoryCell.nib/runtime.nib</key>
 		<data>
-		Y7i0cdYRxYe46DAEe7R1qvWC0Mc=
+		3aLbqnp5yMKfRUo9A/ILnQN6GvA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -123,66 +123,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z2pQuSAXpHQISKQ1CqbBw0I65lk=
+			3gt/m+9m1nRbVdnxrYy+dL5oxp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			PmifB1OcLfllUjc4xCDSkrL0Iq3j4qQKiJIUQv9qj+0=
+			3zCeRtSYH1A7A5wtnWHqiIuv29kNLyn6ocYLV1XvyGA=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zICbDH6F7REjIbr9mH9YjUVrvF0=
+			/pAu4C4TigfWK7qnjrpY8DMlWIc=
 			</data>
 			<key>hash2</key>
 			<data>
-			cgW2+QhXh4ptyFLROmiKoGjKh0fmY/5GZnXG9lr6KSc=
+			rs/muAA092YDCco0DA6jeeiSD6YAmBA39Q6aBsgOmP0=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			497MJ6Grf4cmdc30EXY3v8gvaMw=
+			brL8MhRjHQHfHMVbPoVttnb6CgU=
 			</data>
 			<key>hash2</key>
 			<data>
-			QxN+UmG4jgS9VqSRZ2+oc/YKjJH+VU+vN8mAJ7nE/rQ=
+			aPFbP9iT6umhz6dSH/541tgugwZF52WZsFrT3UkPwss=
 			</data>
 		</dict>
 		<key>GamePlaceholder.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SQ50H3f2r1PvkW1A/c7DJrx9iuc=
+			14Y1Fl5W4DxrktuxAqpCHubSUO0=
 			</data>
 			<key>hash2</key>
 			<data>
-			T8Ix5prdrk5Dmt98zPF0Nc2ZZ3RT/Q/io9aEfxl8Q+s=
+			H4LFdV+TApuUqGA903TfIe0aHmCcFe1YFOMnH8duWL4=
 			</data>
 		</dict>
 		<key>GoodCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uqxBscIFt+PTk+K2m9RpM1nJZYY=
+			V62GgKMr8ErL4VNxFrhZiPeUp2o=
 			</data>
 			<key>hash2</key>
 			<data>
-			en7LKCe9PXjfRzGKmSr+LSJE+AIVba6L/ZnrzlGUmo0=
+			qm6CsY1wT1cumTrN+kYK8XinrJsPgQtm2z0suJiKJls=
 			</data>
 		</dict>
 		<key>GoodCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e0Fgx7rOnGMKJz3Lo4pU7NSD7B8=
+			j26z2rc507Uir6eip7zXUGHzW0Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			EWr4RCJgjuQk1CLYD7eUgTCm9I17TWlEl5xPOwz9jDU=
+			aBhI32ErdEFy8vK2+wcMTilcRKC0TZqRJVhqT7c4mac=
 			</data>
 		</dict>
 		<key>Headers/CSPlaceholderView.h</key>
@@ -200,11 +200,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fsS8SK32tJ1hkoDSrwolzjWYq4k=
+			i6u49SgZ7BCATlqU+iuTWDpanGU=
 			</data>
 			<key>hash2</key>
 			<data>
-			wKJIriqaINTUHitqIST5jm5D2Q0B1+Tv5sGRw5ff3kQ=
+			gzsxxM/ec3cC3ct1ajHAg6VO1I2sTHCYmluHxvQIAdk=
 			</data>
 		</dict>
 		<key>Headers/InAppStorySDK.h</key>
@@ -233,22 +233,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+			kkDlHzrQ67NwtjfpkYS14VcEhag=
 			</data>
 			<key>hash2</key>
 			<data>
-			jigDddPaNU2PH4XbXu3VKSGc8XAI+bpBuD/1z1NvTTg=
+			OI32hwrI2PZhiDm1vosTDK/2Lqpj/FEkre6Fedyn1l4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R5UOwHSLBgNM0yD0g6tj84BvEBU=
+			Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5DosPzJs5KZRV18FowsvPRJhxgSvI4c2YOmyADAHJDM=
+			2Kanays7umBtORQdYeWbljsHzKA4J/lueNIZup3m6A4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -266,22 +266,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			akVCc3BMx15sTQ75x9G41Rm4zZ4=
+			2EeV4jn3buKeyF7HoQ1ym5CAPOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			W8vleEXU+hJaUuQ6l+941objk6taCWRwLWkiduuW2Dw=
+			GwKtUlKyDcrjs+61W8flm1038be+GfesBOZEFRddaO8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gxPqEX+PVDgOvRLhVcp4CWrB6vA=
+			sV8bc4aF48InstldFeLS8sBoUr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+4ZQETdL1PmbcWjgD70Cvk2OO5k4c17HG+iOH67tFWw=
+			OoGu9ilIw77eG5b1u1/Ba/fjDvEtOZGBol/5yVGXtSk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftdoc</key>
@@ -299,22 +299,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			akVCc3BMx15sTQ75x9G41Rm4zZ4=
+			2EeV4jn3buKeyF7HoQ1ym5CAPOE=
 			</data>
 			<key>hash2</key>
 			<data>
-			W8vleEXU+hJaUuQ6l+941objk6taCWRwLWkiduuW2Dw=
+			GwKtUlKyDcrjs+61W8flm1038be+GfesBOZEFRddaO8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gxPqEX+PVDgOvRLhVcp4CWrB6vA=
+			sV8bc4aF48InstldFeLS8sBoUr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			+4ZQETdL1PmbcWjgD70Cvk2OO5k4c17HG+iOH67tFWw=
+			OoGu9ilIw77eG5b1u1/Ba/fjDvEtOZGBol/5yVGXtSk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -332,22 +332,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+			kkDlHzrQ67NwtjfpkYS14VcEhag=
 			</data>
 			<key>hash2</key>
 			<data>
-			jigDddPaNU2PH4XbXu3VKSGc8XAI+bpBuD/1z1NvTTg=
+			OI32hwrI2PZhiDm1vosTDK/2Lqpj/FEkre6Fedyn1l4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R5UOwHSLBgNM0yD0g6tj84BvEBU=
+			Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5DosPzJs5KZRV18FowsvPRJhxgSvI4c2YOmyADAHJDM=
+			2Kanays7umBtORQdYeWbljsHzKA4J/lueNIZup3m6A4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftdoc</key>
@@ -365,22 +365,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Unt/Z7oVziE+rQnBBD2SVZ83cy4=
+			kkDlHzrQ67NwtjfpkYS14VcEhag=
 			</data>
 			<key>hash2</key>
 			<data>
-			jigDddPaNU2PH4XbXu3VKSGc8XAI+bpBuD/1z1NvTTg=
+			OI32hwrI2PZhiDm1vosTDK/2Lqpj/FEkre6Fedyn1l4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R5UOwHSLBgNM0yD0g6tj84BvEBU=
+			Or1l3Y+h7NJbZoUooTUuxSEPWkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5DosPzJs5KZRV18FowsvPRJhxgSvI4c2YOmyADAHJDM=
+			2Kanays7umBtORQdYeWbljsHzKA4J/lueNIZup3m6A4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -398,22 +398,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cInS2ICJ0zl/6NN5WnbsM+oK314=
+			D+7KDg4fB7BuZJNSjVDwwt2ilxI=
 			</data>
 			<key>hash2</key>
 			<data>
-			fdLeVtcPqp+8eQuX/Ni7CXQjD05P0R25E/34XQ+pDY0=
+			GB2MUYIdtH2H4tGc1PdPjwln9ItBCXSdeghLoptLdmM=
 			</data>
 		</dict>
 		<key>StoryCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y7i0cdYRxYe46DAEe7R1qvWC0Mc=
+			3aLbqnp5yMKfRUo9A/ILnQN6GvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			IbRCi36q5my/IgNldtd7CNuxJnmq4jMRFSWQdokgA4s=
+			ZL64AW6v5+HzTxjcp87rkRARhQoUSl4urHKFmxulXjA=
 			</data>
 		</dict>
 	</dict>
