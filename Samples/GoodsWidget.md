@@ -315,6 +315,12 @@ class GoodsView: CustomGoodsView
         
         //setting the size and position of the reader from which the widget was shown
     }
+    
+    func selectGoodsItem()
+    {
+        // send selected item SKU for statistics
+        super.goodsItemClick(with: <String>)
+    }
 }
 ```
 

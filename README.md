@@ -489,6 +489,7 @@ To create your own goods widget, you need to inherit from CustomGoodsView.
 * `setSKUItems(_ items: Array<String>)` - set SKUs of goods from InAppStory reader;
 * `setReaderFrame(_ frame: CGRect)` - set StoryReader frame;
 * `final close()` - needs call from *superclass*, for close widget;
+* `final goodsItemClick(with sku: <String>)` - send statistic in SDK;
 
 ## NotificationCenter
 
