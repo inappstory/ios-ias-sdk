@@ -266,6 +266,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface StoryView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 
@@ -554,6 +555,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface StoryView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 @end
 
 
