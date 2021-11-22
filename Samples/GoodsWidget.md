@@ -53,7 +53,7 @@ extension ViewController: InAppStoryDelegate
     }
     
     //item selection handler
-    func goodItemSelected(_ item: Any, with storyType: StoriesType, storyView: StoryView?)
+    func goodItemSelected(_ item: Any, with storyType: StoriesType)
     {
         InAppStory.shared.closeReader {
             //event handling and product display in the application

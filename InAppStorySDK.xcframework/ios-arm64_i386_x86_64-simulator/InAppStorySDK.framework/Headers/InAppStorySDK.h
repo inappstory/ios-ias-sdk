@@ -2,8 +2,7 @@
 //  InAppStory.h
 //  InAppStory
 //
-//  Created by StPashik on 25/09/2020.
-//  Copyright © 2020 kiozk. All rights reserved.
+//  Created by StPashik on 22.11.2021.
 //
 
 #import <Foundation/Foundation.h>

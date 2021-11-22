@@ -56,12 +56,12 @@ class FavoritesController: UIViewController {
 
 extension FavoritesController: InAppStoryDelegate
 {
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType, storyView: StoryView?) {
+    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {
         //called when the data in the StoryView is updated
     }
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType, storyView: StoryView?) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
        if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
@@ -94,11 +94,11 @@ extension FavoritesController: InAppStoryDelegate
         }
     }
     
-    func storyReaderWillShow(with storyType: StoriesType, storyView: StoryView?) {
+    func storyReaderWillShow(with storyType: StoriesType) {
         // called before the reader will show
     }
     
-    func storyReaderDidClose(with storyType: StoriesType, storyView: StoryView?) {
+    func storyReaderDidClose(with storyType: StoriesType) {
         // called after closing the story reader
     }
 }

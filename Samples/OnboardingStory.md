@@ -39,12 +39,12 @@ To track the actions of the onboarding reader, you need to implement the `InAppS
 ```swift 
 extension ViewController: InAppStoryDelegate
 {
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType, storyView: StoryView?) {
+    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {
         // called when the contents of the list are updated
     }
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType, storyView: StoryView?) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
         if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
@@ -68,11 +68,11 @@ extension ViewController: InAppStoryDelegate
         }
     }
     
-    func storyReaderWillShow(with storyType: StoriesType, storyView: StoryView?) {
+    func storyReaderWillShow(with storyType: StoriesType) {
         // called before the reader will show
     }
     
-    func storyReaderDidClose(with storyType: StoriesType, storyView: StoryView?) {
+    func storyReaderDidClose(with storyType: StoriesType) {
         // called after closing the story reader
     }
 }

@@ -56,7 +56,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.10.2             | 1868          | >= 10.0     |
+| 1.11.0             | 1900          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -75,7 +75,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.10.2
+github "inappstory/ios-sdk" ~> 1.11.0
 ```
 
 ### Swift Package Manager
@@ -86,7 +86,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.10.2"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.11.0"))
 ]
 ```
 
@@ -112,6 +112,7 @@ import InAppStorySDK
 
 * from InAppStorySDK - v 1.8.x -> [Migration guide](Migration-1.8.0.md)
 * from InAppStorySDK - v 1.9.x -> [Migration guide](Migration-1.9.0.md)
+* from InAppStorySDK - v 1.10.x -> [Migration guide](Migration-1.10.0.md)
 
 ## InAppStory
 
@@ -146,6 +147,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `showSingleStory(with id: <String>, from target: <UIViewController>, delegate: <SingleStoryDelegate>, complete: @escaping () -> Void)` - show single reader (**The method deprecated and will be removed in v1.11.x; Use showSingle**, [Migration guide](Migration.md));
 * `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
+* `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
 * `clearCache` - clear all cache of library;
 
 ### Parameters and properties
@@ -241,8 +243,6 @@ override func viewDidLoad() {
 * `create` - running internal StoryView logic;
 * `refresh` - refresh stories list;
 * `clear` - clear cache of images;
-* `closeStory(complete: () -> Void)` - closing the story reader with a closure, `complete` is called after the reader is closed; *(renamed to 'closeReader')*
-* `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
 * `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - displaying a custom controller on top of the story reader.
 
 ### Parameters and properties

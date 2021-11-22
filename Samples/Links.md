@@ -48,7 +48,7 @@ extension ViewController: InAppStoryDelegate
     ...
     
     // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType, storyView: StoryView?) {
+    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
        if type == .swipe { //link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()

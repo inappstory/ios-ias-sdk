@@ -12,154 +12,14 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-@available(*, deprecated, message: "The protocol deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-public protocol StoryViewDelegate : ObjectiveC.NSObjectProtocol {
-  func storyViewUpdated(storyView: InAppStorySDK.StoryView, widgetStories: Swift.Array<InAppStorySDK.WidgetStory>?)
-  func storyView(_ storyView: InAppStorySDK.StoryView, actionWith type: InAppStorySDK.ActionType, for target: Swift.String)
-  func storyReaderWillShow()
-  func storyReaderDidClose()
-  func favoriteCellDidSelect()
-}
-public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
-  func sizeForItem() -> CoreGraphics.CGSize
-  func insetForSection() -> UIKit.UIEdgeInsets
-  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
-  func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
-}
 public struct PhoneFormat {
   public let phoneFormat: Swift.String
   public let regexp: Swift.String
   public init(defaultPhoneFormat: Swift.String)
   public init(phoneFormat: Swift.String, regexp: Swift.String)
 }
-public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
-  static var reuseIdentifier: Swift.String { get }
-  static var nib: UIKit.UINib? { get }
-  func setGoodObject(_ object: InAppStorySDK.GoodsObjectProtocol!)
-}
-public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
-  static var reuseIdentifier: Swift.String { get }
-  static var nib: UIKit.UINib? { get }
-  func setTitle(_ text: Swift.String)
-  func setImageURL(_ url: Foundation.URL)
-  func setVideoURL(_ url: Foundation.URL)
-  func setOpened(_ value: Swift.Bool)
-  func setHighlight(_ value: Swift.Bool)
-  func setBackgroundColor(_ color: UIKit.UIColor)
-  func setTitleColor(_ color: UIKit.UIColor)
-  func setSound(_ value: Swift.Bool)
-}
-public protocol GamePlaceholderProtocol : UIKit.UIView {
-  func setProgress(progress: Swift.Double)
-}
-@objc public enum ClosePosition : Swift.Int {
-  case left, right, bottomLeft, bottomRight
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum ScrollStyle : Swift.Int {
-  case flat, cover, cube
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum PresentationStyle : Swift.Int {
-  case crossDissolve, modal, zoom
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum Quality : Swift.Int {
-  case medium, high
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
-  weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
-    get
-    set
-  }
-  @available(*, deprecated, message: "The property deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-  weak public var delegate: InAppStorySDK.StoryViewDelegate? {
-    get
-    set
-  }
-  weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
-    get
-    set
-  }
-  public var isFavoriteView: Swift.Bool
-  weak public var target: UIKit.UIViewController? {
-    get
-    set
-  }
-  public var storyCell: InAppStorySDK.StoryCellProtocol! {
-    get
-    set
-  }
-  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
-    get
-    set
-  }
-  public var isContent: Swift.Bool {
-    get
-  }
-  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
-  @objc override dynamic public func layoutSubviews()
-  @objc deinit
-}
-extension StoryView {
-  public func create()
-  public func refresh()
-  public func closeReader(complete: @escaping () -> Swift.Void)
-  @available(*, deprecated, renamed: "closeReader")
-  public func closeStory(complete: @escaping () -> Swift.Void)
-  public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
-}
-@_hasMissingDesignatedInitializers final public class ConfigurationRepo {
-  final public var defaultConfiguration: InAppStorySDK.PhoneFormat
-  final public func add(format: InAppStorySDK.PhoneFormat)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
-  public var isSelectable: Swift.Bool
-  final public let config: InAppStorySDK.ConfigurationRepo
-  public var hasPredictiveInput: Swift.Bool {
-    get
-    set
-  }
-  public var prefix: Swift.String? {
-    get
-    set
-  }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
-    @objc get
-    @objc set
-  }
-  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
-    get
-    set
-  }
-  public func phoneNumber() -> Swift.String?
-  public func phoneNumberWithoutPrefix() -> Swift.String?
-  public var formattedText: Swift.String? {
-    get
-    set
-  }
-  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-  @objc deinit
+extension UIView {
+  public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
 }
 public struct WidgetStory {
   public let id: Swift.String
@@ -270,27 +130,16 @@ extension InAppStory {
 }
 extension InAppStory {
   public func showOnboardings(from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
-  @available(*, deprecated, message: "The method deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-  public func showOnboarding(from target: UIKit.UIViewController, delegate: InAppStorySDK.OnboardingDelegate, complete: @escaping () -> Swift.Void)
-  @available(*, deprecated, renamed: "closeReader")
-  public func closeOnboarding(complete: @escaping () -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
-  @available(*, deprecated, message: "The method deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-  public func showSingleStory(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.SingleStoryDelegate, complete: @escaping () -> Swift.Void)
-  @available(*, deprecated, renamed: "closeReader")
-  public func closeSingleStory(complete: @escaping () -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
-@objc @_inheritsConvenienceInitializers open class CustomGoodsView : UIKit.UIView {
-  open func setSKUItems(_ items: Swift.Array<Swift.String>)
-  open func setReaderFrame(_ frame: CoreGraphics.CGRect)
-  final public func goodsItemClick(with sku: Swift.String)
-  final public func close()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+public func MD5(_ input: Swift.String) -> Swift.String
+@_hasMissingDesignatedInitializers final public class ConfigurationRepo {
+  final public var defaultConfiguration: InAppStorySDK.PhoneFormat
+  final public func add(format: InAppStorySDK.PhoneFormat)
   @objc deinit
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
@@ -317,33 +166,60 @@ extension GoodsDelegateFlowLayout {
   public func insetForSection() -> UIKit.UIEdgeInsets
   public func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
 }
-@available(*, deprecated, message: "The protocol deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-public protocol OnboardingDelegate : ObjectiveC.NSObjectProtocol {
-  func onboardingUpdated(isContent: Swift.Bool)
-  func onboardingReader(actionWith target: Swift.String, for type: InAppStorySDK.ActionType)
-  func onboardingReaderWillShow()
-  func onboardingReaderDidClose()
+public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setTitle(_ text: Swift.String)
+  func setImageURL(_ url: Foundation.URL)
+  func setVideoURL(_ url: Foundation.URL)
+  func setOpened(_ value: Swift.Bool)
+  func setHighlight(_ value: Swift.Bool)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+  func setTitleColor(_ color: UIKit.UIColor)
+  func setSound(_ value: Swift.Bool)
 }
-@available(*, deprecated, message: "The protocol deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. See https://github.com/inappstory/ios-sdk/blob/main/Migration.md")
-public protocol SingleStoryDelegate : ObjectiveC.NSObjectProtocol {
-  func singleStoryUpdated(isContent: Swift.Bool)
-  func singleStory(actionWith target: Swift.String, for type: InAppStorySDK.ActionType)
-  func singleStoryReaderWillShow()
-  func singleStoryReaderDidClose()
+public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
+  func sizeForItem() -> CoreGraphics.CGSize
+  func insetForSection() -> UIKit.UIEdgeInsets
+  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+  func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
 }
 public protocol PlaceholderProtocol : UIKit.UIView {
   var isAnimate: Swift.Bool { get }
   func start()
   func stop()
 }
-public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
-  static var reuseIdentifier: Swift.String { get }
-  static var nib: UIKit.UINib? { get }
-  var favoritesCount: Swift.Int { get set }
-  func setHighlight(_ value: Swift.Bool)
-  func setImages(_ urls: Swift.Array<Foundation.URL?>)
-  func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
-  func setBackgroundColor(_ color: UIKit.UIColor)
+@objc public enum ClosePosition : Swift.Int {
+  case left, right, bottomLeft, bottomRight
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ScrollStyle : Swift.Int {
+  case flat, cover, cube
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PresentationStyle : Swift.Int {
+  case crossDissolve, modal, zoom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Quality : Swift.Int {
+  case medium, high
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public enum GoodsFailure : Swift.Error {
   case refresh
@@ -372,23 +248,110 @@ public enum StoriesType {
   }
 }
 public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
-  func storiesDidUpdated(isContent: Swift.Bool, from storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
-  func storyReader(actionWith target: Swift.String, for type: InAppStorySDK.ActionType, from storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
-  func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
-  func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  func storiesDidUpdated(isContent: Swift.Bool, from storyType: InAppStorySDK.StoriesType)
+  func storyReader(actionWith target: Swift.String, for type: InAppStorySDK.ActionType, from storyType: InAppStorySDK.StoriesType)
+  func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
+  func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   func favoriteCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
-  func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
 extension InAppStoryDelegate {
-  public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
-  public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
+  public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   public func favoriteCellDidSelect()
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
-  public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType, storyView: InAppStorySDK.StoryView?)
+  public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
-extension UIView {
-  public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
+@objc @_inheritsConvenienceInitializers open class CustomGoodsView : UIKit.UIView {
+  open func setSKUItems(_ items: Swift.Array<Swift.String>)
+  open func setReaderFrame(_ frame: CoreGraphics.CGRect)
+  final public func goodsItemClick(with sku: Swift.String)
+  final public func close()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
+  public var isSelectable: Swift.Bool
+  final public let config: InAppStorySDK.ConfigurationRepo
+  public var hasPredictiveInput: Swift.Bool {
+    get
+    set
+  }
+  public var prefix: Swift.String? {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+    @objc get
+    @objc set
+  }
+  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
+    get
+    set
+  }
+  public func phoneNumber() -> Swift.String?
+  public func phoneNumberWithoutPrefix() -> Swift.String?
+  public var formattedText: Swift.String? {
+    get
+    set
+  }
+  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @objc deinit
+}
+public protocol GamePlaceholderProtocol : UIKit.UIView {
+  func setProgress(progress: Swift.Double)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
+  weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
+    get
+    set
+  }
+  weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  public var isFavoriteView: Swift.Bool
+  weak public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  public var storyCell: InAppStorySDK.StoryCellProtocol! {
+    get
+    set
+  }
+  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
+    get
+    set
+  }
+  public var isContent: Swift.Bool {
+    get
+  }
+  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension StoryView {
+  public func create()
+  public func refresh()
+  public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
+}
+public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  var favoritesCount: Swift.Int { get set }
+  func setHighlight(_ value: Swift.Bool)
+  func setImages(_ urls: Swift.Array<Foundation.URL?>)
+  func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+}
+public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setGoodObject(_ object: InAppStorySDK.GoodsObjectProtocol!)
 }
 extension InAppStorySDK.ClosePosition : Swift.Equatable {}
 extension InAppStorySDK.ClosePosition : Swift.Hashable {}
