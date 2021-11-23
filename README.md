@@ -27,10 +27,7 @@ A library for embedding stories into an application with customization.
 * [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
 	* [InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)
 	* [GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)
-	* [StoryViewDelegate](https://github.com/inappstory/ios-sdk#StoryViewDelegate)
 	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
-	* [OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)
-	* [SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)
 	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
 	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
@@ -141,10 +138,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `addTags(<Array<String>>)` - adding tags;
 * `removeTags(<Array<String>>)` - remove tags;
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
-* `showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: @escaping () -> Void)` - show onboarding reader (**The method deprecated and will be removed in v1.11.x; Use showOnboardings**, [Migration guide](Migration.md));
 * `showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
-* `showSingleStory(with id: <String>, from target: <UIViewController>, delegate: <SingleStoryDelegate>, complete: @escaping () -> Void)` - show single reader (**The method deprecated and will be removed in v1.11.x; Use showSingle**, [Migration guide](Migration.md));
 * `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
 * `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
@@ -247,7 +242,6 @@ override func viewDidLoad() {
 
 ### Parameters and properties
 
-* `delegate` - should implement the protocol (**The property deprecated and will be removed in v1.11.x; Use storiesDelegate** [Migration guide](Migration.md));
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
@@ -319,18 +313,6 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
 * `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 
-### StoryViewDelegate
-
-* `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - called after the contents of the list are updated;
-* `storyView(_ storyView: <StoryView>, actionWith type: <ActionType>, for target: <String>)
-` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `storyReaderWillShow()` - called before the reader will show;
-* `storyReaderDidClose()` - called after closing the story reader;
-* `favoriteCellDidSelect()` - called when the favorite cell has been selected;
-
-> **Pay attention!**  
-> StoryViewDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
-
 ### StoryViewDelegateFlowLayout
 
 Methods of delegate, like in UICollectionViewDelegateFlowLayout
@@ -339,26 +321,6 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
 * `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 * `minimumInteritemSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
-
-### OnboardingDelegate
-
-* `onboardingUpdated(isContent: <Bool>)` - called after the contents of the list are updated;
-* `onboardingReader(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `onboardingReaderWillShow()` - called before the reader will show;
-* `onboardingReaderDidClose()` - called after closing the story reader;
-
-> **Pay attention!**  
-> OnboardingDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
-
-### SingleStoryDelegate
-
-* `singleStoryUpdated(isContent: <Bool>)` - called after a single story is received;
-* `singleStory(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `singleStoryReaderWillShow()` - called before the reader will show;
-* `singleStoryReaderDidClose()` - called after closing the story reader;
-
-> **Pay attention!**  
-> SingleStoryDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
 
 ### PlaceholderProtocol  
 
