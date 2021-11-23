@@ -4,17 +4,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "InAppStorySDK",
+    name: "InAppStorySDK_SwiftUI",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v13)
     ],
     products: [
-        .library(name: "InAppStorySDK", targets: ["InAppStorySDK"])
+        .library(name: "InAppStorySDK_SwiftUI", targets: ["InAppStorySDK_SwiftUI"])
     ],
     targets: [
-        .binaryTarget(name: "InAppStorySDK",
-                      url: "https://github.com/inappstory/ios-sdk/files/7582987/InAppStorySDK-1.11.0.xcframework.zip",
-                      checksum: "f15e557a862fd485b5fe581c2e5a65f48c972d24efffd450fef2eab610dc0ba4"
+        .binaryTarget(name: "InAppStorySDK_SwiftUI",
+                      url: "https://github.com/inappstory/ios-sdk/files/7586209/InAppStorySDK_SwiftUI-1.11.0.xcframework.zip",
+                      checksum: "0299674084867fe7c1b18f12e7bf579473e6e754538f613029813b6978092bc5"
                 )
     ],
     swiftLanguageVersions: [.v5]

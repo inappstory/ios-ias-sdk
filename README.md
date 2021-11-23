@@ -10,16 +10,19 @@ A library for embedding stories into an application with customization.
 	* [Swift Package Manager](https://github.com/inappstory/ios-sdk#Swift-Package-Manager)
 	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
-* [Migration](https://github.com/inappstory/ios-sdk#Migration)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
 	* [Customization](https://github.com/inappstory/ios-sdk#Customization)
-* [StoryView](https://github.com/inappstory/ios-sdk#StoryView)
+* [StoryViewSUI](https://github.com/inappstory/ios-sdk#StoryViewSUI)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization-1)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods-1)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties-1)
+* [StoryView](https://github.com/inappstory/ios-sdk#StoryView)
+	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization-2)
+	* [Methods](https://github.com/inappstory/ios-sdk#Methods-2)
+	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties-2)
 * [OnboardingStory](https://github.com/inappstory/ios-sdk#OnboardingStory)
 	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation)
 * [SingleStory](https://github.com/inappstory/ios-sdk#SingleStory)
@@ -27,10 +30,7 @@ A library for embedding stories into an application with customization.
 * [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
 	* [InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)
 	* [GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)
-	* [StoryViewDelegate](https://github.com/inappstory/ios-sdk#StoryViewDelegate)
 	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
-	* [OnboardingDelegate](https://github.com/inappstory/ios-sdk#OnboardingDelegate)
-	* [SingleStoryDelegate](https://github.com/inappstory/ios-sdk#SingleStoryDelegate)
 	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
 	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
@@ -50,13 +50,12 @@ A library for embedding stories into an application with customization.
 * [NotificationCenter](https://github.com/inappstory/ios-sdk#NotificationCenter)
 	* [Events](https://github.com/inappstory/ios-sdk#Events)
 	* [Errors](https://github.com/inappstory/ios-sdk#Errors)
-* [Samples](Samples/Samples.md)
 
 ## Installation
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.11.0             | 1900          | >= 10.0     |
+| 1.11.0             | 1900          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -67,7 +66,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.11.0-SwiftUI'
 ```
 
 ### Carthage
@@ -97,22 +96,11 @@ Download `InAppStorySDK.xcframework` from the repository. Connect in the project
 
 ### Library import
 
-##### Objective-C
-
-```objective-c
-#import <InAppStorySDK/InAppStorySDK.h>
-```
-
 ##### Swift
 
 ```swift
-import InAppStorySDK
+import InAppStorySDK_SwiftUI
 ```
-## Migration
-
-* from InAppStorySDK - v 1.8.x -> [Migration guide](Migration-1.8.0.md)
-* from InAppStorySDK - v 1.9.x -> [Migration guide](Migration-1.9.0.md)
-* from InAppStorySDK - v 1.10.x -> [Migration guide](Migration-1.10.0.md)
 
 ## InAppStory
 
@@ -141,12 +129,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `addTags(<Array<String>>)` - adding tags;
 * `removeTags(<Array<String>>)` - remove tags;
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
-* `showOnboarding(from target: <UIViewController>, delegate: <OnboardingDelegate>, complete: @escaping () -> Void)` - show onboarding reader (**The method deprecated and will be removed in v1.11.x; Use showOnboardings**, [Migration guide](Migration.md));
-* `showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
-* `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
-* `showSingleStory(with id: <String>, from target: <UIViewController>, delegate: <SingleStoryDelegate>, complete: @escaping () -> Void)` - show single reader (**The method deprecated and will be removed in v1.11.x; Use showSingle**, [Migration guide](Migration.md));
-* `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
-* `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
+* `showOnboardings(delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
+* `showSingle(with id: <String>, delegate: <InAppStoryDelegate>, complete: @escaping () -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
 * `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
 * `clearCache` - clear all cache of library;
 
@@ -207,6 +191,52 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
 * `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
 
+## StoryViewSUI
+
+The main class for working with lists of stories with SwiftUI.
+
+### Initialization
+---
+**Remark**  
+If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryView`, it should be set:
+
+```swift
+InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
+```
+---
+
+If the parameter `isFavorite: <Bool?>` is equal true, the list will be displayed favorite stories.
+
+```swift
+struct ContentView: View
+{
+    private var storyView: StoryViewSUI = StoryViewSUI(delegate: <InAppStoryDelegate>?, deleagateFlowLayout: <StoryViewDelegateFlowLayout>?, isFavorite: <Bool> = false)
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            storyView
+                .create()
+                .padding(.top)
+                .frame(height: 150.0)
+            Spacer()
+        }
+    }
+}
+```
+
+### Methods
+
+* `create` - running internal StoryView logic;
+* `refresh` - refresh stories list;
+* `setStoryCell(customCell: <StoryCellProtocol>)` - set custom cell for list;
+* `setFavoriteCell(customCell: <FavoriteCellProtocol>)` - set custom favorite cell.
+
+### Parameters and properties
+
+* `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>* - set at initialization;
+* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>* - set at initialization;
+* `isContent` - there is any content in the list of stories *\<Bool>*;
+
 ## StoryView
 
 The main class for working with lists of stories.
@@ -243,11 +273,9 @@ override func viewDidLoad() {
 * `create` - running internal StoryView logic;
 * `refresh` - refresh stories list;
 * `clear` - clear cache of images;
-* `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - displaying a custom controller on top of the story reader.
 
 ### Parameters and properties
 
-* `delegate` - should implement the protocol (**The property deprecated and will be removed in v1.11.x; Use storiesDelegate** [Migration guide](Migration.md));
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
@@ -273,7 +301,7 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display onboarding, you need call the `showOnboardings` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showOnboardings(delegate: <InAppStoryDelegate>, complete: <()->Void>)
 ```
 
 To close the reader of onboarding, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
@@ -295,7 +323,7 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display single story, you need call the `showSingle` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showSingle(from target: <UIViewController>, with id: <String>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showSingle(with id: <String>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
 ```
 
 To close the reader of single story, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
@@ -303,13 +331,13 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 ## Protocols
 
 ### InAppStoryDelegate
-* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
-* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>* and *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
-* `storyReaderWillShow(with storyType: <StoriesType>, storyView: <StoryView>?)` - called before the reader will show *(optional)*;
-* `storyReaderDidClose(with storyType: <StoriesType>, storyView: <StoryView>?)` - called after closing the story reader *(optional)*;
+* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
+* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>* and *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
+* `storyReaderWillShow(with storyType: <StoriesType>)` - called before the reader will show *(optional)*;
+* `storyReaderDidClose(with storyType: <StoriesType>)` - called after closing the story reader *(optional)*;
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
-* `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
+* `goodItemSelected(_ item: <GoodsObjectProtocol>, with storyType: <StoriesType>)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
 
 ### GoodsDelegateFlowLayout
 
@@ -319,18 +347,6 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
 * `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 
-### StoryViewDelegate
-
-* `storyViewUpdated(storyView: <StoryView>, widgetStories: Array<WidgetStory>?)` - called after the contents of the list are updated;
-* `storyView(_ storyView: <StoryView>, actionWith type: <ActionType>, for target: <String>)
-` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `storyReaderWillShow()` - called before the reader will show;
-* `storyReaderDidClose()` - called after closing the story reader;
-* `favoriteCellDidSelect()` - called when the favorite cell has been selected;
-
-> **Pay attention!**  
-> StoryViewDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
-
 ### StoryViewDelegateFlowLayout
 
 Methods of delegate, like in UICollectionViewDelegateFlowLayout
@@ -339,26 +355,6 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
 * `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 * `minimumInteritemSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
-
-### OnboardingDelegate
-
-* `onboardingUpdated(isContent: <Bool>)` - called after the contents of the list are updated;
-* `onboardingReader(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `onboardingReaderWillShow()` - called before the reader will show;
-* `onboardingReaderDidClose()` - called after closing the story reader;
-
-> **Pay attention!**  
-> OnboardingDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
-
-### SingleStoryDelegate
-
-* `singleStoryUpdated(isContent: <Bool>)` - called after a single story is received;
-* `singleStory(actionWith target: <String>, for type: <ActionType>)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>*;
-* `singleStoryReaderWillShow()` - called before the reader will show;
-* `singleStoryReaderDidClose()` - called after closing the story reader;
-
-> **Pay attention!**  
-> SingleStoryDelegate deprecated and will be removed in v1.11.x; please migrate to a InAppStoryDelegate. [Migration guide](Migration.md)
 
 ### PlaceholderProtocol  
 
@@ -404,7 +400,7 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 
 ### GoodsComplete
 
-Closure for contine `getGoodsObject(...)` method in *InAppStoryDelegate* - `(Result<Array<Any>, GoodsFailure>) -> Void`
+Closure for contine `getGoodsObject(...)` method in *InAppStoryDelegate* - `(Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void`
 
 ## enum
 

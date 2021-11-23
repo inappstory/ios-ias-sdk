@@ -1,0 +1,388 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
+import AVFoundation
+import CommonCrypto
+import Compression
+import CoreFoundation
+import CoreText
+import Foundation
+@_exported import InAppStorySDK_SwiftUI
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+public struct PhoneFormat {
+  public let phoneFormat: Swift.String
+  public let regexp: Swift.String
+  public init(defaultPhoneFormat: Swift.String)
+  public init(phoneFormat: Swift.String, regexp: Swift.String)
+}
+extension UIView {
+  public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
+}
+public struct WidgetStory {
+  public let id: Swift.String
+  public let title: Swift.String
+  public let image: Swift.String
+  public let color: Swift.String
+}
+public let StoriesLoaded: Foundation.Notification.Name
+public let ClickOnStory: Foundation.Notification.Name
+public let ShowStory: Foundation.Notification.Name
+public let CloseStory: Foundation.Notification.Name
+public let ClickOnButton: Foundation.Notification.Name
+public let ShowSlide: Foundation.Notification.Name
+public let LikeStory: Foundation.Notification.Name
+public let DislikeStory: Foundation.Notification.Name
+public let FavoriteStory: Foundation.Notification.Name
+public let ClickOnShareStory: Foundation.Notification.Name
+public let StartGame: Foundation.Notification.Name
+public let CloseGame: Foundation.Notification.Name
+public let FinishGame: Foundation.Notification.Name
+public let SessionFailure: Foundation.Notification.Name
+public let StoryFailure: Foundation.Notification.Name
+public let CurrentStoryFailure: Foundation.Notification.Name
+public let NetworkFailure: Foundation.Notification.Name
+public struct Settings : Swift.Equatable {
+  public var userID: Swift.String
+  public var tags: [Swift.String]
+  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String]())
+  public static func == (lhs: InAppStorySDK_SwiftUI.Settings, rhs: InAppStorySDK_SwiftUI.Settings) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
+  public static var shared: InAppStorySDK_SwiftUI.InAppStory
+  public static let VersionSDK: Swift.String
+  public static let BuildSDK: Swift.String
+  public static var frameworkInfo: Swift.String {
+    get
+  }
+  public var settings: InAppStorySDK_SwiftUI.Settings? {
+    get
+    set
+  }
+  public var favoritesCount: Swift.Int {
+    get
+  }
+  public var widgetStories: [InAppStorySDK_SwiftUI.WidgetStory]
+  public var coverQuality: InAppStorySDK_SwiftUI.Quality
+  public var showCellTitle: Swift.Bool
+  public var cellBorderColor: UIKit.UIColor
+  public var goodsCellMainTextColor: UIKit.UIColor
+  public var goodsCellDiscountTextColor: UIKit.UIColor
+  public var cellFont: UIKit.UIFont
+  public var goodCellTitleFont: UIKit.UIFont
+  public var goodCellSubtitleFont: UIKit.UIFont
+  public var goodCellPriceFont: UIKit.UIFont
+  public var goodCellDiscountFont: UIKit.UIFont
+  public var timerGradientEnable: Swift.Bool
+  public var swipeToClose: Swift.Bool
+  public var overScrollToClose: Swift.Bool
+  public var placeholderElementColor: UIKit.UIColor
+  public var placeholderBackgroundColor: UIKit.UIColor
+  public var goodsCloseBackgroundColor: UIKit.UIColor
+  public var goodsSubstrateColor: UIKit.UIColor
+  public var gamePlaceholderTint: UIKit.UIColor
+  public var likeImage: UIKit.UIImage
+  public var likeSelectedImage: UIKit.UIImage
+  public var dislikeImage: UIKit.UIImage
+  public var dislikeSelectedImage: UIKit.UIImage
+  public var favoriteImage: UIKit.UIImage
+  public var favoriteSelectedImag: UIKit.UIImage
+  public var shareImage: UIKit.UIImage
+  public var shareSelectedImage: UIKit.UIImage
+  public var soundImage: UIKit.UIImage
+  public var soundSelectedImage: UIKit.UIImage
+  public var refreshImage: UIKit.UIImage
+  public var refreshGoodsImage: UIKit.UIImage
+  public var goodsCloseImage: UIKit.UIImage
+  public var likePanel: Swift.Bool
+  public var favoritePanel: Swift.Bool
+  public var sharePanel: Swift.Bool
+  public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
+  public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
+  public var gamePlaceholderView: InAppStorySDK_SwiftUI.GamePlaceholderProtocol?
+  public var goodsView: InAppStorySDK_SwiftUI.CustomGoodsView?
+  public var goodsDelegateFlowLayout: InAppStorySDK_SwiftUI.GoodsDelegateFlowLayout?
+  public var closeButtonPosition: InAppStorySDK_SwiftUI.ClosePosition
+  public var scrollStyle: InAppStorySDK_SwiftUI.ScrollStyle
+  public var presentationStyle: InAppStorySDK_SwiftUI.PresentationStyle
+  public var muted: Swift.Bool {
+    get
+    set
+  }
+  public var placeholders: [Swift.String : Swift.String] {
+    get
+    set
+  }
+  public var isLoggingEnabled: Swift.Bool
+  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil, sandBox: Swift.Bool = false)
+  public func addTags(_ addedTags: Swift.Array<Swift.String>)
+  public func removeTags(_ removingTags: Swift.Array<Swift.String>)
+  public func getWidgetStories(complete: @escaping (Swift.Array<InAppStorySDK_SwiftUI.WidgetStory>?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension InAppStory {
+  public func clearMemory()
+  public func clearCache()
+  public func closeReader(complete: @escaping () -> Swift.Void)
+}
+extension InAppStory {
+  public func showOnboardings(delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+}
+extension InAppStory {
+  public func showSingle(with id: Swift.String, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+}
+public struct StoryViewSUI : SwiftUI.UIViewRepresentable {
+  public var isContent: Swift.Bool {
+    get
+  }
+  public init(delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate? = nil, deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? = nil, isFavorite: Swift.Bool = false)
+  public func makeUIView(context: InAppStorySDK_SwiftUI.StoryViewSUI.Context) -> InAppStorySDK_SwiftUI.StoryView
+  public func updateUIView(_ uiView: InAppStorySDK_SwiftUI.StoryView, context: InAppStorySDK_SwiftUI.StoryViewSUI.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = InAppStorySDK_SwiftUI.StoryView
+}
+extension StoryViewSUI {
+  public func create() -> InAppStorySDK_SwiftUI.StoryViewSUI
+  public func refresh() -> InAppStorySDK_SwiftUI.StoryViewSUI
+  public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
+  public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
+}
+@_hasMissingDesignatedInitializers final public class ConfigurationRepo {
+  final public var defaultConfiguration: InAppStorySDK_SwiftUI.PhoneFormat
+  final public func add(format: InAppStorySDK_SwiftUI.PhoneFormat)
+  @objc deinit
+}
+public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
+  var sku: Swift.String! { get set }
+}
+@objc public class GoodObject : ObjectiveC.NSObject, InAppStorySDK_SwiftUI.GoodsObjectProtocol {
+  public var sku: Swift.String!
+  public var title: Swift.String?
+  public var subtitle: Swift.String?
+  public var imageURL: Foundation.URL?
+  public var price: Swift.String?
+  public var discount: Swift.String?
+  public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, discount: Swift.String?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
+  func sizeForItem() -> CoreGraphics.CGSize
+  func insetForSection() -> UIKit.UIEdgeInsets
+  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+}
+extension GoodsDelegateFlowLayout {
+  public func sizeForItem() -> CoreGraphics.CGSize
+  public func insetForSection() -> UIKit.UIEdgeInsets
+  public func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+}
+public func MD5(_ input: Swift.String) -> Swift.String
+public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setTitle(_ text: Swift.String)
+  func setImageURL(_ url: Foundation.URL)
+  func setVideoURL(_ url: Foundation.URL)
+  func setOpened(_ value: Swift.Bool)
+  func setHighlight(_ value: Swift.Bool)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+  func setTitleColor(_ color: UIKit.UIColor)
+  func setSound(_ value: Swift.Bool)
+}
+public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
+  func sizeForItem() -> CoreGraphics.CGSize
+  func insetForSection() -> UIKit.UIEdgeInsets
+  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+  func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
+}
+public protocol PlaceholderProtocol : UIKit.UIView {
+  var isAnimate: Swift.Bool { get }
+  func start()
+  func stop()
+}
+@objc public enum ClosePosition : Swift.Int {
+  case left, right, bottomLeft, bottomRight
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ScrollStyle : Swift.Int {
+  case flat, cover, cube
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PresentationStyle : Swift.Int {
+  case crossDissolve, modal, zoom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Quality : Swift.Int {
+  case medium, high
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum GoodsFailure : Swift.Error {
+  case refresh
+  case close
+  public static func == (a: InAppStorySDK_SwiftUI.GoodsFailure, b: InAppStorySDK_SwiftUI.GoodsFailure) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias GoodsComplete = (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void
+public enum ActionType {
+  case button, swipe, game
+  public static func == (a: InAppStorySDK_SwiftUI.ActionType, b: InAppStorySDK_SwiftUI.ActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum StoriesType {
+  case list, single, onboarding
+  public static func == (a: InAppStorySDK_SwiftUI.StoriesType, b: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
+  func storiesDidUpdated(isContent: Swift.Bool, from storyType: InAppStorySDK_SwiftUI.StoriesType)
+  func storyReader(actionWith target: Swift.String, for type: InAppStorySDK_SwiftUI.ActionType, from storyType: InAppStorySDK_SwiftUI.StoriesType)
+  func storyReaderWillShow(with storyType: InAppStorySDK_SwiftUI.StoriesType)
+  func storyReaderDidClose(with storyType: InAppStorySDK_SwiftUI.StoriesType)
+  func favoriteCellDidSelect()
+  func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
+  func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
+}
+extension InAppStoryDelegate {
+  public func storyReaderWillShow(with storyType: InAppStorySDK_SwiftUI.StoriesType)
+  public func storyReaderDidClose(with storyType: InAppStorySDK_SwiftUI.StoriesType)
+  public func favoriteCellDidSelect()
+  public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
+  public func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
+}
+@objc @_inheritsConvenienceInitializers open class CustomGoodsView : UIKit.UIView {
+  open func setSKUItems(_ items: Swift.Array<Swift.String>)
+  open func setReaderFrame(_ frame: CoreGraphics.CGRect)
+  final public func goodsItemClick(with sku: Swift.String)
+  final public func close()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
+  public var isSelectable: Swift.Bool
+  final public let config: InAppStorySDK_SwiftUI.ConfigurationRepo
+  public var hasPredictiveInput: Swift.Bool {
+    get
+    set
+  }
+  public var prefix: Swift.String? {
+    get
+    set
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+    @objc get
+    @objc set
+  }
+  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
+    get
+    set
+  }
+  public func phoneNumber() -> Swift.String?
+  public func phoneNumberWithoutPrefix() -> Swift.String?
+  public var formattedText: Swift.String? {
+    get
+    set
+  }
+  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
+  weak public var storiesDelegate: InAppStorySDK_SwiftUI.InAppStoryDelegate? {
+    get
+    set
+  }
+  weak public var deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  public var isFavoriteView: Swift.Bool
+  weak public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  public var storyCell: InAppStorySDK_SwiftUI.StoryCellProtocol! {
+    get
+    set
+  }
+  public var favoriteCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol! {
+    get
+    set
+  }
+  public var isContent: Swift.Bool {
+    get
+  }
+  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension StoryView {
+  public func create()
+  public func refresh()
+}
+public protocol GamePlaceholderProtocol : UIKit.UIView {
+  func setProgress(progress: Swift.Double)
+}
+public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  var favoritesCount: Swift.Int { get set }
+  func setHighlight(_ value: Swift.Bool)
+  func setImages(_ urls: Swift.Array<Foundation.URL?>)
+  func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
+  func setBackgroundColor(_ color: UIKit.UIColor)
+}
+public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+  func setGoodObject(_ object: InAppStorySDK_SwiftUI.GoodsObjectProtocol!)
+}
+extension InAppStorySDK_SwiftUI.ClosePosition : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.ClosePosition : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.ClosePosition : Swift.RawRepresentable {}
+extension InAppStorySDK_SwiftUI.ScrollStyle : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.ScrollStyle : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.ScrollStyle : Swift.RawRepresentable {}
+extension InAppStorySDK_SwiftUI.PresentationStyle : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.PresentationStyle : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.PresentationStyle : Swift.RawRepresentable {}
+extension InAppStorySDK_SwiftUI.Quality : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.Quality : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.Quality : Swift.RawRepresentable {}
+extension InAppStorySDK_SwiftUI.GoodsFailure : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.GoodsFailure : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.ActionType : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.ActionType : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.StoriesType : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.StoriesType : Swift.Hashable {}
