@@ -66,7 +66,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.11.0-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.11.0-SwiftUI'
 ```
 
 ### Carthage
