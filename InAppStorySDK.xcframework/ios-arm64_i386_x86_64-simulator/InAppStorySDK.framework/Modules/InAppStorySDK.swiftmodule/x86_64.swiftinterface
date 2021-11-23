@@ -117,6 +117,7 @@ public struct Settings : Swift.Equatable {
   }
   public var isLoggingEnabled: Swift.Bool
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil, sandBox: Swift.Bool = false)
+  public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
   public func getWidgetStories(complete: @escaping (Swift.Array<InAppStorySDK.WidgetStory>?) -> Swift.Void)
