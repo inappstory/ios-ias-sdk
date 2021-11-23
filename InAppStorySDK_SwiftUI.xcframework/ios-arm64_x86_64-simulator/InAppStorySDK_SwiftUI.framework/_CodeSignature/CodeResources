@@ -6,19 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		/Fk3MnaecwMNe/4g/+j6dvDqAc4=
+		Gc/ccIxoD3wlV401rn7mh2UvEoo=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
-		6uDNRZjcD+KKlXoXG5ByLYXKgTA=
+		PqMEDMsY6Qi2fWRoEEbnuHXEc/0=
 		</data>
 		<key>GamePlaceholder.nib</key>
 		<data>
-		RVxXwRWnru5yirISmSFCO3xf8Ws=
+		Pb9WHtG7efRwxcAKlIW5q4UMupQ=
 		</data>
 		<key>GoodCell.nib</key>
 		<data>
-		S+qnEMZw/RumkAY1gjoZOGZdNS4=
+		JbHuBMqUXPTykJ1UerzYN+CPtPM=
 		</data>
 		<key>Headers/CSPlaceholderView.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UozPSHYf/b4GYHb6JgqiZRPeJGU=
+		BTwXcf9hERCOstP4n3gmaVpBWBQ=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		UozPSHYf/b4GYHb6JgqiZRPeJGU=
+		BTwXcf9hERCOstP4n3gmaVpBWBQ=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6lzIDmDfRvACfaN9HyptSeyx+i0=
+		LEIWRjDPamwZqAlTMg7DO5OuJvM=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		6lzIDmDfRvACfaN9HyptSeyx+i0=
+		LEIWRjDPamwZqAlTMg7DO5OuJvM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>StoryCell.nib</key>
 		<data>
-		69Kcsp7vTBBzNhXQ0uSNOnUzjNU=
+		tIlfMCIuKovFF7N9aUhzqY99xPk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -99,28 +99,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jsZUJ43jtxk2WgUQ9rujiV5ddKO+ZQg2ebolcw0Esfc=
+			zrKvyfBY8z0jhpWdmyVUwVG2nScuzjCl5nDu3I84rv8=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qMnzxZF8aTEkPu67akXUwAP6PkANNOpiJ2e2GNKGVmA=
+			vKwHEht6/9+8xYym2pUH9rDrp1mtbaKkECh/dHlRDok=
 			</data>
 		</dict>
 		<key>GamePlaceholder.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M0EFsG8GCaGair6ubr/iXd5gvk4enaNWOEpn7T66wfk=
+			lr8qI4oG+ZwNlGZu9Ut/mBUSpJ0A+dZh19NX/OvQ5sc=
 			</data>
 		</dict>
 		<key>GoodCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZUFcKSTpVqxBCRmdzM3nwvK/RcahUR7nw168vN3A9Wc=
+			yD8xUEYlhigyNUlZWrwnW4ngTeAPMsVtgmpHFV0apb4=
 			</data>
 		</dict>
 		<key>Headers/CSPlaceholderView.h</key>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jAvLCc9lwyFCpeIviBB2jRmdVd4r/9eZNVPoUh+XEug=
+			egrR20eX+Wz/y+osbfnWRGxZ2ci13ReWIWDSA9KR3jI=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
@@ -183,7 +183,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jAvLCc9lwyFCpeIviBB2jRmdVd4r/9eZNVPoUh+XEug=
+			egrR20eX+Wz/y+osbfnWRGxZ2ci13ReWIWDSA9KR3jI=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -204,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LOAuQ2bL4H8jG/tGRM99m6ebm1ilMCyTahfRaz8Xp5s=
+			hu7FFBGD5u2T3JzLQBOkbX6/ldCK//FXqqjj31IS6Mo=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
@@ -225,7 +225,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LOAuQ2bL4H8jG/tGRM99m6ebm1ilMCyTahfRaz8Xp5s=
+			hu7FFBGD5u2T3JzLQBOkbX6/ldCK//FXqqjj31IS6Mo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -239,7 +239,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7NnuxHfhOS/vnkcY959IEkdXmZofFs9V9kjyjs3pkHw=
+			/iOt8aypJhuiNEAcXtMY7GIQKcT22b5Xked8ZkRe8pI=
 			</data>
 		</dict>
 	</dict>
