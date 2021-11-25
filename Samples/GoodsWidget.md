@@ -121,13 +121,11 @@ class SimpleGoodsViewDelegate: NSObject, InAppStoryDelegate
 
 InAppStory has three ways to customize GoodsWidget:
 
-* Customize default cell of goods [Appearance customization]();
-* Set custom cell [Custom cell]();
-* Fully custom widget implemented on the application side [Full owerride widget]()
+* Customize default cell of goods [Appearance customization](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/GoodsWidget.md#appearance-customization);
+* Set custom cell [Custom cell](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/GoodsWidget.md#custom-cell);
+* Fully custom widget implemented on the application side [Full owerride widget](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/GoodsWidget.md#full-owerride-widget)
 
-#### Appearance customization
-
->-
+### Appearance customization
 
 Appearance customization is similar to the work of a list with stories.
 
@@ -231,9 +229,7 @@ class CustomCellGoodsFlowDelegate: NSObject, GoodsDelegateFlowLayout
 
 ```
 
-#### Custom cell
-
->-
+### Custom cell
 
 1) You need to initialize `InAppStorySUI` in the project
 
@@ -350,9 +346,7 @@ struct ContentView: View
 }
 ```
 
-#### Full owerride widget
-
->-
+### Full owerride widget
 
 The Goods Widget can be completely replaced with a custom implementation. It must be remembered that with such a change, the library does not have access to it and works with the widget only through the [CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView) methods.
 

@@ -2,7 +2,8 @@
 
 ## Customization through properties
 
-Customization through properties changes the appearance of a standard cell with a fixed rounding and border thickness. Sizes also apply to the favorites cell. To change the appearance, shape and behavior of a cell, you need to create your own cell. The cell should implement `StoryCellProtocol` and` FavoriteCellProtocol`, described in more detail [here](https://github.com/inappstory/ios-sdk/blob/main/Samples/CustomCell.md#Customization-via-StoryCellProtocol-and-FavoriteCellProtocol).
+Customization through properties changes the appearance of a standard cell with a fixed rounding and border thickness. Sizes also apply to the favorites cell. To change the appearance, shape and behavior of a cell, you need to create your own cell. The cell should implement `StoryCellProtocol` and` FavoriteCellProtocol`, described in more detail [here](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/CustomCell.md#Customization-via-StoryCellProtocol-and-FavoriteCellProtocol).
+
 
 1) You need to initialize InAppStory in the project
 

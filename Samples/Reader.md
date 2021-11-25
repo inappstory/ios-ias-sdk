@@ -2,12 +2,12 @@
 
 #### Change the appearance of the reader:
 
-1. [Close button position](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Close-button-position)
-2. [Changing icons in the bottom panel](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Changing-icons-in-the-bottom-panel)
-3. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
-4. [Presentation style](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Presentation-style)
-5. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#Swipe-animation)
-6. [Timers gradient](https://github.com/inappstory/ios-sdk/blob/main/Samples/Reader.md#timers-gradient)
+1. [Close button position](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Close-button-position)
+2. [Changing icons in the bottom panel](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-icons-in-the-bottom-panel)
+3. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
+4. [Presentation style](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Presentation-style)
+5. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Swipe-animation)
+6. [Timers gradient](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#timers-gradient)
 
 ### Close button position
 
