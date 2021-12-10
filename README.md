@@ -10,7 +10,7 @@ A library for embedding stories into an application with customization.
 	* [Swift Package Manager](https://github.com/inappstory/ios-sdk#Swift-Package-Manager)
 	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
 	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
-* [Migration](https://github.com/inappstory/ios-sdk#Migration)
+* [Migration](https://github.com/inappstory/ios-sdk/tree/1.10.x#migration)
 * [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
@@ -110,8 +110,8 @@ import InAppStorySDK
 ```
 ## Migration
 
-* from InAppStorySDK - v 1.8.x -> [Migration guide](Migration-1.8.0.md)
-* from InAppStorySDK - v 1.9.x -> [Migration guide](Migration-1.9.0.md)
+* from InAppStorySDK - v 1.8.x -> [Migration guide to 1.9.0](https://github.com/inappstory/ios-sdk/blob/1.10.x/Migration-1.9.0.md)
+* from InAppStorySDK - v 1.9.x -> [Migration guide to 1.10.0](https://github.com/inappstory/ios-sdk/blob/1.10.x/Migration-1.10.0.md)
 
 ## InAppStory
 
