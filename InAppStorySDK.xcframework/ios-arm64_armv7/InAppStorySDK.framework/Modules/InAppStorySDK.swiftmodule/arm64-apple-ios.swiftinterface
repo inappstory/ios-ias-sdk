@@ -67,6 +67,7 @@ public struct Settings : Swift.Equatable {
   public var widgetStories: [InAppStorySDK.WidgetStory]
   public var coverQuality: InAppStorySDK.Quality
   public var showCellTitle: Swift.Bool
+  public var cellBorderRadius: CoreGraphics.CGFloat
   public var cellBorderColor: UIKit.UIColor
   public var goodsCellMainTextColor: UIKit.UIColor
   public var goodsCellDiscountTextColor: UIKit.UIColor
@@ -137,6 +138,10 @@ extension InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
+extension InAppStory {
+  public func removeFromFavorite(with storyID: Swift.String)
+  public func removeAllFavorites()
+}
 public func MD5(_ input: Swift.String) -> Swift.String
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK.PhoneFormat
@@ -170,6 +175,7 @@ extension GoodsDelegateFlowLayout {
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
+  var storyID: Swift.String! { get set }
   func setTitle(_ text: Swift.String)
   func setImageURL(_ url: Foundation.URL)
   func setVideoURL(_ url: Foundation.URL)

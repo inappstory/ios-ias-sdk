@@ -33,6 +33,11 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
     InAppStory.shared.cellBorderColor = .purple //border color around an unopened cell 
     
+    // cell's border radius
+    // to create a circle, you need to specify half the cell size.
+    // at this sample - is 75.0
+    InAppStory.shared.cellBorderRadius = 16.0 // default value
+    
     InAppStory.shared.cellFont = UIFont.systemFont(ofSize: 12.0) //title font (you can specify your own by first connecting it to the project)
     
     InAppStory.shared.coverQuality = .high // quality of cover images
@@ -180,6 +185,9 @@ class CustomStoryCell: UICollectionViewCell
     static var nib: UINib? {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
+    
+    // id of story
+    var storyID: String!
 }
 
 // implementation of the StoryCellProtocol
