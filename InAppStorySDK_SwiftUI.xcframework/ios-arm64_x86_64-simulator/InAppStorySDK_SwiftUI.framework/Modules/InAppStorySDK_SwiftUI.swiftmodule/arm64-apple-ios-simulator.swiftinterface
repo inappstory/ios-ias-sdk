@@ -68,6 +68,7 @@ public struct Settings : Swift.Equatable {
   public var widgetStories: [InAppStorySDK_SwiftUI.WidgetStory]
   public var coverQuality: InAppStorySDK_SwiftUI.Quality
   public var showCellTitle: Swift.Bool
+  public var cellBorderRadius: CoreGraphics.CGFloat
   public var cellBorderColor: UIKit.UIColor
   public var goodsCellMainTextColor: UIKit.UIColor
   public var goodsCellDiscountTextColor: UIKit.UIColor
@@ -136,6 +137,10 @@ extension InAppStory {
 extension InAppStory {
   public func showSingle(with id: Swift.String, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
 }
+extension InAppStory {
+  public func removeFromFavorite(with storyID: Swift.String)
+  public func removeAllFavorites()
+}
 public struct StoryViewSUI : SwiftUI.UIViewRepresentable {
   public var isContent: Swift.Bool {
     get
@@ -186,6 +191,7 @@ public func MD5(_ input: Swift.String) -> Swift.String
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
+  var storyID: Swift.String! { get set }
   func setTitle(_ text: Swift.String)
   func setImageURL(_ url: Foundation.URL)
   func setVideoURL(_ url: Foundation.URL)

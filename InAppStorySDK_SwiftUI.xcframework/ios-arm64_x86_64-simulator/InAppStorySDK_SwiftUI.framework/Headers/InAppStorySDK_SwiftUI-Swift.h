@@ -258,6 +258,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 
 
 
+
 typedef SWIFT_ENUM(NSInteger, PresentationStyle, open) {
   PresentationStyleCrossDissolve = 0,
   PresentationStyleModal = 1,
@@ -554,6 +555,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

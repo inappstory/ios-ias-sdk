@@ -37,6 +37,10 @@ struct ContentView: View
     
         // color of cell border
         InAppStory.shared.cellBorderColor = .purple
+        // cell's border radius
+        // to create a circle, you need to specify half the cell size.
+        // at this sample - is 75.0
+        InAppStory.shared.cellBorderRadius = 16.0 // default value
         // cell title font
         InAppStory.shared.cellFont = UIFont.systemFont(ofSize: 12.0)
     }
