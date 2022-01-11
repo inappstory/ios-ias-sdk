@@ -115,6 +115,9 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
+  public var isReaderOpen: Swift.Bool {
+    get
+  }
   public var isLoggingEnabled: Swift.Bool
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil, sandBox: Swift.Bool = false)
   public func setTags(_ tags: Swift.Array<Swift.String>)
