@@ -42,7 +42,7 @@ struct ContentView: View
 ##### ContentView.swift
 ```swift
 ...
-var storyView: StoryView!
+var storyView: StoryViewSUI!
 
 func setTags() {
     InAppStory.shared.setTags(<Array<String>>) //replace all tags list
