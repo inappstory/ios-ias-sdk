@@ -62,3 +62,6 @@ func removeTags() {
     storyView.refresh() //updating story list
 }
 ```
+> **Remark**  
+>When adding or changing tags, it's a good idea to make sure they're up to date before calling `refresh()`.  
+>You can also call `refresh()` right after the tag update methods.

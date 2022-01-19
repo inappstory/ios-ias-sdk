@@ -46,7 +46,10 @@ public let CurrentStoryFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public struct Settings : Swift.Equatable {
   public var userID: Swift.String
-  public var tags: [Swift.String]
+  public var tags: Swift.Array<Swift.String> {
+    get
+    set
+  }
   public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String]())
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
