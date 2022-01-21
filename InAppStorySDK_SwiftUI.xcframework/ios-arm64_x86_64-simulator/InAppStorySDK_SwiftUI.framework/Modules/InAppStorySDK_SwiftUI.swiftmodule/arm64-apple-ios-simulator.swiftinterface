@@ -159,9 +159,13 @@ public struct StoryViewSUI : SwiftUI.UIViewRepresentable {
   public typealias UIViewType = InAppStorySDK_SwiftUI.StoryView
 }
 extension StoryViewSUI {
+  @discardableResult
   public func create() -> InAppStorySDK_SwiftUI.StoryViewSUI
+  @discardableResult
   public func refresh() -> InAppStorySDK_SwiftUI.StoryViewSUI
+  @discardableResult
   public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
+  @discardableResult
   public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
