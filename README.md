@@ -251,7 +251,6 @@ override func viewDidLoad() {
 
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
-* `tags` - list of tags for content filtering *\<Array\<String>>*;
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
