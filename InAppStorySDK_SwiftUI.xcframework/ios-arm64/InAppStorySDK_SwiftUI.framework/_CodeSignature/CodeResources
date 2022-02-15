@@ -6,19 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		/oO0bVyt+3tM7jiCn+ePltUjBeM=
+		ANhAU8FR9v4nLexZmclf6lq/Vmw=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
-		kN228P8PG/h0QHC5kD9nmV8IXrc=
+		f7JIBSBKEW93wvBjbKH1c7faeaU=
 		</data>
 		<key>GamePlaceholder.nib</key>
 		<data>
-		7Iy2Sl3kxGvC7EhhctUmE+LSfbU=
+		6i9Xu5MGV9c1SUj39aVg6IApAto=
 		</data>
 		<key>GoodCell.nib</key>
 		<data>
-		hvoG26YZbcU6nWFBJw7x16nVX5E=
+		9WS5M2YDZgnWJpuy3vjTLIEMsuQ=
 		</data>
 		<key>Headers/CSPlaceholderView.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/InAppStorySDK_SwiftUI-Swift.h</key>
 		<data>
-		AZWbkxshsCbUXxr0a+ZFjGvFgxs=
+		Zz2REuGOkCpfDTjNNaLE8S2c3NA=
 		</data>
 		<key>Headers/InAppStorySDK_SwiftUI.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		aV4qB4pymaCvSzd8sZMKYspLZ1s=
+		772t9FO9Sv/8yD8fMUMOdtkAEk4=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xfGcsbkE0Gn99xi3Xu3Ka6uv9ZI=
+		aWUoNzIiFioK5/43aMiDe0GveP4=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		0zQGjMqGLSs1C+kF6XME8T+pOHA=
+		mfCYR9qho7K52OMMIhmVPeiR6u8=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		xfGcsbkE0Gn99xi3Xu3Ka6uv9ZI=
+		aWUoNzIiFioK5/43aMiDe0GveP4=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		0zQGjMqGLSs1C+kF6XME8T+pOHA=
+		mfCYR9qho7K52OMMIhmVPeiR6u8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>StoryCell.nib</key>
 		<data>
-		HZq4lp/aJkDhwMB+jm+tCD/jL9w=
+		fEEBJqiCjlEzzvrQMpY0VZ7/yhM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,28 +75,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tTg518g7oQ0ccohlI6xGRZSoSUB3Mauo7jcg5UDJ+eQ=
+			DdvrkRVcRDitwfP8HVf35pdHNAn5q7SJggpB8QDse7w=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KTdH5foXBcHLZYweshS4FUjvUdQfzaua+FRc1oYi2Y8=
+			j3si6SxqiAz8PSx8KkP8ypXimbYhIdDYR5AjFsWZflU=
 			</data>
 		</dict>
 		<key>GamePlaceholder.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+0NuACWJbiFsdIUIJcqBBQ68AWAjlHyMUd4Q3CbOpM=
+			H1vPUJvJV+4Ke2cdW/vDvq/pAc6qhLlYZz+KFq2Ilc8=
 			</data>
 		</dict>
 		<key>GoodCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l4jLYBtO2AW5td/UdL3VYvXYkRP2RXBQaYv6i48AjwE=
+			FZx3GW/uBZm3ii2weU9RTVL5SjsUY6f8ktVvGzdPGWE=
 			</data>
 		</dict>
 		<key>Headers/CSPlaceholderView.h</key>
@@ -110,7 +110,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kx3zmVitzZ15gbN13bBjifIL4ZEGgMGUaCOyv5jwL78=
+			oogowhyt2UUteLTkPzaVyjNhAz7fTbPkVd4KkngV418=
 			</data>
 		</dict>
 		<key>Headers/InAppStorySDK_SwiftUI.h</key>
@@ -131,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQ9lLiQIVIm9pwZlyvbPcu4TGB+cYb0LYPf6U5P62PA=
+			l6N2L3tG6ko4AMBPcmnHctSrl3OWCi/w1ieAmPGp+z4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+SUKybyKAoqMeUKV8Lnc9d2z30LotFPpSmF+12aRj3c=
+			4gJxYvdAFr7Dkzsw8IsJn8CV9qja0cKbLCBNMz7CKTw=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQ9lLiQIVIm9pwZlyvbPcu4TGB+cYb0LYPf6U5P62PA=
+			l6N2L3tG6ko4AMBPcmnHctSrl3OWCi/w1ieAmPGp+z4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+SUKybyKAoqMeUKV8Lnc9d2z30LotFPpSmF+12aRj3c=
+			4gJxYvdAFr7Dkzsw8IsJn8CV9qja0cKbLCBNMz7CKTw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -173,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CPob8//SY4vMWZ10cS9HHqeriV3hgi5KAL7Wt5ek26k=
+			23LiJfgIZ2ATe4RabkbtTowgWH3lM1j90QjmVWf8QvU=
 			</data>
 		</dict>
 	</dict>

@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
 import AVFoundation
+import Combine
 import CommonCrypto
 import Compression
 import CoreFoundation
@@ -13,11 +14,18 @@ import SwiftUI
 import SystemConfiguration
 import UIKit
 import WebKit
+import os
 public struct PhoneFormat {
   public let phoneFormat: Swift.String
   public let regexp: Swift.String
   public init(defaultPhoneFormat: Swift.String)
   public init(phoneFormat: Swift.String, regexp: Swift.String)
+}
+extension View {
+  public func onboardingStories(tags: [Swift.String]? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((Swift.String, InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((Swift.Array<Swift.String>, (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  
+  public func singleStory(storyID: Swift.String, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((Swift.String, InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((Swift.Array<Swift.String>, (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  
 }
 extension UIView {
   public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
@@ -69,6 +77,7 @@ public struct Settings : Swift.Equatable {
     get
   }
   public var widgetStories: [InAppStorySDK_SwiftUI.WidgetStory]
+  public var sslPinningHashKeys: [Swift.String]?
   public var coverQuality: InAppStorySDK_SwiftUI.Quality
   public var showCellTitle: Swift.Bool
   public var cellBorderRadius: CoreGraphics.CGFloat
@@ -138,35 +147,29 @@ extension InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStory {
-  public func showOnboardings(delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
 }
 extension InAppStory {
-  public func showSingle(with id: Swift.String, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
 }
 extension InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
   public func removeAllFavorites()
 }
-public struct StoryViewSUI : SwiftUI.UIViewRepresentable {
-  public var isContent: Swift.Bool {
+public struct StoryListView : SwiftUI.View {
+  public init(id: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((Swift.Bool) -> Swift.Void)? = nil, onAction: ((Swift.String) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((Swift.Array<Swift.String>, (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool>)
+  public var body: some SwiftUI.View {
     get
   }
-  public init(delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate? = nil, deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? = nil, isFavorite: Swift.Bool = false)
-  public func makeUIView(context: InAppStorySDK_SwiftUI.StoryViewSUI.Context) -> InAppStorySDK_SwiftUI.StoryView
-  public func updateUIView(_ uiView: InAppStorySDK_SwiftUI.StoryView, context: InAppStorySDK_SwiftUI.StoryViewSUI.Context)
-  public typealias Body = Swift.Never
-  public typealias Coordinator = Swift.Void
-  public typealias UIViewType = InAppStorySDK_SwiftUI.StoryView
+  public typealias Body = @_opaqueReturnTypeOf("$s21InAppStorySDK_SwiftUI0C8ListViewV4bodyQrvp", 0) 🦸
 }
-extension StoryViewSUI {
-  @discardableResult
-  public func create() -> InAppStorySDK_SwiftUI.StoryViewSUI
-  @discardableResult
-  public func refresh() -> InAppStorySDK_SwiftUI.StoryViewSUI
-  @discardableResult
-  public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
-  @discardableResult
-  public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryViewSUI
+extension StoryListView {
+  public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListView
+  public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
+  public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
+  public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
+  public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
+  public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK_SwiftUI.PhoneFormat
@@ -368,6 +371,10 @@ extension StoryView {
   public func create()
   public func refresh()
 }
+public let CreateRequest: Foundation.Notification.Name
+public let AppendResponse: Foundation.Notification.Name
+public let CreateCacheRequest: Foundation.Notification.Name
+public let AppendCacheResponse: Foundation.Notification.Name
 public protocol GamePlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
 }
