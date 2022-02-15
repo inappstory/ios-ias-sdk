@@ -297,6 +297,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 
 
 
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -587,6 +588,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (void)layoutSubviews;
 @end
+
 
 
 

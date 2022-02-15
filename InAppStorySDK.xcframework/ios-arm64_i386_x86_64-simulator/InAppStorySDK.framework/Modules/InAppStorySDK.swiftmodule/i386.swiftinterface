@@ -12,6 +12,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+import os
 public struct PhoneFormat {
   public let phoneFormat: Swift.String
   public let regexp: Swift.String
@@ -68,6 +69,7 @@ public struct Settings : Swift.Equatable {
     get
   }
   public var widgetStories: [InAppStorySDK.WidgetStory]
+  public var sslPinningHashKeys: [Swift.String]?
   public var coverQuality: InAppStorySDK.Quality
   public var showCellTitle: Swift.Bool
   public var cellBorderRadius: CoreGraphics.CGFloat
@@ -137,7 +139,7 @@ extension InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStory {
-  public func showOnboardings(from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStory {
@@ -315,6 +317,10 @@ extension InAppStoryDelegate {
   @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc deinit
 }
+public let CreateRequest: Foundation.Notification.Name
+public let AppendResponse: Foundation.Notification.Name
+public let CreateCacheRequest: Foundation.Notification.Name
+public let AppendCacheResponse: Foundation.Notification.Name
 public protocol GamePlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
 }
