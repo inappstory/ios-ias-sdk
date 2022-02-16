@@ -145,6 +145,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `isLoggingEnabled` - displaying requests to the server in the console;
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
 * `widgetStories` - data for iOS widget.
+* `sslPinningHashKeys` - hashs of public keys for SSL-Pinning *Array\<String\>?*
 
 ### Customization
 
@@ -198,53 +199,66 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk/tree/SwiftUI#ScrollStyle)>*;
 * `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstory/ios-sdk/tree/SwiftUI#PresentationStyle)>*;
 
-## StoryViewSUI
+## StoryListView
 
 The main class for working with lists of stories with SwiftUI.
 
 ### Initialization
----
-**Remark**  
-If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryView`, it should be set:
 
+> **Remark**  
+> If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryView`, it should > be set:
+> 
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
----
 
 If the parameter `isFavorite: <Bool?>` is equal true, the list will be displayed favorite stories.
 
 ```swift
 struct ContentView: View
 {
-    private var storyView: StoryViewSUI = StoryViewSUI(delegate: <InAppStoryDelegate>?, deleagateFlowLayout: <StoryViewDelegateFlowLayout>?, isFavorite: <Bool> = false)
-    
     var body: some View {
         VStack(alignment: .leading) {
-            storyView
-                .create()
-                .padding(.top)
-                .frame(height: 150.0)
+            StoryListView(id: <String?>,
+                          isFavorite: <Bool>,
+                          onUpdated: <((Bool) -> Void)?>,
+                          onAction: <((String) -> Void)?>,
+                          onDismiss: <(() -> Void)?>,
+                          favoritesSelect: <(() -> Void)?>,
+                          getGoodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>,
+                          selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>,
+                          refresh: <Binding<Bool>>)
             Spacer()
         }
     }
 }
 ```
 
+### Parameters
+
+* `id: <String?>` - optional id of stories list. Under normal conditions with a list and favorites, there is no need to set it. If multiple lists are used in an application, unique values must be specified for each;
+* `isFavorite: <Bool>` - if this parameter is equal `true`, the list will be displayed favorite stories. Default is `false`;
+* `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
+* `onAction: <((String) -> Void)?>` - called by action in Reader. Parameter is string URL from Story;
+* `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
+* `favoritesSelect: <(() -> Void)?>` - called after favorite cell did selected;
+* `goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>` - called when library need goods items for widget. First parameter is array of goods' SKUs, the second parameter is a closure to which you need to pass objects of goods that implement the protocol `GoodsObjectProtocol`;
+* `selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>` - called when goods item select in story reader;
+* `refresh: <Binding<Bool>>` - binding `Bool` value that start refresh logic in list;
+
 ### Methods
 
-* `create` - running internal StoryView logic;
-* `refresh` - refresh stories list;
-* `setStoryCell(customCell: <StoryCellProtocol>)` - set custom cell for list;
-* `setFavoriteCell(customCell: <FavoriteCellProtocol>)` - set custom favorite cell.
-
-### Parameters and properties
-
-* `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk/tree/SwiftUI#InAppStoryDelegate)>* - set at initialization;
-* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryViewDelegateFlowLayout)>* - set at initialization;
-* `isContent` - there is any content in the list of stories *\<Bool>*;
+* `itemsSize(_ size: CGSize) -> StoryListView` - set cell size in list;
+* `edgeInserts(_ inserts: UIEdgeInsets) -> StoryListView` - set padding from the edges of the list for cells;
+* `lineSpacing(_ spacing: CGFloat) -> StoryListView` - set the vertical padding between cells in a list;
+* `interitemSpacing(_ spacing: CGFloat) -> StoryListView` - set horizontal padding between cells in a list;
+* `setStoryCell(customCell: StoryCellProtocol) -> StoryListView` - set custom cell for list that realize  [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storycellprotocol)
+* `setFavoriteCell(customCell: FavoriteCellProtocol) -> StoryListView` - set custom favorite cell taht realize [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#favoritecellprotocol)
 
 ## StoryView
+
+> **Pay attention**  
+> `StoryView` is available as a public class, but will be deprecated in upcoming releases.
 
 The main class for working with lists of stories.
 
@@ -296,44 +310,66 @@ override func viewDidLoad() {
 Onboarding is used to display stories not present in the main list.
 
 ### Presentation
----
-**Remark**  
-If the *settings* parameter was not specified for `InAppStory`, before showing onboarding, it should be set:
 
+> **Remark**  
+> If the *settings* parameter was not specified for `InAppStory`, before showing onboarding, it should be set:
+> 
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
----
 
-To display onboarding, you need call the `showOnboardings` method of the singleton class `InAppStory.shared`:
+Onboarding show like `sheet`, `alert` etc. from any `View`:
 
 ```swift
-InAppStory.shared.showOnboardings(delegate: <InAppStoryDelegate>, complete: <()->Void>)
+.onboardingStories(tags: <[String]?>,
+                   isPresented: <Binding<Bool>>,
+                   onDismiss: <(() -> Void)?>,
+                   onAction: <((String, ActionType) -> Void)?>,
+                   goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>,
+                   selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>)
 ```
+### Parameters
 
-To close the reader of onboarding, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
+* `tags: <[String]?>` - optional tags for showing onboarding. If not set, tags gets from `InAppStory.shared.settings`;
+* `isPresented: <Binding<Bool>>` - binding `Bool` value that start showing onboarding reader. `false` - value close reader, but it's better to use `InAppStory.share.closeReader()`;
+* `onDismiss: <(() -> Void)?>` - called when reader is dismiss;
+* `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
+* `goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>` - called when library need goods items for widget. First parameter is array of goods' SKUs, the second parameter is a closure to which you need to pass objects of goods that implement the protocol `GoodsObjectProtocol`;
+* `selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>` - called when goods item select in story reader;
 
 ## SingleStory
 
 Used to display stories by their id or slug.
 
 ### Presentation
----
-**Remark**  
-If the *settings* parameter was not specified for `InAppStory`, before showing single story, it should be set:
 
+> **Remark**  
+> If the *settings* parameter was not specified for `InAppStory`, before showing single story, it should be set:
+>
 ```swift
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
----
 
-To display single story, you need call the `showSingle` method of the singleton class `InAppStory.shared`:
+Single story show like `sheet`, `alert` etc. from any `View`:
 
 ```swift
-InAppStory.shared.showSingle(with id: <String>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+.singleStory(storyID: <String>,
+             tags: <[String]?>,
+             isPresented: <Binding<Bool>>,
+             onDismiss: <(() -> Void)?>,
+             onAction: <((String, ActionType) -> Void)?>,
+             goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>,
+             selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>)
 ```
+### Parameters
 
-To close the reader of single story, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
+* `storyID` - story ID that needed show;
+* `tags: <[String]?>` - optional tags for showing onboarding. If not set, tags gets from `InAppStory.shared.settings`;
+* `isPresented: <Binding<Bool>>` - binding `Bool` value that start showing onboarding reader. `false` - value close reader, but it's better to use `InAppStory.share.closeReader()`;
+* `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
+* `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
+* `goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>` - called when library need goods items for widget. First parameter is array of goods' SKUs, the second parameter is a closure to which you need to pass objects of goods that implement the protocol `GoodsObjectProtocol`;
+* `selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>` - called when goods item select in story reader;
 
 ## Protocols
 
