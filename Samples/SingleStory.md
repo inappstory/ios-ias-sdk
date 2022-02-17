@@ -12,45 +12,33 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
 }
 ```
 
-In the controller, where it is necessary to show a single story, call the `showSingleStory` method on `InAppStory`.
+In the view, where you want to show onboarding, set the `singleStory` extension method for `View`
 
 ##### ContentView.swift
 ```swift
 struct ContentView: View
 {
+    // set isSinglePresent = true, if need show single story
+    @State var isSinglePresent: Bool = false
+    ...
     var body: some View {
         VStack(alignment: .leading) {
             Button("Show Single Story") {
-                InAppStory.shared.showSingle(with: <String>, delegate: SingleViewDelegate()) {}
+                isSinglePresent = true
             }
             Spacer()
         }
         .padding(.top)
+        .singleStory(storyID: <String>, isPresented: $isSinglePresent) // single story showing
     }
 }
 ```
 
-To track the actions of the single story reader, you need to implement the `InAppStoryDelegate ` methods
-
-##### SingleViewDelegate.swift
-
-```swift 
-class SingleViewDelegate: NSObject, InAppStoryDelegate
-{
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {}
-    
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url)
-        }
-    }
-}
-
-```
+All parametrs review of onboarding see in [SingleStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#singlestory)

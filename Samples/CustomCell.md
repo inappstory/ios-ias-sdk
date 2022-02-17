@@ -15,7 +15,7 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
@@ -48,7 +48,7 @@ struct ContentView: View
 }
 ```
 
-3) Should create `StoryViewSUI` in `ContentView`
+3) Should create `StoryListView` in `ContentView`
 
 ##### ContentView.swift
 ```swift
@@ -56,33 +56,18 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryViewSUI(deleagateFlowLayout: FlowDelegate())
-            .create()
+        StoryListView(onAction: { target in // get link from story
+            InAppStory.shared.closeReader {
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }, refresh: $isStoryRefresh) // refresh stories list
+            .itemsSize(CGSize(width: 150.0, height: 150.0))//cell size
+            .edgeInserts(UIEdgeInsets(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0)) //padding from the edges of the StoryListView
+            .lineSpacing(8.0) //vertical padding between cells
+            .interitemSpacing(8.0) //horizontal padding between cells
             .frame(height: 150.0)
-    }
-}
-```
-
-4) It is also necessary to add `StoryViewDelegateFlowLayout` and implement it
-
-##### FlowDelegate.swift
-```swift 
-fileprivate class FlowDelegate: NSObject, StoryViewDelegateFlowLayout
-{
-    func sizeForItem() -> CGSize {
-        return CGSize(width: 150.0, height: 150.0) //cell size
-    }
-    
-    func insetForSection() -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0) //padding from the edges of the StoryViewSUI
-    }
-    
-    func minimumLineSpacingForSection() -> CGFloat {
-        return 8.0 //vertical padding between cells
-    }
-    
-    func minimumInteritemSpacingForSection() -> CGFloat {
-        return 8.0 //horizontal padding between cells
     }
 }
 ```
@@ -99,14 +84,14 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
 }
 ```
 
-2) Should initialize `StoryViewSUI` in `ContentView`
+2) Should initialize `StoryListView` in `ContentView`
 
 ##### ContentView.swift
 ```swift
@@ -114,37 +99,21 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryViewSUI(deleagateFlowLayout: FlowDelegate())
-            .create()
+        StoryListView(onAction: { target in // get link from story
+            InAppStory.shared.closeReader {
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }, refresh: $isStoryRefresh) // refresh stories list
+            .itemsSize(CGSize(width: 150.0, height: 150.0))//cell size
+            .edgeInserts(UIEdgeInsets(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0)) //padding from the edges of the StoryListView
+            .lineSpacing(8.0) //vertical padding between cells
+            .interitemSpacing(8.0) //horizontal padding between cells
             .frame(height: 150.0)
     }
 }
 ```
-
-3) It is also necessary to add `StoryViewDelegateFlowLayout` and implement it
-
-##### FlowDelegate.swift
-```swift 
-fileprivate class FlowDelegate: NSObject, StoryViewDelegateFlowLayout
-{
-    func sizeForItem() -> CGSize {
-        return CGSize(width: 150.0, height: 150.0) //cell size
-    }
-    
-    func insetForSection() -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0) //padding from the edges of the StoryViewSUI
-    }
-    
-    func minimumLineSpacingForSection() -> CGFloat {
-        return 8.0 //vertical padding between cells
-    }
-    
-    func minimumInteritemSpacingForSection() -> CGFloat {
-        return 8.0 //horizontal padding between cells
-    }
-}
-```
-
 4) For the list cell, create a class that implements the `StoryCellProtocol` protocol
 
 ##### CustomStoryCell.swift
@@ -243,7 +212,7 @@ extension StoryFavoriteCell: FavoriteCellProtocol
 > The library does not have access to the custom cell, except for the implementation of the `FavoriteCellProtocol` protocol. To display the actual information and avoid duplicate thumbnails, it is necessary to clean the images and colors with each call of the `setImages` and `setImagesColors` methods.
 
 
-6) It is necessary to specify cell data for an instance of the `StoryViewSUI` class
+6) It is necessary to specify cell data for an instance of the `StoryListView` class
 
 ##### ContentView.swift
 ```swift
@@ -251,10 +220,21 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryViewSUI(deleagateFlowLayout: FlowDelegate())
+        StoryListView(onAction: { target in // get link from story
+            InAppStory.shared.closeReader {
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }, refresh: $isStoryRefresh) // refresh stories list
+        //---- add custom cells for list
             .setStoryCell(customCell: CustomStoryCell()) //custom list cell
             .setFavoriteCell(customCell: CustomFavoriteCell()) //custom favorite cell
-            .create() //running internal logic
+        //----
+            .itemsSize(CGSize(width: 150.0, height: 150.0))
+            .edgeInserts(UIEdgeInsets(top: 0.0, left: 8.0, bottom: 0.0, right: 8.0))
+            .lineSpacing(8.0)
+            .interitemSpacing(8.0)            
             .frame(height: 150.0)
     }
 }

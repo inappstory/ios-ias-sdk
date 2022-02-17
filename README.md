@@ -15,7 +15,7 @@ A library for embedding stories into an application with customization.
 	* [Methods](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Methods)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties)
 	* [Customization](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Customization)
-* [StoryViewSUI](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryViewSUI)
+* [StoryListView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storylistview)
 	* [Initialization](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Initialization-1)
 	* [Methods](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Methods-1)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties-1)

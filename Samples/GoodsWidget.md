@@ -7,35 +7,47 @@
 For default integration *GoodsWidget* need:
 
 1. setup widget in web console;
-2. realize two methods from *InAppStoryDelegate*
 
 ##### ContentView.swift
 ```swift
 struct ContentView: View
 {
-    @State private var isAlertShowing: Bool = false
-    @State private var selectedItemSKU: String = ""
+    @State var isAlertShowing: Bool = false
+    @State var isStoryRefresh: Bool = false
     
+    @State var selectedItemSKU: String = ""
+        
     init() {
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
 
        
     var body: some View {
         VStack(alignment: .leading) {
-            // init StoryViewSUI with delegate SimpleGoodsViewDelegate
-            StoryViewSUI(delegate: SimpleGoodsViewDelegate(isAlertShowing: $isAlertShowing, selectedItemSKU: $selectedItemSKU))
-                .create() //running internal logic
+            StoryListView(onAction: { target in
+                InAppStory.shared.closeReader {
+                    if let url = URL(string: target) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+              }, getGoodsObjects: { skus, complete in
+                complete(.success(getObjects(skus: skus))) // send list of goods objects to lib
+              }, selectGoodsItem: { item in // get action, by selected goods item
+                  InAppStory.shared.closeReader {
+                      selectedItemSKU = item.sku as String
+                      isAlertShowing = true
+                  }
+              }, refresh: $isStoryRefresh)
                 .frame(height: 150.0)
             Spacer()
         }
         .padding(.top)
         .navigationBarTitle(Text("Simple GoodsWidget"))
-        .alert(isPresented: $isAlertShowing) { // show alert after selected goods item
+        .alert(isPresented: $isAlertShowing) {
             Alert(
                 title: Text("Select goods item"),
                 message: Text("Goods item has SKU: \(selectedItemSKU)"),
@@ -44,77 +56,25 @@ struct ContentView: View
         }
     }
 }
-```
 
-##### SimpleGoodsViewDelegate.swift
-
-```swift
-class SimpleGoodsViewDelegate: NSObject, InAppStoryDelegate
+extension ContentView
 {
-    @Binding var isAlertShowing: Bool // bindig var showing alert with SKU
-    @Binding var selectedItemSKU: String // bindig var with selected SKU
-    
-    init(isAlertShowing: Binding<Bool>, selectedItemSKU: Binding<String>) 
+    // Create list of goods objects by SKU's array
+    fileprivate func getObjects(skus: Array<String>) -> Array<GoodsObjectProtocol>
     {
-        self._isAlertShowing = isAlertShowing
-        self._selectedItemSKU = selectedItemSKU
-        
-        super.init()
-    }
-    
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) 
-    {
-        //called when the data in the StoryViewSUI is updated
-    }
-    
-    // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) 
-    {
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url)
-        }
-    }
-    
-    //get goods object from parent app
-    func getGoodsObject(with skus: Array<String>, complete: @escaping GoodsComplete) 
-    {
-        // get goods info from your App
-        ...
-        
-        var goodsArray: Array<GoodObject> = []
-        
-        for (i, sku) in skus.enumerated() {
-            let goodsObject = GoodObject(sku: sku,
-                                         title: "title of item - \(i)",
-                                         subtitle: "subtitle of item - \(i)",
-                                         imageURL: nil,
-                                         price: "\(i * i)$",
-                                         discount: "")
-            
-            goodsArray.append(goodsObject)
+        var items: Array<GoodsObjectProtocol> = []
+        for sku in skus {
+            items.append(GoodObject(sku: sku,
+                                    title: sku,
+                                    subtitle: sku,
+                                    imageURL: nil,
+                                    price: nil,
+                                    discount: nil))
         }
         
-        complete(.success(goodsArray))
-        
-        //if the list could not be retrieved or a network error occurred while retrieving, 
-        //you must call complete(.failure(.close or .refresh))
-    }
-    
-    //item selection handler
-    func goodItemSelected(_ item: GoodsObjectProtocol, with storyType: StoriesType) 
-    {
-        //event handling and product display in the application
-        InAppStory.shared.closeReader { [weak self] in
-            guard let weakSelf = self else {
-                return
-            }
-            
-            weakSelf.selectedItemSKU = item.sku //set bindig selected SKU
-            weakSelf.isAlertShowing = true //showing alert with SKU
-        }
+        return items
     }
 }
-
 ```
 
 ### Customization
@@ -139,7 +99,7 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
@@ -178,7 +138,7 @@ struct ContentView: View
 }
 ```
 
-3) Should initialize `StoryViewSUI` in `ContentView`
+3) Should initialize `StoryListView` in `ContentView`
 
 ##### ContentView.swift
 ```swift
@@ -186,8 +146,20 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryViewSUI(deleagateFlowLayout: FlowDelegate())
-            .create()
+        StoryListView(onAction: { target in
+            InAppStory.shared.closeReader {
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }, getGoodsObjects: { skus, complete in
+            complete(.success(getObjects(skus: skus))) // send list of goods objects to lib
+        }, selectGoodsItem: { item in // get action, by selected goods item
+            InAppStory.shared.closeReader {
+                selectedItemSKU = item.sku as String
+                isAlertShowing = true
+            }
+        }, refresh: $isStoryRefresh)
             .frame(height: 150.0)
     }
 }
@@ -202,7 +174,7 @@ struct ContentView: View
     init() {
         ...
     
-        InAppStory.shared.goodsDelegateFlowLayout = self //defining a list display delegate
+        InAppStory.shared.goodsDelegateFlowLayout = CustomCellGoodsFlowDelegate.shared //defining a list display delegate
     }
 }
 ```
@@ -211,6 +183,8 @@ struct ContentView: View
 ```swift 
 class CustomCellGoodsFlowDelegate: NSObject, GoodsDelegateFlowLayout
 {
+    static let shared: CustomCellGoodsFlowDelegate = .init()
+    
     func sizeForItem() -> CGSize
     {
         return CGSize(width: 130.0, height: 130.0) //cell size
@@ -241,14 +215,14 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
 }
 ```
 
-2) Should initialize `StoryViewSUI` in `ContentView`
+2) Should initialize `StoryListView` in `ContentView`
 
 ##### ContentView.swift
 ```swift
@@ -256,8 +230,20 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryViewSUI(deleagateFlowLayout: FlowDelegate())
-            .create()
+        StoryListView(onAction: { target in
+            InAppStory.shared.closeReader {
+                if let url = URL(string: target) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }, getGoodsObjects: { skus, complete in
+            complete(.success(getObjects(skus: skus))) // send list of goods objects to lib
+        }, selectGoodsItem: { item in // get action, by selected goods item
+            InAppStory.shared.closeReader {
+                selectedItemSKU = item.sku as String
+                isAlertShowing = true
+            }
+        }, refresh: $isStoryRefresh)
             .frame(height: 150.0)
     }
 }
@@ -360,7 +346,7 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
@@ -369,7 +355,7 @@ struct ContentView: View
 
 2) Should create a class that inherits *CustomGoodsView*
 
-##### ViewController.swift
+##### GoodsView.swift
 ```swift
 class GoodsView: CustomGoodsView
 {

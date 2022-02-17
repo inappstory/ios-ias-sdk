@@ -12,47 +12,30 @@ struct ContentView: View
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
     }
     ...
 }
 ```
 
-In the controller, where you want to show onboarding, call the `showOnboardings` method of the `InAppStory`
+In the view, where you want to show onboarding, set the `onboardingStories` extension method for `View`
 
 ##### ContentView.swift
 ```swift
 struct ContentView: View
 {
+	// set isOnboardingPresent = true, if need show onboardings
+    @State var isOnboardingPresent: Bool = false
+    ...
     var body: some View {
         VStack(alignment: .leading) {
-            StoryViewSUI()
-                .create()
-                .frame(height: 150.0)
-            Spacer()
+            // main body content of view
         }
         .padding(.top)
         .navigationBarTitle(Text("Onboarding"))
-        .onAppear() {
-            InAppStory.shared.showOnboardings(delegate: OnboardingViewDelegate()) {}
-        }
+        .onboardingStories(isPresented: $isOnboardingPresent) // onboardings showing
     }
 }
 ```
-
-To track the actions of the onboarding reader, you need to implement the `InAppStoryDelegate` methods
-
-##### OnboardingViewDelegate.swift
-```swift 
-class OnboardingViewDelegate: NSObject, InAppStoryDelegate
-{
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) {}
-    
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url)
-        }
-    }
-}
-```
+All parametrs review of onboarding see in [OnboardingStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#onboardingstory)

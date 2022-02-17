@@ -8,7 +8,7 @@ After customizing a cell using `StoryCellProtocol` (description in the [Cell cus
 >
 > 1. Caching of video covers is carried out by means of the library and the address to the file (which located in local storage) comes to the implementation of the `setVideoURL(_ url: URL)` method.
 > 2. To prevent video covers from drowning out the sound of background audio/video playback, you need:
->  * When opening the application and before creating the `StoryView`, set the `AVAudioSession` to the `.ambient` category
+>  * When opening the application and before creating the `StoryListView`, set the `AVAudioSession` to the `.ambient` category
 >  * If you need to start audio/video in an application overlapping background audio playback from another application, specify the `.playback`/`.soloAmbient` category
 >  * Upon completion of playing audio/video, set the `AVAudioSession` to the `.ambient` category again.
 >  * Mode (`AVAudioSession.Mode`) and options (`AVAudioSession.CategoryOptions`), at the discretion of the developer.

@@ -28,7 +28,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 By default, the sound in the story is turned off, this can be changed by setting the `InAppStory` parameter `muted` with the required value.
 
-##### ViewController.swift
+##### SoundView.swift
 ```swift
 ...
 

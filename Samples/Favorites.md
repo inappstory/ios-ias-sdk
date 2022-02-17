@@ -6,13 +6,15 @@ To display the favorites screen, you should wait for the StoryView to call the `
 ```swift
 struct ContentView: View
 {
-    @State private var isFavoriteSelected: Bool = false
+    @State var isFavoriteSelected: Bool = false // is favorite cell selected in list
+    @State var isStoryRefresh: Bool = false // is story list need refresh
+    @State var isFavoriteRefresh: Bool = false // is favorites list need refresh
         
     init() {
         //library initialization
         InAppStory.shared.initWith(serviceKey: "<service_key>")
         
-        // settings can also be specified at any time before creating a StoryViewSUI or calling individual stories
+        // settings can also be specified at any time before creating a StoryListView or calling individual stories
         InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
         
         // enable favorite button in reader & showinng favorite cell in the end of list
@@ -21,9 +23,15 @@ struct ContentView: View
     
     var body: some View {
         VStack(alignment: .leading) {
-            // init StoryViewSUI with delegate FavoritesStoryViewDelegate
-            StoryViewSUI(delegate: FavoritesStoryViewDelegate(isFavoriteSelected: $isFavoriteSelected))
-                .create() //running internal logic
+            StoryListView(onAction: { target in
+                InAppStory.shared.closeReader {
+                    if let url = URL(string: target) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }, favoritesSelect: {
+                isFavoriteSelected = true
+            }, refresh: $isStoryRefresh)
                 .frame(height: 150.0)
             Spacer()
         }
@@ -31,8 +39,7 @@ struct ContentView: View
         .navigationBarTitle(Text("Favorites"))
         .sheet(isPresented: $isFavoriteSelected) { // present View if favorite cell is selected
             NavigationView {
-                StoryViewSUI(isFavorite: true) // favorite StoryViewSUI View
-                    .create() //running internal logic
+                StoryListView(isFavorite: true, refresh: $isFavoriteRefresh) // favorites stories list view
                     .navigationBarTitle(Text("Favorites"), displayMode: .inline)
             }
         }
@@ -40,36 +47,4 @@ struct ContentView: View
 }
 ```
 
-The favorites screen is created in the same way as the list of stories. `StoryViewSUI` with the parameter `isFavorite = true`.
-
-##### FavoritesStoryViewDelegate.swift
-
-```swift
-class FavoritesStoryViewDelegate: NSObject, InAppStoryDelegate
-{
-    @Binding var favoriteSelected: Bool // bindig var selected favorite cell
-    
-    init(isFavoriteSelected: Binding<Bool>) {
-        self._favoriteSelected = isFavoriteSelected
-        
-        super.init()
-    }
-    
-    func storiesDidUpdated(isContent: Bool, from storyType: StoriesType) 
-    {
-        //called when the data in the StoryViewSUI is updated
-    }
-    
-    // called when a button or SwipeUp event is triggered in the reader
-    func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
-        if let url = URL(string: target) {
-            UIApplication.shared.open(url)
-        }
-    }
-    
-    // called when favorite cell selected
-    func favoriteCellDidSelect() {
-        favoriteSelected = true // set binding var true value
-    }
-}
-``` 
+The favorites screen is created in the same way as the list of stories. `StoryListView` with the parameter `isFavorite = true`.
