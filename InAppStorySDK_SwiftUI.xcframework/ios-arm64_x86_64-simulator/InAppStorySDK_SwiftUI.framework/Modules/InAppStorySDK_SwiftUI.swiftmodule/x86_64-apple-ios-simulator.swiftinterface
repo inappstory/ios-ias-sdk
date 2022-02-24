@@ -157,7 +157,7 @@ extension InAppStory {
   public func removeAllFavorites()
 }
 public struct StoryListView : SwiftUI.View {
-  public init(id: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((Swift.Bool) -> Swift.Void)? = nil, onAction: ((Swift.String) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((Swift.Array<Swift.String>, (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool>)
+  public init(id: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((Swift.Bool) -> Swift.Void)? = nil, onAction: ((Swift.String, InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((Swift.Array<Swift.String>, (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   public var body: some SwiftUI.View {
     get
   }

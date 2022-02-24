@@ -56,7 +56,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.13.0             | 2098          | >= 13.0     |
+| 1.13.1             | 2102          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -67,7 +67,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.13.0-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.13.1-SwiftUI'
 ```
 
 ### Carthage
@@ -75,7 +75,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.13.0
+github "inappstory/ios-sdk" ~> 1.13.1
 ```
 
 ### Swift Package Manager
@@ -86,7 +86,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.13.0-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.13.1-SwiftUI"))
 ]
 ```
 
@@ -222,7 +222,7 @@ struct ContentView: View
             StoryListView(id: <String?>,
                           isFavorite: <Bool>,
                           onUpdated: <((Bool) -> Void)?>,
-                          onAction: <((String) -> Void)?>,
+                          onAction: <((String, ActionType) -> Void)?>,
                           onDismiss: <(() -> Void)?>,
                           favoritesSelect: <(() -> Void)?>,
                           getGoodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>,
@@ -239,7 +239,7 @@ struct ContentView: View
 * `id: <String?>` - optional id of stories list. Under normal conditions with a list and favorites, there is no need to set it. If multiple lists are used in an application, unique values must be specified for each;
 * `isFavorite: <Bool>` - if this parameter is equal `true`, the list will be displayed favorite stories. Default is `false`;
 * `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
-* `onAction: <((String) -> Void)?>` - called by action in Reader. Parameter is string URL from Story;
+* `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
 * `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
 * `favoritesSelect: <(() -> Void)?>` - called after favorite cell did selected;
 * `goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>` - called when library need goods items for widget. First parameter is array of goods' SKUs, the second parameter is a closure to which you need to pass objects of goods that implement the protocol `GoodsObjectProtocol`;

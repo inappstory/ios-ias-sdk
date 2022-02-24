@@ -28,7 +28,7 @@ struct ContentView: View
        
     var body: some View {
         VStack(alignment: .leading) {
-            StoryListView(onAction: { target in
+            StoryListView(onAction: { target, type in
                 InAppStory.shared.closeReader {
                     if let url = URL(string: target) {
                         UIApplication.shared.open(url)
@@ -146,7 +146,7 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryListView(onAction: { target in
+        StoryListView(onAction: { target, type in
             InAppStory.shared.closeReader {
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url)
@@ -230,7 +230,7 @@ struct ContentView: View
 {
     ...
     var body: some View {
-        StoryListView(onAction: { target in
+        StoryListView(onAction: { target, type in
             InAppStory.shared.closeReader {
                 if let url = URL(string: target) {
                     UIApplication.shared.open(url)
