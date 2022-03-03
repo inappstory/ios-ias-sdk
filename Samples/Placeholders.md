@@ -42,7 +42,7 @@ override func viewDidLoad() {
 }
 
 // calling after StoryView is created
-func addTags() {
+func setPlaceholders() {
     InAppStory.shared.placeholders = <Dictionary<String, String>> // set placeholders values
     
     storyView.refresh() //updating story list
