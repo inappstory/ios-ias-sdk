@@ -1,10 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
+import AudioToolbox
 import CommonCrypto
 import Compression
 import CoreFoundation
+import CoreHaptics
 import CoreText
 import Foundation
 @_exported import InAppStorySDK
@@ -12,6 +14,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+import _Concurrency
 import os
 public struct PhoneFormat {
   public let phoneFormat: Swift.String
@@ -19,8 +22,8 @@ public struct PhoneFormat {
   public init(defaultPhoneFormat: Swift.String)
   public init(phoneFormat: Swift.String, regexp: Swift.String)
 }
-extension UIView {
-  public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
 }
 public struct WidgetStory {
   public let id: Swift.String
@@ -99,6 +102,7 @@ public struct Settings : Swift.Equatable {
   public var shareSelectedImage: UIKit.UIImage
   public var soundImage: UIKit.UIImage
   public var soundSelectedImage: UIKit.UIImage
+  public var closeReaderImage: UIKit.UIImage
   public var refreshImage: UIKit.UIImage
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
@@ -133,20 +137,20 @@ public struct Settings : Swift.Equatable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension InAppStory {
+extension InAppStorySDK.InAppStory {
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
-extension InAppStory {
+extension InAppStorySDK.InAppStory {
   public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
-extension InAppStory {
+extension InAppStorySDK.InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
-extension InAppStory {
+extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
   public func removeAllFavorites()
 }
@@ -167,7 +171,6 @@ public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   public var price: Swift.String?
   public var discount: Swift.String?
   public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, discount: Swift.String?)
-  @objc override dynamic public init()
   @objc deinit
 }
 public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
@@ -175,7 +178,7 @@ public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
   func insetForSection() -> UIKit.UIEdgeInsets
   func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
 }
-extension GoodsDelegateFlowLayout {
+extension InAppStorySDK.GoodsDelegateFlowLayout {
   public func sizeForItem() -> CoreGraphics.CGSize
   public func insetForSection() -> UIKit.UIEdgeInsets
   public func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
@@ -271,50 +274,50 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
-extension InAppStoryDelegate {
+extension InAppStorySDK.InAppStoryDelegate {
   public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
   public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   public func favoriteCellDidSelect()
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
-@objc @_inheritsConvenienceInitializers open class CustomGoodsView : UIKit.UIView {
-  open func setSKUItems(_ items: Swift.Array<Swift.String>)
-  open func setReaderFrame(_ frame: CoreGraphics.CGRect)
-  final public func goodsItemClick(with sku: Swift.String)
-  final public func close()
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CustomGoodsView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) open func setSKUItems(_ items: Swift.Array<Swift.String>)
+  @_Concurrency.MainActor(unsafe) open func setReaderFrame(_ frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) final public func goodsItemClick(with sku: Swift.String)
+  @_Concurrency.MainActor(unsafe) final public func close()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class CSPhoneFormattedTextField : UIKit.UITextField {
-  public var isSelectable: Swift.Bool
-  final public let config: InAppStorySDK.ConfigurationRepo
-  public var hasPredictiveInput: Swift.Bool {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CSPhoneFormattedTextField : UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) public var isSelectable: Swift.Bool
+  @_Concurrency.MainActor(unsafe) final public let config: InAppStorySDK.ConfigurationRepo
+  @_Concurrency.MainActor(unsafe) public var hasPredictiveInput: Swift.Bool {
     get
     set
   }
-  public var prefix: Swift.String? {
+  @_Concurrency.MainActor(unsafe) public var prefix: Swift.String? {
     get
     set
   }
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
-    @objc get
-    @objc set
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
   }
-  public var textDidChangeBlock: ((UIKit.UITextField?) -> Swift.Void)? {
+  @_Concurrency.MainActor(unsafe) public var textDidChangeBlock: ((_ textField: UIKit.UITextField?) -> Swift.Void)? {
     get
     set
   }
-  public func phoneNumber() -> Swift.String?
-  public func phoneNumberWithoutPrefix() -> Swift.String?
-  public var formattedText: Swift.String? {
+  @_Concurrency.MainActor(unsafe) public func phoneNumber() -> Swift.String?
+  @_Concurrency.MainActor(unsafe) public func phoneNumberWithoutPrefix() -> Swift.String?
+  @_Concurrency.MainActor(unsafe) public var formattedText: Swift.String? {
     get
     set
   }
-  @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc deinit
 }
 public let CreateRequest: Foundation.Notification.Name
@@ -324,39 +327,39 @@ public let AppendCacheResponse: Foundation.Notification.Name
 public protocol GamePlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StoryView : UIKit.UIView {
-  weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
     get
     set
   }
-  weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
     get
     set
   }
-  public var isFavoriteView: Swift.Bool
-  weak public var target: UIKit.UIViewController? {
+  @_Concurrency.MainActor(unsafe) public var isFavoriteView: Swift.Bool
+  @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
     get
     set
   }
-  public var storyCell: InAppStorySDK.StoryCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
     get
     set
   }
-  public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
     get
     set
   }
-  public var isContent: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
     get
   }
-  public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
-  @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
-extension StoryView {
-  public func create()
-  public func refresh()
-  public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
+extension InAppStorySDK.StoryView {
+  @_Concurrency.MainActor(unsafe) public func create()
+  @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }

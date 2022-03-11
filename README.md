@@ -53,7 +53,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.13.1             | 2102          | >= 10.0     |
+| 1.13.2             | 2114          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -72,7 +72,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.13.1
+github "inappstory/ios-sdk" ~> 1.13.2
 ```
 
 ### Swift Package Manager
@@ -83,7 +83,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.13.1"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.13.2"))
 ]
 ```
 
@@ -206,6 +206,7 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `shareSelectedImage` - images for selected sharing button *\<UIImage>*;
 * `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
 * `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
+* `closeReaderImage` - image for reader's close button *\<UIImage>*. Recommended 24pt;
 * `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
 * `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
 * `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
