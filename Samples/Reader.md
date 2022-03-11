@@ -67,6 +67,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     InAppStory.shared.shareImage = <UIImage>
     InAppStory.shared.shareSelectedImage = <UIImage>
     
+    InAppStory.shared.closeReaderImage = <UIImage> // reader close button icon (24pt)
+    
     // change sound icons
     InAppStory.shared.soundImage = <UIImage> // Sound on
     InAppStory.shared.soundSelectedImage = <UIImage> // Sound off
