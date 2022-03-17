@@ -143,11 +143,11 @@ extension InAppStorySDK.InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
-  public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping () -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
@@ -250,7 +250,7 @@ public enum GoodsFailure : Swift.Error {
 }
 public typealias GoodsComplete = (Swift.Result<Swift.Array<InAppStorySDK.GoodsObjectProtocol>, InAppStorySDK.GoodsFailure>) -> Swift.Void
 public enum ActionType {
-  case button, swipe, game
+  case button, swipe, game, deeplink
   public static func == (a: InAppStorySDK.ActionType, b: InAppStorySDK.ActionType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {

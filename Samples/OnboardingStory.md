@@ -27,8 +27,9 @@ In the controller, where you want to show onboarding, call the `showOnboarding` 
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    InAppStory.shared.showOnboardings(from: <UIViewController>, delegate: <InAppStoryDelegate>) {
+    InAppStory.shared.showOnboardings(from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
         // the closure is triggered when the onboarding reader is opened
+        // show: <Bool> - if the reader was presented on the screen, value is true
     }
 }
 ...
@@ -56,7 +57,7 @@ extension ViewController: InAppStoryDelegate
 	               InAppStory.shared.onboardingPresent(controller: swipeContentController)
                }
            }
-       } else {
+       } else { // .button, .game, .deeplink
             // if the processed link leads to a screen in the application, 
             // it is recommend to close the reader
             InAppStory.shared.closeReader {

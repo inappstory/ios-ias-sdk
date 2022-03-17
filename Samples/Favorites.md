@@ -73,7 +73,7 @@ extension FavoritesController: InAppStoryDelegate
 	               storyView.present(controller: swipeContentController)
                }
            }
-       } else {
+       } else { // .button, .game, .deeplink
             // if the processed link leads to a screen in the application, 
             // recommend to close the reader
             if let storyView = storyView {

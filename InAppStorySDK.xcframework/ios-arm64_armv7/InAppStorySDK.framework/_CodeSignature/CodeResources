@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		sroyrcoJL22BbSnkAoQDXg5lL0w=
+		PfdWKFAC4lKRkou6m+N2E0/lQME=
 		</data>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NpFlnF74O13W/WOd9B9YmmaPrmc=
+		JNKa4qs7lIGcn8FxRmBZzV6YjhQ=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftinterface</key>
 		<data>
-		amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+		3w8Fee5xp06T5FHXr7yrSSq8af0=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+		7KlRJuLXH+EShsSR+OIIa7hFt7s=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ag46znOEywW9jGRX4JhVxBwuOvE=
+		dCX8rmWMzG/QxgLafaOZn4NW+eg=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		hxrtEvSDDsd0P1445rK0vt78Jyc=
+		qkUAw/XlaDZ9Aud9V0KooNxIDxY=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		ag46znOEywW9jGRX4JhVxBwuOvE=
+		dCX8rmWMzG/QxgLafaOZn4NW+eg=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		hxrtEvSDDsd0P1445rK0vt78Jyc=
+		qkUAw/XlaDZ9Aud9V0KooNxIDxY=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+		3w8Fee5xp06T5FHXr7yrSSq8af0=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+		7KlRJuLXH+EShsSR+OIIa7hFt7s=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+		3w8Fee5xp06T5FHXr7yrSSq8af0=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+		7KlRJuLXH+EShsSR+OIIa7hFt7s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -123,11 +123,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sroyrcoJL22BbSnkAoQDXg5lL0w=
+			PfdWKFAC4lKRkou6m+N2E0/lQME=
 			</data>
 			<key>hash2</key>
 			<data>
-			UaO5anc0eZeAsw8+KNcO3jwn+hrK6MKaKwA5K6tZo7Q=
+			9ZTsZpTvhuHFJ+lZBnYqsCwAM0QrYb0MoNBdsV9f0Wg=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
@@ -233,22 +233,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+			3w8Fee5xp06T5FHXr7yrSSq8af0=
 			</data>
 			<key>hash2</key>
 			<data>
-			euy8eoRNJYVSLhgum185M0DlqzeCxL0fynIUgoFtwYk=
+			U1NJhquA67PoeBA05zPL+0XwgvNG+2XL/l1X28AEZj8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+			7KlRJuLXH+EShsSR+OIIa7hFt7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			X/zdJ+4jSPja8GwWaY3lNdeLw0XXe5axSlb6cVUj4yY=
+			M8LJnwM6W1c9+OTO4k3mwF0CrQnwOzTRzRwl4HaEvD4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -266,22 +266,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ag46znOEywW9jGRX4JhVxBwuOvE=
+			dCX8rmWMzG/QxgLafaOZn4NW+eg=
 			</data>
 			<key>hash2</key>
 			<data>
-			raoxiaOhIr34SJfbwwTOy/XTKilChZD+fYAZZKfWA2Q=
+			EdDIphhbwULO63VAoLDnYJ5Ze7+pheZCkA2nTvNlyIk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hxrtEvSDDsd0P1445rK0vt78Jyc=
+			qkUAw/XlaDZ9Aud9V0KooNxIDxY=
 			</data>
 			<key>hash2</key>
 			<data>
-			wx+iQOIGHW0CIi7X+mdTMjPzmMemZADu/o1yVGj4lWw=
+			k2qKksQ7vQ4yYrKA3edzfue5so/7x0Q+AiDl+EyG90s=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftdoc</key>
@@ -299,22 +299,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ag46znOEywW9jGRX4JhVxBwuOvE=
+			dCX8rmWMzG/QxgLafaOZn4NW+eg=
 			</data>
 			<key>hash2</key>
 			<data>
-			raoxiaOhIr34SJfbwwTOy/XTKilChZD+fYAZZKfWA2Q=
+			EdDIphhbwULO63VAoLDnYJ5Ze7+pheZCkA2nTvNlyIk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hxrtEvSDDsd0P1445rK0vt78Jyc=
+			qkUAw/XlaDZ9Aud9V0KooNxIDxY=
 			</data>
 			<key>hash2</key>
 			<data>
-			wx+iQOIGHW0CIi7X+mdTMjPzmMemZADu/o1yVGj4lWw=
+			k2qKksQ7vQ4yYrKA3edzfue5so/7x0Q+AiDl+EyG90s=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -332,22 +332,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+			3w8Fee5xp06T5FHXr7yrSSq8af0=
 			</data>
 			<key>hash2</key>
 			<data>
-			euy8eoRNJYVSLhgum185M0DlqzeCxL0fynIUgoFtwYk=
+			U1NJhquA67PoeBA05zPL+0XwgvNG+2XL/l1X28AEZj8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+			7KlRJuLXH+EShsSR+OIIa7hFt7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			X/zdJ+4jSPja8GwWaY3lNdeLw0XXe5axSlb6cVUj4yY=
+			M8LJnwM6W1c9+OTO4k3mwF0CrQnwOzTRzRwl4HaEvD4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftdoc</key>
@@ -365,22 +365,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			amx4o9W7u5Xu7Sfp2fsRu+wGcrE=
+			3w8Fee5xp06T5FHXr7yrSSq8af0=
 			</data>
 			<key>hash2</key>
 			<data>
-			euy8eoRNJYVSLhgum185M0DlqzeCxL0fynIUgoFtwYk=
+			U1NJhquA67PoeBA05zPL+0XwgvNG+2XL/l1X28AEZj8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Nc2eEY8hJX7kfxT6fEi8b8QcJnU=
+			7KlRJuLXH+EShsSR+OIIa7hFt7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			X/zdJ+4jSPja8GwWaY3lNdeLw0XXe5axSlb6cVUj4yY=
+			M8LJnwM6W1c9+OTO4k3mwF0CrQnwOzTRzRwl4HaEvD4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

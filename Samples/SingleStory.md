@@ -26,8 +26,9 @@ In the controller, where it is necessary to show a single story, call the `showS
 ... 
 
 func pushNotification() {
-    InAppStory.shared.showSingle(with: <String>, from: <UIViewController>, delegate: <InAppStoryDelegate>) {
+    InAppStory.shared.showSingle(with: <String>, from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
         // the closure is triggered when the single story reader is opened
+        // show: <Bool> - if the reader was presented on the screen, value is true
     }
 }
 ...
@@ -57,7 +58,7 @@ extension ViewController: InAppStoryDelegate
 	               InAppStory.shared.singlePresent(controller: swipeContentController)
                }
            }
-       } else {
+       } else { // .button, .game, .deeplink
             // if the processed link leads to a screen in the application, 
             // it is recommend to close the reader
             InAppStory.shared.closeReader {
