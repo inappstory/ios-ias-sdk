@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		FTH8eoJxdDilGAu3wcniOBiSpHY=
+		TBbg6V0HD2ANtgrjAmmlEfhIWd4=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HK72AugF9AEzxNF8AM74wr3e28Y=
+		mphxpbloMR1SgMFaa39I8G5nFH8=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		R+3njkGKxb4w4W79ZlcE4NmrCzg=
+		1Kf3URDntghRN7SFPpRlcBe7PNU=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		fm+/Cj3VmhwN8RberIjVjOGnA0o=
+		/9sDfPOAfZqYLWLjPHuTWdTltlE=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		R+3njkGKxb4w4W79ZlcE4NmrCzg=
+		1Kf3URDntghRN7SFPpRlcBe7PNU=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		fm+/Cj3VmhwN8RberIjVjOGnA0o=
+		/9sDfPOAfZqYLWLjPHuTWdTltlE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZJzlNiU0efcbvqBbykdPuz7QKv51hCFUesCsx/a67xk=
+			CqdeS/TMpmrhAFJi2bMot85MM5xZ53ld+D1NjWF8avA=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
@@ -131,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AgsEJs4cmeJfjRmgNIdtJi8gUh7apWYdRtetEeQFYqM=
+			WYOxblFf00+EQm+bhA8l4qHEKoWyvMOZHkWw1sfr9AQ=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovZJo9ai/PSmNX+G1fPwVPD1TOeTZQH+rW7DScqrNco=
+			+AInMjCoaBMRzR1fqzDJQ8f/Hx/aSNB+Atq2OLz0lMU=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AgsEJs4cmeJfjRmgNIdtJi8gUh7apWYdRtetEeQFYqM=
+			WYOxblFf00+EQm+bhA8l4qHEKoWyvMOZHkWw1sfr9AQ=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ovZJo9ai/PSmNX+G1fPwVPD1TOeTZQH+rW7DScqrNco=
+			+AInMjCoaBMRzR1fqzDJQ8f/Hx/aSNB+Atq2OLz0lMU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
