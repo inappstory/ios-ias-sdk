@@ -53,7 +53,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.14.1             | 2126          | >= 10.0     |
+| 1.15.0             | 2140          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -72,7 +72,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.14.1
+github "inappstory/ios-sdk" ~> 1.15.0
 ```
 
 ### Swift Package Manager
@@ -83,7 +83,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.14.1"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.0"))
 ]
 ```
 
@@ -225,6 +225,7 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
 
+To use the multi-feed function, `feedID: <String>` must be set. By default, this is an empty string, and the list loads the main feed from the console.
 If the parameter `favorite: <Bool?>` is equal true, the list will be displayed favorite stories.
 
 ```swift
@@ -233,7 +234,7 @@ var storyView: StoryView!
 override func viewDidLoad() {
 	super.viewDidLoad()
 	
-   	storyView = StoryView(frame: <CGRect>, favorite: <Bool?>)
+   	storyView = StoryView(frame: <CGRect> = .zero, feedID: <String> = "", favorite: <Bool> = false)
 	storyView.target = <UIViewController>
         
 	view.addSubview(storyView)
@@ -275,8 +276,10 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display onboarding, you need call the `showOnboardings` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showOnboardings(feedID: <String> = "", from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
 ```
+
+Also, in the onboarding, you can show a separate list specified in the console. To do this, you must specify the `feedID: <String>` parameter related to the feed. By default, this is an empty string, and the list loads the oboarding feed from the console.
 
 To close the reader of onboarding, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 
@@ -418,23 +421,23 @@ The action by which the link was obtained:
 
 The action by which the link was obtained:
 
-* `.list` - type for StoryView;
+* `.list(feed: <String>?)` - type for StoryView, `feed` - id stories list;
 * `.single` - type for single story reader;
-* `.onboarding` - type for onboarding story reader.
+* `.onboarding(feed: <String>)` - type for onboarding story reader, `feed` - id stories list.
 
 ### Quality
 
 Quality of cover images in cells
 
-* `medium`;
-* `high`.
+* `.medium`;
+* `.high`.
 
 ### GoodsFailure
 
 Failure that return in `Result` from `getGoodsObject(...)` closure
 
-* `refresh` - show refresh button in the *GoodsView*;
-* `close` - close *GoodsView*.
+* `.refresh` - show refresh button in the *GoodsView*;
+* `.close` - close *GoodsView*.
 
 ## Objects
 
@@ -467,9 +470,9 @@ To create your own goods widget, you need to inherit from CustomGoodsView.
 
 ### Events
 
-Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`. The exception is `StoriesLoaded`
+Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The exception is `StoriesLoaded`
 
-* `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count;
+* `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count & `feed` - stories feed id;
 * `ClickOnStory` - click on story in the list with additional parameters:
     * place where the click came from (`list` or `favorite`);
 * `ShowStory` - display of the story reader with additional parameters:
