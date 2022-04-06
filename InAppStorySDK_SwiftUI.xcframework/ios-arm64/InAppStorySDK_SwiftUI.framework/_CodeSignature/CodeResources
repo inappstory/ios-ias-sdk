@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7Gj2qzg5w3IETf6+G6NReN1DuxY=
+		cSmrpZV6Z1K0rMPmyluDwwaX3Zw=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
@@ -34,31 +34,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zpz3P//azl/fcc3JMWiTj9qL0rM=
+		C2LbXKysXcFwIaNeDvhPykSMdCs=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		8qHT5OUz7wMfh1ENdqGqIyW0ceE=
+		lBfvOKlC2vklyy7Q48Lu7DyKm74=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		1Kf3URDntghRN7SFPpRlcBe7PNU=
+		+YxXCQy/YG81zi6mWlxwm1FH4l8=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Ua3xlwQyjIU7dNLAb2MZnLrFspU=
+		5ZI6YPQPu1WHQuhtWueMohIW9CI=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		8qHT5OUz7wMfh1ENdqGqIyW0ceE=
+		lBfvOKlC2vklyy7Q48Lu7DyKm74=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		1Kf3URDntghRN7SFPpRlcBe7PNU=
+		+YxXCQy/YG81zi6mWlxwm1FH4l8=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Ua3xlwQyjIU7dNLAb2MZnLrFspU=
+		5ZI6YPQPu1WHQuhtWueMohIW9CI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JGLrwoazXY2nm+Uw0J2eDEMAsj/4sJl7Fa/51UJNaFc=
+			pyfswu8VW6yDtqaPTYcQKkrD74DC+M09ZvOvgFj8lHY=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
@@ -124,42 +124,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Lh4TgHimMZwvTY/2qvYVs+ujSep9XA3lm+unjModNk=
+			nUgsGZtIihIO8CVQ4+p6+n5awTP7w+rnp3n54dobXX0=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WYOxblFf00+EQm+bhA8l4qHEKoWyvMOZHkWw1sfr9AQ=
+			05f4NyxRry5s4jax+1w5pUVDgF+lJAz5iGpt7IJnUdc=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wl+G5WOuj+RqggXiiRl0W01XiqF6EqYQy/wbzIoraQU=
+			mzZ8zMCNHyCf1fFdEluV4OC4XSRdAjweglAEj7cVPU0=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Lh4TgHimMZwvTY/2qvYVs+ujSep9XA3lm+unjModNk=
+			nUgsGZtIihIO8CVQ4+p6+n5awTP7w+rnp3n54dobXX0=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WYOxblFf00+EQm+bhA8l4qHEKoWyvMOZHkWw1sfr9AQ=
+			05f4NyxRry5s4jax+1w5pUVDgF+lJAz5iGpt7IJnUdc=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wl+G5WOuj+RqggXiiRl0W01XiqF6EqYQy/wbzIoraQU=
+			mzZ8zMCNHyCf1fFdEluV4OC4XSRdAjweglAEj7cVPU0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

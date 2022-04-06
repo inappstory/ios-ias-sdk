@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
+// swift-module-flags: -target x86_64-apple-ios13.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
 import AVFoundation
 import AudioToolbox
 import Combine
@@ -25,7 +25,7 @@ public struct PhoneFormat {
   public init(phoneFormat: Swift.String, regexp: Swift.String)
 }
 extension SwiftUI.View {
-  public func onboardingStories(tags: [Swift.String]? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func onboardingStories(feed: Swift.String? = nil, tags: [Swift.String]? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
   public func singleStory(storyID: Swift.String, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
@@ -151,7 +151,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
-  public func showOnboardings(from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showOnboardings(feed: Swift.String = "onboarding", from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
@@ -161,7 +161,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeAllFavorites()
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(id: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
@@ -279,12 +279,9 @@ public enum ActionType {
   }
 }
 public enum StoriesType {
-  case list, single, onboarding
-  public static func == (a: InAppStorySDK_SwiftUI.StoriesType, b: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+  case list(feed: Swift.String?)
+  case single
+  case onboarding(feed: Swift.String)
 }
 public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storiesDidUpdated(isContent: Swift.Bool, from storyType: InAppStorySDK_SwiftUI.StoriesType)
@@ -366,7 +363,7 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, favorite: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
@@ -411,5 +408,3 @@ extension InAppStorySDK_SwiftUI.GoodsFailure : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.GoodsFailure : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.ActionType : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.ActionType : Swift.Hashable {}
-extension InAppStorySDK_SwiftUI.StoriesType : Swift.Equatable {}
-extension InAppStorySDK_SwiftUI.StoriesType : Swift.Hashable {}
