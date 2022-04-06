@@ -13,3 +13,4 @@
 ### 11. [Favorites](Favorites.md)
 ### 12. [Sound control](Sound.md)
 ### 13. [GoodsWidget](GoodsWidget.md)
+### 14. [Multi-feed](Multifeed.md)
