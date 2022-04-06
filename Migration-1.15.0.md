@@ -10,10 +10,10 @@ This functionality can be:
 3. Providing different users with different feeds;  
 4. Etc.
 
-To work with multi-feed, the `feedID: <String>` parameter has been added to the **StoryView**. By default, this parameter is equal to an empty *String* and with this value it receives a default story feed from the server. If you don't plan to switch to multifeed at this time, don't specify a `feedID: <String>` when initializing the **StoryView**. In this case, everything will work as before.
+To work with multi-feed, the `feed: <String>` parameter has been added to the **StoryView**. By default, this parameter is equal to an empty *String* and with this value it receives a default story feed from the server. If you don't plan to switch to multifeed at this time, don't specify a `feed: <String>` when initializing the **StoryView**. In this case, everything will work as before.
 
 ```swift
-StoryView(frame: <CGRect> = .zero, feedID: <String> = "", favorite: <Bool> = false)
+StoryView(frame: <CGRect> = .zero, feed: <String> = "", favorite: <Bool> = false)
 ```
 More info see in [Mulifeed samples](https://github.com/inappstory/ios-sdk/blob/main/Samples/Mulifeed.md)
 
@@ -21,10 +21,10 @@ More info see in [Mulifeed samples](https://github.com/inappstory/ios-sdk/blob/m
 ## Onboardings
 
 The multifeed functionality can also be used in onboardings to separate them by screens or events.
-To use multifeed in onboardings, you must specify `feedID: <String>` when calling the `showOnboardings` method. If you don't plan to switch to multifeed at this time, don't specify a `feedID: <String>`. In this case, everything will work as before.
+To use multifeed in onboardings, you must specify `feed: <String>` when calling the `showOnboardings` method. If you don't plan to switch to multifeed at this time, don't specify a `feed: <String>`. In this case, everything will work as before.
 
 ```swift
-InAppStory.shared.showOnboardings(feedID: <String> = "", from: <UIViewController>, with: <[String]?> = nil, delegate: <InAppStoryDelegate>, complete: <(_ show: Bool) -> Void>)
+InAppStory.shared.showOnboardings(feed: <String> = "", from: <UIViewController>, with: <[String]?> = nil, delegate: <InAppStoryDelegate>, complete: <(_ show: Bool) -> Void>)
 ```
 More info see in [Onboardings samples](https://github.com/inappstory/ios-sdk/blob/main/Samples/OnboardingStory.md)
 

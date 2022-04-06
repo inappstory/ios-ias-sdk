@@ -225,7 +225,7 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
 
-To use the multi-feed function, `feedID: <String>` must be set. By default, this is an empty string, and the list loads the main feed from the console.
+To use the multi-feed function, `feed: <String>` must be set. By default, this is an empty string, and the list loads the main feed from the console.
 If the parameter `favorite: <Bool?>` is equal true, the list will be displayed favorite stories.
 
 ```swift
@@ -234,7 +234,7 @@ var storyView: StoryView!
 override func viewDidLoad() {
 	super.viewDidLoad()
 	
-   	storyView = StoryView(frame: <CGRect> = .zero, feedID: <String> = "", favorite: <Bool> = false)
+   	storyView = StoryView(frame: <CGRect> = .zero, feed: <String> = "", favorite: <Bool> = false)
 	storyView.target = <UIViewController>
         
 	view.addSubview(storyView)
@@ -276,10 +276,10 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display onboarding, you need call the `showOnboardings` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showOnboardings(feedID: <String> = "", from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showOnboardings(feed: <String> = "", from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
 ```
 
-Also, in the onboarding, you can show a separate list specified in the console. To do this, you must specify the `feedID: <String>` parameter related to the feed. By default, this is an empty string, and the list loads the oboarding feed from the console.
+Also, in the onboarding, you can show a separate list specified in the console. To do this, you must specify the `feed: <String>` parameter related to the feed. By default, this is an empty string, and the list loads the oboarding feed from the console.
 
 To close the reader of onboarding, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 

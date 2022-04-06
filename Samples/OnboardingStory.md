@@ -21,7 +21,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ### Default Onboardings
 
 In the controller, where you want to show onboarding, call the `showOnboarding` method of the `InAppStory`.  
-By default (if `feedID: <String>` is not specified), the feed marked in the console as "Onboarding" will be displayed.
+By default (if `feed: <String>` is not specified), the feed marked in the console as "Onboarding" will be displayed.
 
 ##### ViewController.swift
 ```swift 
@@ -40,7 +40,7 @@ override func viewDidAppear(_ animated: Bool) {
 
 ### Custom feed Onboardings
 
-In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feedID: <String>` when calling the `showOnboarding` method of the `InAppStory`.
+In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `showOnboarding` method of the `InAppStory`.
 
 ##### ViewController.swift
 ```swift 
@@ -49,7 +49,7 @@ In onboarding, you can show any feed from the list in the console. To show a non
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    InAppStory.shared.showOnboardings(feedID: <String> = "AboutFeed", from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
+    InAppStory.shared.showOnboardings(feed: <String> = "AboutFeed", from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
         // the closure is triggered when the onboarding reader is opened
         // show: <Bool> - if the reader was presented on the screen, value is true
     }
