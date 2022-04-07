@@ -110,6 +110,7 @@ import InAppStorySDK
 * from InAppStorySDK - v 1.8.x -> [Migration guide to 1.9.0](Migration-1.9.0.md)
 * from InAppStorySDK - v 1.9.x -> [Migration guide to 1.10.0](Migration-1.10.0.md)
 * from InAppStorySDK - v 1.10.x -> [Migration guide to 1.11.0](Migration-1.11.0.md)
+* from InAppStorySDK - v 1.14.x -> [Migration guide to 1.15.0](Migration-1.15.0.md)
 
 ## InAppStory
 
