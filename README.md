@@ -56,7 +56,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.14.1             | 2126          | >= 13.0     |
+| 1.15.0             | 2160          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -67,7 +67,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.14.1-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.15.0-SwiftUI'
 ```
 
 ### Carthage
@@ -75,7 +75,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.14.1
+github "inappstory/ios-sdk" ~> 1.15.0
 ```
 
 ### Swift Package Manager
@@ -86,7 +86,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.14.1-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.0-SwiftUI"))
 ]
 ```
 
@@ -220,7 +220,7 @@ struct ContentView: View
 {
     var body: some View {
         VStack(alignment: .leading) {
-            StoryListView(id: <String?>,
+            StoryListView(feed: <String?>,
                           isFavorite: <Bool>,
                           onUpdated: <((Bool) -> Void)?>,
                           onAction: <((String, ActionType) -> Void)?>,
@@ -237,7 +237,7 @@ struct ContentView: View
 
 ### Parameters
 
-* `id: <String?>` - optional id of stories list. Under normal conditions with a list and favorites, there is no need to set it. If multiple lists are used in an application, unique values must be specified for each;
+* `feed: <String?>` - optional id of stories feed. By default, this parameter is equal to an empty *String* and with this value it receives a default story feed from the server. If you don't plan to switch to multifeed at this time, don't specify a `feed: <String?>` when initializing the **StoryListView**. In this case, everything will work as before.
 * `isFavorite: <Bool>` - if this parameter is equal `true`, the list will be displayed favorite stories. Default is `false`;
 * `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
 * `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
@@ -272,6 +272,8 @@ If the *settings* parameter was not specified for `InAppStory`, before initializ
 InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 ```
 ---
+To use the multi-feed function, `feed: <String>` must be set. By default, this is an empty string, and the list loads the main feed from the console.
+
 
 If the parameter `favorite: <Bool?>` is equal true, the list will be displayed favorite stories.
 
@@ -281,7 +283,7 @@ var storyView: StoryView!
 override func viewDidLoad() {
 	super.viewDidLoad()
 	
-   	storyView = StoryView(frame: <CGRect>, favorite: <Bool?>)
+   	storyView = StoryView(frame: <CGRect> = .zero, feed: <String> = "", favorite: <Bool> = false)
 	storyView.target = <UIViewController>
         
 	view.addSubview(storyView)
@@ -322,13 +324,17 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 Onboarding show like `sheet`, `alert` etc. from any `View`:
 
 ```swift
-.onboardingStories(tags: <[String]?>,
+.onboardingStories(feed: <String>,
+                   tags: <[String]?>,
                    isPresented: <Binding<Bool>>,
                    onDismiss: <(() -> Void)?>,
                    onAction: <((String, ActionType) -> Void)?>,
                    goodsObjects: <((Array<String>, (Result<Array<GoodsObjectProtocol>, GoodsFailure>) -> Void) -> Void)?>,
                    selectGoodsItem: <((GoodsObjectProtocol) -> Void)?>)
 ```
+
+Also, in the onboarding, you can show a separate list specified in the console. To do this, you must specify the `feed: <String>` parameter related to the feed. By default, this is an empty string, and the list loads the oboarding feed from the console.
+
 ### Parameters
 
 * `tags: <[String]?>` - optional tags for showing onboarding. If not set, tags gets from `InAppStory.shared.settings`;
@@ -488,9 +494,9 @@ The action by which the link was obtained:
 
 The action by which the link was obtained:
 
-* `.list` - type for StoryView;
+* `.list(feed: <String>?)` - type for StoryView, `feed` - id stories list;
 * `.single` - type for single story reader;
-* `.onboarding` - type for onboarding story reader.
+* `.onboarding(feed: <String>)` - type for onboarding story reader, `feed` - id stories list.
 
 ### Quality
 
@@ -537,9 +543,10 @@ To create your own goods widget, you need to inherit from CustomGoodsView.
 
 ### Events
 
-Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`. The exception is `StoriesLoaded`
+Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The exception is `StoriesLoaded`
 
-* `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count;
+* `StoriesLoaded` - the list of stories has loaded, `StoryView` is ready to work (fires every time the list is loaded, and also on refresh). In `userInfo` only field `count` - stories count & `feed` - stories feed id;
+
 * `ClickOnStory` - click on story in the list with additional parameters:
     * place where the click came from (`list` or `favorite`);
 * `ShowStory` - display of the story reader with additional parameters:

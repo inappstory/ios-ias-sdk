@@ -19,7 +19,10 @@ struct ContentView: View
 }
 ```
 
-In the view, where you want to show onboarding, set the `onboardingStories` extension method for `View`
+### Default Onboardings
+
+In the view, where you want to show onboarding, set the `onboardingStories` extension method for `View`.  
+By default (if `feed: <String>` is not specified), the feed marked in the console as "Onboarding" will be displayed.
 
 ##### ContentView.swift
 ```swift
@@ -38,4 +41,30 @@ struct ContentView: View
     }
 }
 ```
+### Custom feed Onboardings
+
+In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `onboardingStories` method of the extension method for `View`.
+
+##### ContentView.swift
+```swift
+struct ContentView: View
+{
+	// set isOnboardingPresent = true, if need show onboardings
+    @State var isOnboardingPresent: Bool = false
+    ...
+    var body: some View {
+        VStack(alignment: .leading) {
+            // main body content of view
+        }
+        .padding(.top)
+        .navigationBarTitle(Text("Onboarding"))
+        .onboardingStories(feed: "OnboardingFeed", // custom onboarding feed
+                           isPresented: $isOnboardingPresent) // onboardings showing
+    }
+}
+```
+> **Pay attention**  
+> Displaying any feed in onboarding works according to onboarding rules. Stories are shown only once per user. The next time you try to show the read story in onboarding, it will be cut off.
+
+
 All parametrs review of onboarding see in [OnboardingStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#onboardingstory)
