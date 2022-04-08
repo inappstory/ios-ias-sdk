@@ -2,6 +2,8 @@
 
 To display the favorites screen, you should wait for the StoryView to call the `favoriteCellDidSelect()` delegate method. After that, go to the screen with your favorite stories.
 
+The favorites is common to all feeds. Adding story to favorites in one feed will cause it to appear in favorites in all feeds.
+
 ##### ViewController.swift
 ```swift
 ...

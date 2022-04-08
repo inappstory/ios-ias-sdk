@@ -18,7 +18,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-In the controller, where you want to show onboarding, call the `showOnboarding` method of the `InAppStory`
+### Default Onboardings
+
+In the controller, where you want to show onboarding, call the `showOnboarding` method of the `InAppStory`.  
+By default (if `feed: <String>` is not specified), the feed marked in the console as "Onboarding" will be displayed.
 
 ##### ViewController.swift
 ```swift 
@@ -35,6 +38,29 @@ override func viewDidAppear(_ animated: Bool) {
 ...
 ```
 
+### Custom feed Onboardings
+
+In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `showOnboarding` method of the `InAppStory`.
+
+##### ViewController.swift
+```swift 
+... 
+
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    InAppStory.shared.showOnboardings(feed: <String> = "AboutFeed", from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
+        // the closure is triggered when the onboarding reader is opened
+        // show: <Bool> - if the reader was presented on the screen, value is true
+    }
+}
+...
+```
+> **Pay attention**  
+> Displaying any feed in onboarding works according to onboarding rules. Stories are shown only once per user. The next time you try to show the read story in onboarding, it will be cut off.
+
+### Onboardings actions
+
 To track the actions of the onboarding reader, you need to implement the `InAppStoryDelegate` methods
 
 ```swift 
@@ -46,6 +72,15 @@ extension ViewController: InAppStoryDelegate
     
     // called when a button or SwipeUp event is triggered in the reader
     func storyReader(actionWith target: String, for type: ActionType, from storyType: StoriesType) {
+        switch storyType {
+        case .list(let listFeed):
+            print("List feed is \(listFeed)") // stories list feed id
+        case .onboarding(let onboardingFeed):
+            print("Onboarding feed is \(onboardingFeed)") // onboarding list feed id
+        default:
+            print("Feed is not set") // by favorites or sigle
+        }
+        
         if type == .swipe { // link obtained by swipeUP action
            if let url = URL(string: target) {
                let swipeContentController = SwipeContentController()
