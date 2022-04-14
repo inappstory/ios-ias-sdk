@@ -25,9 +25,9 @@ public struct PhoneFormat {
   public init(phoneFormat: Swift.String, regexp: Swift.String)
 }
 extension SwiftUI.View {
-  public func onboardingStories(feed: Swift.String? = nil, tags: [Swift.String]? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func onboardingStories(feed: Swift.String? = nil, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
-  public func singleStory(storyID: Swift.String, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func singleStory(storyID: Swift.String, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
 }
 extension UIKit.UIView {
@@ -64,6 +64,12 @@ public struct Settings : Swift.Equatable {
   }
   public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String]())
   public static func == (lhs: InAppStorySDK_SwiftUI.Settings, rhs: InAppStorySDK_SwiftUI.Settings) -> Swift.Bool
+}
+public struct PanelSettings {
+  public var like: Swift.Bool
+  public var favorites: Swift.Bool
+  public var share: Swift.Bool
+  public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
 }
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK_SwiftUI.InAppStory
@@ -114,8 +120,12 @@ public struct Settings : Swift.Equatable {
   public var refreshImage: UIKit.UIImage
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
+  public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'likePanel' parameter will be removed.")
   public var likePanel: Swift.Bool
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'favoritePanel' parameter will be removed.")
   public var favoritePanel: Swift.Bool
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'sharePanel' parameter will be removed.")
   public var sharePanel: Swift.Bool
   public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
@@ -151,17 +161,17 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
-  public func showOnboardings(feed: Swift.String = "onboarding", from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showOnboardings(feed: Swift.String = "onboarding", from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
   public func removeAllFavorites()
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
@@ -362,6 +372,10 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   }
   @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
     get
+  }
+  @_Concurrency.MainActor(unsafe) public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings? {
+    get
+    set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()

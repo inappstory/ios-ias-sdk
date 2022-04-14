@@ -14,3 +14,5 @@
 ### 12. [Sound control](Sound.md)
 ### 13. [GoodsWidget](GoodsWidget.md)
 ### 14. [Multi-feed](Multifeed.md)
+### 15. [PanelSettings](PanelSettings.md)
+### 16. [ListPlaceholder](ListPlaceholder.md)

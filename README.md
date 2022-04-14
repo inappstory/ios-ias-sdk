@@ -45,6 +45,7 @@ A library for embedding stories into an application with customization.
 	* [GoodsFailure](https://github.com/inappstory/ios-sdk/tree/SwiftUI#GoodsFailure)
 * [Objects](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Objects)
 	* [Settings](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Settings)
+	* [PanelSettings](https://github.com/inappstory/ios-sdk/tree/SwiftUI#PanelSettings)
 	* [WidgetStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#WidgetStory)
 	* [CustomGoodsView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#CustomGoodsView)
 * [NotificationCenter](https://github.com/inappstory/ios-sdk/tree/SwiftUI#NotificationCenter)
@@ -56,7 +57,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.15.0             | 2160          | >= 13.0     |
+| 1.15.1             | 2170          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -67,7 +68,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.15.0-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.15.1-SwiftUI'
 ```
 
 ### Carthage
@@ -75,7 +76,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.15.0
+github "inappstory/ios-sdk" ~> 1.15.1
 ```
 
 ### Swift Package Manager
@@ -86,7 +87,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.0-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.1-SwiftUI"))
 ]
 ```
 
@@ -182,9 +183,10 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
 * `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
 * `timerGradientEnable` - enable gradient shadow under timers in story *\<Bool>*;
-* `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
-* `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
-* `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;
+* `panelSettings` - displaying the bottom bar (should be enabled in the console) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
+* `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*; ***deprecated***
+* `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*; ***deprecated***
+* `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*; ***deprecated***
 * `likeImage` - images for the like button *\<UIImage>*;
 * `likeSelectedImage` - images for the selected like button *\<UIImage>*;
 * `dislikeImage` - images for the dislike button *\<UIImage>*;
@@ -239,6 +241,7 @@ struct ContentView: View
 
 * `feed: <String?>` - optional id of stories feed. By default, this parameter is equal to an empty *String* and with this value it receives a default story feed from the server. If you don't plan to switch to multifeed at this time, don't specify a `feed: <String?>` when initializing the **StoryListView**. In this case, everything will work as before.
 * `isFavorite: <Bool>` - if this parameter is equal `true`, the list will be displayed favorite stories. Default is `false`;
+* `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
 * `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
 * `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
@@ -302,6 +305,7 @@ override func viewDidLoad() {
 
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk/tree/SwiftUI#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryViewDelegateFlowLayout)>*;
+* `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
@@ -326,6 +330,7 @@ Onboarding show like `sheet`, `alert` etc. from any `View`:
 ```swift
 .onboardingStories(feed: <String>,
                    tags: <[String]?>,
+                   panelSettings: <PanelSettings?> = nil,
                    isPresented: <Binding<Bool>>,
                    onDismiss: <(() -> Void)?>,
                    onAction: <((String, ActionType) -> Void)?>,
@@ -338,6 +343,7 @@ Also, in the onboarding, you can show a separate list specified in the console. 
 ### Parameters
 
 * `tags: <[String]?>` - optional tags for showing onboarding. If not set, tags gets from `InAppStory.shared.settings`;
+* `panelSettings: <PanelSettings?> = nil` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `isPresented: <Binding<Bool>>` - binding `Bool` value that start showing onboarding reader. `false` - value close reader, but it's better to use `InAppStory.share.closeReader()`;
 * `onDismiss: <(() -> Void)?>` - called when reader is dismiss;
 * `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
@@ -360,8 +366,8 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 Single story show like `sheet`, `alert` etc. from any `View`:
 
 ```swift
-.singleStory(storyID: <String>,
-             tags: <[String]?>,
+.singleStory(storyID: <String>,,
+             panelSettings: <PanelSettings?> = nil,
              isPresented: <Binding<Bool>>,
              onDismiss: <(() -> Void)?>,
              onAction: <((String, ActionType) -> Void)?>,
@@ -371,7 +377,8 @@ Single story show like `sheet`, `alert` etc. from any `View`:
 ### Parameters
 
 * `storyID` - story ID that needed show;
-* `tags: <[String]?>` - optional tags for showing onboarding. If not set, tags gets from `InAppStory.shared.settings`;
+* `panelSettings: <PanelSettings?> = nil` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
+
 * `isPresented: <Binding<Bool>>` - binding `Bool` value that start showing onboarding reader. `false` - value close reader, but it's better to use `InAppStory.share.closeReader()`;
 * `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
 * `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
@@ -520,6 +527,15 @@ Failure that return in `Result` from `getGoodsObject(...)` closure
 
 * `userID` - unique user identifier *\<String>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
+
+### PanelSettings
+
+#### Parameters
+
+* `like` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
+* `favorites` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
+* `share` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;
+
 
 ### WidgetStory
 
