@@ -57,6 +57,12 @@ public struct Settings : Swift.Equatable {
   public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String]())
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
+public struct PanelSettings {
+  public var like: Swift.Bool
+  public var favorites: Swift.Bool
+  public var share: Swift.Bool
+  public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
+}
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK.InAppStory
   public static let VersionSDK: Swift.String
@@ -106,8 +112,12 @@ public struct Settings : Swift.Equatable {
   public var refreshImage: UIKit.UIImage
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
+  public var panelSettings: InAppStorySDK.PanelSettings?
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'likePanel' parameter will be removed.")
   public var likePanel: Swift.Bool
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'favoritePanel' parameter will be removed.")
   public var favoritePanel: Swift.Bool
+  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'sharePanel' parameter will be removed.")
   public var sharePanel: Swift.Bool
   public var goodCell: InAppStorySDK.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK.PlaceholderProtocol?
@@ -143,11 +153,11 @@ extension InAppStorySDK.InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
-  public func showOnboardings(feed: Swift.String = "onboarding", from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showOnboardings(feed: Swift.String = "onboarding", from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   public func onboardingPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   public func singleStoryPresent(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
@@ -348,6 +358,10 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
   }
   @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
     get
+  }
+  @_Concurrency.MainActor(unsafe) public var panelSettings: InAppStorySDK.PanelSettings? {
+    get
+    set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()

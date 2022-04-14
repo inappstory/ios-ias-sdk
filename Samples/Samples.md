@@ -15,3 +15,5 @@
 ### 13. [Widget iOS 14](Widget.md)
 ### 14. [GoodsWidget](GoodsWidget.md)
 ### 15. [Multi-feed](Multifeed.md)
+### 16. [PanelSettings](PanelSettings.md)
+### 17. [ListPlaceholder](ListPlaceholder.md)

@@ -53,7 +53,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.15.0             | 2160          | >= 10.0     |
+| 1.15.1             | 2170          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -72,7 +72,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.15.0
+github "inappstory/ios-sdk" ~> 1.15.1
 ```
 
 ### Swift Package Manager
@@ -83,7 +83,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.0"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.15.1"))
 ]
 ```
 
@@ -194,9 +194,10 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
 * `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
 * `timerGradientEnable` - enable gradient shadow under timers in story *\<Bool>*;
-* `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
-* `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
-* `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;
+* `panelSettings` - displaying the bottom bar (should be enabled in the console) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
+* `likePanel` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*; ***deprecated***
+* `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*; ***deprecated***
+* `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*; ***deprecated***
 * `likeImage` - images for the like button *\<UIImage>*;
 * `likeSelectedImage` - images for the selected like button *\<UIImage>*;
 * `dislikeImage` - images for the dislike button *\<UIImage>*;
@@ -255,6 +256,7 @@ override func viewDidLoad() {
 
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
+* `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
@@ -277,10 +279,12 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display onboarding, you need call the `showOnboardings` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showOnboardings(feed: <String> = "", from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showOnboardings(feed: <String> = "", from target: <UIViewController>, delegate: <InAppStoryDelegate>, with panelSettings: PanelSettings? = nil, complete: <()->Void>)
 ```
 
 Also, in the onboarding, you can show a separate list specified in the console. To do this, you must specify the `feed: <String>` parameter related to the feed. By default, this is an empty string, and the list loads the oboarding feed from the console.
+
+Parametr `panelSettings` displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 
 To close the reader of onboarding, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 
@@ -301,8 +305,10 @@ InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
 To display single story, you need call the `showSingle` method of the singleton class `InAppStory.shared`:
 
 ```swift
-InAppStory.shared.showSingle(from target: <UIViewController>, with id: <String>, delegate: <InAppStoryDelegate>, complete: <()->Void>)
+InAppStory.shared.showSingle(from target: <UIViewController>, with id: <String>, delegate: <InAppStoryDelegate>, with panelSettings: PanelSettings? = nil, complete: <()->Void>)
 ```
+
+Parametr `panelSettings` displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 
 To close the reader of single story, call `closeReader(complete: () -> Void)`. This may be necessary, such as when handling open the link by push a button in story. `complete` called after closing the reader.
 
@@ -448,6 +454,14 @@ Failure that return in `Result` from `getGoodsObject(...)` closure
 
 * `userID` - unique user identifier *\<String>*;
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
+
+### PanelSettings
+
+#### Parameters
+
+* `like` - displaying the bottom bar with likes (should be enabled in the console) *\<Bool>*;
+* `favorites` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*;
+* `share` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*;
 
 ### WidgetStory
 
