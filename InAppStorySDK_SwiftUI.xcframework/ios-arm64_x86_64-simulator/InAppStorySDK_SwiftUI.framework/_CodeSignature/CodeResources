@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zmax7sNkIYY+tvxwEIfj7epfnaQ=
+		04eFXZtRy1oSZuLP8aVsTS+4K20=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I3LZv7v4eVmW75stwyKmao/v+QE=
+		5zS3DqF8qCXILc0P9nhbjthSM4Y=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		W/3fS7hfv2ausLElADojjhyBIgk=
+		FH/qgdmwSvmkKsqXZPTsQx+d9jE=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		W/3fS7hfv2ausLElADojjhyBIgk=
+		FH/qgdmwSvmkKsqXZPTsQx+d9jE=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XgQIwqIOybxc6kNfykOCCC9pGwY=
+		xIYrhqswT+/Mg54vvQ3qtc2hz0Y=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		XgQIwqIOybxc6kNfykOCCC9pGwY=
+		xIYrhqswT+/Mg54vvQ3qtc2hz0Y=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,7 +99,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jni3qYRa6INtTBDa2nI+PjBvP5S45uavB+klCbAHIE4=
+			y4uRAh3P7xbxC8oqciQ+qsYjY437mtaHHvbZYdXPGpE=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NydnkL+8+UH0jpKjL3waMjg2ySDzLJMFSJb3KlVvJqc=
+			y+QnATizTVXNuP+bbcGkYdL2EVd94z6PfjWeoL8lC+o=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
@@ -183,7 +183,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NydnkL+8+UH0jpKjL3waMjg2ySDzLJMFSJb3KlVvJqc=
+			y+QnATizTVXNuP+bbcGkYdL2EVd94z6PfjWeoL8lC+o=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -204,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VfCFZWYl0sE/d3AFfKmwxKjRiw3dAHlhJzhBSSMudOc=
+			GTdv6zqhTVisxj7VMNAghOmNNWjoWJsrm8QNqOYofaM=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
@@ -225,7 +225,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VfCFZWYl0sE/d3AFfKmwxKjRiw3dAHlhJzhBSSMudOc=
+			GTdv6zqhTVisxj7VMNAghOmNNWjoWJsrm8QNqOYofaM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
