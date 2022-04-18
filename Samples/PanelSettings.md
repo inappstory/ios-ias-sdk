@@ -52,7 +52,7 @@ InAppStory.shared.showOnboardings(from: self, // target from where the reader wi
 
 #### Single Story
 
-To set special settings for the bottom bar in single story. You must specify the `panelSettings` parameter when calling the `showOnboardings(...)` method.
+To set special settings for the bottom bar in single story. You must specify the `panelSettings` parameter when calling the `showSingle(...)` method.
 
 ```swift
 InAppStory.shared.showSingle(with: "<storyID>",
