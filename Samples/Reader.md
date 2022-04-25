@@ -3,11 +3,12 @@
 #### Change the appearance of the reader:
 
 1. [Close button position](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Close-button-position)
-2. [Changing icons in the bottom panel](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-icons-in-the-bottom-panel)
-3. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
-4. [Presentation style](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Presentation-style)
-5. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Swipe-animation)
-6. [Timers gradient](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#timers-gradient)
+2. [Timers shadow gradient](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Timers-shadow-gradient)
+3. [Changing icons in the bottom panel](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-icons-in-the-bottom-panel)
+4. [Changing the preloader on unloaded cards](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Changing-the-preloader-on-unloaded-cards)
+5. [Presentation style](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Presentation-style)
+6. [Swipe animation](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#Swipe-animation)
+7. [Timers gradient](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Reader.md#timers-gradient)
 
 ### Close button position
 
@@ -31,6 +32,36 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
     // close button position
     InAppStory.shared.closeButtonPosition = <ClosePosition>
+    
+    return true
+}
+```
+--
+### Timers shadow gradient
+
+When initializing the library in the application, you can change the shadow gradient display under the timers `TimersGradient`. Detail see in [main doc](https://github.com/inappstory/ios-sdk/tree/SwiftUI#TimersGradient)
+
+##### Defaults init parametrs
+```swift
+TimersGradient(colors: Array<UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.3)],
+               startPoint: CGPoint = CGPoint(x: 0.5, y: 1.0),
+               endPoint: CGPoint = CGPoint(x: 0.5, y: 0.0),
+               locations: Array<Double> = [0, 1],
+               height: Double = 80.0)
+```
+
+##### AppDelegate.swift
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+{
+    // library initialization
+    InAppStory.shared.initWith(serviceKey: <String>)
+    
+    // settings can also be specified at any time before creating a StoryView or calling individual stories 
+    InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
+    
+    // change timers gradient
+    InAppStory.shared.timerGradient = <TimersGradient>
     
     return true
 }
