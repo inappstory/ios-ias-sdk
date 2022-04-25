@@ -63,6 +63,14 @@ public struct PanelSettings {
   public var share: Swift.Bool
   public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
 }
+public struct TimersGradient {
+  public var colors: Swift.Array<UIKit.UIColor>
+  public var startPoint: CoreGraphics.CGPoint
+  public var endPoint: CoreGraphics.CGPoint
+  public var locations: Swift.Array<Swift.Double>
+  public var height: Swift.Double
+  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.3)], startPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 80.0)
+}
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK.InAppStory
   public static let VersionSDK: Swift.String
@@ -93,6 +101,7 @@ public struct PanelSettings {
   public var timerGradientEnable: Swift.Bool
   public var swipeToClose: Swift.Bool
   public var overScrollToClose: Swift.Bool
+  public var timerGradient: InAppStorySDK.TimersGradient
   public var placeholderElementColor: UIKit.UIColor
   public var placeholderBackgroundColor: UIKit.UIColor
   public var goodsCloseBackgroundColor: UIKit.UIColor
