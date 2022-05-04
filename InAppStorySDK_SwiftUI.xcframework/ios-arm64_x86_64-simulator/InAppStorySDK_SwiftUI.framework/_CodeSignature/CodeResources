@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dUD37TY9I8+yT0moOK6j1BRXbo0=
+		AWpTiZvV46RGWN1huJMQaeYTx0w=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/ltDBdG4dVJ61p207SbXsLvhIao=
+		0nuKyD/VxDJHhkZZNBeT5GPdTLI=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		/ltDBdG4dVJ61p207SbXsLvhIao=
+		0nuKyD/VxDJHhkZZNBeT5GPdTLI=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		37Y+SKAlYYjhbDVkF8w1JnFQlI8=
+		HDTAku2v7yIErvxHnt9shp4VEos=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		37Y+SKAlYYjhbDVkF8w1JnFQlI8=
+		HDTAku2v7yIErvxHnt9shp4VEos=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VVeoa53ILRvSepOA6D88Kr+a+gcUuj+48CJuFR9ovSs=
+			mDnn6hYfwsvpVGoO7+sT2lGuEDFpSlZ4Fek4jKceXPk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
@@ -183,7 +183,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VVeoa53ILRvSepOA6D88Kr+a+gcUuj+48CJuFR9ovSs=
+			mDnn6hYfwsvpVGoO7+sT2lGuEDFpSlZ4Fek4jKceXPk=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -204,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/EkjQN/JcuFBKfe5cq3X2wAejpN9IM2+dN0xF5HM+E=
+			N7PUEpjZHRDqxYsYJX7RBgwmmfDBtX6/RnDtoGM7Xgo=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64.swiftdoc</key>
@@ -225,7 +225,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T/EkjQN/JcuFBKfe5cq3X2wAejpN9IM2+dN0xF5HM+E=
+			N7PUEpjZHRDqxYsYJX7RBgwmmfDBtX6/RnDtoGM7Xgo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

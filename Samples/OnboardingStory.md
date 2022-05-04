@@ -41,6 +41,30 @@ struct ContentView: View
     }
 }
 ```
+### Custom tags Onboardings
+
+For onboarding, you can set a list of tags other than those set in `InAppStory.shared.settings`. Tags set in this way completely override the tags set in `InAppStory.shared.settings` for a particular onboarding call.
+
+##### ContentView.swift
+```swift
+struct ContentView: View
+{
+	// set isOnboardingPresent = true, if need show onboardings
+    @State var isOnboardingPresent: Bool = false
+    ...
+    var body: some View {
+        VStack(alignment: .leading) {
+            // main body content of view
+        }
+        .padding(.top)
+        .navigationBarTitle(Text("Onboarding"))
+        .onboardingStories(feed: "OnboardingFeed", // custom onboarding feed
+                           tags: ["Array of custom tags"], // custom tags for onboardinng
+                           isPresented: $isOnboardingPresent) // onboardings showing
+    }
+}
+```
+
 ### Custom feed Onboardings
 
 In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `onboardingStories` method of the extension method for `View`.
