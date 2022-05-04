@@ -38,6 +38,29 @@ override func viewDidAppear(_ animated: Bool) {
 ...
 ```
 
+### Custom tags Onboardings
+
+For onboarding, you can set a list of tags other than those set in `InAppStory.shared.settings`. Tags set in this way completely override the tags set in `InAppStory.shared.settings` for a particular onboarding call.
+
+##### ViewController.swift
+```swift 
+... 
+
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    // feed - custom feed id;
+    // from - controller for showing reader;
+    // with - array of castom tads;
+    // delegate - delegate for onbording reader;
+    InAppStory.shared.showOnboardings(feed: <String> = "AboutFeed", from: <UIViewController>, with: ["Array with new tags"], delegate: <InAppStoryDelegate>) { show in
+        // the closure is triggered when the onboarding reader is opened
+        // show: <Bool> - if the reader was presented on the screen, value is true
+    }
+}
+...
+```
+
 ### Custom feed Onboardings
 
 In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `showOnboarding` method of the `InAppStory`.
