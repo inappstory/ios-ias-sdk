@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		cSmrpZV6Z1K0rMPmyluDwwaX3Zw=
+		df0YRvlHmeEhuSpJgdXvkYBeLO0=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>GamePlaceholder.nib</key>
 		<data>
-		rHEQgbmjRs1mC21FVsvODboAMoQ=
+		6AwyDell1Z9XiuqQsLQgCjN8xbQ=
 		</data>
 		<key>GoodCell.nib</key>
 		<data>
-		tHdObU1Yw5J4aY4iNe9qp+sFfNs=
+		+EK2Lxv8IGFs7klr199uaHFlSro=
 		</data>
 		<key>Headers/CSPlaceholderView.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Headers/InAppStorySDK_SwiftUI-Swift.h</key>
 		<data>
-		aftrHXxmZ5lOOQDe50TviTkWmFo=
+		xWtOREbZjhrVpeHJSfS4aAQVCcQ=
 		</data>
 		<key>Headers/InAppStorySDK_SwiftUI.h</key>
 		<data>
@@ -34,31 +34,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Bg4CUBVj1K2drcntJg8E10SXGYw=
+		l+YRjK2152cg1aUDstvL2nODZWI=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		lBfvOKlC2vklyy7Q48Lu7DyKm74=
+		+ZFYDM5CCkNJ1OZRvuGSG6a3lro=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		i+dOFUBZPv/zAyiI8YxpfJ2IQT4=
+		ptYD8lupUH7Cy/Wk8iFPeqVFVPc=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		3pLfhTQBYirGvwepaUTZX/DL/b0=
-		</data>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		lBfvOKlC2vklyy7Q48Lu7DyKm74=
-		</data>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		i+dOFUBZPv/zAyiI8YxpfJ2IQT4=
-		</data>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		3pLfhTQBYirGvwepaUTZX/DL/b0=
+		5nwKSdXboIOcSzjHewdzNWPmFu8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +54,7 @@
 		</data>
 		<key>StoryCell.nib</key>
 		<data>
-		xrtrrYAPFBwB3BnMnq3TZcNwseM=
+		Sfk8o1fVxsVxY/L534qRcMokOi0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pyfswu8VW6yDtqaPTYcQKkrD74DC+M09ZvOvgFj8lHY=
+			okKcePXbSc5Xq+VJaaCYUQ8AhyAxAOHIcCsKgAQggKo=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
@@ -89,14 +77,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wbeuApgFxI1cWJTGTxh6UVbJSqIgr5QFEaJkR2kL2F4=
+			G9Q/vSarC8CWz9sO0TTHbplfZx3+cM/NZqfwTtx1RJU=
 			</data>
 		</dict>
 		<key>GoodCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CTMc9ixGdDb0FzC8iZR4rTbanSoroRla5r8gKDWpXgQ=
+			6TIBAxHzGeHvzHldQhvqnPjuldLm7lsA4w/+pyX6Z8o=
 			</data>
 		</dict>
 		<key>Headers/CSPlaceholderView.h</key>
@@ -110,7 +98,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CWCC/FoVEFNSmOMR06f2qh6f6nRTBLSlS+IKtSkSxt4=
+			ZCdLtWsxa7y9dxreLcOa1n3Mr8NX8bHoSlTxCwq4yb8=
 			</data>
 		</dict>
 		<key>Headers/InAppStorySDK_SwiftUI.h</key>
@@ -124,42 +112,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nUgsGZtIihIO8CVQ4+p6+n5awTP7w+rnp3n54dobXX0=
+			vUZls3PFmP32Q36wrE/nKE6TUGmv5bBhkk3JKBNLox4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1KeS2bk/hh3AL2zHV70jB3X/LPH/Qyzq4MbR8cAZskc=
+			e6ZkbyCJXXl08Rzk/SQe77ay0xlvUtSYI/eaKP31bU8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VycyN4nYH2X0j4d+x8fILIc/KcNmsaC5ly11XqTSw4g=
-			</data>
-		</dict>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nUgsGZtIihIO8CVQ4+p6+n5awTP7w+rnp3n54dobXX0=
-			</data>
-		</dict>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1KeS2bk/hh3AL2zHV70jB3X/LPH/Qyzq4MbR8cAZskc=
-			</data>
-		</dict>
-		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VycyN4nYH2X0j4d+x8fILIc/KcNmsaC5ly11XqTSw4g=
+			NQLd7q4XOODmxfXNHJcuC9IgwtR2XVMFhma5y8LJ9XY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -173,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+36BD7drycBrmQOA9wOBc9QoF009WvGnUabYwxukWxM=
+			QAaa2UKuS+hkyKz22gBsaFpqSkhkOSt8I4we0LWTWOI=
 			</data>
 		</dict>
 	</dict>
