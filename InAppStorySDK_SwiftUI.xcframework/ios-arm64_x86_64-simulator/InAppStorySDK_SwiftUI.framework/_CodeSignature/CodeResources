@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		df0YRvlHmeEhuSpJgdXvkYBeLO0=
+		A1hiIMLM70iDK4QJCVGWRYWU0uU=
 		</data>
 		<key>FavoriteCell.nib</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HK2mhs9+8uj1DtFXxYqWxXqyJWE=
+		eFcbIN7KBu5xkrjVNpJvQNR7bmc=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JSOrhFswtAYmy0xRTx2fd2uoxCY=
+		zQ37I2kzfOxV5XyT1xr29xOUPlQ=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		I69VJ+zn5fnPmPdDQ2IN1QUzEPc=
+		zta8MWW4a3cdC+lUCArMT9GIm/M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			okKcePXbSc5Xq+VJaaCYUQ8AhyAxAOHIcCsKgAQggKo=
+			0KFO6/VHtTDpdsPg6F/UglzyUsFzhbIRDv4NFjt0XW8=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib</key>
@@ -138,7 +138,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2XVXaNVASVvaVv+CJ+6zvWOXz8J6KW3GdsZaY3LBiH0=
+			fSkdqOATIKxGMzlDRCpT2whPu8uknbcLzmIWG/A1ky0=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -159,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FqiFZmXKHYVy1SlNPOaY3eTLA2X/iUIvoWqzeMnAe30=
+			FGGILRlZGEUb4Fg8OtxpL1DrZQ3v6+1JA7DEu2/YMh4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
