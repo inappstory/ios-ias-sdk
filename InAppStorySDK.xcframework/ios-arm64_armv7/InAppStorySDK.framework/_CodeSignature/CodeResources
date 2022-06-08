@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		59cTVjH/PodT31ua+5Tsbdyz2Zo=
+		2CbhO1QMVmqt+5MTL0x3M8BBziM=
 		</data>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sUFFo1ojbGxyGwHK36sIibg1+Z0=
+		w5F7L8pmbMf6raklS8I5Wpj5Sek=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		raZ1w+qIoC1vEfgyA6OaEG0oLXM=
+		lHWiE6erorbX0vKyjMAOHavUF7o=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		wB1/HvA8ZcN6mIncu0PeGTHSsro=
+		D13MDzvQdXayO9eMUiILBmQ+Fak=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,11 +87,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			59cTVjH/PodT31ua+5Tsbdyz2Zo=
+			2CbhO1QMVmqt+5MTL0x3M8BBziM=
 			</data>
 			<key>hash2</key>
 			<data>
-			w7WsS3Uxs2S9XY1YKxUJ+YYSQ+iyeOdeLDHgpVDFy1g=
+			IMSjizMhABRQelHgAkSAznmj/iI7MO5z+jf8+q8y5bY=
 			</data>
 		</dict>
 		<key>FavoriteCell.nib/objects-12.3+.nib</key>
@@ -208,11 +208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			raZ1w+qIoC1vEfgyA6OaEG0oLXM=
+			lHWiE6erorbX0vKyjMAOHavUF7o=
 			</data>
 			<key>hash2</key>
 			<data>
-			SBFB8x5Dj+L9oX/2cxHROiLVtQHOLeMMMKyJryVYAbE=
+			OwWQGiH3KxOmNk5jXVzSBQP6xhXLd/1Vd0fshMOvB/4=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -241,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wB1/HvA8ZcN6mIncu0PeGTHSsro=
+			D13MDzvQdXayO9eMUiILBmQ+Fak=
 			</data>
 			<key>hash2</key>
 			<data>
-			4E1xG1T+y13GSpS+NF/rEhq5SZ0SlNfmf9I8B08ja7k=
+			3ziObIt2ghQOhnpoYxzcf4dXav1I0r1SSc39Vz2TNdQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
