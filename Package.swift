@@ -9,12 +9,12 @@ let package = Package(
         .iOS(.v10)
     ],
     products: [
-        .library(name: "InAppStorySDK", targets: ["InAppStorySDK"])
+        .library(name: "InAppStorySDK_UGC", targets: ["InAppStorySDK_UGC"])
     ],
     targets: [
-        .binaryTarget(name: "InAppStorySDK",
-                      url: "https://cs.inappstory.com/iOS/InAppStorySDK-1.16.0.xcframework.zip",
-                      checksum: "6787be8a98ff637ad5d31abd4b2a7a9033734a3275a5d3af6fb2997346a0ed8a"
+        .binaryTarget(name: "InAppStorySDK_UGC",
+                      url: "https://cs.inappstory.com/iOS/InAppStorySDK_UGC-1.16.0.xcframework.zip",
+                      checksum: "b61a299876c548e5128be17d8902c2c44ed20f6e744afdf177f0ec7a8709deae"
                 )
     ],
     swiftLanguageVersions: [.v5]

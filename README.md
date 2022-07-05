@@ -1,4 +1,4 @@
-# InAppStory
+# InAppStory UGC
 
 A library for embedding stories into an application with customization.
 
