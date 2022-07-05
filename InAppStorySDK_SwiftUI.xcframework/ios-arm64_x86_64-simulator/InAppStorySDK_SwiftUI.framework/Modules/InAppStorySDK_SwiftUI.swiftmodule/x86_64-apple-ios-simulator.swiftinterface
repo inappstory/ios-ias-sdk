@@ -10,7 +10,9 @@ import CoreFoundation
 import CoreHaptics
 import CoreText
 import Foundation
+import ImageIO
 @_exported import InAppStorySDK_SwiftUI
+import Photos
 import Swift
 import SwiftUI
 import SystemConfiguration
@@ -49,6 +51,7 @@ public let LikeStory: Foundation.Notification.Name
 public let DislikeStory: Foundation.Notification.Name
 public let FavoriteStory: Foundation.Notification.Name
 public let ClickOnShareStory: Foundation.Notification.Name
+public let StoryWidgetEvent: Foundation.Notification.Name
 public let StartGame: Foundation.Notification.Name
 public let CloseGame: Foundation.Notification.Name
 public let FinishGame: Foundation.Notification.Name
@@ -130,15 +133,9 @@ public struct TimersGradient {
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
-  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'likePanel' parameter will be removed.")
-  public var likePanel: Swift.Bool
-  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'favoritePanel' parameter will be removed.")
-  public var favoritePanel: Swift.Bool
-  @available(*, deprecated, message: "Please use 'InAppStory.shared.panelSettings'. In v1.16.0 the 'sharePanel' parameter will be removed.")
-  public var sharePanel: Swift.Bool
   public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
-  public var gamePlaceholderView: InAppStorySDK_SwiftUI.GamePlaceholderProtocol?
+  public var gamePlaceholderView: InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol?
   public var goodsView: InAppStorySDK_SwiftUI.CustomGoodsView?
   public var goodsDelegateFlowLayout: InAppStorySDK_SwiftUI.GoodsDelegateFlowLayout?
   public var closeButtonPosition: InAppStorySDK_SwiftUI.ClosePosition
@@ -398,8 +395,17 @@ public let CreateRequest: Foundation.Notification.Name
 public let AppendResponse: Foundation.Notification.Name
 public let CreateCacheRequest: Foundation.Notification.Name
 public let AppendCacheResponse: Foundation.Notification.Name
+@available(*, unavailable, renamed: "DownloadPlaceholderProtocol")
 public protocol GamePlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
+}
+public protocol DownloadPlaceholderProtocol : UIKit.UIView {
+  func setProgress(progress: Swift.Double)
+}
+extension UIKit.UIImage {
+  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
+  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
+  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
