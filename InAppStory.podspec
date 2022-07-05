@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-    s.name = 'InAppStory_SwiftUI'
+    s.name = 'InAppStory_UGC_SwiftUI'
     s.version = '1.16.0'
     s.platform = :ios, '13.0'
     s.license  = { :type => 'MIT', :file => 'LICENSE' }
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
     s.description = 'Library for present Stories with customization from inappstory.com' \
                     'You can customize every detail. Make Stories of your dream! :)'
 
-    s.vendored_frameworks = "InAppStorySDK_SwiftUI.xcframework"
+    s.vendored_frameworks = "InAppStorySDK_UGC_SwiftUI.xcframework"
 end
