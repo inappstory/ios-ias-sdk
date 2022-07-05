@@ -535,6 +535,10 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The ex
 * `FinishGame` - closing the game at the end with additional parameters:
     * `index` - index of the slide which game finished,
     * `result<Dictionary<String, Any>?>` - game end results;
+* `StoryWidgetEvent` - action in widget with parameters:
+    * `index` - the index of the slide where the widget is located,
+    * `widgetName` - name of widget,
+    * `data<Dictionary<String, Any>?>` - activated widget data [detail data fields](https://github.com/inappstory/ios-sdk/blob/1.16.0/Docs/StoryWidgetEvent.md);
 
 ### Errors
 
