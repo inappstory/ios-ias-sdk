@@ -4,53 +4,53 @@ A library for embedding stories into an application with customization.
 
 ## Contents
 
-* [Installation](https://github.com/inappstory/ios-sdk#Installation)
-	* [CocoaPods](https://github.com/inappstory/ios-sdk#CocoaPods)
-	* [Carthage](https://github.com/inappstory/ios-sdk#Carthage)
-	* [Swift Package Manager](https://github.com/inappstory/ios-sdk#Swift-Package-Manager)
-	* [Manual installation](https://github.com/inappstory/ios-sdk#Manual-installation)
-	* [Library import](https://github.com/inappstory/ios-sdk#Library-import)
-* [Migration](https://github.com/inappstory/ios-sdk#Migration)
-* [InAppStory](https://github.com/inappstory/ios-sdk#InAppStory)
-	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization)
-	* [Methods](https://github.com/inappstory/ios-sdk#Methods)
-	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties)
-	* [Customization](https://github.com/inappstory/ios-sdk#Customization)
-* [StoryView](https://github.com/inappstory/ios-sdk#StoryView)
-	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization-1)
-	* [Methods](https://github.com/inappstory/ios-sdk#Methods-1)
-	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties-1)
-* [OnboardingStory](https://github.com/inappstory/ios-sdk#OnboardingStory)
-	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation)
-* [SingleStory](https://github.com/inappstory/ios-sdk#SingleStory)
-	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation-1)
-* [Protocols](https://github.com/inappstory/ios-sdk#Protocols)
-	* [InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)
-	* [GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)
-	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
-	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
-	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
-	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
-	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)
-	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk#EditorCellProtocol)
-* [enum](https://github.com/inappstory/ios-sdk#enum)
-	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
-	* [StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)
-	* [ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)
-	* [PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)
-	* [ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)
-	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
-	* [GoodsFailure](https://github.com/inappstory/ios-sdk#GoodsFailure)
-* [Objects](https://github.com/inappstory/ios-sdk#Objects)
-	* [Settings](https://github.com/inappstory/ios-sdk#Settings)
-	* [PanelSettings](https://github.com/inappstory/ios-sdk#PanelSettings)
-	* [TimersGradient](https://github.com/inappstory/ios-sdk#TimersGradient)
-	* [WidgetStory](https://github.com/inappstory/ios-sdk#WidgetStory)
-	* [CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView)
-* [NotificationCenter](https://github.com/inappstory/ios-sdk#NotificationCenter)
-	* [Events](https://github.com/inappstory/ios-sdk#Events)
-	* [Errors](https://github.com/inappstory/ios-sdk#Errors)
-* [Samples](Samples/Samples.md)
+* [Installation](https://github.com/inappstory/ios-sdk/tree/UGC#installation)
+	* [CocoaPods](https://github.com/inappstoryios-sdk/tree/UGC#CocoaPods)
+	* [Carthage](https://github.com/inappstoryios-sdk/tree/UGC#Carthage)
+	* [Swift Package Manager](https://github.com/inappstoryios-sdk/tree/UGC#Swift-Package-Manager)
+	* [Manual installation](https://github.com/inappstoryios-sdk/tree/UGC#Manual-installation)
+	* [Library import](https://github.com/inappstoryios-sdk/tree/UGC#Library-import)
+* [Migration](https://github.com/inappstoryios-sdk/tree/UGC#Migration)
+* [InAppStory](https://github.com/inappstoryios-sdk/tree/UGC#InAppStory)
+	* [Initialization](https://github.com/inappstoryios-sdk/tree/UGC#Initialization)
+	* [Methods](https://github.com/inappstoryios-sdk/tree/UGC#Methods)
+	* [Parameters and properties](https://github.com/inappstoryios-sdk/tree/UGC#Parameters-and-properties)
+	* [Customization](https://github.com/inappstoryios-sdk/tree/UGC#Customization)
+* [StoryView](https://github.com/inappstoryios-sdk/tree/UGC#StoryView)
+	* [Initialization](https://github.com/inappstoryios-sdk/tree/UGC#Initialization-1)
+	* [Methods](https://github.com/inappstoryios-sdk/tree/UGC#Methods-1)
+	* [Parameters and properties](https://github.com/inappstoryios-sdk/tree/UGC#Parameters-and-properties-1)
+* [OnboardingStory](https://github.com/inappstoryios-sdk/tree/UGC#OnboardingStory)
+	* [Presentation](https://github.com/inappstoryios-sdk/tree/UGC#Presentation)
+* [SingleStory](https://github.com/inappstoryios-sdk/tree/UGC#SingleStory)
+	* [Presentation](https://github.com/inappstoryios-sdk/tree/UGC#Presentation-1)
+* [Protocols](https://github.com/inappstoryios-sdk/tree/UGC#Protocols)
+	* [InAppStoryDelegate](https://github.com/inappstoryios-sdk/tree/UGC#InAppStoryDelegate)
+	* [GoodsDelegateFlowLayout](https://github.com/inappstoryios-sdk/tree/UGC#GoodsDelegateFlowLayout)
+	* [StoryViewDelegateFlowLayout](https://github.com/inappstoryios-sdk/tree/UGC#StoryViewDelegateFlowLayout)
+	* [PlaceholderProtocol](https://github.com/inappstoryios-sdk/tree/UGC#PlaceholderProtocol)
+	* [GamePlaceholderProtocol](https://github.com/inappstoryios-sdk/tree/UGC#GamePlaceholderProtocol)
+	* [StoryCellProtocol](https://github.com/inappstoryios-sdk/tree/UGC#StoryCellProtocol)
+	* [FavoriteCellProtocol](https://github.com/inappstoryios-sdk/tree/UGC#FavoriteCellProtocol)
+	* [EditorCellProtocol](https://github.com/inappstoryios-sdk/tree/UGC#EditorCellProtocol)
+* [enum](https://github.com/inappstoryios-sdk/tree/UGC#enum)
+	* [ActionType](https://github.com/inappstoryios-sdk/tree/UGC#ActionType)
+	* [StoriesType](https://github.com/inappstoryios-sdk/tree/UGC#StoriesType)
+	* [ScrollStyle](https://github.com/inappstoryios-sdk/tree/UGC#ScrollStyle)
+	* [PresentationStyle](https://github.com/inappstoryios-sdk/tree/UGC#PresentationStyle)
+	* [ClosePosition](https://github.com/inappstoryios-sdk/tree/UGC#ClosePosition)
+	* [ActionType](https://github.com/inappstoryios-sdk/tree/UGC#ActionType)
+	* [GoodsFailure](https://github.com/inappstoryios-sdk/tree/UGC#GoodsFailure)
+* [Objects](https://github.com/inappstoryios-sdk/tree/UGC#Objects)
+	* [Settings](https://github.com/inappstoryios-sdk/tree/UGC#Settings)
+	* [PanelSettings](https://github.com/inappstoryios-sdk/tree/UGC#PanelSettings)
+	* [TimersGradient](https://github.com/inappstoryios-sdk/tree/UGC#TimersGradient)
+	* [WidgetStory](https://github.com/inappstoryios-sdk/tree/UGC#WidgetStory)
+	* [CustomGoodsView](https://github.com/inappstoryios-sdk/tree/UGC#CustomGoodsView)
+* [NotificationCenter](https://github.com/inappstoryios-sdk/tree/UGC#NotificationCenter)
+	* [Events](https://github.com/inappstoryios-sdk/tree/UGC#Events)
+	* [Errors](https://github.com/inappstoryios-sdk/tree/UGC#Errors)
+* [Samples](https://github.com/inappstory/ios-sdk/blob/UGC/Samples/Samples.md)
 
 ## Installation
 
@@ -134,7 +134,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 * `serviceKey` - service authorization key (\<*String*>); 
 * `testKey ` - test authorization key in the service (\<*String*>);  
-* `settings` - configuration object (*<[Settings?](https://github.com/inappstory/ios-sdk#Settings)>* - *optional*).
+* `settings` - configuration object (*<[Settings?](https://github.com/inappstoryios-sdk/tree/UGC#Settings)>* - *optional*).
 
 >**Attention!**  
 >If you pass *testKey*, then the library will display the stories only in the **"Moderation"** status.
@@ -145,15 +145,15 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `addTags(<Array<String>>)` - adding tags;
 * `removeTags(<Array<String>>)` - remove tags;
 * `getWidgetStories(complete: (Array<WidgetStory>?) -> Void)` - getting a list of stories for a widget;
-* `showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping (_ show: Boll) -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
+* `showOnboardings(from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping (_ show: Boll) -> Void)` - show onboarding reader, also see *<[InAppStoryDelegate](https://github.com/inappstoryios-sdk/tree/UGC#InAppStoryDelegate)>*
 * `onboardingPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over onboarding stories;
-* `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping (_ show: Bool) -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
+* `showSingle(with id: <String>, from target: <UIViewController>, delegate: <InAppStoryDelegate>, complete: @escaping (_ show: Bool) -> Void)` - show single reader, also see *<[InAppStoryDelegate](https://github.com/inappstoryios-sdk/tree/UGC#InAppStoryDelegate)>*
 * `singleStoryPresent(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - serves for display of a custom controller over a single story;
 * `closeReader(complete: () -> Void)` - closing any story reader that showinng with a closure, `complete` is called after the reader is closed;
 * `clearCache` - clear all cache of library;
 * `removeFromFavorite(with storyID: <String>)` - remove story from favorites;
 * `removeAllFavorites()` - remove all favorites stories;
-* `showEditor(from target: UIViewController, delegate: InAppStoryDelegate, complete: @escaping (_ show: Bool) -> Void)` - show editor from target controller, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
+* `showEditor(from target: UIViewController, delegate: InAppStoryDelegate, complete: @escaping (_ show: Bool) -> Void)` - show editor from target controller, also see *<[InAppStoryDelegate](https://github.com/inappstoryios-sdk/tree/UGC#InAppStoryDelegate)>*
 * `closeEditor(complete: @escaping () -> Void)` - close editor programmatically from app code;
 
 ### Parameters and properties
@@ -169,7 +169,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 Customization of the appearance of the cells and the reader occurs through the singleton of the class `InAppStory.shared`:
 
 #### List
-* `coverQuality` - quality of cover images in cells *\<[Quality](https://github.com/inappstory/ios-sdk#Quality)>*;
+* `coverQuality` - quality of cover images in cells *\<[Quality](https://github.com/inappstoryios-sdk/tree/UGC#Quality)>*;
 * `showCellTitle` - displaying story titles in a cell *\<Bool>*;
 * `cellFont` - cell title font *\<UIFont>*;
 * `cellBorderColor` - cell border color *\<UIColor>*;
@@ -188,14 +188,14 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `goodsSubstrateColor` - backround color under goods list *\<UIColor>*;
 * `refreshGoodsImage` - images for refresh button *\<UIImage>*;
 * `goodsCloseImage` - images for close button *\<UIImage>*;
-* `goodCell` - custom cell, should implement the protocol *<[GoodsCellProtocol](https://github.com/inappstory/ios-sdk#GoodsCellProtocol)>*;
-* `goodsView` - custom goods view, should inherit from *<[CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView)>*;
-* `goodsDelegateFlowLayout` - should implement the protocol *<[GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)>*;
+* `goodCell` - custom cell, should implement the protocol *<[GoodsCellProtocol](https://github.com/inappstoryios-sdk/tree/UGC#GoodsCellProtocol)>*;
+* `goodsView` - custom goods view, should inherit from *<[CustomGoodsView](https://github.com/inappstoryios-sdk/tree/UGC#CustomGoodsView)>*;
+* `goodsDelegateFlowLayout` - should implement the protocol *<[GoodsDelegateFlowLayout](https://github.com/inappstoryios-sdk/tree/UGC#GoodsDelegateFlowLayout)>*;
 
 #### Editor
 
 * `isEditorEnabled` - enable UGC story editor (need enabled in console) *\<Bool>*;
-* `editorPlaceholderView` - a custom editor loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)>*;
+* `editorPlaceholderView` - a custom editor loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstoryios-sdk/tree/UGC#DownloadPlaceholderProtocol)>*;
 
 #### Reader
 * `swipeToClose` - closing the reader by swipe *\<Bool>*;
@@ -215,12 +215,12 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `favoriteSelectedImag` - images for selected favorites button *\<UIImage>*;
 * `shareImage` - images for sharing button *\<UIImage>*;
 * `shareSelectedImage` - images for selected sharing button *\<UIImage>*;
-* `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
-* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)>*;
+* `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstoryios-sdk/tree/UGC#PlaceholderProtocol)>*;
+* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstoryios-sdk/tree/UGC#DownloadPlaceholderProtocol)>*;
 * `closeReaderImage` - image for reader's close button *\<UIImage>*. Recommended 24pt;
-* `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
-* `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
-* `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstory/ios-sdk#PresentationStyle)>*;
+* `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstoryios-sdk/tree/UGC#ClosePosition)>*;
+* `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstoryios-sdk/tree/UGC#ScrollStyle)>*;
+* `presentationStyle` - reader display style *<[PresentationStyle](https://github.com/inappstoryios-sdk/tree/UGC#PresentationStyle)>*;
 
 ## StoryView
 
@@ -263,14 +263,14 @@ override func viewDidLoad() {
 
 ### Parameters and properties
 
-* `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
-* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
+* `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstoryios-sdk/tree/UGC#InAppStoryDelegate)>*;
+* `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstoryios-sdk/tree/UGC#StoryViewDelegateFlowLayout)>*;
 * `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
-* `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
-* `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
-* `editorCell` - custom editor cell in list, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk#EditorCellProtocol)>*;
+* `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstoryios-sdk/tree/UGC#StoryCellProtocol)>*;
+* `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstoryios-sdk/tree/UGC#FavoriteCellProtocol)>*;
+* `editorCell` - custom editor cell in list, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstoryios-sdk/tree/UGC#EditorCellProtocol)>*;
 
 ## OnboardingStory
 
@@ -327,12 +327,12 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 ## Protocols
 
 ### InAppStoryDelegate
-* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
-* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstory/ios-sdk#ActionType)>* and *<[StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)>*;
+* `storiesDidUpdated(isContent: <Bool>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after the contents are updated for sories type *<[StoriesType](https://github.com/inappstoryios-sdk/tree/UGC#StoriesType)>*;
+* `storyReader(actionWith target: <String>, for type: <ActionType>, from storyType: <StoriesType>, storyView: <StoryView>?)` - called after a link is received from stories with the interaction type *<[ActionType](https://github.com/inappstoryios-sdk/tree/UGC#ActionType)>* and *<[StoriesType](https://github.com/inappstoryios-sdk/tree/UGC#StoriesType)>*;
 * `storyReaderWillShow(with storyType: <StoriesType>, storyView: <StoryView>?)` - called before the reader will show *(optional)*;
 * `storyReaderDidClose(with storyType: <StoriesType>, storyView: <StoryView>?)` - called after closing the story reader *(optional)*;
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
-* `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
+* `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstoryios-sdk/tree/UGC#GoodsComplete)>*;
 * `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
 * `editorCellDidSelect()` - an editor cell was selected in the list of stories;
 * `editorWillShow()` - editor screen will show;
