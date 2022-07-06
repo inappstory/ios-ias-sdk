@@ -557,7 +557,7 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The ex
 * `StoryWidgetEvent` - action in widget with parameters:
     * `index` - the index of the slide where the widget is located,
     * `widgetName` - name of widget,
-    * `data<Dictionary<String, Any>?>` - activated widget data [detail data fields](https://github.com/inappstory/ios-sdk/blob/main/Docs/StoryWidgetEvent.md);
+    * `data<Dictionary<String, Any>?>` - activated widget data [detail data fields](https://github.com/inappstory/ios-sdk/blob/UGC/Docs/StoryWidgetEvent.md);
 
 ### Errors
 
