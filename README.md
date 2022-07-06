@@ -32,6 +32,7 @@ A library for embedding stories into an application with customization.
 	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)
+	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk#EditorCellProtocol)
 * [enum](https://github.com/inappstory/ios-sdk#enum)
 	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
 	* [StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)
@@ -66,7 +67,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
+pod 'InAppStory_UGC', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.16.0-UGC'
 ```
 
 ### Carthage
@@ -74,7 +75,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.16.0
+github "inappstory/ios-sdk" ~> 1.16.0-UGC
 ```
 
 ### Swift Package Manager
@@ -85,13 +86,13 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.16.0"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.16.0-UGC"))
 ]
 ```
 
 ### Manual installation
 
-Download `InAppStorySDK.xcframework` from the repository. Connect in the project settings on the *General* tab.
+Download `InAppStorySDK_UGC.xcframework` from the repository. Connect in the project settings on the *General* tab.
 
 
 ### Library import
@@ -99,13 +100,13 @@ Download `InAppStorySDK.xcframework` from the repository. Connect in the project
 ##### Objective-C
 
 ```objective-c
-#import <InAppStorySDK/InAppStorySDK.h>
+#import <InAppStorySDK_UGC/InAppStorySDK_UGC.h>
 ```
 
 ##### Swift
 
 ```swift
-import InAppStorySDK
+import InAppStorySDK_UGC
 ```
 ## Migration
 
@@ -152,6 +153,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `clearCache` - clear all cache of library;
 * `removeFromFavorite(with storyID: <String>)` - remove story from favorites;
 * `removeAllFavorites()` - remove all favorites stories;
+* `showEditor(from target: UIViewController, delegate: InAppStoryDelegate, complete: @escaping (_ show: Bool) -> Void)` - show editor from target controller, also see *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*
+* `closeEditor(complete: @escaping () -> Void)` - close editor programmatically from app code;
 
 ### Parameters and properties
 * `isReaderOpen` - show that reader is open on screen or not *nil* in *InAppStory.shared*
@@ -189,6 +192,11 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `goodsView` - custom goods view, should inherit from *<[CustomGoodsView](https://github.com/inappstory/ios-sdk#CustomGoodsView)>*;
 * `goodsDelegateFlowLayout` - should implement the protocol *<[GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)>*;
 
+#### Editor
+
+* `isEditorEnabled` - enable UGC story editor (need enabled in console) *\<Bool>*;
+* `editorPlaceholderView` - a custom editor loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)>*;
+
 #### Reader
 * `swipeToClose` - closing the reader by swipe *\<Bool>*;
 * `overScrollToClose` - closing the reader when scrolling through the last story *\<Bool>*;
@@ -208,7 +216,7 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `shareImage` - images for sharing button *\<UIImage>*;
 * `shareSelectedImage` - images for selected sharing button *\<UIImage>*;
 * `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
-* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
+* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)>*;
 * `closeReaderImage` - image for reader's close button *\<UIImage>*. Recommended 24pt;
 * `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
 * `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
@@ -262,6 +270,7 @@ override func viewDidLoad() {
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
 * `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
+* `editorCell` - custom editor cell in list, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk#EditorCellProtocol)>*;
 
 ## OnboardingStory
 
@@ -325,6 +334,9 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
 * `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
+* `editorCellDidSelect()` - an editor cell was selected in the list of stories;
+* `editorWillShow()` - editor screen will show;
+* `editorDidClose()` - editor screen did close;
 
 ### GoodsDelegateFlowLayout
 
@@ -350,6 +362,10 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `stop` - stop animation
 
 ### GamePlaceholderProtocol  
+
+Protocol renamed to `DownloadPlaceholderProtocol`
+
+### DownloadPlaceholderProtocol
 
 * `func setProgress(progress: Double)` - setting the progress value (0.0 - 1.0)
 
@@ -383,6 +399,11 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `setImages(_ urls: <Array<URL?>>)` - a list of addresses of the first four images stories in favorites;
 * `setImagesColors(_ colors: <Array<UIColor?>>)` - a list of background colors of the first four stories in favorites;
 * `setBackgroundColor(_ color: <UIColor>)` - main background color of a cell;
+
+### EditorCellProtocol
+
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation;  
 
 ## Closure
 
