@@ -10,6 +10,11 @@ In SDK version 1.16.0, properies of InAppStory `likePanel`, `favoritePanel` and 
 * `favoritePanel` - displaying the bottom bar with favorites (should be enabled in the console) *\<Bool>*; 
 * `sharePanel` - displaying the bottom panel with sharing (should be enabled in the console) *\<Bool>*; 
 
+## Protocols
+
+`GamePlaceholderProtocol` renamed to `DownloadPlaceholderProtocol`
+
+
 ## NotificationCenter
 
 Add new NotificationCenter event `StoryWidgetEvent`

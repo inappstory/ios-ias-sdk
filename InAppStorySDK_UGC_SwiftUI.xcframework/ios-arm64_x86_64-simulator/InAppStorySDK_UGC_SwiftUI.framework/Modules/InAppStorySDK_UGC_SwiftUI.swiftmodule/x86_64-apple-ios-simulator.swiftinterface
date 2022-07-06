@@ -241,6 +241,7 @@ extension InAppStorySDK_UGC_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_UGC_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_UGC_SwiftUI.StoryCellProtocol) -> InAppStorySDK_UGC_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setFavoriteCell(customCell: InAppStorySDK_UGC_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_UGC_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_UGC_SwiftUI.EditorCellProtocol) -> InAppStorySDK_UGC_SwiftUI.StoryListView
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK_UGC_SwiftUI.PhoneFormat

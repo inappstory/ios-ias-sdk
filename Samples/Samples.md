@@ -16,3 +16,4 @@
 ### 14. [Multi-feed](Multifeed.md)
 ### 15. [PanelSettings](PanelSettings.md)
 ### 16. [ListPlaceholder](ListPlaceholder.md)
+### 17. [UGC Editor](UGCEditor.md)
