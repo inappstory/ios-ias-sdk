@@ -54,7 +54,7 @@ A library for embedding stories into an application with customization.
 * [NotificationCenter](https://github.com/inappstory/ios-sdk/tree/UGC_SwiftUI#NotificationCenter)
 	* [Events](https://github.com/inappstory/ios-sdk/tree/UGC_SwiftUI#Events)
 	* [Errors](https://github.com/inappstory/ios-sdk/tree/UGC_SwiftUI#Errors)
-* [Samples](https://github.com/inappstory/ios-sdk/blob/SwiftUI/Samples/Samples.md)
+* [Samples](https://github.com/inappstory/ios-sdk/blob/UGC_SwiftUI/Samples/Samples.md)
 
 ## Installation
 
