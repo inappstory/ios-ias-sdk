@@ -55,7 +55,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.16.1             | 2226          | >= 10.0     |
+| 1.17.0             | 2288          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -74,7 +74,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.16.1
+github "inappstory/ios-sdk" ~> 1.17.0
 ```
 
 ### Swift Package Manager
@@ -85,7 +85,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.16.1"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.17.0"))
 ]
 ```
 
@@ -158,6 +158,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `favoritesCount` - the number of favorite stories a user has;
 * `isLoggingEnabled` - displaying requests to the server in the console;
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
+* `imagesPlaceholders` - images personalization substitution list *Dictionary\<String, String\>*;
 * `widgetStories` - data for iOS widget.
 * `sslPinningHashKeys` - hashs of public keys for SSL-Pinning *Array<String>?*
 
@@ -515,6 +516,7 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The ex
     * `link` - string link;
 * `ShowSlide` - show slide with additional parameters:
     * `index` - index of the slide that now show;
+    * `payload` - innformation from console parametrs;
 * `LikeStory` - story like with additional parameters:
     * `index` - index of the slide which "like" pressed,
     * `value` - value of "like" position (`true` - is like, `false` - isn't like);
