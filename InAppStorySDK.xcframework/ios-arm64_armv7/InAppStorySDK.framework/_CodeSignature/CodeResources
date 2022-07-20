@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2gosWNgmRXrKonSIKBkq+9vxDqk=
+		eiLUcK6gNrH4Qj0amg1fRN5phBQ=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		kgYc30ykwdp8jzFsxmZ60DuLars=
+		WRBHvq5mqoCvc7Bdd5A6ZBFPkM4=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		+Hu2FNVTpzob5NcJokpAqgHqtjs=
+		oUYLmZ21sJtC4Rn1kTX0IaGfPW0=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		JpJTCzn54wnB6SXYQoi8BK5dMUs=
+		PTFjXkjOIyl+vdTUG5g0e/KfqI0=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		de7N2Y7X9ErlEH6xCGPCaumeIik=
+		i9DENYQoHJPVDk524QSkC5MMcAo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -197,22 +197,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kgYc30ykwdp8jzFsxmZ60DuLars=
+			WRBHvq5mqoCvc7Bdd5A6ZBFPkM4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NDvpOjkocUQdHhqcQz10YiGlKbofL6a7xjJZdgxUk0o=
+			CQxcMVrDLoVvwaQtwwkEGwPb0OIzx+Yo+fP3W8m3OxQ=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+Hu2FNVTpzob5NcJokpAqgHqtjs=
+			oUYLmZ21sJtC4Rn1kTX0IaGfPW0=
 			</data>
 			<key>hash2</key>
 			<data>
-			G+43krl5k2uiepOAI8rKEMYo5Jkvf84NvWLOv0cPueM=
+			zO6bCuJqVTVVXkHmke4tOOabxen2u3txQ07oeUBp2s0=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -230,22 +230,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JpJTCzn54wnB6SXYQoi8BK5dMUs=
+			PTFjXkjOIyl+vdTUG5g0e/KfqI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			jhIc+kxrn/QfsuD9Y0PJvcMLrwU8Uc8DC6dV+KroSFk=
+			oimStFCIYms6OAmtq3MEhtznmx3wJXF8jB8G8QBYDV8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			de7N2Y7X9ErlEH6xCGPCaumeIik=
+			i9DENYQoHJPVDk524QSkC5MMcAo=
 			</data>
 			<key>hash2</key>
 			<data>
-			TVWIsbDTIoSnzIP4TRvDv872b7bXlDxMAnCCSbK7nLQ=
+			z2Qm9GMoDsPikwqxVrfCYSQZd8/Q7fDBhb36KrGXKN0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

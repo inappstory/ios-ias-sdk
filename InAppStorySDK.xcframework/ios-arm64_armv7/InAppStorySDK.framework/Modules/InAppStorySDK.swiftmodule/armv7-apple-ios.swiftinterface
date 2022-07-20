@@ -141,6 +141,10 @@ public struct TimersGradient {
     get
     set
   }
+  public var imagesPlaceholders: [Swift.String : Swift.String] {
+    get
+    set
+  }
   public var isReaderOpen: Swift.Bool {
     get
   }
