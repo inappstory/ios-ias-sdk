@@ -10,6 +10,7 @@
 ### 8. [Refresh](Refresh.md)
 ### 9. [Tags](Tags.md)
 ### 10. [Placeholders](Placeholders.md)
+### 11. [Images Placeholders](ImagesPlaceholders.md)
 ### 11. [Favorites](Favorites.md)
 ### 12. [Sound control](Sound.md)
 ### 13. [GoodsWidget](GoodsWidget.md)
