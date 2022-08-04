@@ -34,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7bFkzEHhAy8KnyJPSQBAlN353ds=
+		feC1MSHBwlpltlNAMKr6l5C+xlQ=
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/InAppStorySDK_SwiftUI.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		bU6/FxtQpPDyBA5dVK3YDHf0H0U=
+		8TF2id6L3InSOUP8z8aaFD7qYDA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -126,7 +126,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IOgqxM4Gtm3ZOy+pgYE7b6qSXjgLZklLFNc3lbwk3KM=
+			73Q9iQKH/26E1T7Q22arkbHEx8uKoM7snjRfoN/6YUc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
