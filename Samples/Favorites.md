@@ -105,3 +105,15 @@ extension FavoritesController: InAppStoryDelegate
     }
 }
 ``` 
+
+## Removing favorites by ID
+
+`InAppStory.shared.removeFromFavorite(with storyID: <String>)`  
+
+
+To remove a specific story from favorites, you need to call the `removeFromFavorite(with storyID: <String>)` method and specify the ID required for removal. You can get the story ID from the `StoryCellProtocol` cell in the `var storyID: String property! { get set }`. The request to delete stories is sent immediately after the method call and cannot be cancelled. To use the undo deletion function, you must first collect the ID of the story to be deleted and call the delete method for each through a loop.
+
+## Removing all favorites
+`InAppStory.shared.removeAllFavorites()`
+
+To remove all favorite stories, call the `removeAllFavorites()`. This method also has no undo functionality.

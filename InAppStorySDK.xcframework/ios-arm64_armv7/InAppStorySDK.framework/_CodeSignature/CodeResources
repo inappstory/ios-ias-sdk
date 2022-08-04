@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eiLUcK6gNrH4Qj0amg1fRN5phBQ=
+		WUO/3D7CbkuxS+qGlTQJ0XsAb20=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		oUYLmZ21sJtC4Rn1kTX0IaGfPW0=
+		kVMTaL6T7LZQbS8QZx5ggFfuGcw=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		i9DENYQoHJPVDk524QSkC5MMcAo=
+		nnNC2zS2PpJs3S/ji4+6LVc7AmM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -208,11 +208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oUYLmZ21sJtC4Rn1kTX0IaGfPW0=
+			kVMTaL6T7LZQbS8QZx5ggFfuGcw=
 			</data>
 			<key>hash2</key>
 			<data>
-			zO6bCuJqVTVVXkHmke4tOOabxen2u3txQ07oeUBp2s0=
+			Jw211nUrtVmiKsj18nuS0DNLuYapdv4Xtmz/ycszNd8=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -241,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i9DENYQoHJPVDk524QSkC5MMcAo=
+			nnNC2zS2PpJs3S/ji4+6LVc7AmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			z2Qm9GMoDsPikwqxVrfCYSQZd8/Q7fDBhb36KrGXKN0=
+			20muQ7FmCGjnK1rNGFfu6GyKGLvuZL7nLpetHoEvAw4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
