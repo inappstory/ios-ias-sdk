@@ -29,7 +29,7 @@ A library for embedding stories into an application with customization.
 	* [GoodsDelegateFlowLayout](https://github.com/inappstory/ios-sdk#GoodsDelegateFlowLayout)
 	* [StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)
 	* [PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)
-	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
+	* [DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)
 	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk#EditorCellProtocol)
@@ -212,7 +212,7 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `shareImage` - images for sharing button *\<UIImage>*;
 * `shareSelectedImage` - images for selected sharing button *\<UIImage>*;
 * `placeholderView` - custom loader, should implement the protocol *<[PlaceholderProtocol](https://github.com/inappstory/ios-sdk#PlaceholderProtocol)>*;
-* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)>*;
+* `gamePlaceholderView` - a custom game loader with progress, should implement the protocol *<[DownloadPlaceholderProtocol](https://github.com/inappstory/ios-sdk#DownloadPlaceholderProtocol)>*;
 * `closeReaderImage` - image for reader's close button *\<UIImage>*. Recommended 24pt;
 * `closeButtonPosition` - the position of the close button relative to the timers *<[ClosePosition](https://github.com/inappstory/ios-sdk#ClosePosition)>*;
 * `scrollStyle` - animation style for slide transitions *<[ScrollStyle](https://github.com/inappstory/ios-sdk#ScrollStyle)>*;
@@ -356,7 +356,7 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `start` - start animation
 * `stop` - stop animation
 
-### GamePlaceholderProtocol  
+### DownloadPlaceholderProtocol  
 
 * `func setProgress(progress: Double)` - setting the progress value (0.0 - 1.0)
 
