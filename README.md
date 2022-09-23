@@ -32,6 +32,7 @@ A library for embedding stories into an application with customization.
 	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk#StoryCellProtocol)
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)
+	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk#EditorCellProtocol)
 * [enum](https://github.com/inappstory/ios-sdk#enum)
 	* [ActionType](https://github.com/inappstory/ios-sdk#ActionType)
 	* [StoriesType](https://github.com/inappstory/ios-sdk#StoriesType)
@@ -55,7 +56,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.17.1             | 2296          | >= 10.0     |
+| 1.18.0             | 2329          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -74,7 +75,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.17.1
+github "inappstory/ios-sdk" ~> 1.18.0
 ```
 
 ### Swift Package Manager
@@ -85,7 +86,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.17.1"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.18.0"))
 ]
 ```
 
@@ -157,6 +158,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `isReaderOpen` - show that reader is open on screen or not *nil* in *InAppStory.shared*
 * `favoritesCount` - the number of favorite stories a user has;
 * `isLoggingEnabled` - displaying requests to the server in the console;
+* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
+* `isEditorShowing` - is editor current displaying; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
 * `imagesPlaceholders` - images personalization substitution list *Dictionary\<String, String\>*;
 * `widgetStories` - data for iOS widget.
@@ -263,6 +266,7 @@ override func viewDidLoad() {
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
 * `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
+* `editorCell` - custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk#EditorCellProtocol)>*;
 
 ## OnboardingStory
 
@@ -326,6 +330,8 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
 * `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
+* `editorWillShow()` - editor screen will show;
+* `editorDidClose()` - editor screen did close;
 
 ### GoodsDelegateFlowLayout
 
@@ -384,6 +390,11 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `setImages(_ urls: <Array<URL?>>)` - a list of addresses of the first four images stories in favorites;
 * `setImagesColors(_ colors: <Array<UIColor?>>)` - a list of background colors of the first four stories in favorites;
 * `setBackgroundColor(_ color: <UIColor>)` - main background color of a cell;
+
+###EditorCellProtocol
+
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation; 
 
 ## Closure
 

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 import AVFoundation
 import AudioToolbox
@@ -23,9 +23,6 @@ public struct PhoneFormat {
   public let regexp: Swift.String
   public init(defaultPhoneFormat: Swift.String)
   public init(phoneFormat: Swift.String, regexp: Swift.String)
-}
-extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
 }
 public struct WidgetStory {
   public let id: Swift.String
@@ -125,6 +122,10 @@ public struct TimersGradient {
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK.PanelSettings?
+  public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
   public var goodCell: InAppStorySDK.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK.PlaceholderProtocol?
   public var gamePlaceholderView: InAppStorySDK.DownloadPlaceholderProtocol?
@@ -149,7 +150,7 @@ public struct TimersGradient {
     get
   }
   public var isLoggingEnabled: Swift.Bool
-  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil, sandBox: Swift.Bool = false)
+  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
@@ -227,6 +228,10 @@ public protocol PlaceholderProtocol : UIKit.UIView {
   func start()
   func stop()
 }
+public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+}
 @objc public enum ClosePosition : Swift.Int {
   case left, right, bottomLeft, bottomRight
   public init?(rawValue: Swift.Int)
@@ -288,6 +293,7 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
   func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   func favoriteCellDidSelect()
+  func editorCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
@@ -295,6 +301,7 @@ extension InAppStorySDK.InAppStoryDelegate {
   public func storyReaderWillShow(with storyType: InAppStorySDK.StoriesType)
   public func storyReaderDidClose(with storyType: InAppStorySDK.StoriesType)
   public func favoriteCellDidSelect()
+  public func editorCellDidSelect()
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
@@ -362,6 +369,10 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK.EditorCellProtocol! {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
     get
     set
@@ -385,11 +396,6 @@ extension InAppStorySDK.StoryView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh()
   @_Concurrency.MainActor(unsafe) public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
-}
-extension UIKit.UIImage {
-  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
-  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
-  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
