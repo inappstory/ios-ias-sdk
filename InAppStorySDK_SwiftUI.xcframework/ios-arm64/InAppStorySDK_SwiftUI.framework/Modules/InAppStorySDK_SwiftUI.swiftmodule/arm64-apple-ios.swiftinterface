@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
 import AVFoundation
 import AudioToolbox
@@ -31,9 +31,6 @@ extension SwiftUI.View {
   
   public func singleStory(storyID: Swift.String, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
-}
-extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
 }
 public struct WidgetStory {
   public let id: Swift.String
@@ -133,6 +130,10 @@ public struct TimersGradient {
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
+  public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
   public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
   public var gamePlaceholderView: InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol?
@@ -157,7 +158,7 @@ public struct TimersGradient {
     get
   }
   public var isLoggingEnabled: Swift.Bool
-  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil, sandBox: Swift.Bool = false)
+  public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
@@ -181,7 +182,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeAllFavorites()
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
@@ -194,6 +195,7 @@ extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
 }
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
   final public var defaultConfiguration: InAppStorySDK_SwiftUI.PhoneFormat
@@ -309,6 +311,7 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storyReaderWillShow(with storyType: InAppStorySDK_SwiftUI.StoriesType)
   func storyReaderDidClose(with storyType: InAppStorySDK_SwiftUI.StoriesType)
   func favoriteCellDidSelect()
+  func editorCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
   func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
 }
@@ -316,6 +319,7 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   public func storyReaderWillShow(with storyType: InAppStorySDK_SwiftUI.StoriesType)
   public func storyReaderDidClose(with storyType: InAppStorySDK_SwiftUI.StoriesType)
   public func favoriteCellDidSelect()
+  public func editorCellDidSelect()
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
   public func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
 }
@@ -358,6 +362,10 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @objc deinit
 }
+public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
+  static var reuseIdentifier: Swift.String { get }
+  static var nib: UIKit.UINib? { get }
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) weak public var storiesDelegate: InAppStorySDK_SwiftUI.InAppStoryDelegate? {
     get
@@ -369,6 +377,10 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   }
   @_Concurrency.MainActor(unsafe) public var isFavoriteView: Swift.Bool
   @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK_SwiftUI.EditorCellProtocol! {
     get
     set
   }
@@ -405,11 +417,6 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
 }
 public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
-}
-extension UIKit.UIImage {
-  public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?
-  public class func gifImageWithURL(_ gifUrl: Swift.String) -> UIKit.UIImage?
-  public class func gifImageWithName(_ name: Swift.String) -> UIKit.UIImage?
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }

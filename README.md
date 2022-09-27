@@ -36,6 +36,7 @@ A library for embedding stories into an application with customization.
 	* [GamePlaceholderProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#GamePlaceholderProtocol)
 	* [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryCellProtocol)
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#FavoriteCellProtocol)
+	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)
 * [enum](https://github.com/inappstory/ios-sdk/tree/SwiftUI#enum)
 	* [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#ActionType)
 	* [StoriesType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoriesType)
@@ -59,7 +60,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.17.1             | 2296          | >= 13.0     |
+| 1.18.0             | 2329          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -70,7 +71,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.17.1-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.18.0-SwiftUI'
 ```
 
 ### Carthage
@@ -78,7 +79,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.17.1-SwiftUI
+github "inappstory/ios-sdk" ~> 1.18.0-SwiftUI
 ```
 
 ### Swift Package Manager
@@ -89,7 +90,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.17.1-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.18.0-SwiftUI"))
 ]
 ```
 
@@ -150,6 +151,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `isReaderOpen` - show that reader is open on screen or not *nil* in *InAppStory.shared*
 * `favoritesCount` - the number of favorite stories a user has;
 * `isLoggingEnabled` - displaying requests to the server in the console;
+* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
+* `isEditorShowing` - is editor current displaying; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
 * `imagesPlaceholders` - images personalization substitution list *Dictionary\<String, String\>*;
 * `widgetStories` - data for iOS widget.
@@ -266,6 +269,7 @@ struct ContentView: View
 * `interitemSpacing(_ spacing: CGFloat) -> StoryListView` - set horizontal padding between cells in a list;
 * `setStoryCell(customCell: StoryCellProtocol) -> StoryListView` - set custom cell for list that realize  [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storycellprotocol)
 * `setFavoriteCell(customCell: FavoriteCellProtocol) -> StoryListView` - set custom favorite cell taht realize [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#favoritecellprotocol)
+* `setEditorCell(customCell: EditorCellProtocol) -> StoryListView` - set custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)>*;
 
 ## StoryView
 
@@ -319,6 +323,8 @@ override func viewDidLoad() {
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryCellProtocol)>*;
 * `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#FavoriteCellProtocol)>*;
+* `editorCell` - custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)>*;
+
 
 ## OnboardingStory
 
@@ -403,6 +409,8 @@ Single story show like `sheet`, `alert` etc. from any `View`:
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk/tree/SwiftUI#GoodsComplete)>*;
 * `goodItemSelected(_ item: <GoodsObjectProtocol>, with storyType: <StoriesType>)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
+* `editorWillShow()` - editor screen will show;
+* `editorDidClose()` - editor screen did close;
 
 ### GoodsDelegateFlowLayout
 
@@ -461,6 +469,11 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 * `setImages(_ urls: <Array<URL?>>)` - a list of addresses of the first four images stories in favorites;
 * `setImagesColors(_ colors: <Array<UIColor?>>)` - a list of background colors of the first four stories in favorites;
 * `setBackgroundColor(_ color: <UIColor>)` - main background color of a cell;
+
+###EditorCellProtocol
+
+* `reuseIdentifier: <String> { get }` - returns cell reuse identifier;
+* `nib: <UINib?> { get }` - returns the nib of the cell's visual representation; 
 
 ## Closure
 
