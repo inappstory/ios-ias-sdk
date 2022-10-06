@@ -3560,13 +3560,13 @@ $s13InAppStorySDK15VibrateSettingsVACSeAAWl
 userContentController
 showClose.set
 showClose.didset
+sendStory
 $s13InAppStorySDK16OldHapticManagerC6sharedACvau
 vibrateWith
 supportTaptic.get
 InAppStory/Classes/Extensions/UIDevice+CS.swift
 goodsView.set
 showGoodsView
-sendStory
 shareID.set
 gameCompleteWith
 gameLoaded.set

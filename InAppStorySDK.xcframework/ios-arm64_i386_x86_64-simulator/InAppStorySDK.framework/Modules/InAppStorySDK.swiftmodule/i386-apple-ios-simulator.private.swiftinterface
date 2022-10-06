@@ -618,7 +618,7 @@ public let AppendCacheResponse: Foundation.Notification.Name
   @_spi(Private) @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
 @_spi(Private) public enum Model : Swift.String {
-  @_spi(Private) case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPadMini1, iPadMini2, iPadMini3, iPadAir1, iPadAir2, iPadPro9_7, iPadPro9_7_cell, iPadPro12_9, iPadPro12_9_cell, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXs, iPhoneXsMax, iPhoneXr, iPhoneSE2, iPhone11, iPhone11Pro, iPhone11ProMax, iPhone12mini, iPhone12, iPhone12Pro, iPhone12ProMax, iPhone13Pro, iPhone13ProMax, iPhone13mini, iPhone13, unrecognized
+  @_spi(Private) case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPadMini1, iPadMini2, iPadMini3, iPadAir1, iPadAir2, iPadPro9_7, iPadPro9_7_cell, iPadPro12_9, iPadPro12_9_cell, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXs, iPhoneXsMax, iPhoneXr, iPhoneSE2, iPhone11, iPhone11Pro, iPhone11ProMax, iPhone12mini, iPhone12, iPhone12Pro, iPhone12ProMax, iPhone13Pro, iPhone13ProMax, iPhone13mini, iPhone13, iPhoneSE3, iPhone14, iPhone14Plus, iPhone14Pro, iPhone14ProMax, unrecognized
   @_spi(Private) public init?(rawValue: Swift.String)
   @_spi(Private) public typealias RawValue = Swift.String
   @_spi(Private) public var rawValue: Swift.String {
