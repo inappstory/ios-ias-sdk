@@ -3965,9 +3965,9 @@ $s21InAppStorySDK_SwiftUI15VibrateSettingsVACSeAAWl
 userContentController
 showClose.set
 showClose.didset
+sendStory
 goodsView.set
 showGoodsView
-sendStory
 shareID.set
 gameCompleteWith
 gameLoaded.set
