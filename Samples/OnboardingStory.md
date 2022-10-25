@@ -64,6 +64,28 @@ struct ContentView: View
     }
 }
 ```
+### Onboarding limits
+
+In order to display a certain number of onboardings in the reader, you must set a limit when you call `showOnboardings(...)`. If you call `showOnboardings(...)` again, the following onboardings will be obtained according to the limit.
+`limit: Int` - limit for displaying the number of onboardings in one query. With `limit=0` all available and unread at the moment are displayed.
+
+##### ContentView.swift
+```swift
+struct ContentView: View
+{
+	// set isOnboardingPresent = true, if need show onboardings
+    @State var isOnboardingPresent: Bool = false
+    ...
+    var body: some View {
+        VStack(alignment: .leading) {
+            // main body content of view
+        }
+        .padding(.top)
+        .navigationBarTitle(Text("Onboarding"))
+        .onboardingStories(limit: 2, isPresented: $isOnboardingPresent) // onboardings showing with limit of stories
+    }
+}
+```
 
 ### Custom feed Onboardings
 
