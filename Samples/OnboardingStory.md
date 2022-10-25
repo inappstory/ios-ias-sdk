@@ -61,6 +61,25 @@ override func viewDidAppear(_ animated: Bool) {
 ...
 ```
 
+### Onboarding limits
+
+In order to display a certain number of onboardings in the reader, you must set a limit when you call `showOnboardings(...)`. If you call `showOnboardings(...)` again, the following onboardings will be obtained according to the limit.
+`limit: Int` - limit for displaying the number of onboardings in one query. With `limit=0` all available and unread at the moment are displayed.
+
+##### ViewController.swift
+```swift 
+... 
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    InAppStory.shared.showOnboardings(limit: 2, from: <UIViewController>, delegate: <InAppStoryDelegate>) { show in
+        // the closure is triggered when the onboarding reader is opened
+        // show: <Bool> - if the reader was presented on the screen, value is true
+    }
+}
+...
+```
+
 ### Custom feed Onboardings
 
 In onboarding, you can show any feed from the list in the console. To show a non-default feed, you must specify `feed: <String>` when calling the `showOnboarding` method of the `InAppStory`.
@@ -68,7 +87,6 @@ In onboarding, you can show any feed from the list in the console. To show a non
 ##### ViewController.swift
 ```swift 
 ... 
-
 override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     

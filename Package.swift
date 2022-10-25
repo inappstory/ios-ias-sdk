@@ -13,8 +13,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(name: "InAppStorySDK",
-                      url: "https://cs.inappstory.com/iOS/InAppStorySDK-1.18.1.xcframework.zip",
-                      checksum: "27be8596c3410015e360c1320dd84d2f24e59c8c4e3783bfea78705d4cfb83a8"
+                      url: "https://cs.inappstory.com/iOS/InAppStorySDK-1.18.2.xcframework.zip",
+                      checksum: "e19b360194e68697553f2896f0cdd9ffd73c65121421f588e17acb08f01574c6"
                 )
     ],
     swiftLanguageVersions: [.v5]
