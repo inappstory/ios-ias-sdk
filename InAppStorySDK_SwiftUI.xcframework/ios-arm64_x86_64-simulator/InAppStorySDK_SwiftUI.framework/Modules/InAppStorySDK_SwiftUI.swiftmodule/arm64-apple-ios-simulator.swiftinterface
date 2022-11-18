@@ -32,6 +32,21 @@ extension SwiftUI.View {
   public func singleStory(storyID: Swift.String, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
 }
+@_Concurrency.MainActor(unsafe) public struct StoryListUGCView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(filter: Swift.Dictionary<Swift.String, Any>, isEditorEnabled: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s21InAppStorySDK_SwiftUI0C11ListUGCViewV4bodyQrvp", 0) __
+}
+extension InAppStorySDK_SwiftUI.StoryListUGCView {
+  @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
+}
 public struct WidgetStory {
   public let id: Swift.String
   public let title: Swift.String
@@ -39,6 +54,7 @@ public struct WidgetStory {
   public let color: Swift.String
 }
 public let StoriesLoaded: Foundation.Notification.Name
+public let UGCStoriesLoaded: Foundation.Notification.Name
 public let ClickOnStory: Foundation.Notification.Name
 public let ShowStory: Foundation.Notification.Name
 public let CloseStory: Foundation.Notification.Name
@@ -112,6 +128,8 @@ public struct TimersGradient {
   public var timerGradient: InAppStorySDK_SwiftUI.TimersGradient
   public var placeholderElementColor: UIKit.UIColor
   public var placeholderBackgroundColor: UIKit.UIColor
+  public var readerBackgroundColor: UIKit.UIColor
+  public var readerCornerRadius: CoreGraphics.CGFloat
   public var goodsCloseBackgroundColor: UIKit.UIColor
   public var goodsSubstrateColor: UIKit.UIColor
   public var gamePlaceholderTint: UIKit.UIColor
@@ -130,10 +148,6 @@ public struct TimersGradient {
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
-  public var isEditorEnabled: Swift.Bool {
-    get
-    set
-  }
   public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
   public var gamePlaceholderView: InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol?
@@ -182,7 +196,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeAllFavorites()
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isEditorEnabled: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
@@ -259,7 +273,7 @@ public protocol PlaceholderProtocol : UIKit.UIView {
   }
 }
 @objc public enum ScrollStyle : Swift.Int {
-  case flat, cover, cube
+  case flat, cover, cube, depth
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -302,6 +316,7 @@ public enum ActionType {
 }
 public enum StoriesType {
   case list(feed: Swift.String?)
+  case ugcList
   case single
   case onboarding(feed: Swift.String)
 }
@@ -399,6 +414,10 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
@@ -406,6 +425,11 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
 extension InAppStorySDK_SwiftUI.StoryView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh()
+}
+extension UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
 }
 public let CreateRequest: Foundation.Notification.Name
 public let AppendResponse: Foundation.Notification.Name
@@ -417,6 +441,42 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
 }
 public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryUGCView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var storiesDelegate: InAppStorySDK_SwiftUI.InAppStoryDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK_SwiftUI.EditorCellProtocol! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK_SwiftUI.StoryCellProtocol! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension InAppStorySDK_SwiftUI.StoryUGCView {
+  @_Concurrency.MainActor(unsafe) public func create()
+  @_Concurrency.MainActor(unsafe) public func refresh()
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
