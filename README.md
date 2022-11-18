@@ -241,6 +241,8 @@ struct ContentView: View
         VStack(alignment: .leading) {
             StoryListView(feed: <String?>,
                           isFavorite: <Bool>,
+                          panelSettings: <PanelSettings>?,
+                          isEditorEnabled: <Bool>,
                           onUpdated: <((Bool) -> Void)?>,
                           onAction: <((String, ActionType) -> Void)?>,
                           onDismiss: <(() -> Void)?>,
@@ -259,6 +261,7 @@ struct ContentView: View
 * `feed: <String?>` - optional id of stories feed. By default, this parameter is equal to an empty *String* and with this value it receives a default story feed from the server. If you don't plan to switch to multifeed at this time, don't specify a `feed: <String?>` when initializing the **StoryListView**. In this case, everything will work as before.
 * `isFavorite: <Bool>` - if this parameter is equal `true`, the list will be displayed favorite stories. Default is `false`;
 * `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
+* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk/tree/SwiftUI))
 * `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
 * `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
 * `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
