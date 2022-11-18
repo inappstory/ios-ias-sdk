@@ -22,20 +22,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-2) To enable the editor feature in the SDK, you need set the `isEditorEnabled` property to true
-
-##### AppDelegate.swift
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-{
-    ...
-    // enable editor functionality
-    InAppStory.shared.isEditorEnabled = true
-    ...
-}
-```
-
-3) Initialize `StoryView` in `ViewController` and set delegate for them
+2) Initialize `StoryListView` in `View` and set delegate for them. To enable the editor feature in the list, you need set the `isEditorEnabled` property to true
 
 ##### MainView.swift
 ```swift
@@ -45,6 +32,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 var body: some View {
     VStack(alignment: .leading) {
         StoryListView(
+            isEditorEnabled = true,
             onAction: { target, actionType in
                 InAppStory.shared.closeReader {
                     if let url = URL(string: target) {
@@ -69,6 +57,61 @@ var body: some View {
 ```
 > **Remark**  
 > Closing the editor does not happen instantly, before closing it, internal logic is triggered before closing.
+
+## UGC Approved stories list
+
+The `StoryListUGCView` must be used to display the list of stories added with the editor and approved. Initializing and working with the `StoryListUGCView` is almost the same as working with the `StoryListView`.
+
+1) To initialize InAppStory library in the project
+
+##### AppDelegate.swift
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+{
+    // library initialization
+    InAppStory.shared.initWith(serviceKey: <String>)
+    
+    // settings can also be specified at any time before creating a StoryView or calling individual stories
+    InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>>)
+    
+    return true
+}
+```
+
+2) Initialize `StoryListUGCView` in `View` and set delegate for them. To enable the editor feature in the list, you need set the `isEditorEnabled` property to true
+
+##### MainView.swift
+```swift
+...
+@State private var isEditorShowing: Bool = false
+...
+var body: some View {
+    VStack(alignment: .leading) {
+        StoryListUGCView(
+            filter: [:], // filter to display approved stories 
+            isEditorEnabled = true, // display the editor cell in the list
+            onAction: { target, actionType in
+                InAppStory.shared.closeReader {
+                    if let url = URL(string: target) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }, editorSelect: {
+                // calling after editor cell tapped
+                isEditorShowing.toggle()
+            })
+            .frame(height: 150.0)
+        Spacer()
+    }
+    .padding(.top)
+    // showing editor by state var isEditorShowing
+    // get when editor is dismissed
+    .storyEditor(payload: [:], isPresented: $isEditorShowing, onDismiss: { 
+	     print(isEditorShowing)
+    })
+}
+...
+```
 
 ## Editor list cell customize
 

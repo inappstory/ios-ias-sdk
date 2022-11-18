@@ -20,10 +20,14 @@ A library for embedding stories into an application with customization.
 	* [Initialization](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Initialization-1)
 	* [Methods](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Methods-1)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties-1)
-* [StoryView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryView)
+* [StoryListUGCView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storylistugcview)
 	* [Initialization](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Initialization-2)
 	* [Methods](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Methods-2)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties-2)
+* [StoryView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryView)
+	* [Initialization](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Initialization-3)
+	* [Methods](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Methods-3)
+	* [Parameters and properties](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties-3)
 * [OnboardingStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#OnboardingStory)
 	* [Presentation](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Presentation)
 * [SingleStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#SingleStory)
@@ -60,7 +64,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.18.3             | 2344          | >= 13.0     |
+| 1.19.0             | 2412          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -71,7 +75,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.18.3-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.19.0-SwiftUI'
 ```
 
 ### Carthage
@@ -79,7 +83,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.18.3-SwiftUI
+github "inappstory/ios-sdk" ~> 1.19.0-SwiftUI
 ```
 
 ### Swift Package Manager
@@ -90,7 +94,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.18.3-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.19.0-SwiftUI"))
 ]
 ```
 
@@ -151,7 +155,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `isReaderOpen` - show that reader is open on screen or not *nil* in *InAppStory.shared*
 * `favoritesCount` - the number of favorite stories a user has;
 * `isLoggingEnabled` - displaying requests to the server in the console;
-* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
+* `isEditorEnabled` - moved to [StoryListView parametrs](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Parameters-and-properties-1);
 * `isEditorShowing` - is editor current displaying; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
 * `imagesPlaceholders` - images personalization substitution list *Dictionary\<String, String\>*;
@@ -192,6 +196,8 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `placeholderBackgroundColor` - slide preloader background color *\<UIColor>*;
 * `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
 * `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
+* `readerBackgroundColor` - reader background color, by default black *\<UIColor>*;
+* `readerCornerRadius` - corner radiof of stories cards, by default 16.0 *\<CGFloat>*;
 * `timerGradientEnable` - enable gradient shadow under timers in story *\<Bool>*;
 * `timerGradient` - shadow gradient at the top of the story below the timers *\<TimersGradient>*;
 * `panelSettings` - displaying the bottom bar (should be enabled in the console) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
@@ -269,6 +275,58 @@ struct ContentView: View
 * `interitemSpacing(_ spacing: CGFloat) -> StoryListView` - set horizontal padding between cells in a list;
 * `setStoryCell(customCell: StoryCellProtocol) -> StoryListView` - set custom cell for list that realize  [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storycellprotocol)
 * `setFavoriteCell(customCell: FavoriteCellProtocol) -> StoryListView` - set custom favorite cell taht realize [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#favoritecellprotocol)
+* `setEditorCell(customCell: EditorCellProtocol) -> StoryListView` - set custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)>*;
+
+## StoryListUGCView
+
+The main class for working with lists of stories with SwiftUI.
+
+### Initialization
+
+> **Remark**  
+> If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryView`, it should > be set:
+> 
+```swift
+InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
+```
+
+To filter stories by attributes, you must pass the `filter: Dictionary<String, Any>` parameter when initializing the list instance. If you pass an empty filter, all storis from moderation section that passed approval will be displayed.
+
+```swift
+struct ContentView: View
+{
+    var body: some View {
+        VStack(alignment: .leading) {
+            StoryListUGCView(filter: <Dictionary<String, Any>>,
+                             isEditorEnabled: <Bool>,
+                             onUpdated: <((Bool) -> Void)?>,
+                             onAction: <((String, ActionType) -> Void)?>,
+                             onDismiss: <(() -> Void)?>,
+                             editorSelect: <(() -> Void)?>,
+                             refresh: <Binding<Bool>>)
+            Spacer()
+        }
+    }
+}
+```
+
+### Parameters
+
+* `filter: <Dictionary<String, Any>>` - filter the list of stories created in the UGC editor;
+* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk/tree/SwiftUI))
+* `onUpdated: <((Bool) -> Void)?>` - called after the contents are updated;
+* `onAction: <((String, ActionType) -> Void)?>` - called by action in Reader. First parameter is string URL from Story, second parameter action type, more at [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#actiontype);
+* `onDismiss: <(() -> Void)?>` - called when reader did dismiss;
+* `editorSelect: <(() -> Void)?>` - called after editor cell did selected;
+* `refresh: <Binding<Bool>>` - binding `Bool` value that start refresh logic in list;
+
+### Methods
+
+* `itemsSize(_ size: CGSize) -> StoryListView` - set cell size in list;
+* `edgeInserts(_ inserts: UIEdgeInsets) -> StoryListView` - set padding from the edges of the list for cells;
+* `lineSpacing(_ spacing: CGFloat) -> StoryListView` - set the vertical padding between cells in a list;
+* `interitemSpacing(_ spacing: CGFloat) -> StoryListView` - set horizontal padding between cells in a list;
+* `setStoryCell(customCell: StoryCellProtocol) -> StoryListView` - set custom cell for list that realize  [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storycellprotocol)
 * `setEditorCell(customCell: EditorCellProtocol) -> StoryListView` - set custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)>*;
 
 ## StoryView
@@ -411,8 +469,6 @@ Single story show like `sheet`, `alert` etc. from any `View`:
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk/tree/SwiftUI#GoodsComplete)>*;
 * `goodItemSelected(_ item: <GoodsObjectProtocol>, with storyType: <StoriesType>)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
-* `editorWillShow()` - editor screen will show;
-* `editorDidClose()` - editor screen did close;
 
 ### GoodsDelegateFlowLayout
 
@@ -491,6 +547,7 @@ Story transition animation style in reader:
 
 * `.flat` - usual, one after another, like UIScrollView;
 * `.cover` - covered with next slide;
+* `.depth` - covered with next slide with previos slide alpha;
 * `.cube` - in the form of a 3D cube;
 
 
