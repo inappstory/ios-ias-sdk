@@ -20,6 +20,10 @@ A library for embedding stories into an application with customization.
 	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization-1)
 	* [Methods](https://github.com/inappstory/ios-sdk#Methods-1)
 	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties-1)
+* [StoryUGCView](https://github.com/inappstory/ios-sdk#StoryUGCView)
+	* [Initialization](https://github.com/inappstory/ios-sdk#Initialization-2)
+	* [Methods](https://github.com/inappstory/ios-sdk#Methods-2)
+	* [Parameters and properties](https://github.com/inappstory/ios-sdk#Parameters-and-properties-2)
 * [OnboardingStory](https://github.com/inappstory/ios-sdk#OnboardingStory)
 	* [Presentation](https://github.com/inappstory/ios-sdk#Presentation)
 * [SingleStory](https://github.com/inappstory/ios-sdk#SingleStory)
@@ -56,7 +60,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.18.3             | 2344          | >= 10.0     |
+| 1.19.3             | 2412          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -67,7 +71,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.18.3'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.19.0'
 ```
 
 ### Carthage
@@ -75,7 +79,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.18.3
+github "inappstory/ios-sdk" ~> 1.19.0
 ```
 
 ### Swift Package Manager
@@ -86,7 +90,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.18.3"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.19.0"))
 ]
 ```
 
@@ -158,7 +162,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 * `isReaderOpen` - show that reader is open on screen or not *nil* in *InAppStory.shared*
 * `favoritesCount` - the number of favorite stories a user has;
 * `isLoggingEnabled` - displaying requests to the server in the console;
-* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
+* `isEditorEnabled` - moved to [StoryView parametrs](https://github.com/inappstory/ios-sdk#Parameters-and-properties-1);
 * `isEditorShowing` - is editor current displaying; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
 * `placeholders` - personalization substitution list *Dictionary\<String, String\>*;
 * `imagesPlaceholders` - images personalization substitution list *Dictionary\<String, String\>*;
@@ -200,6 +204,8 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `placeholderBackgroundColor` - slide preloader background color *\<UIColor>*;
 * `gamePlaceholderTint` - default game loader tint color *\<UIColor>*;
 * `muted` - mute/unmute the sound in the story *\<Bool>*; (*[Details](Samples/Sound.md)*)
+* `readerBackgroundColor` - reader background color, by default black *\<UIColor>*;
+* `readerCornerRadius` - corner radiof of stories cards, by default 16.0 *\<CGFloat>*;
 * `timerGradientEnable` - enable gradient shadow under timers in story *\<Bool>*;
 * `timerGradient` - shadow gradient at the top of the story below the timers *\<TimersGradient>*;
 * `panelSettings` - displaying the bottom bar (should be enabled in the console) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
@@ -250,22 +256,51 @@ override func viewDidLoad() {
 }
 ```
 
+## StoryUGCView
+
+The main class for working with lists of UGC stories.
+
+### Initialization
+---
+**Remark**  
+If the *settings* parameter was not specified for `InAppStory`, before initializing `StoryUGCView`, it should be set:
+
+```swift
+InAppStory.shared.settings = Settings(userID: <String>, tags: <Array<String>?>)
+```
+---
+
+To filter stories by attributes, you must pass the `filter: Dictionary<String, Any>` parameter when initializing the list instance. If you pass an empty filter, all storis from moderation section that passed approval will be displayed.
+
+```swift
+var storyView: StoryUGCView!
+    
+override func viewDidLoad() {
+	super.viewDidLoad()
+	
+   	storyView = StoryUGCView(frame: <CGRect> = .zero, filter: Dictionary<String, Any> = [:])
+	storyView.target = <UIViewController>
+        
+	view.addSubview(storyView)
+        
+	storyView.create()
+}
+```
+
 ### Methods
 
-* `create` - running internal StoryView logic;
+* `create` - running internal StoryUGCView logic;
 * `refresh` - refresh stories list;
-* `clear` - clear cache of images;
 * `present(controller presentingViewController: <UIViewController>, with transitionStyle: <UIModalTransitionStyle>)` - displaying a custom controller on top of the story reader.
 
 ### Parameters and properties
 
 * `storiesDelegate` - should implement the protocol *<[InAppStoryDelegate](https://github.com/inappstory/ios-sdk#InAppStoryDelegate)>*;
 * `deleagateFlowLayout` - should implement the protocol *<[StoryViewDelegateFlowLayout](https://github.com/inappstory/ios-sdk#StoryViewDelegateFlowLayout)>*;
-* `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
+* `isEditorEnabled` - displaying editor cell in sories lists; ([InAppStoryUGC](https://github.com/inappstory/ios-ugc-sdk))
 * `target` - controller for reader display *\<UIViewController>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk#StoryCellProtocol)>*;
-* `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk#FavoriteCellProtocol)>*;
 * `editorCell` - custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk#EditorCellProtocol)>*;
 
 ## OnboardingStory
@@ -332,8 +367,6 @@ To close the reader of single story, call `closeReader(complete: () -> Void)`. T
 * `favoriteCellDidSelect()` - called when the favorite cell has been selected *(optional)*;
 * `getGoodsObject(with skus: <Array<String>>, complete: <GoodsComplete>)` - get goods items from parent app with closure, *<[GoodsComplete](https://github.com/inappstory/ios-sdk#GoodsComplete)>*;
 * `goodItemSelected(_ item: <Any>, with storyType: <StoriesType>, storyView: <StoryView>?)` - selected goods item in widget, with object sended in `getGoodsObject(...)`
-* `editorWillShow()` - editor screen will show;
-* `editorDidClose()` - editor screen did close;
 
 ### GoodsDelegateFlowLayout
 
@@ -412,6 +445,7 @@ Story transition animation style in reader:
 
 * `.flat` - usual, one after another, like UIScrollView;
 * `.cover` - covered with next slide;
+* `.depth` - covered with next slide with previos slide alpha;
 * `.cube` - in the form of a 3D cube;
 
 

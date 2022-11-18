@@ -22,20 +22,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-2) To enable the editor feature in the SDK, you need set the `isEditorEnabled` property to true
-
-##### AppDelegate.swift
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
-{
-    ...
-    // enable editor functionality
-    InAppStory.shared.isEditorEnabled = true
-    ...
-}
-```
-
-3) Initialize `StoryView` in `ViewController` and set delegate for them
+2) Initialize `StoryView` in `ViewController` and set delegate for them. For enable the editor feature in the list, you need set the `isEditorEnabled` property to true
 
 ##### ViewController.swift
 ```swift
@@ -44,6 +31,7 @@ override func viewDidLoad() {
         
     let storyView = StoryView() //StoryView initialization
     storyView.storiesDelegate = self // set delegate
+    storyView.isEditorEnabled = true // enable editor cell in list
     
     view.addSubview(storyView) //adding an object to a view
     
@@ -51,7 +39,7 @@ override func viewDidLoad() {
 }
 ```
 
-4) Implement delegate methods to track editor cell taps, and call method to show editor
+3) Implement delegate methods to track editor cell taps, and call method to show editor
 
 ##### ViewController.swift
 ```swift
@@ -61,8 +49,10 @@ extension ViewController: InAppStoryDelegate
     // calling after editor cell tapped
     func editorCellDidSelect()
     {
+        // ugc editor payload (filter)
+        let payloadUGC: Dictionary<String, Any?> = ["param1" : "param"]
         // show editor from target
-        InAppStoryEditor.shared.showEditor(from: self, delegate: self) { show in
+        InAppStoryEditor.shared.showEditor(payload: payloadUGC,from: self, delegate: self) { show in
             // calling after present logic complete
             // if show is true that all ok, else see logs
         }
@@ -71,18 +61,15 @@ extension ViewController: InAppStoryDelegate
 }
 ```
 
-5) To track the display and close of the editor, you can also implement delegate methods
+4) To track the display and close of the editor, you can also implement delegate methods. See [Full list of events](https://github.com/inappstory/ios-ugc-sdk#ListOfDelegateEvents)
 
 ##### ViewController.swift
 ```swift
 extension ViewController: InAppStoryEditorDelegate
 {
     ...
-    // calling before editor will show
-    func editorWillShow() { ... }
-    
-    // calling after editor dismissing complete
-    func editorDidClose() { ... }
+    // all of editor events (editorWillShow, editorDidClose,...)
+    func editorEvent(name: String, data: Dictionary<String, Any>) {...}
     ...
 }
 ```
@@ -108,6 +95,62 @@ extension ViewController
 ```
 > **Remark**  
 > Closing the editor does not happen instantly, before closing it, internal logic is triggered before closing.
+
+## UGC Approved stories list
+
+The `StoryUGCView` must be used to display the list of stories added with the editor and approved. Initializing and working with the `StoryUGCView` is almost the same as working with the `StoryView`.
+
+1) Initialize `StoryUGCView` in `ViewController` and set delegate for them. If you want to display the editor cell in list, you have to set the `isEditorEnabled` property to true. Also, when initializing `StoryUGCView`, you can set a filter to display only the necessary stories in the list.
+
+##### ViewController.swift
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+        
+    let storyUGCView = StoryUGCView(filter: ["param1": "parameter"]) //StoryUGCView initialization with filter
+    storyUGCView.storiesDelegate = self // set delegate
+    storyUGCView.isEditorEnabled = true // enable editor cell in list
+    
+    view.addSubview(storyUGCView) //adding an object to a view
+    
+    storyView.create() //running internal logic
+}
+```
+
+2) Implement delegate methods to track editor cell taps, and call method to show editor
+
+##### ViewController.swift
+```swift
+extension ViewController: InAppStoryDelegate
+{
+    ...
+    // calling after editor cell tapped
+    func editorCellDidSelect()
+    {
+        // ugc editor payload (filter)
+        let payloadUGC: Dictionary<String, Any?> = ["param1" : "param"]
+        // show editor from target
+        InAppStoryEditor.shared.showEditor(payload: payloadUGC,from: self, delegate: self) { show in
+            // calling after present logic complete
+            // if show is true that all ok, else see logs
+        }
+    }
+    ...
+}
+```
+
+3) To track the display and close of the editor, you can also implement delegate methods. Editor full list of [events](https://github.com/inappstory/ios-ugc-sdk#ListOfDelegateEvents);
+
+##### ViewController.swift
+```swift
+extension ViewController: InAppStoryEditorDelegate
+{
+    ...
+    // all of editor events (editorWillShow, editorDidClose,...)
+    func editorEvent(name: String, data: Dictionary<String, Any>) {...}
+    ...
+}
+```
 
 ## Editor list cell customize
 
