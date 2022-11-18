@@ -274,6 +274,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -317,7 +318,21 @@ typedef SWIFT_ENUM(NSInteger, ScrollStyle, open) {
   ScrollStyleFlat = 0,
   ScrollStyleCover = 1,
   ScrollStyleCube = 2,
+  ScrollStyleDepth = 3,
 };
+
+
+SWIFT_CLASS("_TtC13InAppStorySDK12StoryUGCView")
+@interface StoryUGCView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+
+
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
@@ -332,6 +347,11 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 
 
 
+
+
+@interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
+@property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
+@end
 
 
 
@@ -623,6 +643,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -666,7 +687,21 @@ typedef SWIFT_ENUM(NSInteger, ScrollStyle, open) {
   ScrollStyleFlat = 0,
   ScrollStyleCover = 1,
   ScrollStyleCube = 2,
+  ScrollStyleDepth = 3,
 };
+
+
+SWIFT_CLASS("_TtC13InAppStorySDK12StoryUGCView")
+@interface StoryUGCView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+
+
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
@@ -681,6 +716,11 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 
 
 
+
+
+@interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
+@property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
+@end
 
 
 

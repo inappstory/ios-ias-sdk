@@ -31,6 +31,7 @@ public struct WidgetStory {
   public let color: Swift.String
 }
 public let StoriesLoaded: Foundation.Notification.Name
+public let UGCStoriesLoaded: Foundation.Notification.Name
 public let ClickOnStory: Foundation.Notification.Name
 public let ShowStory: Foundation.Notification.Name
 public let CloseStory: Foundation.Notification.Name
@@ -104,6 +105,8 @@ public struct TimersGradient {
   public var timerGradient: InAppStorySDK.TimersGradient
   public var placeholderElementColor: UIKit.UIColor
   public var placeholderBackgroundColor: UIKit.UIColor
+  public var readerBackgroundColor: UIKit.UIColor
+  public var readerCornerRadius: CoreGraphics.CGFloat
   public var goodsCloseBackgroundColor: UIKit.UIColor
   public var goodsSubstrateColor: UIKit.UIColor
   public var gamePlaceholderTint: UIKit.UIColor
@@ -122,10 +125,6 @@ public struct TimersGradient {
   public var refreshGoodsImage: UIKit.UIImage
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK.PanelSettings?
-  public var isEditorEnabled: Swift.Bool {
-    get
-    set
-  }
   public var goodCell: InAppStorySDK.GoodsCellProtocol?
   public var placeholderView: InAppStorySDK.PlaceholderProtocol?
   public var gamePlaceholderView: InAppStorySDK.DownloadPlaceholderProtocol?
@@ -180,6 +179,43 @@ public func MD5(_ input: Swift.String) -> Swift.String
   final public var defaultConfiguration: InAppStorySDK.PhoneFormat
   final public func add(format: InAppStorySDK.PhoneFormat)
   @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryUGCView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var storiesDelegate: InAppStorySDK.InAppStoryDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK.EditorCellProtocol! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isContent: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+extension InAppStorySDK.StoryUGCView {
+  @_Concurrency.MainActor(unsafe) public func create()
+  @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   var sku: Swift.String! { get set }
@@ -241,7 +277,7 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
   }
 }
 @objc public enum ScrollStyle : Swift.Int {
-  case flat, cover, cube
+  case flat, cover, cube, depth
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -284,6 +320,7 @@ public enum ActionType {
 }
 public enum StoriesType {
   case list(feed: Swift.String?)
+  case ugcList
   case single
   case onboarding(feed: Swift.String)
 }
@@ -388,6 +425,10 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
@@ -396,6 +437,11 @@ extension InAppStorySDK.StoryView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh()
   @_Concurrency.MainActor(unsafe) public func present(controller presentingViewController: UIKit.UIViewController, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
+}
+extension UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
