@@ -56,6 +56,7 @@ public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
+public let RequestFailure: Foundation.Notification.Name
 public struct Settings : Swift.Equatable {
   public var userID: Swift.String
   public var tags: Swift.Array<Swift.String> {
