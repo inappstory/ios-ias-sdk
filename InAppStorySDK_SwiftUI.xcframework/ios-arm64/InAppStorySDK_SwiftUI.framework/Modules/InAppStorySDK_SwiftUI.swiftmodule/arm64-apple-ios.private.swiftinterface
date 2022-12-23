@@ -577,6 +577,11 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
 @_spi(Private) extension Foundation.URL {
   @_spi(Private) public func absoluteStringByTrimmingQuery() -> Swift.String?
 }
+@_spi(Private) extension Foundation.URL {
+  @_spi(Private) public var fileSize: Swift.Int? {
+    @_spi(Private) get
+  }
+}
 @_spi(Private) extension Swift.Array where Element : InAppStorySDK_SwiftUI.Reorderable {
   @_spi(Private) public func reorder(by preferredOrder: [Element.OrderElement]) -> [Element]
 }
