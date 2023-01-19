@@ -18,6 +18,10 @@ import UIKit
 import WebKit
 import _Concurrency
 import os
+@_spi(UGC) public let EditorZipDownloadComplete: Foundation.Notification.Name
+@_spi(UGC) public let EditorZipDownloadProgress: Foundation.Notification.Name
+@_spi(UGC) public let EditorResourceDownloadComplete: Foundation.Notification.Name
+@_spi(UGC) public let EditorResourceDownloadProgress: Foundation.Notification.Name
 @_spi(Private) extension Foundation.URLRequest {
   @_spi(Private) public var cURL: Swift.String {
     @_spi(Private) get
@@ -634,12 +638,7 @@ public let AppendCacheResponse: Foundation.Notification.Name
   @_spi(Private) case task
   @_spi(Private) case file
   @_spi(Private) case game
-  @_spi(Private) case editor
-  @_spi(Private) public static func == (a: InAppStorySDK.NetworkError, b: InAppStorySDK.NetworkError) -> Swift.Bool
-  @_spi(Private) public func hash(into hasher: inout Swift.Hasher)
-  @_spi(Private) public var hashValue: Swift.Int {
-    @_spi(Private) get
-  }
+  @_spi(Private) case editor(reason: Swift.String)
 }
 @_spi(Private) public typealias EditorDownloadComplete = (Swift.Result<Swift.String, InAppStorySDK.NetworkError>) -> Swift.Void
 @_spi(Private) @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NetworkService : ObjectiveC.NSObject {
@@ -812,8 +811,6 @@ extension InAppStorySDK.GoodsFailure : Swift.Equatable {}
 extension InAppStorySDK.GoodsFailure : Swift.Hashable {}
 extension InAppStorySDK.ActionType : Swift.Equatable {}
 extension InAppStorySDK.ActionType : Swift.Hashable {}
-extension InAppStorySDK.NetworkError : Swift.Equatable {}
-extension InAppStorySDK.NetworkError : Swift.Hashable {}
 extension InAppStorySDK.Model : Swift.Equatable {}
 extension InAppStorySDK.Model : Swift.Hashable {}
 extension InAppStorySDK.Model : Swift.RawRepresentable {}
