@@ -625,6 +625,11 @@ extension InAppStorySDK.InAppStoryDelegate {
 @_spi(Private) extension Foundation.URL {
   @_spi(Private) public func absoluteStringByTrimmingQuery() -> Swift.String?
 }
+@_spi(Private) extension Foundation.URL {
+  @_spi(Private) public var fileSize: Swift.Int? {
+    @_spi(Private) get
+  }
+}
 @_spi(Private) extension Swift.KeyedDecodingContainer {
   @_spi(Private) public func decodeWrapper<T>(key: K, defaultValue: T) throws -> T where T : Swift.Decodable
 }
