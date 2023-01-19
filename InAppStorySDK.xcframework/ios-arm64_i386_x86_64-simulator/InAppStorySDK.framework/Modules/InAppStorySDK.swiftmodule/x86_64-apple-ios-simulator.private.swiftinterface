@@ -184,6 +184,7 @@ public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
+public let RequestFailure: Foundation.Notification.Name
 public struct Settings : Swift.Equatable {
   public var userID: Swift.String
   public var tags: Swift.Array<Swift.String> {
@@ -327,7 +328,12 @@ public func MD5(_ input: Swift.String) -> Swift.String
     get
     set
   }
+  @available(*, deprecated, renamed: "delegateFlowLayout")
   @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
     get
     set
   }
@@ -700,7 +706,12 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
+  @available(*, deprecated, renamed: "delegateFlowLayout")
   @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var delegateFlowLayout: InAppStorySDK.StoryViewDelegateFlowLayout? {
     get
     set
   }
