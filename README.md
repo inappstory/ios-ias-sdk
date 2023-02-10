@@ -60,7 +60,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.20.2             | 2510          | >= 10.0     |
+| 1.20.3             | 2514          | >= 10.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -71,7 +71,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.20.2'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.20.3'
 ```
 
 ### Carthage
@@ -79,7 +79,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.20.2
+github "inappstory/ios-sdk" ~> 1.20.3
 ```
 
 ### Swift Package Manager
@@ -90,7 +90,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.20.2"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.20.3"))
 ]
 ```
 
@@ -179,7 +179,7 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `cellFont` - cell title font *\<UIFont>*;
 * `cellBorderColor` - cell border color *\<UIColor>*;
 * `cellBorderRadius` - radius of default cell borders *\<CGFloat>*;
-
+* `cellGradientEnabled` - display shading on the bottom of the default cell *\<Bool>*;
 
 #### Goods widget
 
