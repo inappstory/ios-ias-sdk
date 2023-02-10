@@ -114,6 +114,7 @@ public struct TimersGradient {
   public var sslPinningHashKeys: [Swift.String]?
   public var coverQuality: InAppStorySDK_SwiftUI.Quality
   public var showCellTitle: Swift.Bool
+  public var cellGradientEnabled: Swift.Bool
   public var cellBorderRadius: CoreGraphics.CGFloat
   public var cellBorderColor: UIKit.UIColor
   public var goodsCellMainTextColor: UIKit.UIColor
