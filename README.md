@@ -374,7 +374,7 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 
 * `sizeForItemAt() -> <CGSize>` - returns the cell size for the list;
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
-* `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
+* `minimumLineSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
 
 ### StoryViewDelegateFlowLayout
 
@@ -382,8 +382,8 @@ Methods of delegate, like in UICollectionViewDelegateFlowLayout
 
 * `sizeForItemAt() -> <CGSize>` - returns the cell size for the list;
 * `insetForSection() -> <UIEdgeInsets>` - returns padding from the edges of the list for cells;
-* `minimumLineSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
-* `minimumInteritemSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
+* `minimumLineSpacingForSection() -> <CGFloat>` - returns horizontal padding between cells in a list;
+* `minimumInteritemSpacingForSection() -> <CGFloat>` - returns the vertical padding between cells in a list;
 
 ### PlaceholderProtocol  
 
