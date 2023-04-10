@@ -13,8 +13,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(name: "InAppStorySDK_SwiftUI",
-                      url: "https://cs.inappstory.com/iOS/InAppStorySDK_SwiftUI-1.19.9.xcframework.zip",
-                      checksum: "8b4c0af735865df4e99750d53890abbbc552d8381107f66ee8a935991754ff99"
+                      url: "https://github.com/inappstory/ios-sdk/files/11191343/InAppStorySDK_SwiftUI-1.19.10.xcframework.zip",
+                      checksum: "383a4d9b13e4afc029653e924f39b68d5e1d35cbf8c5340cf95a7df5360217eb"
                 )
     ],
     swiftLanguageVersions: [.v5]
