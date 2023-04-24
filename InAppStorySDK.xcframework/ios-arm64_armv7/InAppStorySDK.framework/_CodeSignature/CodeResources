@@ -50,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TaKpgs1O4v4HE0cRMkpMw+bU5Bs=
+		/DFem95075Uljd3S9On4zvykEOo=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		djtaA4LXvwJbWlR6AVYEf23ntfU=
+		hpjGKJtTTfdechGarkmCBxHM5Vg=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.private.swiftinterface</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		AbxccoBeJc3M921vgBvisEb3yDY=
+		yMc7iPVvfdNAgqnEd7tGeYROi8o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -257,11 +257,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			djtaA4LXvwJbWlR6AVYEf23ntfU=
+			hpjGKJtTTfdechGarkmCBxHM5Vg=
 			</data>
 			<key>hash2</key>
 			<data>
-			hJheo1bMk9LF+dhUqrtw73GjCIY5yAzkYBijXIjbS4E=
+			MdMgiPSQXpJaYv1/3Gxrg9Y0I2KrppxrzU3gOaftWHY=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/armv7-apple-ios.private.swiftinterface</key>
@@ -301,11 +301,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AbxccoBeJc3M921vgBvisEb3yDY=
+			yMc7iPVvfdNAgqnEd7tGeYROi8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			9QBKyFxQLLRRCOr/HVvkd0NBrdpjKQQnhxO9H6gUF1g=
+			RaZ5VrZwCrhmj3Vc9h/cCcEPkP1kxxILV1l05jUKjuk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
