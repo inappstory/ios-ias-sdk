@@ -64,7 +64,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.20.8             | 2530          | >= 13.0     |
+| 1.20.9             | 2532          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -75,7 +75,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.20.8-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.20.9-SwiftUI'
 ```
 
 ### Carthage
@@ -83,7 +83,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.20.8-SwiftUI
+github "inappstory/ios-sdk" ~> 1.20.9-SwiftUI
 ```
 
 ### Swift Package Manager
@@ -94,7 +94,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.20.8-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.20.9-SwiftUI"))
 ]
 ```
 
@@ -698,9 +698,21 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The ex
 
 In error notifications, `userInfo` also comes in the form of a dictionary `["errorMessage": <Error_message_string>]`
 
-* `SessionFailure` - session error;
-* `StoryFailure` - error in story;
-* `CurrentStoryFailure` - error when loading full story information;
-* `NetworkFailure` - network error (no internet);
+* `SessionFailure` - session error;  
+	Reasons:
+	- *session opening error;*
+	- *authorization key was not specified correctly;*
+	- *access is blocked;*
+* `StoryFailure` - error in story;  
+	Reasons:
+	- *error loading storis list (onboarding/single/tape);*
+	- *problems with decoding data from the server;*
+* `CurrentStoryFailure` - error when loading full story information;  
+	Reasons:
+	- *getting data for a specific story;*
+	- *setting/deleting likes, favorites, sharings;*
+* `NetworkFailure` - network error;  
+	Reasons:
+	- *no internet connection;*
 * `RequestFailure` - аn error occurred when requesting the server;
     * `statusCode` - the server returned a statuscode;
