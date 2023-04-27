@@ -111,6 +111,7 @@ extension SwiftUI.View {
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
@@ -253,6 +254,8 @@ public struct PanelSettings {
   public var share: Swift.Bool
   public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
 }
+public struct EditorCellSettings {
+}
 public struct TimersGradient {
   public var colors: Swift.Array<UIKit.UIColor>
   public var startPoint: CoreGraphics.CGPoint
@@ -282,6 +285,7 @@ public struct TimersGradient {
   public var favoritesCount: Swift.Int {
     get
   }
+  public var editorCellSettings: InAppStorySDK_SwiftUI.EditorCellSettings?
   public var widgetStories: [InAppStorySDK_SwiftUI.WidgetStory]
   public var sslPinningHashKeys: [Swift.String]?
   public var coverQuality: InAppStorySDK_SwiftUI.Quality
@@ -369,6 +373,15 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
   public func removeAllFavorites()
 }
+public enum ScrollListDirection {
+  case horizontal
+  case vertical
+  public static func == (a: InAppStorySDK_SwiftUI.ScrollListDirection, b: InAppStorySDK_SwiftUI.ScrollListDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isEditorEnabled: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
@@ -378,6 +391,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
@@ -531,6 +545,10 @@ extension InAppStorySDK_SwiftUI.InAppStoryDelegate {
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
   public func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
 }
+public enum ListDirection {
+  case horizontal(rows: Swift.Int = 1)
+  case vertical(colums: Swift.Int = 3)
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CustomGoodsView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) open func setSKUItems(_ items: Swift.Array<Swift.String>)
   @_Concurrency.MainActor(unsafe) open func setReaderFrame(_ frame: CoreGraphics.CGRect)
@@ -629,6 +647,10 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
     set
   }
   @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var direction: InAppStorySDK_SwiftUI.ListDirection {
     get
     set
   }
@@ -753,6 +775,10 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var direction: InAppStorySDK_SwiftUI.ListDirection {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
@@ -824,18 +850,22 @@ public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
 @_spi(UGC) public class Editor {
   @_spi(UGC) public var zipURL: Swift.String
   @_spi(UGC) public var config: Swift.String
+  @_spi(UGC) public var messages: Swift.Dictionary<Swift.String, Swift.String>?
+  @_spi(UGC) public var source: [Swift.String : Any]?
   @_spi(UGC) public var name: Swift.String {
     @_spi(UGC) get
   }
   @_spi(UGC) public var version: Swift.String {
     @_spi(UGC) get
   }
-  @_spi(UGC) public init(editorURL: Swift.String, config: Swift.String)
+  @_spi(UGC) public init(editorURL: Swift.String, config: Swift.String, messages: Swift.Dictionary<Swift.String, Swift.String>?, source: [Swift.String : Any]?)
   @_spi(UGC) @objc deinit
 }
 @_spi(UGC) extension InAppStorySDK_SwiftUI.Editor {
   @_spi(UGC) public func getEditorWith(_ complete: @escaping InAppStorySDK_SwiftUI.EditorDownloadComplete)
 }
+extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.ClosePosition : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.ClosePosition : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.ClosePosition : Swift.RawRepresentable {}

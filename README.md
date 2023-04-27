@@ -42,6 +42,7 @@ A library for embedding stories into an application with customization.
 	* [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#FavoriteCellProtocol)
 	* [EditorCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)
 * [enum](https://github.com/inappstory/ios-sdk/tree/SwiftUI#enum)
+ 	* [ListDirection](https://github.com/inappstory/ios-sdk/tree/SwiftUI#ListDirection)
 	* [ActionType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#ActionType)
 	* [StoriesType](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoriesType)
 	* [ScrollStyle](https://github.com/inappstory/ios-sdk/tree/SwiftUI#ScrollStyle)
@@ -54,7 +55,7 @@ A library for embedding stories into an application with customization.
 	* [PanelSettings](https://github.com/inappstory/ios-sdk/tree/SwiftUI#PanelSettings)
 	* [TimersGradient](https://github.com/inappstory/ios-sdk/tree/SwiftUI#TimersGradient)
 	* [WidgetStory](https://github.com/inappstory/ios-sdk/tree/SwiftUI#WidgetStory)
-	* [CustomGoodsView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#CustomGoodsView)
+	* [CustomGoodsView](https://github.com/inappstory/ios-sdk/tree/SwiftUI#CustomGoodsView)	* [EditorCellSettings](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellSettings)
 * [NotificationCenter](https://github.com/inappstory/ios-sdk/tree/SwiftUI#NotificationCenter)
 	* [Events](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Events)
 	* [Errors](https://github.com/inappstory/ios-sdk/tree/SwiftUI#Errors)
@@ -64,7 +65,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.20.9             | 2532          | >= 13.0     |
+| 1.21.0             | 2634          | >= 13.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -75,7 +76,7 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 ```ruby
 use_frameworks!
-pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.20.9-SwiftUI'
+pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :tag => '1.21.0-SwiftUI'
 ```
 
 ### Carthage
@@ -83,7 +84,7 @@ pod 'InAppStory_SwiftUI', :git => 'https://github.com/inappstory/ios-sdk.git', :
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "inappstory/ios-sdk" ~> 1.20.9-SwiftUI
+github "inappstory/ios-sdk" ~> 1.21.0-SwiftUI
 ```
 
 ### Swift Package Manager
@@ -94,7 +95,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.20.9-SwiftUI"))
+    .package(url: "https://github.com/inappstory/ios-sdk.git", .upToNextMajor(from: "1.21.0-SwiftUI"))
 ]
 ```
 
@@ -114,6 +115,7 @@ import InAppStorySDK_SwiftUI
 ## Migration
 
 * from InAppStorySDK - v 1.15.x -> [Migration guide to 1.16.0](Migration-1.16.0.md)
+* from InAppStorySDK - v 1.x.x -> [Migration guide to 1.21.0](Migration-1.21.0.md)
 
 ## InAppStory
 
@@ -173,6 +175,8 @@ Customization of the appearance of the cells and the reader occurs through the s
 * `cellBorderColor` - cell border color *\<UIColor>*;
 * `cellBorderRadius` - radius of default cell borders *\<CGFloat>*;
 * `cellGradientEnabled` - display shading on the bottom of the default cell *\<Bool>*;
+* `editorCellSettings` - setting the cell view of the UGC editor *<[EditorCellSettings](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellSettings)>*;
+
 
 #### Goods widget
 
@@ -277,6 +281,8 @@ struct ContentView: View
 * `edgeInserts(_ inserts: UIEdgeInsets) -> StoryListView` - set padding from the edges of the list for cells;
 * `lineSpacing(_ spacing: CGFloat) -> StoryListView` - set the vertical padding between cells in a list;
 * `interitemSpacing(_ spacing: CGFloat) -> StoryListView` - set horizontal padding between cells in a list;
+* `direction` - list scrolling direction. The default value for the list is `horizontal(rows: 1)`, for favorites, the default value `vertical(colums: 3)`.
+ *<[ListDirection](https://github.com/inappstory/ios-sdk#ListDirection)>*;
 * `setStoryCell(customCell: StoryCellProtocol) -> StoryListView` - set custom cell for list that realize  [StoryCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#storycellprotocol)
 * `setFavoriteCell(customCell: FavoriteCellProtocol) -> StoryListView` - set custom favorite cell taht realize [FavoriteCellProtocol](https://github.com/inappstory/ios-sdk/tree/SwiftUI#favoritecellprotocol)
 * `setEditorCell(customCell: EditorCellProtocol) -> StoryListView` - set custom editor cell, should implement the protocol *<[EditorCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#EditorCellProtocol)>*;
@@ -383,6 +389,8 @@ override func viewDidLoad() {
 * `panelSettings` - displaying the bottom bar (overwrite `InAppStory.shared.panelSettings`) *\<PanelSettings>*; (*[Details](Samples/PanelSettings.md)*)
 * `tags` - list of tags for content filtering *\<Array\<String>>*;
 * `target` - controller for reader display *\<UIViewController>*;
+* `direction` - list scrolling direction. The default value for the list is `horizontal(rows: 1)`, for favorites, the default value `vertical(colums: 3)`.
+ *<[ListDirection](https://github.com/inappstory/ios-sdk#ListDirection)>*;
 * `isContent` - there is any content in the list of stories *\<Bool>*;
 * `storyCell` - custom cell, should implement the protocol *<[StoryCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#StoryCellProtocol)>*;
 * `favoriteCell` - custom favorites cell, should implement the protocol *<[FavoriteCellProtocol!](https://github.com/inappstory/ios-sdk/tree/SwiftUI#FavoriteCellProtocol)>*;
@@ -546,6 +554,13 @@ Closure for contine `getGoodsObject(...)` method in *InAppStoryDelegate* - `(Res
 
 ## enum
 
+### ListDirection
+
+Direction of scrolling stories list, individual for each list
+
+* `horizontal(rows: Int)` - horizontal scrolling with the number of lines, the default is 1;
+* `vertical(colums: Int)` - vertical scrolling with the number of columns, the default is 3;
+
 ### ScrollStyle
 
 Story transition animation style in reader:  
@@ -649,6 +664,16 @@ To create your own goods widget, you need to inherit from CustomGoodsView.
 * `final close()` - needs call from *superclass*, for close widget;
 * `final goodsItemClick(with sku: <String>)` - send statistic in SDK;
 
+### EditorCellSettings
+
+To change the appearance of the UGC editor cell, use this object.
+
+#### Parameters
+
+* `backgroundColor` - background color of the cell *\<UIColor>*
+* `iconColor` - tint color of the icon in the cell *\<UIColor>*
+* `iconImage` - custom icon *\<UIImage>*
+
 ## NotificationCenter
 
 ### Events
@@ -661,6 +686,7 @@ Standard fields `userInfo`: `id`, `title`,` tags`, `slidesCount`, `feed`. The ex
     * place where the click came from (`list` or `favorite`);
 * `ShowStory` - display of the story reader with additional parameters:
     * `source` - place where the showing came from (`direct`, `onboarding`, `list` or `favorite`);
+    * `action` - how the stories was shown (`open`, `auto`, `list`, `swipe`, `tap` or `custom`);
 * `CloseStory` - closing story with additional parameters:
     * `index` - index of the slide from which the closure occurred,
     * `action` - closing action (`swipe`, `click`, `auto` or `custom`),
@@ -705,7 +731,7 @@ In error notifications, `userInfo` also comes in the form of a dictionary `["err
 	- *access is blocked;*
 * `StoryFailure` - error in story;  
 	Reasons:
-	- *error loading storis list (onboarding/single/tape);*
+	- *error loading stories list (onboarding/single/tape);*
 	- *problems with decoding data from the server;*
 * `CurrentStoryFailure` - error when loading full story information;  
 	Reasons:
