@@ -362,6 +362,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 
 
 
+
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
@@ -721,6 +723,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
+
+
 
 
 

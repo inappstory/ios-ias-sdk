@@ -65,6 +65,8 @@ public struct PanelSettings {
   public var share: Swift.Bool
   public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
 }
+public struct EditorCellSettings {
+}
 public struct TimersGradient {
   public var colors: Swift.Array<UIKit.UIColor>
   public var startPoint: CoreGraphics.CGPoint
@@ -87,6 +89,7 @@ public struct TimersGradient {
   public var favoritesCount: Swift.Int {
     get
   }
+  public var editorCellSettings: InAppStorySDK.EditorCellSettings?
   public var widgetStories: [InAppStorySDK.WidgetStory]
   public var sslPinningHashKeys: [Swift.String]?
   public var coverQuality: InAppStorySDK.Quality
@@ -212,6 +215,10 @@ public func MD5(_ input: Swift.String) -> Swift.String
     get
   }
   @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var direction: InAppStorySDK.ListDirection {
     get
     set
   }
@@ -349,6 +356,10 @@ extension InAppStorySDK.InAppStoryDelegate {
   public func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   public func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
+public enum ListDirection {
+  case horizontal(rows: Swift.Int = 1)
+  case vertical(colums: Swift.Int = 3)
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CustomGoodsView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) open func setSKUItems(_ items: Swift.Array<Swift.String>)
   @_Concurrency.MainActor(unsafe) open func setReaderFrame(_ frame: CoreGraphics.CGRect)
@@ -438,6 +449,10 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     set
   }
   @_Concurrency.MainActor(unsafe) public var isEditorEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var direction: InAppStorySDK.ListDirection {
     get
     set
   }
