@@ -1,0 +1,4 @@
+framework module InAppStoryUGC_SwiftUI {
+  header "InAppStoryUGC_SwiftUI-Swift.h"
+  requires objc
+}
