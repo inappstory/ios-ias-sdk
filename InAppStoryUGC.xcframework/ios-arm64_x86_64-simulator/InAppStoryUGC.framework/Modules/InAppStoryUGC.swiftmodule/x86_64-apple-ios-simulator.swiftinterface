@@ -1,0 +1,79 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStoryUGC
+import AVFoundation
+import AssetsLibrary
+import AudioToolbox
+import Foundation
+import InAppStorySDK
+@_exported import InAppStoryUGC
+import MobileCoreServices
+import Photos
+import PhotosUI
+import Swift
+import UIKit
+import UniformTypeIdentifiers
+import WebKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers public class InAppStoryEditor : ObjectiveC.NSObject {
+  public static let shared: InAppStoryUGC.InAppStoryEditor
+  public static let VersionSDK: Swift.String
+  public static let BuildSDK: Swift.String
+  public static var frameworkInfo: Swift.String {
+    get
+  }
+  public var editorPlaceholderView: InAppStorySDK.DownloadPlaceholderProtocol?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension InAppStoryUGC.InAppStoryEditor {
+  public func showEditor(payload: Swift.Dictionary<Swift.String, Any?>? = nil, from target: UIKit.UIViewController, delegate: InAppStoryUGC.InAppStoryEditorDelegate? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func closeEditor(complete: @escaping () -> Swift.Void)
+}
+public enum AssetType : Swift.String {
+  case image
+  case video
+  case mixed
+  public static func assetTypeBy(config: Swift.String) -> InAppStoryUGC.AssetType
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AssetsPicker : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var assetType: InAppStoryUGC.AssetType
+  @_Concurrency.MainActor(unsafe) public var acceptTypes: [Swift.String]
+  @_Concurrency.MainActor(unsafe) public var multiple: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension InAppStoryUGC.AssetsPicker : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension InAppStoryUGC.AssetsPicker : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+extension InAppStoryUGC.AssetsPicker : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+public protocol InAppStoryEditorDelegate : ObjectiveC.NSObjectProtocol {
+  func editorEvent(name: Swift.String, data: Swift.Dictionary<Swift.String, Any>)
+}
+public struct FilePickerOptions : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension InAppStoryUGC.AssetType : Swift.Equatable {}
+extension InAppStoryUGC.AssetType : Swift.Hashable {}
+extension InAppStoryUGC.AssetType : Swift.RawRepresentable {}

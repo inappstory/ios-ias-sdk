@@ -1,0 +1,11 @@
+framework module InAppStoryUGC {
+  umbrella header "InAppStoryUGC.h"
+
+  export *
+  module * { export * }
+}
+
+module InAppStoryUGC.Swift {
+    header "InAppStoryUGC-Swift.h"
+    requires objc
+}
