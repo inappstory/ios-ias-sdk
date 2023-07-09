@@ -1,0 +1,11 @@
+framework module InAppStorySDK_SwiftUI {
+  umbrella header "InAppStorySDK_SwiftUI.h"
+
+  export *
+  module * { export * }
+}
+
+module InAppStorySDK_SwiftUI.Swift {
+    header "InAppStorySDK_SwiftUI-Swift.h"
+    requires objc
+}
