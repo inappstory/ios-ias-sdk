@@ -273,8 +273,6 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 
 
 
-
-
 SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -352,7 +350,6 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI9StoryView")
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK_SwiftUI))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
-
 
 
 

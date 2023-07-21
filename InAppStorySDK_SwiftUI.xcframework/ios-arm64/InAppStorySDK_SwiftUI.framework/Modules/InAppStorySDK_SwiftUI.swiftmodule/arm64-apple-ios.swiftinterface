@@ -26,41 +26,25 @@ public struct PhoneFormat {
   public init(defaultPhoneFormat: Swift.String)
   public init(phoneFormat: Swift.String, regexp: Swift.String)
 }
-@_hasMissingDesignatedInitializers public class Game {
-  public var id: Swift.String?
-  public init(id: Swift.String)
-  @objc deinit
-}
 extension SwiftUI.View {
-  public func onboardingStories(feed: Swift.String? = nil, limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func onboardingStories(feed: Swift.String? = nil, limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
-  public func singleStory(storyID: Swift.String, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func singleStory(storyID: Swift.String, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListUGCView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(filter: Swift.Dictionary<Swift.String, Any>, isEditorEnabled: Swift.Bool = false, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(filter: Swift.Dictionary<Swift.String, Any>, isEditorEnabled: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s21InAppStorySDK_SwiftUI0C11ListUGCViewV4bodyQrvp", 0) __
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
-  @_Concurrency.MainActor(unsafe) public func onUpdate(_ storiesDidUpdated: @escaping (_ isContent: Swift.Bool, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func onAction(_ onAction: @escaping ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func willAppear(_ willAppear: @escaping ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func onDismiss(_ onDismiss: @escaping ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func editorDidSelect(_ editorSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func getGoodsObject(_ getGoodsObject: @escaping ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
-}
-extension InAppStorySDK_SwiftUI.StoryListUGCView {
+  @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: @escaping () -> UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
-}
-extension InAppStorySDK_SwiftUI.StoryListUGCView {
+  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
@@ -105,13 +89,6 @@ public struct PanelSettings {
   public var share: Swift.Bool
   public init(like: Swift.Bool = false, favorites: Swift.Bool = false, share: Swift.Bool = false)
 }
-public struct SharingObject {
-  public let text: Swift.String?
-  public let images: Swift.Array<UIKit.UIImage>?
-  public let link: Swift.String?
-  public let payload: Swift.String?
-  public init(text: Swift.String?, images: Swift.Array<UIKit.UIImage>?, link: Swift.String?, payload: Swift.String?)
-}
 public struct EditorCellSettings {
 }
 public struct TimersGradient {
@@ -120,7 +97,7 @@ public struct TimersGradient {
   public var endPoint: CoreGraphics.CGPoint
   public var locations: Swift.Array<Swift.Double>
   public var height: Swift.Double
-  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
+  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.3)], startPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 80.0)
 }
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK_SwiftUI.InAppStory
@@ -201,23 +178,6 @@ public struct TimersGradient {
     get
   }
   public var isLoggingEnabled: Swift.Bool
-  public var customShare: ((InAppStorySDK_SwiftUI.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)?
-  public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
-  public var storiesDidUpdated: ((_ isContent: Swift.Bool, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  public var onActionWith: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
-  public var storyReaderWillShow: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  public var storyReaderDidClose: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  public var favoriteCellDidSelect: (() -> Swift.Void)?
-  public var editorCellDidSelect: (() -> Swift.Void)?
-  public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
-  public var sizeForItem: (() -> CoreGraphics.CGSize)?
-  public var insetForSection: (() -> UIKit.UIEdgeInsets)?
-  public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)?
-  public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)?
-  public var goodsSizeForItem: (() -> CoreGraphics.CGSize)?
-  public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)?
-  public var goodsMinimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)?
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
@@ -232,20 +192,9 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @available(*, deprecated, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
   public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
-  public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
-}
-extension InAppStorySDK_SwiftUI.InAppStory {
-  public func openGame(with game: InAppStorySDK_SwiftUI.Game, complete: ((_ opened: Swift.Bool) -> Swift.Void)? = nil)
-  public func closeGame()
-}
-extension InAppStorySDK_SwiftUI.InAppStory {
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @available(*, deprecated, renamed: "showSingle(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
@@ -262,30 +211,18 @@ public enum ScrollListDirection {
   }
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isEditorEnabled: Swift.Bool = false, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
+  @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isEditorEnabled: Swift.Bool = false, onUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ actionType: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, editorSelect: (() -> Swift.Void)? = nil, favoritesSelect: (() -> Swift.Void)? = nil, getGoodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s21InAppStorySDK_SwiftUI0C8ListViewV4bodyQrvp", 0) __
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
-  @_Concurrency.MainActor(unsafe) public func onUpdate(_ storiesDidUpdated: @escaping (_ isContent: Swift.Bool, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func onAction(_ onAction: @escaping ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func willAppear(_ willAppear: @escaping ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func onDismiss(_ onDismiss: @escaping ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func favoriteDidSelect(_ favoriteSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func editorDidSelect(_ editorSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func getGoodsObject(_ getGoodsObject: @escaping ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
-}
-extension InAppStorySDK_SwiftUI.StoryListView {
+  @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: @escaping () -> UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
-}
-extension InAppStorySDK_SwiftUI.StoryListView {
+  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
@@ -308,7 +245,6 @@ public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, discount: Swift.String?)
   @objc deinit
 }
-@available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
   func sizeForItem() -> CoreGraphics.CGSize
   func insetForSection() -> UIKit.UIEdgeInsets
@@ -333,7 +269,6 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setTitleColor(_ color: UIKit.UIColor)
   func setSound(_ value: Swift.Bool)
 }
-@available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
   func sizeForItem() -> CoreGraphics.CGSize
   func insetForSection() -> UIKit.UIEdgeInsets
@@ -401,7 +336,6 @@ public enum StoriesType {
   case single
   case onboarding(feed: Swift.String)
 }
-@available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func storiesDidUpdated(isContent: Swift.Bool, from storyType: InAppStorySDK_SwiftUI.StoriesType)
   func storyReader(actionWith target: Swift.String, for type: InAppStorySDK_SwiftUI.ActionType, from storyType: InAppStorySDK_SwiftUI.StoriesType)
@@ -472,6 +406,11 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
     get
     set
   }
+  @available(*, deprecated, renamed: "delegateFlowLayout")
+  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) weak public var delegateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
     get
     set
@@ -508,39 +447,6 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storiesDidUpdated: ((_ isContent: Swift.Bool, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var onActionWith: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var storyReaderWillShow: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var storyReaderDidClose: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var favoriteCellDidSelect: (() -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var editorCellDidSelect: (() -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreGraphics.CGSize)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var insetForSection: (() -> UIKit.UIEdgeInsets)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)? {
-    get
-    set
-  }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
@@ -570,6 +476,11 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
+  @available(*, deprecated, renamed: "delegateFlowLayout")
+  @_Concurrency.MainActor(unsafe) weak public var deleagateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
+    get
+    set
+  }
   @_Concurrency.MainActor(unsafe) weak public var delegateFlowLayout: InAppStorySDK_SwiftUI.StoryViewDelegateFlowLayout? {
     get
     set
@@ -594,39 +505,6 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     set
   }
   @_Concurrency.MainActor(unsafe) public var direction: InAppStorySDK_SwiftUI.ListDirection {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var storiesDidUpdated: ((_ isContent: Swift.Bool, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var onActionWith: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var storyReaderWillShow: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var storyReaderDidClose: ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var favoriteCellDidSelect: (() -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var editorCellDidSelect: (() -> Swift.Void)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreGraphics.CGSize)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var insetForSection: (() -> UIKit.UIEdgeInsets)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)? {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)? {
     get
     set
   }
