@@ -12,10 +12,11 @@ let package = Package(
         .library(name: "InAppStorySDK_SwiftUI", targets: ["InAppStorySDK_SwiftUI"])
     ],
     targets: [
-        .binaryTarget(name: "InAppStorySDK_SwiftUI",
-                      url: "https://github.com/inappstory/ios-sdk/files/11745567/InAppStorySDK_SwiftUI-1.21.2.xcframework.zip",
-                      checksum: "9e5e329aaa240bfe8b8cfc4321d8144a106568e6959262c8d8a413696a5303c5"
-                )
+        .binaryTarget(
+            name: "InAppStorySDK_SwiftUI",
+            path: "InAppStorySDK_SwiftUI.xcframework"
+        )
+
     ],
     swiftLanguageVersions: [.v5]
 )
