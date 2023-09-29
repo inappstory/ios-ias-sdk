@@ -565,6 +565,7 @@ public func MD5(_ input: Swift.String) -> Swift.String
 extension InAppStorySDK.StoryUGCView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
 }
 @_spi(Private) public typealias Byte = Swift.UInt8
@@ -1174,6 +1175,7 @@ extension InAppStorySDK.Archive {
 extension InAppStorySDK.StoryView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh(newFeed: Swift.String? = nil, newTags: Swift.Array<Swift.String>? = nil)
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
 }
 extension UIKit.UICollectionViewFlowLayout {
