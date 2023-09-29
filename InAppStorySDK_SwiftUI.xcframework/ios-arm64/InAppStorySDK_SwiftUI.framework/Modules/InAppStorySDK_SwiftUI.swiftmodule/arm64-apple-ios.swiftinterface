@@ -90,6 +90,7 @@ extension InAppStorySDK_SwiftUI.StoryListUGCView {
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func onVisibleAreaUpdated(_ onVisibleAreaUpdated: @escaping (_ items: Swift.Array<InAppStorySDK_SwiftUI.VisibleStoryItem>) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData(_ collect: @escaping ((_ collect: @escaping () -> Swift.Void) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea(_ update: @escaping ((_ update: @escaping () -> Swift.Void) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
@@ -352,6 +353,7 @@ extension InAppStorySDK_SwiftUI.StoryListView {
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func onVisibleAreaUpdated(_ onVisibleAreaUpdated: @escaping (_ items: Swift.Array<InAppStorySDK_SwiftUI.VisibleStoryItem>) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData(_ collect: @escaping ((_ collect: @escaping () -> Swift.Void) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea(_ update: @escaping ((_ update: @escaping () -> Swift.Void) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
@@ -751,6 +753,7 @@ public struct EntryOD : Swift.Equatable {
 extension InAppStorySDK_SwiftUI.StoryView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh(newFeed: Swift.String? = nil, newTags: Swift.Array<Swift.String>? = nil)
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
 }
 extension UIKit.UICollectionViewFlowLayout {
@@ -946,6 +949,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
 extension InAppStorySDK_SwiftUI.StoryUGCView {
   @_Concurrency.MainActor(unsafe) public func create()
   @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
