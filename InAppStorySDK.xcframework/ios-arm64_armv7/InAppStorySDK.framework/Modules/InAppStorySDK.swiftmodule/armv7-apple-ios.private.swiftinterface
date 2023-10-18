@@ -119,6 +119,12 @@ extension InAppStorySDK.Archive {
   }
   @_spi(Private) public static func escapeAllSingleQuotes(_ value: Swift.String) -> Swift.String
 }
+@_spi(Private) @_hasMissingDesignatedInitializers public class SessionService {
+  @_spi(Private) @objc deinit
+}
+@_spi(Private) extension InAppStorySDK.SessionService {
+  @_spi(Private) @objc dynamic public class func getSession(_ complete: @escaping () -> Swift.Void)
+}
 @_spi(Private) extension UIKit.UIColor {
   @_spi(Private) public static func colorWithHexString(hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
   @_spi(Private) public static func intFromHexString(hexStr: Swift.String) -> Swift.UInt64
@@ -332,6 +338,7 @@ public struct TimersGradient {
     get
   }
   @_spi(UGC) public var editorModel: InAppStorySDK.Editor?
+  @_spi(QAApp) public var demoMode: Swift.Bool
   @_spi(QAApp) public var sandBox: Swift.Bool {
     get
     set
@@ -1042,6 +1049,14 @@ public let AppendCacheResponse: Foundation.Notification.Name
 }
 @_spi(Private) extension InAppStorySDK.NetworkService : Foundation.URLSessionDelegate {
   @_spi(Private) @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+public struct UploadServerEndpoint : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_spi(Private) public typealias UploadServerEndpointComplete = (Swift.Result<Swift.String, InAppStorySDK.NetworkError>) -> Swift.Void
+@_spi(Private) extension InAppStorySDK.NetworkService {
+  @_spi(Private) public func getUploadServerEndpoint(complete: @escaping InAppStorySDK.UploadServerEndpointComplete)
 }
 @_spi(Private) public enum Model : Swift.String {
   @_spi(Private) case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPad2, iPad3, iPad4, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPadMini1, iPadMini2, iPadMini3, iPadAir1, iPadAir2, iPadPro9_7, iPadPro9_7_cell, iPadPro12_9, iPadPro12_9_cell, iPhone6, iPhone6plus, iPhone6S, iPhone6Splus, iPhoneSE, iPhone7, iPhone7plus, iPhone8, iPhone8plus, iPhoneX, iPhoneXs, iPhoneXsMax, iPhoneXr, iPhoneSE2, iPhone11, iPhone11Pro, iPhone11ProMax, iPhone12mini, iPhone12, iPhone12Pro, iPhone12ProMax, iPhone13Pro, iPhone13ProMax, iPhone13mini, iPhone13, iPhoneSE3, iPhone14, iPhone14Plus, iPhone14Pro, iPhone14ProMax, unrecognized
