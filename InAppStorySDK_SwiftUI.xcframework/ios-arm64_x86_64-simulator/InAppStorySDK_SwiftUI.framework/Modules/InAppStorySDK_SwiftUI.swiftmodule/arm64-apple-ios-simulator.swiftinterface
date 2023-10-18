@@ -765,6 +765,10 @@ public let CreateRequest: Foundation.Notification.Name
 public let AppendResponse: Foundation.Notification.Name
 public let CreateCacheRequest: Foundation.Notification.Name
 public let AppendCacheResponse: Foundation.Notification.Name
+public struct UploadServerEndpoint : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public let defaultReadChunkSize: Swift.Int
 public let defaultWriteChunkSize: Swift.Int
 public let defaultFilePermissions: Swift.UInt16
