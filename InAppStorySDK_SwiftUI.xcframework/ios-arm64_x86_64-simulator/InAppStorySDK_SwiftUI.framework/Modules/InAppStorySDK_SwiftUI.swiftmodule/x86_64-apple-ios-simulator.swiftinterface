@@ -420,6 +420,10 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setBackgroundColor(_ color: UIKit.UIColor)
   func setTitleColor(_ color: UIKit.UIColor)
   func setSound(_ value: Swift.Bool)
+  func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
+}
+extension InAppStorySDK_SwiftUI.StoryCellProtocol {
+  public func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
 }
 extension Foundation.Data {
   @available(*, deprecated, message: "Please use `Int64` for `size` and provider `position`.")
