@@ -338,6 +338,7 @@ public struct TimersGradient {
     get
   }
   @_spi(UGC) public var editorModel: InAppStorySDK.Editor?
+  @_spi(UGC) public var allowUGC: Swift.Bool
   @_spi(QAApp) public var demoMode: Swift.Bool
   @_spi(QAApp) public var sandBox: Swift.Bool {
     get
@@ -665,6 +666,10 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setBackgroundColor(_ color: UIKit.UIColor)
   func setTitleColor(_ color: UIKit.UIColor)
   func setSound(_ value: Swift.Bool)
+  func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
+}
+extension InAppStorySDK.StoryCellProtocol {
+  public func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
 }
 @available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
@@ -794,10 +799,14 @@ final public class Archive : Swift.Sequence {
   @_spi(UGC) @objc deinit
 }
 @_spi(UGC) extension InAppStorySDK.Editor {
+  @_spi(UGC) @objc dynamic public class func getEditorModelWith(_ complete: @escaping () -> Swift.Void)
+}
+@_spi(UGC) extension InAppStorySDK.Editor {
   @_spi(UGC) public func getEditorWith(_ complete: @escaping InAppStorySDK.EditorDownloadComplete)
 }
 @_spi(Private) public struct SessionObject : Swift.Codable {
   @_spi(Private) public let session: InAppStorySDK.Session
+  @_spi(Private) public let allowUGC: Swift.Bool
   @_spi(Private) public let editor: InAppStorySDK.EditorObject?
   @_spi(Private) public init(from decoder: Swift.Decoder) throws
   @_spi(Private) public func encode(to encoder: Swift.Encoder) throws

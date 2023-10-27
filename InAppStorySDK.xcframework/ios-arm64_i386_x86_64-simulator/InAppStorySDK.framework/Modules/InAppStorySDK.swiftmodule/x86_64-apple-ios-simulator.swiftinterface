@@ -449,6 +449,10 @@ public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   func setBackgroundColor(_ color: UIKit.UIColor)
   func setTitleColor(_ color: UIKit.UIColor)
   func setSound(_ value: Swift.Bool)
+  func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
+}
+extension InAppStorySDK.StoryCellProtocol {
+  public func setUGCPayload(_ payload: Swift.Dictionary<Swift.String, Any>)
 }
 @available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {

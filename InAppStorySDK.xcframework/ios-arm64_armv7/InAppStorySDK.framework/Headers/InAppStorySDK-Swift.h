@@ -318,13 +318,13 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 
 
 
-
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
 
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
@@ -720,13 +720,13 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 
 
 
-
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
 
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
