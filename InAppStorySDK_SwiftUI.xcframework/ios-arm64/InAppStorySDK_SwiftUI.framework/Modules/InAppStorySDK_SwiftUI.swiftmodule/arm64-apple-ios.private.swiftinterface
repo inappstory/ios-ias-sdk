@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios13.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AudioToolbox
 import Combine
@@ -19,10 +20,11 @@ import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
+import _StringProcessing
 import os
 import zlib
-extension CoreGraphics.CGRect {
-  public var area: CoreGraphics.CGFloat {
+extension CoreFoundation.CGRect {
+  public var area: CoreFoundation.CGFloat {
     get
   }
 }
@@ -77,7 +79,7 @@ extension InAppStorySDK_SwiftUI.Archive {
   @_spi(Private) @objc dynamic public class func getSession(_ complete: @escaping () -> Swift.Void)
 }
 @_spi(Private) extension UIKit.UIColor {
-  @_spi(Private) public static func colorWithHexString(hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
+  @_spi(Private) public static func colorWithHexString(hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1.0) -> UIKit.UIColor
   @_spi(Private) public static func intFromHexString(hexStr: Swift.String) -> Swift.UInt64
 }
 @_spi(Private) public typealias Byte = Swift.UInt8
@@ -128,7 +130,7 @@ extension InAppStorySDK_SwiftUI.Archive {
   @_spi(Private) public static let pipe: InAppStorySDK_SwiftUI.Byte
 }
 @_spi(Private) @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class DownloadPlaceholder : UIKit.UIView, InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol {
-  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func setProgress(progress: Swift.Double)
   @_spi(Private) @objc deinit
@@ -187,9 +189,9 @@ extension InAppStorySDK_SwiftUI.StoryListUGCView {
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: @escaping () -> UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreFoundation.CGSize) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
@@ -229,13 +231,13 @@ extension Foundation.FileManager {
   public func unzipItemOD(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
 }
 @_spi(Private) extension UIKit.UIView {
-  @_spi(Private) @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreGraphics.CGFloat, anchorPoint: CoreGraphics.CGPoint)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreFoundation.CGFloat, anchorPoint: CoreFoundation.CGPoint)
 }
 @_spi(Private) extension UIKit.UIView {
-  @_spi(Private) @_Concurrency.MainActor(unsafe) public var safeSize: CoreGraphics.CGSize {
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public var safeSize: CoreFoundation.CGSize {
     @_spi(Private) get
   }
-  @_spi(Private) @_Concurrency.MainActor(unsafe) public var safeY: CoreGraphics.CGFloat {
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public var safeY: CoreFoundation.CGFloat {
     @_spi(Private) get
   }
 }
@@ -355,11 +357,11 @@ public struct EditorCellSettings {
 }
 public struct TimersGradient {
   public var colors: Swift.Array<UIKit.UIColor>
-  public var startPoint: CoreGraphics.CGPoint
-  public var endPoint: CoreGraphics.CGPoint
+  public var startPoint: CoreFoundation.CGPoint
+  public var endPoint: CoreFoundation.CGPoint
   public var locations: Swift.Array<Swift.Double>
   public var height: Swift.Double
-  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreGraphics.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
+  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
 }
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK_SwiftUI.InAppStory
@@ -390,10 +392,10 @@ public struct TimersGradient {
   public var coverQuality: InAppStorySDK_SwiftUI.Quality
   public var showCellTitle: Swift.Bool
   public var cellGradientEnabled: Swift.Bool
-  public var cellBorderRadius: CoreGraphics.CGFloat
+  public var cellBorderRadius: CoreFoundation.CGFloat
   public var cellBorderColor: UIKit.UIColor
   public var goodsCellImageBackgroundColor: UIKit.UIColor
-  public var goodsCellImageCornerRadius: CoreGraphics.CGFloat
+  public var goodsCellImageCornerRadius: CoreFoundation.CGFloat
   public var goodsCellMainTextColor: UIKit.UIColor
   @available(*, deprecated, renamed: "goodsCellOldPriceTextColor")
   public var goodsCellDiscountTextColor: UIKit.UIColor {
@@ -418,7 +420,7 @@ public struct TimersGradient {
   public var placeholderElementColor: UIKit.UIColor
   public var placeholderBackgroundColor: UIKit.UIColor
   public var readerBackgroundColor: UIKit.UIColor
-  public var readerCornerRadius: CoreGraphics.CGFloat
+  public var readerCornerRadius: CoreFoundation.CGFloat
   @available(*, unavailable, message: "Next, the background color of the close button is taken from InAppStory.shared.goodsSubstrateColor")
   public var goodsCloseBackgroundColor: UIKit.UIColor {
     get
@@ -426,7 +428,7 @@ public struct TimersGradient {
   }
   public var goodsSubstrateColor: UIKit.UIColor
   public var goodsDimColor: UIKit.UIColor
-  public var goodsSubstrateHeight: CoreGraphics.CGFloat
+  public var goodsSubstrateHeight: CoreFoundation.CGFloat
   public var gamePlaceholderTint: UIKit.UIColor
   public var likeImage: UIKit.UIImage
   public var likeSelectedImage: UIKit.UIImage
@@ -481,13 +483,13 @@ public struct TimersGradient {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
-  public var sizeForItem: (() -> CoreGraphics.CGSize)?
+  public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
-  public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)?
-  public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)?
-  public var goodsSizeForItem: (() -> CoreGraphics.CGSize)?
+  public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
+  public var minimumInteritemSpacingForSection: (() -> CoreFoundation.CGFloat)?
+  public var goodsSizeForItem: (() -> CoreFoundation.CGSize)?
   public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)?
-  public var goodsMinimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)?
+  public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
@@ -559,9 +561,9 @@ extension InAppStorySDK_SwiftUI.StoryListView {
 extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func direction(_ direction: InAppStorySDK_SwiftUI.ScrollListDirection) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func edgeInserts(_ inserts: @escaping () -> UIKit.UIEdgeInsets) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreGraphics.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreGraphics.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func itemsSize(_ size: @escaping () -> CoreFoundation.CGSize) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func lineSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
@@ -595,14 +597,14 @@ public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
 }
 @available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
-  func sizeForItem() -> CoreGraphics.CGSize
+  func sizeForItem() -> CoreFoundation.CGSize
   func insetForSection() -> UIKit.UIEdgeInsets
-  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+  func minimumLineSpacingForSection() -> CoreFoundation.CGFloat
 }
 extension InAppStorySDK_SwiftUI.GoodsDelegateFlowLayout {
-  public func sizeForItem() -> CoreGraphics.CGSize
+  public func sizeForItem() -> CoreFoundation.CGSize
   public func insetForSection() -> UIKit.UIEdgeInsets
-  public func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
+  public func minimumLineSpacingForSection() -> CoreFoundation.CGFloat
 }
 public func MD5(_ input: Swift.String) -> Swift.String
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
@@ -630,10 +632,10 @@ extension Foundation.Data {
 }
 @available(*, deprecated, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation.")
 public protocol StoryViewDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
-  func sizeForItem() -> CoreGraphics.CGSize
+  func sizeForItem() -> CoreFoundation.CGSize
   func insetForSection() -> UIKit.UIEdgeInsets
-  func minimumLineSpacingForSection() -> CoreGraphics.CGFloat
-  func minimumInteritemSpacingForSection() -> CoreGraphics.CGFloat
+  func minimumLineSpacingForSection() -> CoreFoundation.CGFloat
+  func minimumInteritemSpacingForSection() -> CoreFoundation.CGFloat
 }
 public protocol PlaceholderProtocol : UIKit.UIView {
   var isAnimate: Swift.Bool { get }
@@ -769,10 +771,10 @@ public enum ListDirection {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CustomGoodsView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) open func setSKUItems(_ items: Swift.Array<Swift.String>)
-  @_Concurrency.MainActor(unsafe) open func setReaderFrame(_ frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) open func setReaderFrame(_ frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) final public func goodsItemClick(with sku: Swift.String)
   @_Concurrency.MainActor(unsafe) final public func close()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
@@ -787,11 +789,11 @@ public enum ListDirection {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+    @objc get
+    @objc set
   }
   @_Concurrency.MainActor(unsafe) public var textDidChangeBlock: ((_ textField: UIKit.UITextField?) -> Swift.Void)? {
     get
@@ -967,7 +969,7 @@ public struct EntryOD : Swift.Equatable {
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreGraphics.CGSize)? {
+  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
   }
@@ -975,15 +977,15 @@ public struct EntryOD : Swift.Equatable {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)? {
+  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)? {
+  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreFoundation.CGFloat)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
@@ -995,7 +997,7 @@ extension InAppStorySDK_SwiftUI.StoryView {
 }
 extension UIKit.UICollectionViewFlowLayout {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var flipsHorizontallyInOppositeLayoutDirection: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
 }
 @_spi(Private) extension Swift.KeyedDecodingContainer {
@@ -1236,7 +1238,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreGraphics.CGSize)? {
+  @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
   }
@@ -1244,15 +1246,15 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreGraphics.CGFloat)? {
+  @_Concurrency.MainActor(unsafe) public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreGraphics.CGFloat)? {
+  @_Concurrency.MainActor(unsafe) public var minimumInteritemSpacingForSection: (() -> CoreFoundation.CGFloat)? {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
@@ -1291,9 +1293,9 @@ extension InAppStorySDK_SwiftUI.HapticManager {
   @_spi(Private) @objc deinit
 }
 @_spi(Private) extension UIKit.UIImage {
-  @_spi(Private) public static func imageWithColor(color: UIKit.UIColor, size: CoreGraphics.CGSize) -> UIKit.UIImage!
+  @_spi(Private) public static func imageWithColor(color: UIKit.UIColor, size: CoreFoundation.CGSize) -> UIKit.UIImage!
   @_spi(Private) public func rotate(radians: Swift.Float) -> UIKit.UIImage?
-  @_spi(Private) public func resizeImage(targetSize: CoreGraphics.CGSize) -> UIKit.UIImage
+  @_spi(Private) public func resizeImage(targetSize: CoreFoundation.CGSize) -> UIKit.UIImage
 }
 @_spi(Private) extension UIKit.UIImage {
   @_spi(Private) public class func gifImageWithData(_ data: Foundation.Data) -> UIKit.UIImage?

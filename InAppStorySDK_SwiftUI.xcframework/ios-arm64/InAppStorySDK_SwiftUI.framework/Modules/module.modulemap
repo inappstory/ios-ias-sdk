@@ -6,6 +6,6 @@ framework module InAppStorySDK_SwiftUI {
 }
 
 module InAppStorySDK_SwiftUI.Swift {
-    header "InAppStorySDK_SwiftUI-Swift.h"
-    requires objc
+  header "InAppStorySDK_SwiftUI-Swift.h"
+  requires objc
 }
