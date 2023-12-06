@@ -15888,7 +15888,7 @@
           {
             "kind": "Function",
             "name": "openGame",
-            "printedName": "openGame(with:complete:)",
+            "printedName": "openGame(with:from:notificationInfo:complete:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15900,6 +15900,49 @@
                 "name": "Game",
                 "printedName": "InAppStorySDK.Game",
                 "usr": "s:13InAppStorySDK4GameC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -15930,8 +15973,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C8openGame4with8completeyAA0F0C_ySbcSgtF",
-            "mangledName": "$s13InAppStorySDK0abC0C8openGame4with8completeyAA0F0C_ySbcSgtF",
+            "usr": "s:13InAppStorySDK0abC0C8openGame4with4from16notificationInfo8completeyAA0F0C_So16UIViewControllerCSgSDySSypGSgySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0abC0C8openGame4with4from16notificationInfo8completeyAA0F0C_So16UIViewControllerCSgSDySSypGSgySbcSgtF",
             "moduleName": "InAppStorySDK",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -50720,28 +50763,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 12894,
+      "offset": 13409,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 19149,
+      "offset": 19631,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 20370,
+      "offset": 20852,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 23207,
+      "offset": 23689,
       "length": 4,
       "value": "true"
     },
@@ -51070,56 +51113,56 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "StringLiteral",
-      "offset": 1298,
+      "offset": 1369,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1418,
+      "offset": 1489,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1464,
+      "offset": 1535,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1503,
+      "offset": 1574,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1598,
+      "offset": 1669,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1729,
+      "offset": 1800,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 2288,
+      "offset": 2359,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "FloatLiteral",
-      "offset": 2396,
+      "offset": 2467,
       "length": 3,
       "value": "0.0"
     },
@@ -51569,14 +51612,14 @@
       "kind": "StringLiteral",
       "offset": 4656,
       "length": 8,
-      "value": "\"1.22.5\""
+      "value": "\"1.22.6\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 4706,
       "length": 6,
-      "value": "\"3064\""
+      "value": "\"3082\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",

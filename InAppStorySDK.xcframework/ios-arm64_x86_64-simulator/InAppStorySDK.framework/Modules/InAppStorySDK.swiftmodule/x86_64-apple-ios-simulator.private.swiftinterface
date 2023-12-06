@@ -481,7 +481,7 @@ extension InAppStorySDK.InAppStory {
   public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
-  public func openGame(with game: InAppStorySDK.Game, complete: ((_ opened: Swift.Bool) -> Swift.Void)? = nil)
+  public func openGame(with game: InAppStorySDK.Game, from presentingViewController: UIKit.UIViewController? = nil, notificationInfo: Swift.Dictionary<Swift.String, Any>? = nil, complete: ((_ opened: Swift.Bool) -> Swift.Void)? = nil)
   public func closeGame()
 }
 extension InAppStorySDK.InAppStory {
