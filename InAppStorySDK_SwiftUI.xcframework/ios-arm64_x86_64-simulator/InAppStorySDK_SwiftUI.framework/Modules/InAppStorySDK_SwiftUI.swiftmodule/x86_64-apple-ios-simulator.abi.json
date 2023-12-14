@@ -55066,14 +55066,14 @@
       "kind": "StringLiteral",
       "offset": 4656,
       "length": 8,
-      "value": "\"1.22.6\""
+      "value": "\"1.22.7\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 4706,
       "length": 6,
-      "value": "\"3082\""
+      "value": "\"3086\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
