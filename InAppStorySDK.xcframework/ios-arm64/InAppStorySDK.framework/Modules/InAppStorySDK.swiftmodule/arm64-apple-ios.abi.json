@@ -51612,14 +51612,14 @@
       "kind": "StringLiteral",
       "offset": 4656,
       "length": 8,
-      "value": "\"1.22.7\""
+      "value": "\"1.22.8\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 4706,
       "length": 6,
-      "value": "\"3086\""
+      "value": "\"3090\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -52317,7 +52317,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 53105,
+      "offset": 53123,
       "length": 4,
       "value": "true"
     },
