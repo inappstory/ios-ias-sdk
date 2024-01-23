@@ -392,6 +392,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI12StoryUGCView")
 @interface StoryUGCView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)didMoveToWindow;
 - (void)layoutSubviews;
 @end
 
@@ -405,6 +406,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI9StoryView")
 @interface StoryView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)didMoveToWindow;
 - (void)layoutSubviews;
 @end
 

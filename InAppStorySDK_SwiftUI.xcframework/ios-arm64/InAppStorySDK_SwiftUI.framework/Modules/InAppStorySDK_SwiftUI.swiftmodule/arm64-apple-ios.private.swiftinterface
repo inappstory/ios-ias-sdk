@@ -986,6 +986,7 @@ public struct EntryOD : Swift.Equatable {
     set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
@@ -1255,6 +1256,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
