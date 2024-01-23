@@ -399,6 +399,7 @@ public func MD5(_ input: Swift.String) -> Swift.String
     set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, filter: Swift.Dictionary<Swift.String, Any> = [:])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
@@ -852,6 +853,7 @@ extension InAppStorySDK.Archive {
     set
   }
   @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect = .zero, feed: Swift.String = "default", favorite: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
