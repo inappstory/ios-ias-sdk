@@ -50815,28 +50815,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 13409,
+      "offset": 14659,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 19631,
+      "offset": 20881,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 20852,
+      "offset": 22102,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 23689,
+      "offset": 24939,
       "length": 4,
       "value": "true"
     },
@@ -51664,14 +51664,14 @@
       "kind": "StringLiteral",
       "offset": 4656,
       "length": 9,
-      "value": "\"1.22.10\""
+      "value": "\"1.22.11\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 4707,
       "length": 6,
-      "value": "\"3098\""
+      "value": "\"3112\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -56338,14 +56338,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/StoryView.swift",
       "kind": "StringLiteral",
-      "offset": 4841,
+      "offset": 4877,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/StoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4869,
+      "offset": 4905,
       "length": 5,
       "value": "false"
     },
