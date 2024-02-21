@@ -55118,14 +55118,14 @@
       "kind": "StringLiteral",
       "offset": 4656,
       "length": 9,
-      "value": "\"1.22.11\""
+      "value": "\"1.22.12\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 4707,
       "length": 6,
-      "value": "\"3112\""
+      "value": "\"3116\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -57041,14 +57041,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 18639,
+      "offset": 19011,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 20528,
+      "offset": 20900,
       "length": 5,
       "value": "false"
     },
@@ -58574,7 +58574,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18551,
+      "offset": 18826,
       "length": 5,
       "value": "false"
     },
