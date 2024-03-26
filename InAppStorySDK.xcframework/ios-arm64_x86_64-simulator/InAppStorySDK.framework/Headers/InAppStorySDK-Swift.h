@@ -340,11 +340,14 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -783,11 +786,14 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
