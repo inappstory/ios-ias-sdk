@@ -442,6 +442,7 @@ public struct TimersGradient {
     get
   }
   public var isLoggingEnabled: Swift.Bool
+  public var isDeviceIDEnabled: Swift.Bool
   public var customShare: ((InAppStorySDK.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)?
   public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
   public var storiesDidUpdated: ((_ isContent: Swift.Bool, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)?
