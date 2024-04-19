@@ -55953,7 +55953,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Creator\/CurrentStoryCreator.swift",
       "kind": "BooleanLiteral",
-      "offset": 9577,
+      "offset": 8771,
       "length": 5,
       "value": "false"
     },
@@ -56039,14 +56039,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.23.1\""
+      "value": "\"1.23.2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3184\""
+      "value": "\"3186\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
