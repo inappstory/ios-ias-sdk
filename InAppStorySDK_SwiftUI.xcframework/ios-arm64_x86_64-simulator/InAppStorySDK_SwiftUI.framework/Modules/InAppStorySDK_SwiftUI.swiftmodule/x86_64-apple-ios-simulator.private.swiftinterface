@@ -13,11 +13,13 @@ import CoreText
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK_SwiftUI
+import MobileCoreServices
 import Photos
 import Swift
 import SwiftUI
 import SystemConfiguration
 import UIKit
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
@@ -121,7 +123,7 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
-  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:])
+  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK_SwiftUI.Settings, rhs: InAppStorySDK_SwiftUI.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
@@ -202,7 +204,7 @@ public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK_SwiftUI.StoryData>)
     case ugcStoriesLoaded(stories: Swift.Array<InAppStorySDK_SwiftUI.StoryData>)
-    case clickOnStory(storyData: InAppStorySDK_SwiftUI.StoryData)
+    case clickOnStory(storyData: InAppStorySDK_SwiftUI.StoryData, index: Swift.Int)
     case showStory(storyData: InAppStorySDK_SwiftUI.StoryData, action: InAppStorySDK_SwiftUI.ShowStoryAction)
     case closeStory(slideData: InAppStorySDK_SwiftUI.SlideData, action: InAppStorySDK_SwiftUI.CloseStoryAction)
     case clickOnButton(slideData: InAppStorySDK_SwiftUI.SlideData, link: Swift.String)
@@ -284,6 +286,9 @@ public enum IASEvent {
   @_spi(Private) public static let lessThan: InAppStorySDK_SwiftUI.Byte
   @_spi(Private) public static let greaterThan: InAppStorySDK_SwiftUI.Byte
   @_spi(Private) public static let pipe: InAppStorySDK_SwiftUI.Byte
+}
+@_spi(Private) extension Foundation.Data {
+  @_spi(Private) public mutating func append(_ string: Swift.String)
 }
 @_spi(Private) @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class DownloadPlaceholder : UIKit.UIView, InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol {
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -921,6 +926,9 @@ public enum ListDirection {
   @_spi(Private) public var fileSize: Swift.Int? {
     @_spi(Private) get
   }
+}
+@_spi(Private) extension Foundation.URL {
+  @_spi(Private) public func mimeTypeForPath() -> Swift.String
 }
 @_spi(Private) extension Swift.Array where Element : InAppStorySDK_SwiftUI.Reorderable {
   @_spi(Private) public func reorder(by preferredOrder: [Element.OrderElement]) -> [Element]
