@@ -12,10 +12,12 @@ import CoreText
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK
+import MobileCoreServices
 import Photos
 import Swift
 import SystemConfiguration
 import UIKit
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
@@ -748,7 +750,7 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
-  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:])
+  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
@@ -829,7 +831,7 @@ public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK.StoryData>)
     case ugcStoriesLoaded(stories: Swift.Array<InAppStorySDK.StoryData>)
-    case clickOnStory(storyData: InAppStorySDK.StoryData)
+    case clickOnStory(storyData: InAppStorySDK.StoryData, index: Swift.Int)
     case showStory(storyData: InAppStorySDK.StoryData, action: InAppStorySDK.ShowStoryAction)
     case closeStory(slideData: InAppStorySDK.SlideData, action: InAppStorySDK.CloseStoryAction)
     case clickOnButton(slideData: InAppStorySDK.SlideData, link: Swift.String)

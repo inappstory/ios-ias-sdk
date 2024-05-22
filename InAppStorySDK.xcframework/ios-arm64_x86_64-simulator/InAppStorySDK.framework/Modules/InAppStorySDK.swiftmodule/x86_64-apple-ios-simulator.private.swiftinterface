@@ -12,10 +12,12 @@ import CoreText
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK
+import MobileCoreServices
 import Photos
 import Swift
 import SystemConfiguration
 import UIKit
+import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
@@ -576,6 +578,9 @@ extension InAppStorySDK.StoryUGCView {
   @_spi(Private) public static let greaterThan: InAppStorySDK.Byte
   @_spi(Private) public static let pipe: InAppStorySDK.Byte
 }
+@_spi(Private) extension Foundation.Data {
+  @_spi(Private) public mutating func append(_ string: Swift.String)
+}
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   var sku: Swift.String! { get set }
 }
@@ -948,6 +953,9 @@ extension InAppStorySDK.Archive {
     @_spi(Private) get
   }
 }
+@_spi(Private) extension Foundation.URL {
+  @_spi(Private) public func mimeTypeForPath() -> Swift.String
+}
 extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK.CompressionMethodOD = .none, progress: Foundation.Progress? = nil) throws
   public func unzipItemOD(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
@@ -1057,7 +1065,7 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
-  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:])
+  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
@@ -1138,7 +1146,7 @@ public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK.StoryData>)
     case ugcStoriesLoaded(stories: Swift.Array<InAppStorySDK.StoryData>)
-    case clickOnStory(storyData: InAppStorySDK.StoryData)
+    case clickOnStory(storyData: InAppStorySDK.StoryData, index: Swift.Int)
     case showStory(storyData: InAppStorySDK.StoryData, action: InAppStorySDK.ShowStoryAction)
     case closeStory(slideData: InAppStorySDK.SlideData, action: InAppStorySDK.CloseStoryAction)
     case clickOnButton(slideData: InAppStorySDK.SlideData, link: Swift.String)
