@@ -401,7 +401,7 @@ extension Foundation.FileManager {
   public var storiesEvent: (InAppStorySDK_SwiftUI.IASEvent.Story) -> Swift.Void
   public var gameEvent: (InAppStorySDK_SwiftUI.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK_SwiftUI.IASEvent.Failure) -> Swift.Void
-  public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK_SwiftUI.StackFeedObject) -> Swift.Void)?
+  public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK_SwiftUI.StackFeedObject?) -> Swift.Void)?
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK_SwiftUI.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)

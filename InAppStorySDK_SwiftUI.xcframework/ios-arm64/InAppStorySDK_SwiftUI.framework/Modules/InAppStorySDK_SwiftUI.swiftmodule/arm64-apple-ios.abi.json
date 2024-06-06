@@ -20531,12 +20531,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject) -> ())?",
+                "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject) -> ()",
+                    "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -20545,9 +20545,17 @@
                       },
                       {
                         "kind": "TypeNominal",
-                        "name": "StackFeedObject",
-                        "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
-                        "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                        "name": "Optional",
+                        "printedName": "InAppStorySDK_SwiftUI.StackFeedObject?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StackFeedObject",
+                            "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
+                            "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                          }
+                        ],
+                        "usr": "s:Sq"
                       }
                     ]
                   }
@@ -20556,8 +20564,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvp",
-            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvp",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvp",
             "moduleName": "InAppStorySDK_SwiftUI",
             "declAttributes": [
               "HasInitialValue",
@@ -20575,12 +20583,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject) -> ())?",
+                    "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject?) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject) -> ()",
+                        "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject?) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -20589,9 +20597,17 @@
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "StackFeedObject",
-                            "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
-                            "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                            "name": "Optional",
+                            "printedName": "InAppStorySDK_SwiftUI.StackFeedObject?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "StackFeedObject",
+                                "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
+                                "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                              }
+                            ],
+                            "usr": "s:Sq"
                           }
                         ]
                       }
@@ -20600,8 +20616,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvg",
-                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvg",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvg",
                 "moduleName": "InAppStorySDK_SwiftUI",
                 "implicit": true,
                 "accessorKind": "get"
@@ -20619,12 +20635,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject) -> ())?",
+                    "printedName": "((InAppStorySDK_SwiftUI.StackFeedObject?) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject) -> ()",
+                        "printedName": "(InAppStorySDK_SwiftUI.StackFeedObject?) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -20633,9 +20649,17 @@
                           },
                           {
                             "kind": "TypeNominal",
-                            "name": "StackFeedObject",
-                            "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
-                            "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                            "name": "Optional",
+                            "printedName": "InAppStorySDK_SwiftUI.StackFeedObject?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "StackFeedObject",
+                                "printedName": "InAppStorySDK_SwiftUI.StackFeedObject",
+                                "usr": "s:21InAppStorySDK_SwiftUI15StackFeedObjectV"
+                              }
+                            ],
+                            "usr": "s:Sq"
                           }
                         ]
                       }
@@ -20644,8 +20668,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvs",
-                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvs",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvs",
                 "moduleName": "InAppStorySDK_SwiftUI",
                 "implicit": true,
                 "accessorKind": "set"
@@ -20662,8 +20686,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvM",
-                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVcSgvM",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15stackFeedUpdateyAA05StackH6ObjectVSgcSgvM",
                 "moduleName": "InAppStorySDK_SwiftUI",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -59984,14 +60008,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.23.4\""
+      "value": "\"1.23.5\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3220\""
+      "value": "\"3224\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -60283,112 +60307,112 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 10604,
+      "offset": 10605,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10836,
+      "offset": 10837,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10905,
+      "offset": 10906,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10987,
+      "offset": 10988,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11062,
+      "offset": 11063,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 11203,
+      "offset": 11204,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 11499,
+      "offset": 11500,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 11668,
+      "offset": 11669,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 11823,
+      "offset": 11824,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 11924,
+      "offset": 11925,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 12120,
+      "offset": 12121,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 29241,
+      "offset": 29242,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 29293,
+      "offset": 29294,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 29860,
+      "offset": 29861,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 29912,
+      "offset": 29913,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 43063,
+      "offset": 43064,
       "length": 5,
       "value": "false"
     },
