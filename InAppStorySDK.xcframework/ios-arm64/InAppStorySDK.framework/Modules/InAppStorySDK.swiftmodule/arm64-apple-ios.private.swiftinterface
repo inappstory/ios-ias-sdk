@@ -411,7 +411,7 @@ extension CoreFoundation.CGRect {
   public var storiesEvent: (InAppStorySDK.IASEvent.Story) -> Swift.Void
   public var gameEvent: (InAppStorySDK.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK.IASEvent.Failure) -> Swift.Void
-  public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject) -> Swift.Void)?
+  public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)?
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil)
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
