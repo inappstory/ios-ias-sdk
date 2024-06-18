@@ -1072,6 +1072,2217 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "StoryCellData",
+        "printedName": "StoryCellData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "storyID",
+            "printedName": "storyID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC7storyIDSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC7storyIDSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC7storyIDSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC7storyIDSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storyData",
+            "printedName": "storyData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StoryData",
+                "printedName": "InAppStorySDK.StoryData",
+                "usr": "s:13InAppStorySDK0C4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC05storyF0AA0cF0Vvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC05storyF0AA0cF0Vvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StoryData",
+                    "printedName": "InAppStorySDK.StoryData",
+                    "usr": "s:13InAppStorySDK0C4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC05storyF0AA0cF0Vvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC05storyF0AA0cF0Vvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC5titleSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC5titleSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC5titleSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC5titleSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC5titleSSvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC5titleSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC5titleSSvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC5titleSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "coverImagePath",
+            "printedName": "coverImagePath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC14coverImagePathSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC14coverImagePathSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverImagePathSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverImagePathSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverImagePathSSvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverImagePathSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverImagePathSSvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverImagePathSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "coverVideoPath",
+            "printedName": "coverVideoPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC14coverVideoPathSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC14coverVideoPathSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverVideoPathSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverVideoPathSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverVideoPathSSvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverVideoPathSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC14coverVideoPathSSvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC14coverVideoPathSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC15backgroundColorSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC15backgroundColorSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC15backgroundColorSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC15backgroundColorSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC15backgroundColorSSvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC15backgroundColorSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC15backgroundColorSSvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC15backgroundColorSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleColor",
+            "printedName": "titleColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC10titleColorSSvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC10titleColorSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC10titleColorSSvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC10titleColorSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC10titleColorSSvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC10titleColorSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC10titleColorSSvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC10titleColorSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "opened",
+            "printedName": "opened",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC6openedSbvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC6openedSbvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC6openedSbvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC6openedSbvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC6openedSbvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC6openedSbvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC6openedSbvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC6openedSbvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasAudio",
+            "printedName": "hasAudio",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C8CellDataC8hasAudioSbvp",
+            "mangledName": "$s13InAppStorySDK0C8CellDataC8hasAudioSbvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC8hasAudioSbvg",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC8hasAudioSbvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC8hasAudioSbvs",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC8hasAudioSbvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C8CellDataC8hasAudioSbvM",
+                "mangledName": "$s13InAppStorySDK0C8CellDataC8hasAudioSbvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13InAppStorySDK0C8CellDataC",
+        "mangledName": "$s13InAppStorySDK0C8CellDataC",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "IAS_API"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SimpleFavoriteData",
+        "printedName": "SimpleFavoriteData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "serverID",
+            "printedName": "serverID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvp",
+            "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvg",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvs",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvM",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC8serverIDSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK18SimpleFavoriteDataC5imageSSvp",
+            "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC5imageSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC5imageSSvg",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC5imageSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC5imageSSvs",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC5imageSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC5imageSSvM",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC5imageSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvp",
+            "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvg",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvs",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvM",
+                "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC15backgroundColorSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13InAppStorySDK18SimpleFavoriteDataC",
+        "mangledName": "$s13InAppStorySDK18SimpleFavoriteDataC",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "IAS_API"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StoryListAPI",
+        "printedName": "StoryListAPI",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cellRatio",
+            "printedName": "cellRatio",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC9cellRatioSfvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC9cellRatioSfvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC9cellRatioSfvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC9cellRatioSfvg",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storyUpdate",
+            "printedName": "storyUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((InAppStorySDK.StoryCellData) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.StoryCellData) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StoryCellData",
+                        "printedName": "InAppStorySDK.StoryCellData",
+                        "usr": "s:13InAppStorySDK0C8CellDataC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((InAppStorySDK.StoryCellData) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.StoryCellData) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StoryCellData",
+                            "printedName": "InAppStorySDK.StoryCellData",
+                            "usr": "s:13InAppStorySDK0C8CellDataC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((InAppStorySDK.StoryCellData) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.StoryCellData) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "StoryCellData",
+                            "printedName": "InAppStorySDK.StoryCellData",
+                            "usr": "s:13InAppStorySDK0C8CellDataC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvs",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvM",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC11storyUpdateyAA0C8CellDataCcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storyListUpdate",
+            "printedName": "storyListUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[InAppStorySDK.StoryCellData]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "StoryCellData",
+                                "printedName": "InAppStorySDK.StoryCellData",
+                                "usr": "s:13InAppStorySDK0C8CellDataC"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SimpleFavoriteData",
+                                    "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                    "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.StoryCellData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "StoryCellData",
+                                    "printedName": "InAppStorySDK.StoryCellData",
+                                    "usr": "s:13InAppStorySDK0C8CellDataC"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Array",
+                                    "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "SimpleFavoriteData",
+                                        "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                        "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                                      }
+                                    ],
+                                    "usr": "s:Sa"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "([InAppStorySDK.StoryCellData], [InAppStorySDK.SimpleFavoriteData]?, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.StoryCellData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "StoryCellData",
+                                    "printedName": "InAppStorySDK.StoryCellData",
+                                    "usr": "s:13InAppStorySDK0C8CellDataC"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Array",
+                                    "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "SimpleFavoriteData",
+                                        "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                        "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                                      }
+                                    ],
+                                    "usr": "s:Sa"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvs",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvM",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC05storyE6UpdateySayAA0C8CellDataCG_SayAA014SimpleFavoriteJ0CGSgSStcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "favoritesUpdate",
+            "printedName": "favoritesUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([InAppStorySDK.SimpleFavoriteData]?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([InAppStorySDK.SimpleFavoriteData]?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "SimpleFavoriteData",
+                                "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([InAppStorySDK.SimpleFavoriteData]?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([InAppStorySDK.SimpleFavoriteData]?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SimpleFavoriteData",
+                                    "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                    "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(([InAppStorySDK.SimpleFavoriteData]?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([InAppStorySDK.SimpleFavoriteData]?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[InAppStorySDK.SimpleFavoriteData]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.SimpleFavoriteData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "SimpleFavoriteData",
+                                    "printedName": "InAppStorySDK.SimpleFavoriteData",
+                                    "usr": "s:13InAppStorySDK18SimpleFavoriteDataC"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvs",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvM",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC15favoritesUpdateySayAA18SimpleFavoriteDataCGSgcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "scrollUpdate",
+            "printedName": "scrollUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvs",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvM",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC12scrollUpdateySicSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(feed:isFavorite:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StoryListAPI",
+                "printedName": "InAppStorySDK.StoryListAPI",
+                "usr": "s:13InAppStorySDK0C7ListAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13InAppStorySDK0C7ListAPIC4feed10isFavoriteACSS_Sbtcfc",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC4feed10isFavoriteACSS_Sbtcfc",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setNewFeed",
+            "printedName": "setNewFeed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0C7ListAPIC10setNewFeedyySSF",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC10setNewFeedyySSF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getStoriesList",
+            "printedName": "getStoriesList()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0C7ListAPIC010getStoriesE0yyF",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC010getStoriesE0yyF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "selectStoryCellWith",
+            "printedName": "selectStoryCellWith(id:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0C7ListAPIC06selectC8CellWith2idySS_tF",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC06selectC8CellWith2idySS_tF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVisibleWith",
+            "printedName": "setVisibleWith(storyIDs:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0C7ListAPIC14setVisibleWith8storyIDsySaySSG_tF",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC14setVisibleWith8storyIDsySaySSG_tF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVisibleFavorite",
+            "printedName": "setVisibleFavorite()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0C7ListAPIC18setVisibleFavoriteyyF",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC18setVisibleFavoriteyyF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13InAppStorySDK0C7ListAPIC",
+        "mangledName": "$s13InAppStorySDK0C7ListAPIC",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "IAS_API"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -55479,6 +57690,97 @@
       "value": "\"InAppStorySDK.FormattedTextFieldDelegate\""
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 718,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 779,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 839,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 903,
+      "length": 9,
+      "value": "\"#000000\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 969,
+      "length": 9,
+      "value": "\"#000000\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1029,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1087,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 1314,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 1373,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 1432,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "Array",
+      "offset": 2339,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 2393,
+      "length": 9,
+      "value": "\"default\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2423,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation_old\/ArchiveOD+Reading.swift",
       "kind": "BooleanLiteral",
       "offset": 1161,
@@ -56239,14 +58541,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.23.5\""
+      "value": "\"1.23.6\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3224\""
+      "value": "\"3228\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -60143,56 +62445,56 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5244,
+      "offset": 5311,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6425,
+      "offset": 6492,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6486,
+      "offset": 6553,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6657,
+      "offset": 6724,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 6874,
+      "offset": 6941,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6917,
+      "offset": 6984,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21602,
+      "offset": 21669,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23881,
+      "offset": 23948,
       "length": 5,
       "value": "false"
     },

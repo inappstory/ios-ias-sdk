@@ -84,6 +84,50 @@ extension InAppStorySDK.Archive {
   final public func extract(_ entry: InAppStorySDK.Entry, to url: Foundation.URL, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
   final public func extract(_ entry: InAppStorySDK.Entry, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
 }
+@_spi(IAS_API) public typealias StoryUpdateHandler = (_ data: InAppStorySDK.StoryCellData) -> Swift.Void
+@_spi(IAS_API) public typealias StoriesListUpdateHandler = (_ list: Swift.Array<InAppStorySDK.StoryCellData>, _ favorite: Swift.Array<InAppStorySDK.SimpleFavoriteData>?, _ feed: Swift.String) -> Swift.Void
+@_spi(IAS_API) public typealias FavoriteUpdateHandler = (_ data: Swift.Array<InAppStorySDK.SimpleFavoriteData>?) -> Swift.Void
+@_spi(IAS_API) public typealias ScrollHandler = (_ index: Swift.Int) -> Swift.Void
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class StoryCellData {
+  @_spi(IAS_API) final public let storyID: Swift.String
+  @_spi(IAS_API) final public let storyData: InAppStorySDK.StoryData
+  @_spi(IAS_API) public var title: Swift.String
+  @_spi(IAS_API) public var coverImagePath: Swift.String
+  @_spi(IAS_API) public var coverVideoPath: Swift.String
+  @_spi(IAS_API) public var backgroundColor: Swift.String
+  @_spi(IAS_API) public var titleColor: Swift.String
+  @_spi(IAS_API) public var opened: Swift.Bool
+  @_spi(IAS_API) public var hasAudio: Swift.Bool
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class SimpleFavoriteData {
+  @_spi(IAS_API) public var serverID: Swift.String
+  @_spi(IAS_API) public var image: Swift.String
+  @_spi(IAS_API) public var backgroundColor: Swift.String
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) public class StoryListAPI {
+  @_spi(IAS_API) public var cellRatio: Swift.Float {
+    @_spi(IAS_API) get
+  }
+  @_spi(IAS_API) public var storyUpdate: InAppStorySDK.StoryUpdateHandler?
+  @_spi(IAS_API) public var storyListUpdate: InAppStorySDK.StoriesListUpdateHandler?
+  @_spi(IAS_API) public var favoritesUpdate: InAppStorySDK.FavoriteUpdateHandler?
+  @_spi(IAS_API) public var scrollUpdate: InAppStorySDK.ScrollHandler?
+  @_spi(IAS_API) public init(feed: Swift.String = "default", isFavorite: Swift.Bool = false)
+  @_spi(IAS_API) public func setNewFeed(_ feed: Swift.String)
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.StoryListAPI {
+  @_spi(IAS_API) public func getStoriesList()
+}
+@_spi(IAS_API) extension InAppStorySDK.StoryListAPI {
+  @_spi(IAS_API) public func selectStoryCellWith(id: Swift.String)
+}
+@_spi(IAS_API) extension InAppStorySDK.StoryListAPI {
+  @_spi(IAS_API) public func setVisibleWith(storyIDs: Swift.Array<Swift.String>)
+  @_spi(IAS_API) public func setVisibleFavorite()
+}
 extension InAppStorySDK.ArchiveOD {
   final public func extract(_ entry: InAppStorySDK.EntryOD, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
   final public func extract(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
