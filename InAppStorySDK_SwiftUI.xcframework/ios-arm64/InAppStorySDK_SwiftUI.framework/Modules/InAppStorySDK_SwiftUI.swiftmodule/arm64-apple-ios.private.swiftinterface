@@ -74,6 +74,50 @@ extension InAppStorySDK_SwiftUI.Archive {
   }
   @_spi(Private) public static func escapeAllSingleQuotes(_ value: Swift.String) -> Swift.String
 }
+@_spi(IAS_API) public typealias StoryUpdateHandler = (_ data: InAppStorySDK_SwiftUI.StoryCellData) -> Swift.Void
+@_spi(IAS_API) public typealias StoriesListUpdateHandler = (_ list: Swift.Array<InAppStorySDK_SwiftUI.StoryCellData>, _ favorite: Swift.Array<InAppStorySDK_SwiftUI.SimpleFavoriteData>?, _ feed: Swift.String) -> Swift.Void
+@_spi(IAS_API) public typealias FavoriteUpdateHandler = (_ data: Swift.Array<InAppStorySDK_SwiftUI.SimpleFavoriteData>?) -> Swift.Void
+@_spi(IAS_API) public typealias ScrollHandler = (_ index: Swift.Int) -> Swift.Void
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class StoryCellData {
+  @_spi(IAS_API) final public let storyID: Swift.String
+  @_spi(IAS_API) final public let storyData: InAppStorySDK_SwiftUI.StoryData
+  @_spi(IAS_API) public var title: Swift.String
+  @_spi(IAS_API) public var coverImagePath: Swift.String
+  @_spi(IAS_API) public var coverVideoPath: Swift.String
+  @_spi(IAS_API) public var backgroundColor: Swift.String
+  @_spi(IAS_API) public var titleColor: Swift.String
+  @_spi(IAS_API) public var opened: Swift.Bool
+  @_spi(IAS_API) public var hasAudio: Swift.Bool
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class SimpleFavoriteData {
+  @_spi(IAS_API) public var serverID: Swift.String
+  @_spi(IAS_API) public var image: Swift.String
+  @_spi(IAS_API) public var backgroundColor: Swift.String
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) public class StoryListAPI {
+  @_spi(IAS_API) public var cellRatio: Swift.Float {
+    @_spi(IAS_API) get
+  }
+  @_spi(IAS_API) public var storyUpdate: InAppStorySDK_SwiftUI.StoryUpdateHandler?
+  @_spi(IAS_API) public var storyListUpdate: InAppStorySDK_SwiftUI.StoriesListUpdateHandler?
+  @_spi(IAS_API) public var favoritesUpdate: InAppStorySDK_SwiftUI.FavoriteUpdateHandler?
+  @_spi(IAS_API) public var scrollUpdate: InAppStorySDK_SwiftUI.ScrollHandler?
+  @_spi(IAS_API) public init(feed: Swift.String = "default", isFavorite: Swift.Bool = false)
+  @_spi(IAS_API) public func setNewFeed(_ feed: Swift.String)
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.StoryListAPI {
+  @_spi(IAS_API) public func getStoriesList()
+}
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.StoryListAPI {
+  @_spi(IAS_API) public func selectStoryCellWith(id: Swift.String)
+}
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.StoryListAPI {
+  @_spi(IAS_API) public func setVisibleWith(storyIDs: Swift.Array<Swift.String>)
+  @_spi(IAS_API) public func setVisibleFavorite()
+}
 public typealias StackFeedResult = Swift.Result<InAppStorySDK_SwiftUI.StackFeedObject?, Swift.Error>
 public struct StackFeedCover {
   public var feedCover: Foundation.URL?
