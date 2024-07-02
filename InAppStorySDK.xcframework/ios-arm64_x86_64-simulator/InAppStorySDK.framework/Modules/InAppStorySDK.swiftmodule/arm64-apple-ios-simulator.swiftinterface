@@ -821,7 +821,7 @@ public struct StoryData {
 public struct SlideData {
   public var storyData: InAppStorySDK.StoryData?
   public var index: Swift.Int
-  public var payload: Swift.Dictionary<Swift.String, Any>?
+  public var payload: Swift.String
 }
 public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
