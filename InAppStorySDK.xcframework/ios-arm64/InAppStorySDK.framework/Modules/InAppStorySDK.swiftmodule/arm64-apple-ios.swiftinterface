@@ -137,6 +137,7 @@ extension CoreFoundation.CGRect {
   public var cellGradientEnabled: Swift.Bool
   public var cellBorderRadius: CoreFoundation.CGFloat
   public var cellBorderColor: UIKit.UIColor
+  public var cellBorderOpenedColor: UIKit.UIColor
   public var goodsCellImageBackgroundColor: UIKit.UIColor
   public var goodsCellImageCornerRadius: CoreFoundation.CGFloat
   public var goodsCellMainTextColor: UIKit.UIColor
