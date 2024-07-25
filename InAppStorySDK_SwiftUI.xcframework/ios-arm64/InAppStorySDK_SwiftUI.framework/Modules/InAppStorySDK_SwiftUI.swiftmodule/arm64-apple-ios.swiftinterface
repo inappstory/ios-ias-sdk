@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios13.4 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AudioToolbox
@@ -9,7 +9,6 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
-import CoreText
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK_SwiftUI
@@ -170,7 +169,7 @@ public struct StoryData {
 public struct SlideData {
   public var storyData: InAppStorySDK_SwiftUI.StoryData?
   public var index: Swift.Int
-  public var payload: Swift.String
+  public var payload: Swift.String?
 }
 public struct GameStoryData {
   public var slideData: InAppStorySDK_SwiftUI.SlideData?
@@ -412,6 +411,7 @@ extension Foundation.FileManager {
   @objc deinit
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
+  public func preloadGames()
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
