@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AudioToolbox
@@ -8,7 +8,6 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
-import CoreText
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK
@@ -183,6 +182,11 @@ extension InAppStorySDK.Archive {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func setProgress(progress: Swift.Double)
   @_spi(Private) @objc deinit
 }
+@_spi(Private) extension InAppStorySDK.DownloadPlaceholder : InAppStorySDK.LottiePlaceholderProtocol {
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setAnimationData(_ data: Foundation.Data?)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setMinTime(_ time: Swift.Int)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func finishAnimation(with complete: @escaping () -> Swift.Void)
+}
 @_spi(Private) public struct VibrateSettings : Swift.Codable {
   @_spi(Private) public var pattern: Swift.Array<Swift.Int>
   @_spi(Private) public var fallbackStyle: Swift.String?
@@ -233,17 +237,31 @@ extension CoreFoundation.CGRect {
   @_spi(Private) public static var sdkCachePath: Swift.String {
     @_spi(Private) get
   }
-  @_spi(Private) public static var assetsCachePath: Swift.String {
+  @_spi(Private) public static var storyAssetsPath: Swift.String {
+    @_spi(Private) get
+  }
+  @_spi(Private) public static var LRUCachePath: Swift.String {
     @_spi(Private) get
   }
   @_spi(Private) public static var plistPath: Swift.String {
     @_spi(Private) get
   }
+  @_spi(Private) public static var gamesPath: Swift.String {
+    @_spi(Private) get
+  }
+  @_spi(Private) public static var editorPath: Swift.String {
+    @_spi(Private) get
+  }
   @_spi(Private) public class func filePatch(fileName: Swift.String) -> Swift.String
+  @_spi(Private) public static var assetsCachePath: Swift.String {
+    @_spi(Private) get
+  }
   @_spi(Private) public class func assetPatch(fileName: Swift.String) -> Swift.String
+  @_spi(Private) public class func createCatcheIfNeeded() -> Swift.Bool
   @_spi(Private) public class func isValidItem(atPath path: Swift.String, size: Swift.Int, sha1: Swift.String) -> Swift.Bool
   @_spi(Private) public class func folderSize(folderPath: Swift.String) -> Swift.Int
   @_spi(Private) public func adoptUnzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil) throws
+  @_spi(Private) public class func createFolderIfNeeded(folderPath: Swift.String) -> Swift.Bool
 }
 @_spi(Private) extension UIKit.UIView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreFoundation.CGFloat, anchorPoint: CoreFoundation.CGPoint)
@@ -466,6 +484,7 @@ extension CoreFoundation.CGRect {
   @objc deinit
 }
 extension InAppStorySDK.InAppStory {
+  public func preloadGames()
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
@@ -989,6 +1008,7 @@ extension InAppStorySDK.Archive {
   @_spi(Private) public var queryParameters: [Swift.String : Swift.String]? {
     @_spi(Private) get
   }
+  @_spi(Private) public func removeQueryParameters() -> Foundation.URL?
 }
 @_spi(Private) extension Foundation.URL {
   @_spi(Private) public func absoluteStringByTrimmingQuery() -> Swift.String?
@@ -1181,7 +1201,7 @@ public struct StoryData {
 public struct SlideData {
   public var storyData: InAppStorySDK.StoryData?
   public var index: Swift.Int
-  public var payload: Swift.String
+  public var payload: Swift.String?
 }
 public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
@@ -1249,6 +1269,11 @@ public protocol GamePlaceholderProtocol : UIKit.UIView {
 }
 public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
+}
+@_spi(Private) @objc public protocol LottiePlaceholderProtocol {
+  @_spi(Private) @objc func setAnimationData(_ data: Foundation.Data?)
+  @_spi(Private) @objc func setMinTime(_ time: Swift.Int)
+  @_spi(Private) @objc func finishAnimation(with complete: @escaping () -> Swift.Void)
 }
 @_spi(Private) extension UIKit.UIImageView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func downloadedFrom(url: Foundation.URL, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit, withViewTag tag: Swift.Int)
@@ -1390,11 +1415,6 @@ public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
   func setBackgroundColor(_ color: UIKit.UIColor)
 }
-@_spi(UGC) public let GameZipDownloadComplete: Foundation.Notification.Name
-@_spi(UGC) public let GameZipDownloadProgress: Foundation.Notification.Name
-@_spi(UGC) public let GameResourceDownloadComplete: Foundation.Notification.Name
-@_spi(UGC) public let GameResourceDownloadProgress: Foundation.Notification.Name
-@_spi(UGC) public let GameUnzipProgress: Foundation.Notification.Name
 public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }

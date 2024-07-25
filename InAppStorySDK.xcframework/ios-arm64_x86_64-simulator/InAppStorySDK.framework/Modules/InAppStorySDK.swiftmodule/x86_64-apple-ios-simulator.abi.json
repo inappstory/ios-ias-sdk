@@ -3284,6 +3284,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -3301,23 +3311,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreText",
-        "printedName": "CoreText",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK"
       },
       {
         "kind": "Import",
@@ -4057,6 +4050,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -4302,6 +4305,130 @@
               "Private"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAnimationData",
+            "printedName": "setAnimationData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@InAppStorySDK@objc(cs)DownloadPlaceholder(im)setAnimationData:",
+            "mangledName": "$s13InAppStorySDK19DownloadPlaceholderC16setAnimationDatayy10Foundation0I0VSgF",
+            "moduleName": "InAppStorySDK",
+            "objc_name": "setAnimationData:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMinTime",
+            "printedName": "setMinTime(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@InAppStorySDK@objc(cs)DownloadPlaceholder(im)setMinTime:",
+            "mangledName": "$s13InAppStorySDK19DownloadPlaceholderC10setMinTimeyySiF",
+            "moduleName": "InAppStorySDK",
+            "objc_name": "setMinTime:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finishAnimation",
+            "printedName": "finishAnimation(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@InAppStorySDK@objc(cs)DownloadPlaceholder(im)finishAnimationWith:",
+            "mangledName": "$s13InAppStorySDK19DownloadPlaceholderC15finishAnimation4withyyyc_tF",
+            "moduleName": "InAppStorySDK",
+            "objc_name": "finishAnimationWith:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -4394,6 +4521,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LottiePlaceholderProtocol",
+            "printedName": "LottiePlaceholderProtocol",
+            "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol",
+            "mangledName": "$s13InAppStorySDK25LottiePlaceholderProtocolP"
           }
         ]
       },
@@ -5430,6 +5564,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5578,8 +5722,28 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -5622,6 +5786,16 @@
         "printedName": "CommonCrypto",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -15942,6 +16116,24 @@
           },
           {
             "kind": "Function",
+            "name": "preloadGames",
+            "printedName": "preloadGames()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0abC0C12preloadGamesyyF",
+            "mangledName": "$s13InAppStorySDK0abC0C12preloadGamesyyF",
+            "moduleName": "InAppStorySDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "clearMemory",
             "printedName": "clearMemory()",
             "children": [
@@ -16694,6 +16886,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -21691,6 +21893,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -21807,6 +22019,16 @@
         "sugared_genericSig": "<Self : UIKit.UIView>",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -29766,6 +29988,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -30730,6 +30962,16 @@
         "printedName": "Compression",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -32001,6 +32243,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -32032,6 +32291,16 @@
         "printedName": "Compression",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -39580,16 +39849,25 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:13InAppStorySDK9SlideDataV7payloadSSvp",
-            "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSvp",
+            "usr": "s:13InAppStorySDK9SlideDataV7payloadSSSgvp",
+            "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
+              "HasInitialValue",
               "HasStorage",
               "AccessControl"
             ],
@@ -39602,14 +39880,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSvg",
-                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSvg",
+                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSSgvg",
+                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSSgvg",
                 "moduleName": "InAppStorySDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -39626,14 +39912,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSvs",
-                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSvs",
+                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSSgvs",
+                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSSgvs",
                 "moduleName": "InAppStorySDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -39650,8 +39944,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSvM",
-                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSvM",
+                "usr": "s:13InAppStorySDK9SlideDataV7payloadSSSgvM",
+                "mangledName": "$s13InAppStorySDK9SlideDataV7payloadSSSgvM",
                 "moduleName": "InAppStorySDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -43905,6 +44199,145 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "LottiePlaceholderProtocol",
+        "printedName": "LottiePlaceholderProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setAnimationData",
+            "printedName": "setAnimationData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol(im)setAnimationData:",
+            "mangledName": "$s13InAppStorySDK25LottiePlaceholderProtocolP16setAnimationDatayy10Foundation0J0VSgF",
+            "moduleName": "InAppStorySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.LottiePlaceholderProtocol>",
+            "sugared_genericSig": "<Self where Self : InAppStorySDK.LottiePlaceholderProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "spi_group_names": [
+              "Private"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMinTime",
+            "printedName": "setMinTime(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol(im)setMinTime:",
+            "mangledName": "$s13InAppStorySDK25LottiePlaceholderProtocolP10setMinTimeyySiF",
+            "moduleName": "InAppStorySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.LottiePlaceholderProtocol>",
+            "sugared_genericSig": "<Self where Self : InAppStorySDK.LottiePlaceholderProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "spi_group_names": [
+              "Private"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "finishAnimation",
+            "printedName": "finishAnimation(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol(im)finishAnimationWith:",
+            "mangledName": "$s13InAppStorySDK25LottiePlaceholderProtocolP15finishAnimation4withyyyc_tF",
+            "moduleName": "InAppStorySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.LottiePlaceholderProtocol>",
+            "sugared_genericSig": "<Self where Self : InAppStorySDK.LottiePlaceholderProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "spi_group_names": [
+              "Private"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol",
+        "mangledName": "$s13InAppStorySDK25LottiePlaceholderProtocolP",
+        "moduleName": "InAppStorySDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "Private"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -47532,6 +47965,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -47936,251 +48379,6 @@
         ]
       },
       {
-        "kind": "Var",
-        "name": "GameZipDownloadComplete",
-        "printedName": "GameZipDownloadComplete",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK23GameZipDownloadCompleteSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK23GameZipDownloadCompleteSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "UGC"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK23GameZipDownloadCompleteSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK23GameZipDownloadCompleteSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "GameZipDownloadProgress",
-        "printedName": "GameZipDownloadProgress",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK23GameZipDownloadProgressSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK23GameZipDownloadProgressSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "UGC"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK23GameZipDownloadProgressSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK23GameZipDownloadProgressSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "GameResourceDownloadComplete",
-        "printedName": "GameResourceDownloadComplete",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK28GameResourceDownloadCompleteSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK28GameResourceDownloadCompleteSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "UGC"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK28GameResourceDownloadCompleteSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK28GameResourceDownloadCompleteSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "GameResourceDownloadProgress",
-        "printedName": "GameResourceDownloadProgress",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK28GameResourceDownloadProgressSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK28GameResourceDownloadProgressSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "UGC"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK28GameResourceDownloadProgressSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK28GameResourceDownloadProgressSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "GameUnzipProgress",
-        "printedName": "GameUnzipProgress",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK17GameUnzipProgressSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK17GameUnzipProgressSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl",
-          "SPIAccessControl"
-        ],
-        "spi_group_names": [
-          "UGC"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK17GameUnzipProgressSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK17GameUnzipProgressSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -48343,6 +48541,47 @@
         "sugared_genericSig": "<Self : UIKit.UICollectionViewCell>",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UniformTypeIdentifiers",
+        "printedName": "UniformTypeIdentifiers",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "MobileCoreServices",
+        "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -50010,8 +50249,8 @@
           },
           {
             "kind": "Var",
-            "name": "assetsCachePath",
-            "printedName": "assetsCachePath",
+            "name": "storyAssetsPath",
+            "printedName": "storyAssetsPath",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -50021,8 +50260,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:So13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvpZ",
-            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvpZ",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE15storyAssetsPathSSvpZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15storyAssetsPathSSvpZ",
             "moduleName": "InAppStorySDK",
             "static": true,
             "declAttributes": [
@@ -50047,8 +50286,62 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:So13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvgZ",
-                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvgZ",
+                "usr": "s:So13NSFileManagerC13InAppStorySDKE15storyAssetsPathSSvgZ",
+                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15storyAssetsPathSSvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "LRUCachePath",
+            "printedName": "LRUCachePath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE12LRUCachePathSSvpZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE12LRUCachePathSSvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So13NSFileManagerC13InAppStorySDKE12LRUCachePathSSvgZ",
+                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE12LRUCachePathSSvgZ",
                 "moduleName": "InAppStorySDK",
                 "static": true,
                 "declAttributes": [
@@ -50117,6 +50410,114 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "gamesPath",
+            "printedName": "gamesPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE9gamesPathSSvpZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE9gamesPathSSvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So13NSFileManagerC13InAppStorySDKE9gamesPathSSvgZ",
+                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE9gamesPathSSvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "editorPath",
+            "printedName": "editorPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE10editorPathSSvpZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE10editorPathSSvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So13NSFileManagerC13InAppStorySDKE10editorPathSSvgZ",
+                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE10editorPathSSvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "filePatch",
             "printedName": "filePatch(fileName:)",
@@ -50149,6 +50550,60 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Var",
+            "name": "assetsCachePath",
+            "printedName": "assetsCachePath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvpZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvgZ",
+                "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE15assetsCachePathSSvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "assetPatch",
             "printedName": "assetPatch(fileName:)",
@@ -50169,6 +50624,32 @@
             "declKind": "Func",
             "usr": "s:So13NSFileManagerC13InAppStorySDKE10assetPatch8fileNameS2S_tFZ",
             "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE10assetPatch8fileNameS2S_tFZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createCatcheIfNeeded",
+            "printedName": "createCatcheIfNeeded()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE20createCatcheIfNeededSbyFZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE20createCatcheIfNeededSbyFZ",
             "moduleName": "InAppStorySDK",
             "static": true,
             "declAttributes": [
@@ -50306,6 +50787,38 @@
               "Private"
             ],
             "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createFolderIfNeeded",
+            "printedName": "createFolderIfNeeded(folderPath:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So13NSFileManagerC13InAppStorySDKE20createFolderIfNeeded10folderPathSbSS_tFZ",
+            "mangledName": "$sSo13NSFileManagerC13InAppStorySDKE20createFolderIfNeeded10folderPathSbSS_tFZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -55118,6 +55631,36 @@
           },
           {
             "kind": "Function",
+            "name": "removeQueryParameters",
+            "printedName": "removeQueryParameters()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation3URLV13InAppStorySDKE21removeQueryParametersACSgyF",
+            "mangledName": "$s10Foundation3URLV13InAppStorySDKE21removeQueryParametersACSgyF",
+            "moduleName": "InAppStorySDK",
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "absoluteStringByTrimmingQuery",
             "printedName": "absoluteStringByTrimmingQuery()",
             "children": [
@@ -57817,60 +58360,18 @@
       "value": "false"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GenericGameDownloadTask.swift",
+      "kind": "IntegerLiteral",
+      "offset": 343,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Entry+ZIP64.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
       "length": 1,
       "value": "4"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 227,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 256,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 285,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 314,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 343,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 373,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/NativeFont.swift",
-      "kind": "StringLiteral",
-      "offset": 403,
-      "length": 2,
-      "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
@@ -57938,28 +58439,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14548,
+      "offset": 14755,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 20317,
+      "offset": 20524,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 21536,
+      "offset": 21743,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 24400,
+      "offset": 23997,
       "length": 4,
       "value": "true"
     },
@@ -58300,6 +58801,62 @@
       "value": "0.5"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 562,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 672,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 720,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 772,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "IntegerLiteral",
+      "offset": 816,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "FloatLiteral",
+      "offset": 907,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "FloatLiteral",
+      "offset": 1009,
+      "length": 4,
+      "value": "0.02"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1064,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "StringLiteral",
       "offset": 1626,
@@ -58364,22 +58921,15 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2356,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 2915,
+      "offset": 2742,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "FloatLiteral",
-      "offset": 3023,
+      "offset": 2850,
       "length": 3,
       "value": "0.0"
     },
@@ -58393,7 +58943,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 71346,
+      "offset": 70026,
       "length": 2,
       "value": "[]"
     },
@@ -58477,7 +59027,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Creator\/CurrentStoryCreator.swift",
       "kind": "BooleanLiteral",
-      "offset": 8771,
+      "offset": 9180,
       "length": 5,
       "value": "false"
     },
@@ -58498,21 +59048,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Game.swift",
       "kind": "StringLiteral",
-      "offset": 375,
+      "offset": 426,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Game.swift",
       "kind": "Array",
-      "offset": 693,
+      "offset": 744,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Game.swift",
       "kind": "Array",
-      "offset": 2404,
+      "offset": 2837,
       "length": 2,
       "value": "[]"
     },
@@ -58563,14 +59113,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.23.8\""
+      "value": "\"1.24.0\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3236\""
+      "value": "\"3336\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -58939,35 +59489,35 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 29229,
+      "offset": 30292,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 29281,
+      "offset": 30344,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 29848,
+      "offset": 30911,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 29900,
+      "offset": 30963,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 43052,
+      "offset": 44115,
       "length": 5,
       "value": "false"
     },
@@ -58988,308 +59538,301 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1468,
+      "offset": 1476,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1564,
+      "offset": 1572,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1594,
+      "offset": 1602,
       "length": 8,
       "value": "\"reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2127,
+      "offset": 2135,
       "length": 21,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2147,
+      "offset": 2155,
       "length": 5,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2151,
+      "offset": 2159,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2415,
+      "offset": 2423,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2599,
+      "offset": 2607,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2890,
+      "offset": 2898,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2928,
+      "offset": 2936,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2984,
+      "offset": 2992,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3102,
+      "offset": 3110,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 3146,
+      "offset": 3154,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1272,
+      "offset": 1280,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3392,
+      "offset": 3400,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3436,
+      "offset": 3444,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3476,
+      "offset": 3484,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3511,
+      "offset": 3519,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 3555,
+      "offset": 3563,
       "length": 6,
       "value": "\"next\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3652,
+      "offset": 3660,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3688,
+      "offset": 3696,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3733,
+      "offset": 3741,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3777,
+      "offset": 3785,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3822,
+      "offset": 3830,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3866,
+      "offset": 3874,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3915,
+      "offset": 3923,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3958,
+      "offset": 3966,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4002,
+      "offset": 4010,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 4097,
+      "offset": 4105,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4285,
+      "offset": 4293,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 4466,
+      "offset": 4474,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4511,
+      "offset": 4519,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4559,
+      "offset": 4567,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4607,
+      "offset": 4748,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4710,
+      "offset": 4851,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 4838,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
-      "kind": "FloatLiteral",
-      "offset": 5515,
+      "offset": 5851,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 5522,
+      "offset": 5858,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "Array",
-      "offset": 5649,
+      "offset": 5985,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1147,
+      "offset": 1155,
       "length": 16,
       "value": "\"InAppStorySDK.CurrentStoryView\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11077,
+      "offset": 11615,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 21135,
+      "offset": 22383,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22829,
+      "offset": 24540,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 51562,
+      "offset": 53036,
       "length": 4,
       "value": "true"
     },
@@ -59729,87 +60272,171 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
-      "kind": "IntegerLiteral",
-      "offset": 387,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
-      "kind": "IntegerLiteral",
-      "offset": 416,
-      "length": 1,
-      "value": "0"
+      "kind": "StringLiteral",
+      "offset": 467,
+      "length": 20,
+      "value": "\"splashLottieScreen\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 583,
+      "offset": 559,
       "length": 13,
       "value": "\"downloadUrl\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 649,
+      "offset": 604,
       "length": 13,
       "value": "\"archiveSize\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 693,
+      "offset": 649,
       "length": 13,
       "value": "\"archiveSha1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 737,
-      "length": 19,
-      "value": "\"canTryReloadCount\""
+      "offset": 467,
+      "length": 20,
+      "value": "\"splashLottieScreen\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 787,
-      "length": 13,
-      "value": "\"loggerLevel\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
-      "kind": "StringLiteral",
-      "offset": 583,
+      "offset": 559,
       "length": 13,
       "value": "\"downloadUrl\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 649,
+      "offset": 604,
       "length": 13,
       "value": "\"archiveSize\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 693,
+      "offset": 649,
+      "length": 13,
+      "value": "\"archiveSha1\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 994,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1023,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1124,
+      "length": 20,
+      "value": "\"splashLottieScreen\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1243,
+      "length": 13,
+      "value": "\"downloadUrl\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1310,
+      "length": 13,
+      "value": "\"archiveSize\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1355,
       "length": 13,
       "value": "\"archiveSha1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 737,
+      "offset": 1400,
       "length": 19,
       "value": "\"canTryReloadCount\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 787,
+      "offset": 1451,
       "length": 13,
       "value": "\"loggerLevel\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1124,
+      "length": 20,
+      "value": "\"splashLottieScreen\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1243,
+      "length": 13,
+      "value": "\"downloadUrl\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1310,
+      "length": 13,
+      "value": "\"archiveSize\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1355,
+      "length": 13,
+      "value": "\"archiveSha1\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1400,
+      "length": 19,
+      "value": "\"canTryReloadCount\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1451,
+      "length": 13,
+      "value": "\"loggerLevel\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1884,
+      "length": 19,
+      "value": "\"durationMinimalMs\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
+      "kind": "StringLiteral",
+      "offset": 1884,
+      "length": 19,
+      "value": "\"durationMinimalMs\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Image.swift",
@@ -59852,6 +60479,13 @@
       "offset": 438,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/FFCacheManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1291,
+      "length": 24,
+      "value": "\"com.inappstory.ffcache\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/ReachabilityService.swift",
@@ -60171,140 +60805,140 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 828,
       "length": 18,
       "value": "\"server_timestamp\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 907,
       "length": 20,
       "value": "\"image_placeholders\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 927,
+      "offset": 962,
       "length": 20,
       "value": "\"is_allow_profiling\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 982,
+      "offset": 1017,
       "length": 23,
       "value": "\"is_allow_statistic_v1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1040,
+      "offset": 1075,
       "length": 23,
       "value": "\"is_allow_statistic_v2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1098,
+      "offset": 1133,
       "length": 14,
       "value": "\"is_allow_ugc\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1147,
+      "offset": 1182,
       "length": 7,
       "value": "\"cache\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1189,
+      "offset": 1224,
       "length": 22,
       "value": "\"preview_aspect_ratio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1246,
+      "offset": 1306,
       "length": 8,
       "value": "\"editor\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 793,
+      "offset": 828,
       "length": 18,
       "value": "\"server_timestamp\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 907,
       "length": 20,
       "value": "\"image_placeholders\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 927,
+      "offset": 962,
       "length": 20,
       "value": "\"is_allow_profiling\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 982,
+      "offset": 1017,
       "length": 23,
       "value": "\"is_allow_statistic_v1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1040,
+      "offset": 1075,
       "length": 23,
       "value": "\"is_allow_statistic_v2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1098,
+      "offset": 1133,
       "length": 14,
       "value": "\"is_allow_ugc\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1147,
+      "offset": 1182,
       "length": 7,
       "value": "\"cache\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1189,
+      "offset": 1224,
       "length": 22,
       "value": "\"preview_aspect_ratio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 1246,
+      "offset": 1306,
       "length": 8,
       "value": "\"editor\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 2677,
+      "offset": 2832,
       "length": 11,
       "value": "\"expire_in\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Session.swift",
       "kind": "StringLiteral",
-      "offset": 2677,
+      "offset": 2832,
       "length": 11,
       "value": "\"expire_in\""
     },
@@ -60486,357 +61120,343 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "Dictionary",
-      "offset": 3761,
+      "offset": 3765,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4130,
+      "offset": 4134,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4184,
+      "offset": 4188,
       "length": 12,
       "value": "\"stat_title\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4266,
+      "offset": 4270,
       "length": 13,
       "value": "\"video_cover\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4310,
+      "offset": 4314,
       "length": 14,
       "value": "\"slides_count\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4365,
+      "offset": 4369,
       "length": 18,
       "value": "\"background_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4415,
+      "offset": 4419,
       "length": 13,
       "value": "\"title_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4468,
+      "offset": 4472,
       "length": 10,
       "value": "\"deeplink\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4509,
+      "offset": 4513,
       "length": 15,
       "value": "\"game_instance\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4555,
+      "offset": 4559,
       "length": 16,
       "value": "\"hide_in_reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4602,
+      "offset": 4606,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4653,
+      "offset": 4657,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4692,
+      "offset": 4696,
       "length": 11,
       "value": "\"is_opened\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4734,
+      "offset": 4738,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4796,
+      "offset": 4800,
       "length": 11,
       "value": "\"has_audio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4919,
+      "offset": 4923,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4958,
+      "offset": 4962,
       "length": 13,
       "value": "\"slides_html\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4998,
-      "length": 17,
-      "value": "\"slides_duration\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
-      "kind": "StringLiteral",
-      "offset": 5058,
+      "offset": 5064,
       "length": 25,
       "value": "\"slides_screenshot_share\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5183,
+      "offset": 5191,
       "length": 17,
       "value": "\"like_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5227,
+      "offset": 5235,
       "length": 21,
       "value": "\"favorite_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5275,
+      "offset": 5283,
       "length": 18,
       "value": "\"share_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5337,
+      "offset": 5345,
       "length": 10,
       "value": "\"src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5382,
+      "offset": 5390,
       "length": 26,
       "value": "\"img_placeholder_src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5448,
+      "offset": 5456,
       "length": 16,
       "value": "\"slides_payload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5495,
+      "offset": 5503,
       "length": 9,
       "value": "\"payload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4130,
+      "offset": 4134,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4184,
+      "offset": 4188,
       "length": 12,
       "value": "\"stat_title\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4266,
+      "offset": 4270,
       "length": 13,
       "value": "\"video_cover\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4310,
+      "offset": 4314,
       "length": 14,
       "value": "\"slides_count\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4365,
+      "offset": 4369,
       "length": 18,
       "value": "\"background_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4415,
+      "offset": 4419,
       "length": 13,
       "value": "\"title_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4468,
+      "offset": 4472,
       "length": 10,
       "value": "\"deeplink\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4509,
+      "offset": 4513,
       "length": 15,
       "value": "\"game_instance\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4555,
+      "offset": 4559,
       "length": 16,
       "value": "\"hide_in_reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4602,
+      "offset": 4606,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4653,
+      "offset": 4657,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4692,
+      "offset": 4696,
       "length": 11,
       "value": "\"is_opened\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4734,
+      "offset": 4738,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4796,
+      "offset": 4800,
       "length": 11,
       "value": "\"has_audio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4919,
+      "offset": 4923,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4958,
+      "offset": 4962,
       "length": 13,
       "value": "\"slides_html\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4998,
-      "length": 17,
-      "value": "\"slides_duration\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
-      "kind": "StringLiteral",
-      "offset": 5058,
+      "offset": 5064,
       "length": 25,
       "value": "\"slides_screenshot_share\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5183,
+      "offset": 5191,
       "length": 17,
       "value": "\"like_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5227,
+      "offset": 5235,
       "length": 21,
       "value": "\"favorite_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5275,
+      "offset": 5283,
       "length": 18,
       "value": "\"share_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5337,
+      "offset": 5345,
       "length": 10,
       "value": "\"src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5382,
+      "offset": 5390,
       "length": 26,
       "value": "\"img_placeholder_src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5448,
+      "offset": 5456,
       "length": 16,
       "value": "\"slides_payload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5495,
+      "offset": 5503,
       "length": 9,
       "value": "\"payload\""
     },
@@ -60974,6 +61594,13 @@
       "value": "1"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Objects\/GameTask.swift",
+      "kind": "FloatLiteral",
+      "offset": 192,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "StringLiteral",
       "offset": 371,
@@ -61060,14 +61687,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10291,
+      "offset": 10612,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13594,
+      "offset": 13915,
       "length": 1,
       "value": "0"
     },
@@ -61297,45 +61924,185 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 349,
+      "length": 8,
+      "value": "\"static\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 5,
+      "value": "\"vod\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 349,
+      "length": 8,
+      "value": "\"static\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 5,
+      "value": "\"vod\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "IntegerLiteral",
-      "offset": 360,
+      "offset": 454,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 394,
+      "offset": 488,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 428,
+      "offset": 530,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 462,
+      "offset": 564,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 598,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 637,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1346,
       "length": 13,
       "value": "\"slide_index\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 1406,
+      "length": 14,
+      "value": "\"content_type\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1483,
+      "length": 10,
+      "value": "\"filename\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1543,
+      "length": 13,
+      "value": "\"range_start\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1585,
+      "length": 11,
+      "value": "\"range_end\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1346,
       "length": 13,
       "value": "\"slide_index\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1406,
+      "length": 14,
+      "value": "\"content_type\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1483,
+      "length": 10,
+      "value": "\"filename\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1543,
+      "length": 13,
+      "value": "\"range_start\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 1585,
+      "length": 11,
+      "value": "\"range_end\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2601,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2619,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2645,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2663,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2681,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Resource.swift",
+      "kind": "StringLiteral",
+      "offset": 2704,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/LRUCacheManager.swift",
@@ -61350,6 +62117,20 @@
       "offset": 465,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Managers\/TimelineManager.swift",
+      "kind": "FloatLiteral",
+      "offset": 721,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Managers\/TimelineManager.swift",
+      "kind": "StringLiteral",
+      "offset": 561,
+      "length": 15,
+      "value": "\"InAppStorySDK.TimelineManager\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/ProfilingManager.swift",
@@ -61870,6 +62651,13 @@
       "value": "1"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CustomScheme\/StoryAssetsSchemeHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 134,
+      "length": 24,
+      "value": "\"InAppStorySDK.StoryAssetsSchemeHandler\""
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/DataCompression.swift",
       "kind": "BooleanLiteral",
       "offset": 4208,
@@ -61924,6 +62712,13 @@
       "offset": 884,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/GameManager.swift",
+      "kind": "Array",
+      "offset": 425,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/FileManager+ZIP.swift",
@@ -62208,121 +63003,135 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1576,
+      "offset": 1572,
+      "length": 14,
+      "value": "\"game\/preload\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1614,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1639,
+      "offset": 1677,
       "length": 10,
       "value": "\"serverID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1724,
       "length": 12,
       "value": "\"slideIndex\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1734,
+      "offset": 1772,
       "length": 8,
       "value": "\"expand\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1776,
+      "offset": 1814,
       "length": 6,
       "value": "\"tags\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1816,
+      "offset": 1854,
       "length": 6,
       "value": "\"test\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1856,
+      "offset": 1894,
       "length": 6,
       "value": "\"once\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1898,
+      "offset": 1936,
       "length": 8,
       "value": "\"feedID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1941,
+      "offset": 1979,
       "length": 7,
       "value": "\"limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1986,
+      "offset": 2024,
       "length": 10,
       "value": "\"favorite\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2032,
+      "offset": 2070,
       "length": 8,
       "value": "\"fields\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2074,
+      "offset": 2112,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2115,
+      "offset": 2153,
       "length": 7,
       "value": "\"value\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2158,
+      "offset": 2196,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2210,
+      "offset": 2248,
       "length": 10,
       "value": "\"src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2256,
+      "offset": 2294,
       "length": 8,
       "value": "\"gameID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2303,
+      "offset": 2341,
       "length": 10,
       "value": "\"demoMode\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 2392,
+      "length": 16,
+      "value": "\"hasFeatureWebp\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
@@ -62460,63 +63269,70 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1576,
+      "offset": 1572,
+      "length": 14,
+      "value": "\"game\/preload\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1614,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5311,
+      "offset": 5406,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6492,
+      "offset": 6587,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6553,
+      "offset": 6648,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6724,
+      "offset": 6819,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 6941,
+      "offset": 7036,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6984,
+      "offset": 7079,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21658,
+      "offset": 21865,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23937,
+      "offset": 24144,
       "length": 5,
       "value": "false"
     },
@@ -63671,7 +64487,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/StoryService.swift",
       "kind": "BooleanLiteral",
-      "offset": 21124,
+      "offset": 21128,
       "length": 5,
       "value": "false"
     },
@@ -63746,51 +64562,30 @@
       "value": "\"uk.co.ashleymills.reachability\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameDownloadService.swift",
       "kind": "StringLiteral",
-      "offset": 237,
-      "length": 25,
-      "value": "\"gameZipDownloadComplete\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
-      "kind": "StringLiteral",
-      "offset": 335,
-      "length": 25,
-      "value": "\"gameZipDownloadProgress\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
-      "kind": "StringLiteral",
-      "offset": 433,
-      "length": 30,
-      "value": "\"gameResourceDownloadComplete\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
-      "kind": "StringLiteral",
-      "offset": 536,
-      "length": 30,
-      "value": "\"gameResourceDownloadProgress\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
-      "kind": "StringLiteral",
-      "offset": 639,
-      "length": 19,
-      "value": "\"gameUnzipProgress\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
-      "kind": "StringLiteral",
-      "offset": 1201,
+      "offset": 343,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/GameDownloadService.swift",
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CustomScheme\/VODAssetsSchemeHandler.swift",
+      "kind": "Dictionary",
+      "offset": 691,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
+      "kind": "Array",
+      "offset": 661,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4640,
+      "offset": 3891,
       "length": 1,
       "value": "0"
     }
