@@ -62446,49 +62446,56 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "BooleanLiteral",
-      "offset": 672,
+      "offset": 606,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
+      "kind": "BooleanLiteral",
+      "offset": 649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "IntegerLiteral",
-      "offset": 720,
+      "offset": 697,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "IntegerLiteral",
-      "offset": 772,
+      "offset": 749,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "IntegerLiteral",
-      "offset": 816,
+      "offset": 793,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "FloatLiteral",
-      "offset": 907,
+      "offset": 884,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "FloatLiteral",
-      "offset": 1009,
+      "offset": 986,
       "length": 4,
       "value": "0.02"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Elements\/DownloadPlaceholder.swift",
       "kind": "BooleanLiteral",
-      "offset": 1064,
+      "offset": 1041,
       "length": 5,
       "value": "false"
     },
@@ -62621,7 +62628,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 70026,
+      "offset": 69661,
       "length": 2,
       "value": "[]"
     },
@@ -62903,14 +62910,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.24.0\""
+      "value": "\"1.24.1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3336\""
+      "value": "\"3342\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
