@@ -62522,8 +62522,15 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/GameManager.swift",
+      "kind": "StringLiteral",
+      "offset": 248,
+      "length": 21,
+      "value": "\"com.inappstory.game\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/GameManager.swift",
       "kind": "Array",
-      "offset": 425,
+      "offset": 402,
       "length": 2,
       "value": "[]"
     },
@@ -62613,13 +62620,6 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
-      "kind": "FloatLiteral",
-      "offset": 2850,
-      "length": 3,
-      "value": "0.0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "StringLiteral",
       "offset": 640,
       "length": 10,
@@ -62628,7 +62628,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 69661,
+      "offset": 69821,
       "length": 2,
       "value": "[]"
     },
@@ -62910,14 +62910,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.24.1\""
+      "value": "\"1.24.2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3342\""
+      "value": "\"3376\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -64728,21 +64728,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1990,
+      "offset": 2026,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10612,
+      "offset": 10648,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 13915,
+      "offset": 13951,
       "length": 1,
       "value": "0"
     },
@@ -64805,14 +64805,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 18012,
+      "offset": 17997,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 19901,
+      "offset": 19886,
       "length": 5,
       "value": "false"
     },
