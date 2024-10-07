@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <InAppStorySDK_SwiftUI/CSPlaceholderView.h>
+#import "CSPlaceholderView.h"
 
 //! Project version number for InAppStory.
 FOUNDATION_EXPORT double InAppStoryVersionNumber;
