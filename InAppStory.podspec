@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name = 'InAppStory'
-    s.version = '1.23.9'
+    s.version = '1.23.10'
     s.platform = :ios, '10.0'
     s.license  = { :type => 'MIT', :file => 'LICENSE' }
     s.homepage = 'https://github.com/inappstory/ios-ias-sdk'
