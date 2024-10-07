@@ -57,6 +57,22 @@ public struct Entry : Swift.Equatable {
   }
   public static func == (lhs: InAppStorySDK.Entry, rhs: InAppStorySDK.Entry) -> Swift.Bool
 }
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class SettingsAPI {
+  @_spi(IAS_API) public var placeholders: Swift.Dictionary<Swift.String, Swift.String> {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.SettingsAPI {
+  @_spi(IAS_API) public func setTags(_ tags: Swift.Array<Swift.String>)
+  @_spi(IAS_API) public func addTags(_ tags: Swift.Array<Swift.String>)
+  @_spi(IAS_API) public func removeTags(_ tags: Swift.Array<Swift.String>)
+}
 public struct EntryOD : Swift.Equatable {
   public func path(using encoding: Swift.String.Encoding) -> Swift.String
   public var path: Swift.String {
@@ -130,6 +146,16 @@ extension InAppStorySDK.Archive {
 extension InAppStorySDK.ArchiveOD {
   final public func extract(_ entry: InAppStorySDK.EntryOD, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
   final public func extract(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class FavoritesAPI {
+  @_spi(IAS_API) public func removeFromFavorites(with storyID: Swift.String)
+  @_spi(IAS_API) public func removeAllFavorite()
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class SingleStoryAPI {
+  @_spi(IAS_API) public func showStory(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) public func showStoryOnce(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) @objc deinit
 }
 public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
 @_spi(UGC) public let EditorZipDownloadComplete: Foundation.Notification.Name
@@ -801,6 +827,30 @@ final public class Archive : Swift.Sequence {
   public typealias Element = InAppStorySDK.Entry
   public typealias Iterator = Swift.AnyIterator<InAppStorySDK.Entry>
 }
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppStoryAPI {
+  @_spi(IAS_API) public static let shared: InAppStorySDK.InAppStoryAPI
+  @_spi(IAS_API) final public let settingsAPI: InAppStorySDK.SettingsAPI
+  @_spi(IAS_API) final public let appearanceAPI: InAppStorySDK.AppearanceAPI
+  @_spi(IAS_API) final public let favoritesAPI: InAppStorySDK.FavoritesAPI
+  @_spi(IAS_API) final public let singleStoryAPI: InAppStorySDK.SingleStoryAPI
+  @_spi(IAS_API) final public let onboardingsAPI: InAppStorySDK.OnboardingsAPI
+  @_spi(IAS_API) final public let stackFeedAPI: InAppStorySDK.StackFeedAPI
+  @_spi(IAS_API) final public let gamesAPI: InAppStorySDK.GamesAPI
+  @_spi(IAS_API) final public let callbacksAPI: InAppStorySDK.CallbacksAPI
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.InAppStoryAPI {
+  @_spi(IAS_API) public var settings: InAppStorySDK.Settings? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil)
+}
+@_spi(IAS_API) extension InAppStorySDK.InAppStoryAPI {
+  @_spi(IAS_API) public func clearMemory()
+  @_spi(IAS_API) public func clearCache()
+  @_spi(IAS_API) public func closeReader(complete: @escaping () -> Swift.Void)
+}
 @_spi(UGC) public class Editor {
   @_spi(UGC) public var zipURL: Swift.String
   @_spi(UGC) public var config: Swift.String
@@ -916,6 +966,15 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
   func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class StackFeedAPI {
+  @_spi(IAS_API) public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public func getStackFeed(feed: Swift.String? = nil, complete: @escaping (InAppStorySDK.StackFeedResult) -> Swift.Void)
+  @_spi(IAS_API) public func showStackReader(with stackList: InAppStorySDK.StackFeedObject, with panelSettings: InAppStorySDK.PanelSettings? = nil, showing: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) @objc deinit
+}
 public enum ListDirection {
   case horizontal(rows: Swift.Int = 1)
   case vertical(colums: Swift.Int = 3)
@@ -939,6 +998,252 @@ public enum ListDirection {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class AppearanceAPI {
+  @_spi(IAS_API) public var favoritesCount: Swift.Int {
+    @_spi(IAS_API) get
+  }
+  @_spi(IAS_API) public var editorCellSettings: InAppStorySDK.EditorCellSettings? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var sslPinningHashKeys: [Swift.String]? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var coverQuality: InAppStorySDK.Quality {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var showCellTitle: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var cellGradientEnabled: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var cellBorderRadius: CoreFoundation.CGFloat {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var cellBorderColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var cellBorderOpenedColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var cellFont: UIKit.UIFont {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsCellImageBackgroundColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsCellImageCornerRadius: CoreFoundation.CGFloat {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsCellMainTextColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsCellOldPriceTextColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodCellTitleFont: UIKit.UIFont {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodCellSubtitleFont: UIKit.UIFont {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodCellPriceFont: UIKit.UIFont {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodCellOldPriceFont: UIKit.UIFont {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsSubstrateColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsDimColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsSubstrateHeight: CoreFoundation.CGFloat {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodCell: InAppStorySDK.GoodsCellProtocol? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsView: InAppStorySDK.CustomGoodsView? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsCloseImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var timerGradientEnable: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var swipeToClose: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var overScrollToClose: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var timerGradient: InAppStorySDK.TimersGradient {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var placeholderElementColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var placeholderBackgroundColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var readerBackgroundColor: UIKit.UIColor {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var readerCornerRadius: CoreFoundation.CGFloat {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var likeImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var likeSelectedImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var dislikeImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var dislikeSelectedImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var favoriteImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var favoriteSelectedImag: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var shareImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var shareSelectedImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var soundImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var soundSelectedImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var closeReaderImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var refreshImage: UIKit.UIImage {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var placeholderView: InAppStorySDK.PlaceholderProtocol? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var gamePlaceholderView: InAppStorySDK.DownloadPlaceholderProtocol? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var closeButtonPosition: InAppStorySDK.ClosePosition {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var scrollStyle: InAppStorySDK.ScrollStyle {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var presentationStyle: InAppStorySDK.PresentationStyle {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var muted: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var isReaderOpen: Swift.Bool {
+    @_spi(IAS_API) get
+  }
+  @_spi(IAS_API) public var isGameOpen: Swift.Bool {
+    @_spi(IAS_API) get
+  }
+  @_spi(IAS_API) public var isLoggingEnabled: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var isDeviceIDEnabled: Swift.Bool {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.AppearanceAPI {
+  @_spi(IAS_API) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var insetForSection: (() -> UIKit.UIEdgeInsets)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var minimumInteritemSpacingForSection: (() -> CoreFoundation.CGFloat)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsSizeForItem: (() -> CoreFoundation.CGSize)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
 }
 public enum CompressionMethod : Swift.UInt16 {
   case none
@@ -1037,6 +1342,25 @@ extension Foundation.FileManager {
 }
 extension Foundation.URL {
   public func isContained(in parentDirectoryURL: Foundation.URL) -> Swift.Bool
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class GamesAPI {
+  @_spi(IAS_API) public func openGame(with game: InAppStorySDK.Game, notificationInfo: Swift.Dictionary<Swift.String, Any>? = nil, complete: ((_ opened: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) public func closeGame()
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.GamesAPI {
+  @_spi(IAS_API) public var gameReaderWillShow: (() -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var gameReaderDidClose: (() -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
 }
 @_spi(Private) extension Swift.KeyedDecodingContainer {
   @_spi(Private) public func decodeWrapper<T>(key: K, defaultValue: T) throws -> T where T : Swift.Decodable
@@ -1279,6 +1603,10 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func downloadedFrom(url: Foundation.URL, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit, withViewTag tag: Swift.Int)
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func downloadedFrom(link: Swift.String, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit, withViewTag tag: Swift.Int)
 }
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class OnboardingsAPI {
+  @_spi(IAS_API) public func showOnboarding(feed: Swift.String = "onboarding", limit: Swift.Int = 0, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) @objc deinit
+}
 @_spi(Private) extension Foundation.Timer {
   @_spi(Private) @discardableResult
   public class func schedule(delay: Foundation.TimeInterval, handler: @escaping (Foundation.Timer?) -> Swift.Void) -> Foundation.Timer
@@ -1381,6 +1709,59 @@ extension UIKit.UICollectionViewFlowLayout {
 @_spi(Private) public protocol Reorderable {
   associatedtype OrderElement : Swift.Equatable
   @_spi(Private) var orderElement: Self.OrderElement { get }
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class CallbacksAPI {
+  @_spi(IAS_API) public var storiesDidUpdated: ((_ isContent: Swift.Bool, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var onActionWith: ((_ target: Swift.String, _ type: InAppStorySDK.ActionType, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var storyReaderWillShow: ((_ storyType: InAppStorySDK.StoriesType) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var storyReaderDidClose: ((_ storyType: InAppStorySDK.StoriesType) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var favoriteCellDidSelect: (() -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var editorCellDidSelect: (() -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var goodItemSelected: ((_ item: InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var customShare: ((InAppStorySDK.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)? {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) @objc deinit
+}
+@_spi(IAS_API) extension InAppStorySDK.CallbacksAPI {
+  @_spi(IAS_API) public var storiesEvent: ((_ event: InAppStorySDK.IASEvent.Story) -> Swift.Void) {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var gameEvent: ((_ event: InAppStorySDK.IASEvent.Game) -> Swift.Void) {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
+  @_spi(IAS_API) public var failureEvent: ((InAppStorySDK.IASEvent.Failure) -> Swift.Void) {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
 }
 extension InAppStorySDK.ArchiveOD {
   final public var data: Foundation.Data? {
