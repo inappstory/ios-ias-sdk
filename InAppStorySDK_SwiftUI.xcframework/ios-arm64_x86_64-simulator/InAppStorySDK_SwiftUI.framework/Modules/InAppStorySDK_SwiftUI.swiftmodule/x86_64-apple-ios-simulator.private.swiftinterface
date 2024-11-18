@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK_SwiftUI
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK_SwiftUI
 import AVFoundation
 import AudioToolbox
 import Combine
@@ -9,6 +8,7 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
+import DeveloperToolsSupport
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK_SwiftUI
@@ -22,6 +22,7 @@ import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 import os
 import zlib
 extension CoreFoundation.CGRect {
@@ -89,7 +90,7 @@ extension InAppStorySDK_SwiftUI.Archive {
 @_spi(UGC) extension InAppStorySDK_SwiftUI.EditorDownloadService : Foundation.URLSessionDataDelegate {
   @_spi(UGC) @objc final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
   @_spi(UGC) @objc final public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
-  @_spi(UGC) @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @_spi(UGC) @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
 }
 @_spi(Private) extension Foundation.URLRequest {
   @_spi(Private) public var cURL: Swift.String {
@@ -141,7 +142,7 @@ extension InAppStorySDK_SwiftUI.Archive {
   @_spi(IAS_API) public func setVisibleWith(storyIDs: Swift.Array<Swift.String>)
   @_spi(IAS_API) public func setVisibleFavorite()
 }
-public typealias StackFeedResult = Swift.Result<InAppStorySDK_SwiftUI.StackFeedObject?, Swift.Error>
+public typealias StackFeedResult = Swift.Result<InAppStorySDK_SwiftUI.StackFeedObject?, any Swift.Error>
 public struct StackFeedCover {
   public var feedCover: Foundation.URL?
   public var storyCover: Foundation.URL?
@@ -305,6 +306,7 @@ public enum IASEvent {
 }
 @_spi(Private) extension UIKit.UIColor {
   @_spi(Private) public static func colorWithHexString(hexString: Swift.String, alpha: CoreFoundation.CGFloat = 1.0) -> UIKit.UIColor
+  @_spi(Private) public static func colorWithRGBA(hex: Swift.String) -> UIKit.UIColor
   @_spi(Private) public static func intFromHexString(hexStr: Swift.String) -> Swift.UInt64
 }
 @_spi(Private) public typealias Byte = Swift.UInt8
@@ -392,9 +394,9 @@ public struct PhoneFormat {
   @objc deinit
 }
 extension SwiftUI.View {
-  public func onboardingStories(feed: Swift.String? = nil, limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func onboardingStories(feed: Swift.String? = nil, limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
-  public func singleStory(storyID: Swift.String, once: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
+  public func singleStory(storyID: Swift.String, once: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
 }
 public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
@@ -412,7 +414,7 @@ extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func onDismiss(_ onDismiss: @escaping ((_ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func editorDidSelect(_ editorSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func getGoodsObject(_ getGoodsObject: @escaping ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func onVisibleAreaUpdated(_ onVisibleAreaUpdated: @escaping (_ items: Swift.Array<InAppStorySDK_SwiftUI.VisibleStoryItem>) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListUGCView
@@ -427,8 +429,8 @@ extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
 extension InAppStorySDK_SwiftUI.StoryListUGCView {
-  @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
-  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: any InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
+  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: any InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
 extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK_SwiftUI.CompressionMethod = .none, progress: Foundation.Progress? = nil) throws
@@ -639,9 +641,9 @@ extension Foundation.FileManager {
   }
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
-  public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol?
-  public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol?
-  public var gamePlaceholderView: InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol?
+  public var goodCell: (any InAppStorySDK_SwiftUI.GoodsCellProtocol)?
+  public var placeholderView: (any InAppStorySDK_SwiftUI.PlaceholderProtocol)?
+  public var gamePlaceholderView: (any InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol)?
   public var goodsView: InAppStorySDK_SwiftUI.CustomGoodsView?
   public var closeButtonPosition: InAppStorySDK_SwiftUI.ClosePosition
   public var scrollStyle: InAppStorySDK_SwiftUI.ScrollStyle
@@ -677,7 +679,7 @@ extension Foundation.FileManager {
   public var favoriteCellDidSelect: (() -> Swift.Void)?
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
+  public var goodItemSelected: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
   public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
@@ -710,7 +712,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: any InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
@@ -725,7 +727,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   @available(*, deprecated, renamed: "showStory(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -760,7 +762,7 @@ extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func favoriteDidSelect(_ favoriteSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func editorDidSelect(_ editorSelected: @escaping () -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
   @_Concurrency.MainActor(unsafe) public func getGoodsObject(_ getGoodsObject: @escaping ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func goodItemSelected(_ goodItemSelected: @escaping (_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func onVisibleAreaUpdated(_ onVisibleAreaUpdated: @escaping (_ items: Swift.Array<InAppStorySDK_SwiftUI.VisibleStoryItem>) -> Swift.Void) -> InAppStorySDK_SwiftUI.StoryListView
@@ -778,9 +780,9 @@ extension InAppStorySDK_SwiftUI.StoryListView {
   @_Concurrency.MainActor(unsafe) public func interitemSpacing(_ spacing: @escaping () -> CoreFoundation.CGFloat) -> InAppStorySDK_SwiftUI.StoryListView
 }
 extension InAppStorySDK_SwiftUI.StoryListView {
-  @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func setFavoriteCell(customCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
-  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: any InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func setFavoriteCell(customCell: any InAppStorySDK_SwiftUI.FavoriteCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
+  @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: any InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListView
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class SingleStoryAPI {
   @_spi(IAS_API) public func showStory(with storyID: Swift.String, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
@@ -858,21 +860,21 @@ public protocol PlaceholderProtocol : UIKit.UIView {
   @_spi(Private) public let session: InAppStorySDK_SwiftUI.Session
   @_spi(Private) public let allowUGC: Swift.Bool
   @_spi(Private) public let editor: InAppStorySDK_SwiftUI.EditorObject?
-  @_spi(Private) public init(from decoder: Swift.Decoder) throws
-  @_spi(Private) public func encode(to encoder: Swift.Encoder) throws
+  @_spi(Private) public init(from decoder: any Swift.Decoder) throws
+  @_spi(Private) public func encode(to encoder: any Swift.Encoder) throws
 }
 @_spi(Private) public struct Session : Swift.Codable {
   @_spi(Private) public let id: Swift.String
   @_spi(Private) public let expireIn: Swift.Int
   @_spi(Private) public let expire: Swift.Int
-  @_spi(Private) public init(from decoder: Swift.Decoder) throws
+  @_spi(Private) public init(from decoder: any Swift.Decoder) throws
   @_spi(Private) public func isExpire() -> Swift.Bool
-  @_spi(Private) public func encode(to encoder: Swift.Encoder) throws
+  @_spi(Private) public func encode(to encoder: any Swift.Encoder) throws
 }
 @_spi(Private) public struct EditorObject : Swift.Codable {
   @_spi(Private) public let url: Swift.String
-  @_spi(Private) public init(from decoder: Swift.Decoder) throws
-  @_spi(Private) public func encode(to encoder: Swift.Encoder) throws
+  @_spi(Private) public init(from decoder: any Swift.Decoder) throws
+  @_spi(Private) public func encode(to encoder: any Swift.Encoder) throws
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class SettingsAPI {
   @_spi(IAS_API) public var placeholders: Swift.Dictionary<Swift.String, Swift.String> {
@@ -948,7 +950,7 @@ public enum GoodsFailure : Swift.Error {
     get
   }
 }
-public typealias GoodsComplete = (Swift.Result<Swift.Array<InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void
+public typealias GoodsComplete = (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void
 public enum ActionType {
   case button, swipe, game, deeplink
   public static func == (a: InAppStorySDK_SwiftUI.ActionType, b: InAppStorySDK_SwiftUI.ActionType) -> Swift.Bool
@@ -972,7 +974,7 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func favoriteCellDidSelect()
   func editorCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete)
-  func goodItemSelected(_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
+  func goodItemSelected(_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, with storyType: InAppStorySDK_SwiftUI.StoriesType)
 }
 public enum ListDirection {
   case horizontal(rows: Swift.Int = 1)
@@ -1011,7 +1013,7 @@ public enum ListDirection {
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: (any UIKit.UITextFieldDelegate)? {
     @objc get
     @objc set
   }
@@ -1057,7 +1059,7 @@ public enum ListDirection {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
-  @_spi(IAS_API) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)? {
+  @_spi(IAS_API) public var goodItemSelected: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)? {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
@@ -1190,15 +1192,15 @@ public struct EntryOD : Swift.Equatable {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK_SwiftUI.EditorCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var editorCell: (any InAppStorySDK_SwiftUI.EditorCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK_SwiftUI.StoryCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var storyCell: (any InAppStorySDK_SwiftUI.StoryCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var favoriteCell: InAppStorySDK_SwiftUI.FavoriteCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var favoriteCell: (any InAppStorySDK_SwiftUI.FavoriteCellProtocol)! {
     get
     set
   }
@@ -1237,7 +1239,7 @@ public struct EntryOD : Swift.Equatable {
     set
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
@@ -1306,8 +1308,8 @@ public let AppendCacheResponse: Foundation.Notification.Name
   @_spi(Private) @objc dynamic public func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
 }
 public struct UploadServerEndpoint : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Private) public typealias UploadServerEndpointComplete = (Swift.Result<Swift.String, InAppStorySDK_SwiftUI.NetworkError>) -> Swift.Void
 @_spi(Private) extension InAppStorySDK_SwiftUI.NetworkService {
@@ -1536,7 +1538,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
-  @_spi(IAS_API) public var goodCell: InAppStorySDK_SwiftUI.GoodsCellProtocol? {
+  @_spi(IAS_API) public var goodCell: (any InAppStorySDK_SwiftUI.GoodsCellProtocol)? {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
@@ -1628,11 +1630,11 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
-  @_spi(IAS_API) public var placeholderView: InAppStorySDK_SwiftUI.PlaceholderProtocol? {
+  @_spi(IAS_API) public var placeholderView: (any InAppStorySDK_SwiftUI.PlaceholderProtocol)? {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
-  @_spi(IAS_API) public var gamePlaceholderView: InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol? {
+  @_spi(IAS_API) public var gamePlaceholderView: (any InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol)? {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
@@ -1712,11 +1714,11 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK_SwiftUI.EditorCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var editorCell: (any InAppStorySDK_SwiftUI.EditorCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK_SwiftUI.StoryCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var storyCell: (any InAppStorySDK_SwiftUI.StoryCellProtocol)! {
     get
     set
   }
@@ -1751,7 +1753,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
     set
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
@@ -1788,8 +1790,8 @@ extension InAppStorySDK_SwiftUI.StoryUGCView {
   @_spi(Private) public var fallbackStyle: Swift.String?
   @_spi(Private) public var enableVibrateFallback: Swift.Bool
   @_spi(Private) public init(pattern: Swift.Array<Swift.Int>, fallbackStyle: Swift.String?, enableVibrateFallback: Swift.Bool)
-  @_spi(Private) public func encode(to encoder: Swift.Encoder) throws
-  @_spi(Private) public init(from decoder: Swift.Decoder) throws
+  @_spi(Private) public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(Private) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(Private) @available(iOS 13.0, *)
 public class HapticManager {
@@ -1865,7 +1867,7 @@ public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
 public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
-  func setGoodObject(_ object: InAppStorySDK_SwiftUI.GoodsObjectProtocol!)
+  func setGoodObject(_ object: (any InAppStorySDK_SwiftUI.GoodsObjectProtocol)!)
 }
 @_spi(UGC) public class Editor {
   @_spi(UGC) public var zipURL: Swift.String
@@ -1923,9 +1925,9 @@ extension InAppStorySDK_SwiftUI.ActionType : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.Entry.EntryType : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.Entry.EntryType : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.Entry.EntryType : Swift.RawRepresentable {}
-extension InAppStorySDK_SwiftUI.Model : Swift.Equatable {}
-extension InAppStorySDK_SwiftUI.Model : Swift.Hashable {}
-extension InAppStorySDK_SwiftUI.Model : Swift.RawRepresentable {}
+@_spi(Private) extension InAppStorySDK_SwiftUI.Model : Swift.Equatable {}
+@_spi(Private) extension InAppStorySDK_SwiftUI.Model : Swift.Hashable {}
+@_spi(Private) extension InAppStorySDK_SwiftUI.Model : Swift.RawRepresentable {}
 extension InAppStorySDK_SwiftUI.Archive.ArchiveError : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.Archive.ArchiveError : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.Archive.AccessMode : Swift.Equatable {}
