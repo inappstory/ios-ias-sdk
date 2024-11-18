@@ -1,25 +1,27 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InAppStorySDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK
 import AVFoundation
 import AudioToolbox
 import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
+import DeveloperToolsSupport
 import Foundation
 import ImageIO
 @_exported import InAppStorySDK
 import MobileCoreServices
 import Photos
 import Swift
+import SwiftUI
 import SystemConfiguration
 import UIKit
 import UniformTypeIdentifiers
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 import os
 import zlib
 public struct Entry : Swift.Equatable {
@@ -192,9 +194,9 @@ extension CoreFoundation.CGRect {
   }
   public var goodsCloseImage: UIKit.UIImage
   public var panelSettings: InAppStorySDK.PanelSettings?
-  public var goodCell: InAppStorySDK.GoodsCellProtocol?
-  public var placeholderView: InAppStorySDK.PlaceholderProtocol?
-  public var gamePlaceholderView: InAppStorySDK.DownloadPlaceholderProtocol?
+  public var goodCell: (any InAppStorySDK.GoodsCellProtocol)?
+  public var placeholderView: (any InAppStorySDK.PlaceholderProtocol)?
+  public var gamePlaceholderView: (any InAppStorySDK.DownloadPlaceholderProtocol)?
   public var goodsView: InAppStorySDK.CustomGoodsView?
   public var closeButtonPosition: InAppStorySDK.ClosePosition
   public var scrollStyle: InAppStorySDK.ScrollStyle
@@ -230,7 +232,7 @@ extension CoreFoundation.CGRect {
   public var favoriteCellDidSelect: (() -> Swift.Void)?
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
-  public var goodItemSelected: ((_ item: InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
+  public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
   public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
@@ -263,7 +265,7 @@ extension InAppStorySDK.InAppStory {
 extension InAppStorySDK.InAppStory {
   public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
   public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
@@ -278,7 +280,7 @@ extension InAppStorySDK.InAppStory {
   @available(*, deprecated, renamed: "showStory(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -295,11 +297,11 @@ public func MD5(_ input: Swift.String) -> Swift.String
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK.EditorCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var editorCell: (any InAppStorySDK.EditorCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var storyCell: (any InAppStorySDK.StoryCellProtocol)! {
     get
     set
   }
@@ -334,7 +336,7 @@ public func MD5(_ input: Swift.String) -> Swift.String
     set
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
@@ -563,7 +565,7 @@ public enum GoodsFailure : Swift.Error {
     get
   }
 }
-public typealias GoodsComplete = (Swift.Result<Swift.Array<InAppStorySDK.GoodsObjectProtocol>, InAppStorySDK.GoodsFailure>) -> Swift.Void
+public typealias GoodsComplete = (Swift.Result<Swift.Array<any InAppStorySDK.GoodsObjectProtocol>, InAppStorySDK.GoodsFailure>) -> Swift.Void
 public enum ActionType {
   case button, swipe, game, deeplink
   public static func == (a: InAppStorySDK.ActionType, b: InAppStorySDK.ActionType) -> Swift.Bool
@@ -587,7 +589,7 @@ public protocol InAppStoryDelegate : ObjectiveC.NSObjectProtocol {
   func favoriteCellDidSelect()
   func editorCellDidSelect()
   func getGoodsObject(with skus: Swift.Array<Swift.String>, complete: @escaping InAppStorySDK.GoodsComplete)
-  func goodItemSelected(_ item: InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
+  func goodItemSelected(_ item: any InAppStorySDK.GoodsObjectProtocol, with storyType: InAppStorySDK.StoriesType)
 }
 public enum ListDirection {
   case horizontal(rows: Swift.Int = 1)
@@ -654,7 +656,7 @@ extension InAppStorySDK.ArchiveOD {
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: UIKit.UITextFieldDelegate? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var delegate: (any UIKit.UITextFieldDelegate)? {
     @objc get
     @objc set
   }
@@ -699,10 +701,10 @@ public let AppendResponse: Foundation.Notification.Name
 public let CreateCacheRequest: Foundation.Notification.Name
 public let AppendCacheResponse: Foundation.Notification.Name
 public struct UploadServerEndpoint : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
-public typealias StackFeedResult = Swift.Result<InAppStorySDK.StackFeedObject?, Swift.Error>
+public typealias StackFeedResult = Swift.Result<InAppStorySDK.StackFeedObject?, any Swift.Error>
 public struct StackFeedCover {
   public var feedCover: Foundation.URL?
   public var storyCover: Foundation.URL?
@@ -876,15 +878,15 @@ extension InAppStorySDK.Archive {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var editorCell: InAppStorySDK.EditorCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var editorCell: (any InAppStorySDK.EditorCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var storyCell: InAppStorySDK.StoryCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var storyCell: (any InAppStorySDK.StoryCellProtocol)! {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var favoriteCell: InAppStorySDK.FavoriteCellProtocol! {
+  @_Concurrency.MainActor(unsafe) public var favoriteCell: (any InAppStorySDK.FavoriteCellProtocol)! {
     get
     set
   }
@@ -923,7 +925,7 @@ extension InAppStorySDK.Archive {
     set
   }
   @_Concurrency.MainActor(unsafe) public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var sizeForItem: (() -> CoreFoundation.CGSize)? {
     get
     set
@@ -978,7 +980,7 @@ public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
 public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
   static var nib: UIKit.UINib? { get }
-  func setGoodObject(_ object: InAppStorySDK.GoodsObjectProtocol!)
+  func setGoodObject(_ object: (any InAppStorySDK.GoodsObjectProtocol)!)
 }
 extension InAppStorySDK.Entry.EntryType : Swift.Equatable {}
 extension InAppStorySDK.Entry.EntryType : Swift.Hashable {}

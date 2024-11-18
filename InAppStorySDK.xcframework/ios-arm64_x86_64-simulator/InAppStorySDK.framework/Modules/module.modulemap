@@ -1,7 +1,7 @@
 framework module InAppStorySDK {
   umbrella header "InAppStorySDK.h"
-
   export *
+
   module * { export * }
 }
 
