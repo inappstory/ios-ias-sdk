@@ -127,6 +127,8 @@ extension CoreFoundation.CGRect {
     get
     set
   }
+  public var appVersion: Swift.String?
+  public var appBuild: Swift.String?
   public var favoritesCount: Swift.Int {
     get
   }
