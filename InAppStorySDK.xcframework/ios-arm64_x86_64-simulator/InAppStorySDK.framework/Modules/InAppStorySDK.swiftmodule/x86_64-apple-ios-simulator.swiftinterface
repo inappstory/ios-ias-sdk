@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK
 import AVFoundation
 import AudioToolbox
 import CommonCrypto
@@ -235,6 +235,9 @@ extension CoreFoundation.CGRect {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
+  public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
+  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
   public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
@@ -243,6 +246,7 @@ extension CoreFoundation.CGRect {
   public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)?
   public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
   public var storiesEvent: (InAppStorySDK.IASEvent.Story) -> Swift.Void
+  public var inAppMessagesEvent: (InAppStorySDK.IASEvent.IAMessage) -> Swift.Void
   public var gameEvent: (InAppStorySDK.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK.IASEvent.Failure) -> Swift.Void
   public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)?
@@ -256,6 +260,7 @@ extension CoreFoundation.CGRect {
 }
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
+  public func preloadInAppMessages(complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
@@ -283,6 +288,9 @@ extension InAppStorySDK.InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+}
+extension InAppStorySDK.InAppStory {
+  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -527,7 +535,18 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
   static var nib: UIKit.UINib? { get }
 }
 @objc public enum ClosePosition : Swift.Int {
-  case left, right, bottomLeft, bottomRight
+  @available(*, unavailable, renamed: "leading")
+  case left
+  @available(*, unavailable, renamed: "trailing")
+  case right
+  @available(*, unavailable, renamed: "leadingBottom")
+  case bottomLeft
+  @available(*, unavailable, renamed: "trailingBottom")
+  case bottomRight
+  case leading
+  case trailing
+  case leadingBottom
+  case trailingBottom
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -741,6 +760,8 @@ public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
+public let InAppMessageFailure: Foundation.Notification.Name
+public let CurrentInAppMessageFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public let RequestFailure: Foundation.Notification.Name
 public struct WidgetStory {
@@ -782,7 +803,7 @@ public struct TimersGradient {
   public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
 }
 public enum StoryType : Swift.String {
-  case story, storyUGC
+  case story, storyUGC, iam
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -790,7 +811,7 @@ public enum StoryType : Swift.String {
   }
 }
 public enum StorySource : Swift.String {
-  case single, onboarding, list, favorite
+  case single, onboarding, list, favorite, inAppMessages
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -832,6 +853,10 @@ public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
   public var gameID: Swift.String?
 }
+public struct InAppMessageData {
+  public var id: Swift.String?
+  public var campaign: Swift.String?
+}
 public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK.StoryData>)
@@ -854,9 +879,17 @@ public enum IASEvent {
     case eventGame(gameData: InAppStorySDK.GameStoryData, name: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
     case gameFailure(gameData: InAppStorySDK.GameStoryData, message: Swift.String)
   }
+  public enum IAMessage {
+    case preloaded(messages: Swift.Array<InAppStorySDK.InAppMessageData>)
+    case show(iamData: InAppStorySDK.InAppMessageData)
+    case close(iamData: InAppStorySDK.InAppMessageData)
+    case clickOnButton(iamData: InAppStorySDK.InAppMessageData, link: Swift.String)
+    case widgetEvent(iamData: InAppStorySDK.InAppMessageData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
+  }
   public enum Failure {
     case sessionFailure(message: Swift.String)
     case storyFailure(message: Swift.String)
+    case inAppMessageFailure(message: Swift.String)
     case currentStoryFailure(message: Swift.String)
     case networkFailure(message: Swift.String)
     case requestFailure(message: Swift.String, statusCode: Swift.Int)

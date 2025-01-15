@@ -3734,6 +3734,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "FavoritesAPI",
         "printedName": "FavoritesAPI",
@@ -4010,6 +4020,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
       },
       {
         "kind": "Import",
@@ -4719,6 +4746,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -4826,6 +4863,33 @@
           "Private"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -5266,6 +5330,16 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -6398,6 +6472,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -6430,6 +6514,53 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -6462,33 +6593,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK"
       },
       {
         "kind": "Import",
@@ -15202,6 +15306,439 @@
           },
           {
             "kind": "Var",
+            "name": "inAppMessagesDidUpdated",
+            "printedName": "inAppMessagesDidUpdated",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvp",
+            "mangledName": "$s13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvg",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvs",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvM",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB18MessagesDidUpdatedySbcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "inAppMessageWillShow",
+            "printedName": "inAppMessageWillShow",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvp",
+            "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvg",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvs",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvM",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageWillShowyycSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "inAppMessageDidClose",
+            "printedName": "inAppMessageDidClose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvp",
+            "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvg",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvs",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvM",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB15MessageDidCloseyycSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "sizeForItem",
             "printedName": "sizeForItem",
             "children": [
@@ -16349,6 +16886,128 @@
           },
           {
             "kind": "Var",
+            "name": "inAppMessagesEvent",
+            "printedName": "inAppMessagesEvent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASEvent.IAMessage) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IAMessage",
+                    "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                    "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvp",
+            "mangledName": "$s13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IAMessage",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                        "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvg",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IAMessage",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                        "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvs",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvM",
+                "mangledName": "$s13InAppStorySDK0abC0C02inB13MessagesEventyyAA8IASEventO9IAMessageOcvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "gameEvent",
             "printedName": "gameEvent",
             "children": [
@@ -17021,6 +17680,56 @@
           },
           {
             "kind": "Function",
+            "name": "preloadInAppMessages",
+            "printedName": "preloadInAppMessages(complete:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.Bool, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.Bool, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0abC0C07preloadaB8Messages8completeyys6ResultOySbs5Error_pGc_tF",
+            "mangledName": "$s13InAppStorySDK0abC0C07preloadaB8Messages8completeyys6ResultOySbs5Error_pGc_tF",
+            "moduleName": "InAppStorySDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "clearMemory",
             "printedName": "clearMemory()",
             "children": [
@@ -17663,6 +18372,64 @@
             "declAttributes": [
               "Available"
             ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showInAppMessageWith",
+            "printedName": "showInAppMessageWith(id:onlyPreloaded:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
+            "moduleName": "InAppStorySDK",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -21159,6 +21926,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -21193,6 +21970,16 @@
         "printedName": "CommonCrypto",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -22777,6 +23564,26 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -22799,6 +23606,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -29771,6 +30588,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -29911,6 +30738,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "CommonCrypto",
         "printedName": "CommonCrypto",
         "declKind": "Import",
@@ -29985,6 +30822,7 @@
             "mangledName": "$s13InAppStorySDK13ClosePositionO4leftyA2CmF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
+              "Available",
               "ObjC"
             ],
             "fixedbinaryorder": 0
@@ -30026,6 +30864,7 @@
             "mangledName": "$s13InAppStorySDK13ClosePositionO5rightyA2CmF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
+              "Available",
               "ObjC"
             ],
             "fixedbinaryorder": 1
@@ -30067,6 +30906,7 @@
             "mangledName": "$s13InAppStorySDK13ClosePositionO10bottomLeftyA2CmF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
+              "Available",
               "ObjC"
             ],
             "fixedbinaryorder": 2
@@ -30108,9 +30948,174 @@
             "mangledName": "$s13InAppStorySDK13ClosePositionO11bottomRightyA2CmF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
+              "Available",
               "ObjC"
             ],
             "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "leading",
+            "printedName": "leading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.ClosePosition.Type) -> InAppStorySDK.ClosePosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClosePosition",
+                    "printedName": "InAppStorySDK.ClosePosition",
+                    "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.ClosePosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClosePosition",
+                        "printedName": "InAppStorySDK.ClosePosition",
+                        "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InAppStorySDK@E@ClosePosition@ClosePositionLeading",
+            "mangledName": "$s13InAppStorySDK13ClosePositionO7leadingyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "trailing",
+            "printedName": "trailing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.ClosePosition.Type) -> InAppStorySDK.ClosePosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClosePosition",
+                    "printedName": "InAppStorySDK.ClosePosition",
+                    "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.ClosePosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClosePosition",
+                        "printedName": "InAppStorySDK.ClosePosition",
+                        "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InAppStorySDK@E@ClosePosition@ClosePositionTrailing",
+            "mangledName": "$s13InAppStorySDK13ClosePositionO8trailingyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "leadingBottom",
+            "printedName": "leadingBottom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.ClosePosition.Type) -> InAppStorySDK.ClosePosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClosePosition",
+                    "printedName": "InAppStorySDK.ClosePosition",
+                    "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.ClosePosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClosePosition",
+                        "printedName": "InAppStorySDK.ClosePosition",
+                        "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InAppStorySDK@E@ClosePosition@ClosePositionLeadingBottom",
+            "mangledName": "$s13InAppStorySDK13ClosePositionO13leadingBottomyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "trailingBottom",
+            "printedName": "trailingBottom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.ClosePosition.Type) -> InAppStorySDK.ClosePosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClosePosition",
+                    "printedName": "InAppStorySDK.ClosePosition",
+                    "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.ClosePosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ClosePosition",
+                        "printedName": "InAppStorySDK.ClosePosition",
+                        "usr": "c:@M@InAppStorySDK@E@ClosePosition"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InAppStorySDK@E@ClosePosition@ClosePositionTrailingBottom",
+            "mangledName": "$s13InAppStorySDK13ClosePositionO14trailingBottomyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
           },
           {
             "kind": "Constructor",
@@ -32064,6 +33069,16 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -45093,6 +46108,96 @@
       },
       {
         "kind": "Var",
+        "name": "InAppMessageFailure",
+        "printedName": "InAppMessageFailure",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Name",
+            "printedName": "Foundation.NSNotification.Name",
+            "usr": "c:@T@NSNotificationName"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:13InAppStorySDK0aB14MessageFailureSo18NSNotificationNameavp",
+        "mangledName": "$s13InAppStorySDK0aB14MessageFailureSo18NSNotificationNameavp",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:13InAppStorySDK0aB14MessageFailureSo18NSNotificationNameavg",
+            "mangledName": "$s13InAppStorySDK0aB14MessageFailureSo18NSNotificationNameavg",
+            "moduleName": "InAppStorySDK",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "Var",
+        "name": "CurrentInAppMessageFailure",
+        "printedName": "CurrentInAppMessageFailure",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Name",
+            "printedName": "Foundation.NSNotification.Name",
+            "usr": "c:@T@NSNotificationName"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:13InAppStorySDK07CurrentaB14MessageFailureSo18NSNotificationNameavp",
+        "mangledName": "$s13InAppStorySDK07CurrentaB14MessageFailureSo18NSNotificationNameavp",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:13InAppStorySDK07CurrentaB14MessageFailureSo18NSNotificationNameavg",
+            "mangledName": "$s13InAppStorySDK07CurrentaB14MessageFailureSo18NSNotificationNameavg",
+            "moduleName": "InAppStorySDK",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "Var",
         "name": "NetworkFailure",
         "printedName": "NetworkFailure",
         "children": [
@@ -47040,6 +48145,43 @@
             "moduleName": "InAppStorySDK"
           },
           {
+            "kind": "Var",
+            "name": "iam",
+            "printedName": "iam",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.StoryType.Type) -> InAppStorySDK.StoryType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StoryType",
+                    "printedName": "InAppStorySDK.StoryType",
+                    "usr": "s:13InAppStorySDK0C4TypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.StoryType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StoryType",
+                        "printedName": "InAppStorySDK.StoryType",
+                        "usr": "s:13InAppStorySDK0C4TypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK0C4TypeO3iamyA2CmF",
+            "mangledName": "$s13InAppStorySDK0C4TypeO3iamyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -47310,6 +48452,43 @@
             "declKind": "EnumElement",
             "usr": "s:13InAppStorySDK0C6SourceO8favoriteyA2CmF",
             "mangledName": "$s13InAppStorySDK0C6SourceO8favoriteyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "inAppMessages",
+            "printedName": "inAppMessages",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.StorySource.Type) -> InAppStorySDK.StorySource",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StorySource",
+                    "printedName": "InAppStorySDK.StorySource",
+                    "usr": "s:13InAppStorySDK0C6SourceO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.StorySource.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "StorySource",
+                        "printedName": "InAppStorySDK.StorySource",
+                        "usr": "s:13InAppStorySDK0C6SourceO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK0C6SourceO02inB8MessagesyA2CmF",
+            "mangledName": "$s13InAppStorySDK0C6SourceO02inB8MessagesyA2CmF",
             "moduleName": "InAppStorySDK"
           },
           {
@@ -49430,6 +50609,240 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "InAppMessageData",
+        "printedName": "InAppMessageData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0aB11MessageDataV2idSSSgvp",
+            "mangledName": "$s13InAppStorySDK0aB11MessageDataV2idSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV2idSSSgvg",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV2idSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV2idSSSgvs",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV2idSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV2idSSSgvM",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV2idSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "campaign",
+            "printedName": "campaign",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0aB11MessageDataV8campaignSSSgvp",
+            "mangledName": "$s13InAppStorySDK0aB11MessageDataV8campaignSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV8campaignSSSgvg",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV8campaignSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV8campaignSSSgvs",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV8campaignSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0aB11MessageDataV8campaignSSSgvM",
+                "mangledName": "$s13InAppStorySDK0aB11MessageDataV8campaignSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13InAppStorySDK0aB11MessageDataV",
+        "mangledName": "$s13InAppStorySDK0aB11MessageDataV",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "IASEvent",
         "printedName": "IASEvent",
         "children": [
@@ -50595,6 +52008,352 @@
           },
           {
             "kind": "TypeDecl",
+            "name": "IAMessage",
+            "printedName": "IAMessage",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "preloaded",
+                "printedName": "preloaded",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage.Type) -> ([InAppStorySDK.InAppMessageData]) -> InAppStorySDK.IASEvent.IAMessage",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([InAppStorySDK.InAppMessageData]) -> InAppStorySDK.IASEvent.IAMessage",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(messages: [InAppStorySDK.InAppMessageData])",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.InAppMessageData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "InAppMessageData",
+                                    "printedName": "InAppStorySDK.InAppMessageData",
+                                    "usr": "s:13InAppStorySDK0aB11MessageDataV"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IAMessageO9preloadedyAESayAA0aB11MessageDataVG_tcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO9preloadedyAESayAA0aB11MessageDataVG_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "show",
+                "printedName": "show",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage.Type) -> (InAppStorySDK.InAppMessageData) -> InAppStorySDK.IASEvent.IAMessage",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.InAppMessageData) -> InAppStorySDK.IASEvent.IAMessage",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(iamData: InAppStorySDK.InAppMessageData)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "InAppMessageData",
+                                "printedName": "InAppStorySDK.InAppMessageData",
+                                "usr": "s:13InAppStorySDK0aB11MessageDataV"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IAMessageO4showyAeA0aB11MessageDataV_tcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO4showyAeA0aB11MessageDataV_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "close",
+                "printedName": "close",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage.Type) -> (InAppStorySDK.InAppMessageData) -> InAppStorySDK.IASEvent.IAMessage",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.InAppMessageData) -> InAppStorySDK.IASEvent.IAMessage",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(iamData: InAppStorySDK.InAppMessageData)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "InAppMessageData",
+                                "printedName": "InAppStorySDK.InAppMessageData",
+                                "usr": "s:13InAppStorySDK0aB11MessageDataV"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IAMessageO5closeyAeA0aB11MessageDataV_tcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO5closeyAeA0aB11MessageDataV_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "clickOnButton",
+                "printedName": "clickOnButton",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage.Type) -> (InAppStorySDK.InAppMessageData, Swift.String) -> InAppStorySDK.IASEvent.IAMessage",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.InAppMessageData, Swift.String) -> InAppStorySDK.IASEvent.IAMessage",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(iamData: InAppStorySDK.InAppMessageData, link: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "InAppMessageData",
+                                "printedName": "InAppStorySDK.InAppMessageData",
+                                "usr": "s:13InAppStorySDK0aB11MessageDataV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IAMessageO13clickOnButtonyAeA0aB11MessageDataV_SStcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO13clickOnButtonyAeA0aB11MessageDataV_SStcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "widgetEvent",
+                "printedName": "widgetEvent",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IAMessage.Type) -> (InAppStorySDK.InAppMessageData, Swift.String, [Swift.String : Any]?) -> InAppStorySDK.IASEvent.IAMessage",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.InAppMessageData, Swift.String, [Swift.String : Any]?) -> InAppStorySDK.IASEvent.IAMessage",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(iamData: InAppStorySDK.InAppMessageData, name: Swift.String, data: [Swift.String : Any]?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "InAppMessageData",
+                                "printedName": "InAppStorySDK.InAppMessageData",
+                                "usr": "s:13InAppStorySDK0aB11MessageDataV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "[Swift.String : Any]?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Dictionary",
+                                    "printedName": "[Swift.String : Any]",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "ProtocolComposition",
+                                        "printedName": "Any"
+                                      }
+                                    ],
+                                    "usr": "s:SD"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IAMessage.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IAMessage",
+                            "printedName": "InAppStorySDK.IASEvent.IAMessage",
+                            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IAMessageO11widgetEventyAeA0aB11MessageDataV_SSSDySSypGSgtcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO11widgetEventyAeA0aB11MessageDataV_SSSDySSypGSgtcAEmF",
+                "moduleName": "InAppStorySDK"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:13InAppStorySDK8IASEventO9IAMessageO",
+            "mangledName": "$s13InAppStorySDK8IASEventO9IAMessageO",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
             "name": "Failure",
             "printedName": "Failure",
             "children": [
@@ -50710,6 +52469,63 @@
                 "declKind": "EnumElement",
                 "usr": "s:13InAppStorySDK8IASEventO7FailureO05storyF0yAESS_tcAEmF",
                 "mangledName": "$s13InAppStorySDK8IASEventO7FailureO05storyF0yAESS_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "inAppMessageFailure",
+                "printedName": "inAppMessageFailure",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.Failure.Type) -> (Swift.String) -> InAppStorySDK.IASEvent.Failure",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> InAppStorySDK.IASEvent.Failure",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Failure",
+                            "printedName": "InAppStorySDK.IASEvent.Failure",
+                            "usr": "s:13InAppStorySDK8IASEventO7FailureO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(message: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.Failure.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Failure",
+                            "printedName": "InAppStorySDK.IASEvent.Failure",
+                            "usr": "s:13InAppStorySDK8IASEventO7FailureO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO7FailureO02inb7MessageF0yAESS_tcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO7FailureO02inb7MessageF0yAESS_tcAEmF",
                 "moduleName": "InAppStorySDK"
               },
               {
@@ -53596,6 +55412,16 @@
         "printedName": "Photos",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -60230,6 +62056,16 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "InAppStorySDK"
       },
       {
@@ -63306,6 +65142,68 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "roundTopCorners",
+            "printedName": "roundTopCorners(radius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC13InAppStorySDKE15roundTopCorners6radiusy14CoreFoundation7CGFloatV_tF",
+            "mangledName": "$sSo6UIViewC13InAppStorySDKE15roundTopCorners6radiusy12CoreGraphics7CGFloatV_tF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Custom",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "roundAllCorners",
+            "printedName": "roundAllCorners(radius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC13InAppStorySDKE15roundAllCorners6radiusy14CoreFoundation7CGFloatV_tF",
+            "mangledName": "$sSo6UIViewC13InAppStorySDKE15roundAllCorners6radiusy12CoreGraphics7CGFloatV_tF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Custom",
+              "SPIAccessControl"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -68204,6 +70102,114 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "topSafeArea",
+            "printedName": "topSafeArea",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8UIDeviceC13InAppStorySDKE11topSafeArea14CoreFoundation7CGFloatVvpZ",
+            "mangledName": "$sSo8UIDeviceC13InAppStorySDKE11topSafeArea12CoreGraphics7CGFloatVvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8UIDeviceC13InAppStorySDKE11topSafeArea14CoreFoundation7CGFloatVvgZ",
+                "mangledName": "$sSo8UIDeviceC13InAppStorySDKE11topSafeArea12CoreGraphics7CGFloatVvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bottomSafeArea",
+            "printedName": "bottomSafeArea",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8UIDeviceC13InAppStorySDKE14bottomSafeArea14CoreFoundation7CGFloatVvpZ",
+            "mangledName": "$sSo8UIDeviceC13InAppStorySDKE14bottomSafeArea12CoreGraphics7CGFloatVvpZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "spi_group_names": [
+              "Private"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8UIDeviceC13InAppStorySDKE14bottomSafeArea14CoreFoundation7CGFloatVvgZ",
+                "mangledName": "$sSo8UIDeviceC13InAppStorySDKE14bottomSafeArea12CoreGraphics7CGFloatVvgZ",
+                "moduleName": "InAppStorySDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "spi_group_names": [
+                  "Private"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           }
         ],
         "declKind": "Class",
@@ -70303,6 +72309,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/Transitions\/BottomSheetTransitionDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 238,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Entry+ZIP64.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
@@ -70312,91 +72325,98 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 790,
+      "offset": 850,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 937,
+      "offset": 997,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 982,
+      "offset": 1042,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "StringLiteral",
-      "offset": 1021,
+      "offset": 1081,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1459,
+      "offset": 1519,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1607,
+      "offset": 1667,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1718,
+      "offset": 1778,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2033,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "FloatLiteral",
-      "offset": 2216,
+      "offset": 2280,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2152,
+      "offset": 2216,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14763,
+      "offset": 14852,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 20532,
+      "offset": 20621,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 21751,
+      "offset": 21894,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 24005,
+      "offset": 24148,
       "length": 4,
       "value": "true"
     },
@@ -70413,6 +72433,62 @@
       "offset": 1512,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 434,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 852,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "Array",
+      "offset": 1034,
+      "length": 340,
+      "value": "[\"storyLoaded\", \"storyRenderReady\", \"storyStarted\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1565,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1612,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1664,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1712,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
+      "kind": "StringLiteral",
+      "offset": 256,
+      "length": 14,
+      "value": "\"InAppStorySDK.IAMContentView\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CustomGoodsController.swift",
@@ -70476,6 +72552,195 @@
       "offset": 4432,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 490,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 501,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 516,
+      "length": 10,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 490,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 501,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 516,
+      "length": 10,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 490,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 501,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 516,
+      "length": 10,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 693,
+      "length": 15,
+      "value": "\"content_ratio\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 740,
+      "length": 18,
+      "value": "\"background_color\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 693,
+      "length": 15,
+      "value": "\"content_ratio\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 740,
+      "length": 18,
+      "value": "\"background_color\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 1282,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1637,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2121,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2156,
+      "length": 15,
+      "value": "\"campaign_name\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2202,
+      "length": 17,
+      "value": "\"has_placeholder\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2250,
+      "length": 17,
+      "value": "\"frequency_limit\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2298,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2417,
+      "length": 12,
+      "value": "\"updated_at\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2121,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2156,
+      "length": 15,
+      "value": "\"campaign_name\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2202,
+      "length": 17,
+      "value": "\"has_placeholder\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2250,
+      "length": 17,
+      "value": "\"frequency_limit\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2298,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 2417,
+      "length": 12,
+      "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
@@ -70669,21 +72934,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2282,
+      "offset": 2290,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
       "kind": "Array",
-      "offset": 2505,
+      "offset": 2513,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
       "kind": "Array",
-      "offset": 2561,
+      "offset": 2569,
       "length": 2,
       "value": "[]"
     },
@@ -70721,6 +72986,20 @@
       "offset": 3200,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetAnimator.swift",
+      "kind": "FloatLiteral",
+      "offset": 281,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetAnimator.swift",
+      "kind": "StringLiteral",
+      "offset": 125,
+      "length": 22,
+      "value": "\"InAppStorySDK.IAMBottomSheetAnimator\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIColor+CS.swift",
@@ -70879,7 +73158,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 71842,
+      "offset": 71849,
       "length": 2,
       "value": "[]"
     },
@@ -70963,7 +73242,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Creator\/CurrentStoryCreator.swift",
       "kind": "BooleanLiteral",
-      "offset": 9240,
+      "offset": 8568,
       "length": 5,
       "value": "false"
     },
@@ -71045,415 +73324,429 @@
       "value": "0"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/Transitions\/ModalTransitionDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 226,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 352,
-      "length": 9,
-      "value": "\"1.24.11\""
+      "length": 12,
+      "value": "\"1.25.0-RC3\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 403,
+      "offset": 406,
       "length": 6,
-      "value": "\"3460\""
+      "value": "\"3533\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1113,
+      "offset": 1116,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1169,
+      "offset": 1172,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1219,
+      "offset": 1222,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1415,
+      "offset": 1418,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1477,
+      "offset": 1480,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Array",
-      "offset": 2487,
+      "offset": 2490,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 2662,
+      "offset": 2665,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 2715,
+      "offset": 2718,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 2763,
+      "offset": 2766,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3018,
+      "offset": 3021,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3466,
+      "offset": 3469,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3565,
+      "offset": 3568,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3660,
+      "offset": 3663,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3738,
+      "offset": 3741,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4041,
+      "offset": 4044,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4135,
+      "offset": 4138,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4183,
+      "offset": 4186,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4231,
+      "offset": 4234,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4538,
+      "offset": 4541,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5031,
+      "offset": 5034,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5043,
+      "offset": 5046,
       "length": 4,
       "value": "0.50"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5096,
+      "offset": 5099,
       "length": 5,
       "value": "200.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5216,
+      "offset": 5219,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5339,
+      "offset": 5342,
       "length": 14,
       "value": "\"likeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5465,
+      "offset": 5468,
       "length": 9,
       "value": "\"dislike\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5594,
+      "offset": 5597,
       "length": 17,
       "value": "\"dislikeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5724,
+      "offset": 5727,
       "length": 10,
       "value": "\"bookmark\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5854,
+      "offset": 5857,
       "length": 18,
       "value": "\"bookmarkSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5982,
+      "offset": 5985,
       "length": 7,
       "value": "\"share\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6107,
+      "offset": 6110,
       "length": 15,
       "value": "\"shareSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6232,
+      "offset": 6235,
       "length": 7,
       "value": "\"sound\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6357,
+      "offset": 6360,
       "length": 15,
       "value": "\"soundSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6493,
+      "offset": 6496,
       "length": 11,
       "value": "\"closeIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6616,
+      "offset": 6619,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6774,
+      "offset": 6777,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 7143,
+      "offset": 7146,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 7750,
+      "offset": 7755,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 7929,
+      "offset": 7934,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 8087,
+      "offset": 8092,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8513,
+      "offset": 8518,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8553,
+      "offset": 8558,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 10779,
+      "offset": 11101,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11011,
+      "offset": 11333,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11080,
+      "offset": 11402,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11162,
+      "offset": 11484,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11237,
+      "offset": 11559,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 11378,
+      "offset": 11744,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 12001,
+      "offset": 12367,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12170,
+      "offset": 12536,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12325,
+      "offset": 12691,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12426,
+      "offset": 12792,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 12622,
+      "offset": 12988,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 30754,
+      "offset": 31542,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 30806,
+      "offset": 31594,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 31373,
+      "offset": 32161,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 31425,
+      "offset": 32213,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 47143,
+      "offset": 48134,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
+      "kind": "BooleanLiteral",
+      "offset": 53084,
       "length": 5,
       "value": "false"
     },
@@ -71474,301 +73767,301 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1490,
+      "offset": 1679,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1586,
+      "offset": 1775,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1616,
+      "offset": 1805,
       "length": 8,
       "value": "\"reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2149,
+      "offset": 2338,
       "length": 21,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2169,
+      "offset": 2358,
       "length": 5,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 2173,
+      "offset": 2362,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2437,
+      "offset": 2626,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2621,
+      "offset": 2810,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2912,
+      "offset": 3101,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2950,
+      "offset": 3139,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3006,
+      "offset": 3195,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3124,
+      "offset": 3313,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 3168,
+      "offset": 3357,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1294,
+      "offset": 1483,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3414,
+      "offset": 3603,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3458,
+      "offset": 3647,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3498,
+      "offset": 3687,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3533,
+      "offset": 3722,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 3577,
+      "offset": 3766,
       "length": 6,
       "value": "\"next\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3674,
+      "offset": 3863,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3710,
+      "offset": 3899,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3755,
+      "offset": 3944,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3799,
+      "offset": 3988,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3844,
+      "offset": 4033,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3888,
+      "offset": 4077,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3937,
+      "offset": 4126,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3980,
+      "offset": 4169,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4024,
+      "offset": 4213,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 4119,
+      "offset": 4308,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4307,
+      "offset": 4496,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 4488,
+      "offset": 4677,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4533,
+      "offset": 4722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4581,
+      "offset": 4770,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4762,
+      "offset": 4951,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 4865,
+      "offset": 5054,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 5865,
+      "offset": 6049,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 5872,
+      "offset": 6056,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "Array",
-      "offset": 5999,
+      "offset": 6183,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "StringLiteral",
-      "offset": 1169,
+      "offset": 1298,
       "length": 16,
       "value": "\"InAppStorySDK.CurrentStoryView\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11735,
+      "offset": 11983,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22939,
+      "offset": 23183,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 25236,
+      "offset": 25480,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 55003,
+      "offset": 55268,
       "length": 4,
       "value": "true"
     },
@@ -71918,6 +74211,20 @@
       "offset": 1616,
       "length": 2,
       "value": "20"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalAnimator.swift",
+      "kind": "FloatLiteral",
+      "offset": 269,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalAnimator.swift",
+      "kind": "StringLiteral",
+      "offset": 119,
+      "length": 16,
+      "value": "\"InAppStorySDK.IAMModalAnimator\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SimpleStory.swift",
@@ -72214,6 +74521,20 @@
       "value": "0x7C"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/FullScreen\/IAMFulllScreenAnimator.swift",
+      "kind": "FloatLiteral",
+      "offset": 279,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/FullScreen\/IAMFulllScreenAnimator.swift",
+      "kind": "StringLiteral",
+      "offset": 124,
+      "length": 21,
+      "value": "\"InAppStorySDK.IAMFullScreenAnimator\""
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
       "offset": 467,
@@ -72417,11 +74738,95 @@
       "value": "\"InAppStorySDK.GoodObject\""
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 314,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 453,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/FavoriteCell.swift",
       "kind": "IntegerLiteral",
       "offset": 438,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 173,
+      "length": 4,
+      "value": "\"ei\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 213,
+      "length": 4,
+      "value": "\"ii\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 253,
+      "length": 4,
+      "value": "\"si\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 4,
+      "value": "\"st\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 3,
+      "value": "\"d\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 384,
+      "length": 6,
+      "value": "\"open\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "StringLiteral",
+      "offset": 417,
+      "length": 7,
+      "value": "\"close\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "Array",
+      "offset": 1864,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Statistic\/IAMStatisticManager.swift",
+      "kind": "Array",
+      "offset": 1920,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/FFCacheManager.swift",
@@ -73007,429 +75412,443 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4400,
+      "offset": 4397,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4441,
+      "offset": 4438,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4482,
+      "offset": 4479,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4523,
+      "offset": 4520,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "IntegerLiteral",
-      "offset": 4660,
+      "offset": 4657,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4757,
+      "offset": 4754,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4803,
+      "offset": 4800,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 4857,
+      "offset": 4854,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 4976,
+      "offset": 4973,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5028,
+      "offset": 5025,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5080,
+      "offset": 5077,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5154,
+      "offset": 5151,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "IntegerLiteral",
-      "offset": 5228,
+      "offset": 5225,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "IntegerLiteral",
-      "offset": 5269,
+      "offset": 5266,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5305,
+      "offset": 5302,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5350,
+      "offset": 5347,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5399,
+      "offset": 5396,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5443,
+      "offset": 5440,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "BooleanLiteral",
-      "offset": 5487,
+      "offset": 5484,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 5532,
+      "offset": 5529,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "Dictionary",
-      "offset": 5736,
+      "offset": 5733,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6106,
+      "offset": 6103,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6160,
+      "offset": 6157,
       "length": 12,
       "value": "\"stat_title\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6242,
+      "offset": 6239,
       "length": 13,
       "value": "\"video_cover\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6286,
+      "offset": 6283,
       "length": 14,
       "value": "\"slides_count\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6341,
+      "offset": 6338,
       "length": 18,
       "value": "\"background_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6391,
+      "offset": 6388,
       "length": 13,
       "value": "\"title_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6444,
+      "offset": 6441,
       "length": 10,
       "value": "\"deeplink\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6485,
+      "offset": 6482,
       "length": 15,
       "value": "\"game_instance\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6531,
+      "offset": 6528,
       "length": 16,
       "value": "\"hide_in_reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6578,
+      "offset": 6575,
       "length": 15,
       "value": "\"hide_timeline\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6624,
+      "offset": 6621,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6675,
+      "offset": 6672,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6714,
+      "offset": 6711,
       "length": 11,
       "value": "\"is_opened\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6756,
+      "offset": 6753,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6818,
+      "offset": 6815,
       "length": 11,
       "value": "\"has_audio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6970,
+      "offset": 6967,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7026,
+      "offset": 7023,
       "length": 17,
       "value": "\"like_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7070,
+      "offset": 7067,
       "length": 21,
       "value": "\"favorite_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7118,
+      "offset": 7115,
       "length": 18,
       "value": "\"share_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7176,
+      "offset": 7173,
       "length": 9,
       "value": "\"payload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6106,
+      "offset": 6103,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6160,
+      "offset": 6157,
       "length": 12,
       "value": "\"stat_title\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6242,
+      "offset": 6239,
       "length": 13,
       "value": "\"video_cover\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6286,
+      "offset": 6283,
       "length": 14,
       "value": "\"slides_count\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6341,
+      "offset": 6338,
       "length": 18,
       "value": "\"background_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6391,
+      "offset": 6388,
       "length": 13,
       "value": "\"title_color\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6444,
+      "offset": 6441,
       "length": 10,
       "value": "\"deeplink\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6485,
+      "offset": 6482,
       "length": 15,
       "value": "\"game_instance\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6531,
+      "offset": 6528,
       "length": 16,
       "value": "\"hide_in_reader\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6578,
+      "offset": 6575,
       "length": 15,
       "value": "\"hide_timeline\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6624,
+      "offset": 6621,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6675,
+      "offset": 6672,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6714,
+      "offset": 6711,
       "length": 11,
       "value": "\"is_opened\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6756,
+      "offset": 6753,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6818,
+      "offset": 6815,
       "length": 11,
       "value": "\"has_audio\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 6970,
+      "offset": 6967,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7026,
+      "offset": 7023,
       "length": 17,
       "value": "\"like_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7070,
+      "offset": 7067,
       "length": 21,
       "value": "\"favorite_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7118,
+      "offset": 7115,
       "length": 18,
       "value": "\"share_functional\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Story.swift",
       "kind": "StringLiteral",
-      "offset": 7176,
+      "offset": 7173,
       "length": 9,
       "value": "\"payload\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/ContentFullScreen\/IAMFulllScreenContentAnimator.swift",
+      "kind": "FloatLiteral",
+      "offset": 351,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/ContentFullScreen\/IAMFulllScreenContentAnimator.swift",
+      "kind": "StringLiteral",
+      "offset": 132,
+      "length": 28,
+      "value": "\"InAppStorySDK.IAMFullScreenContentAnimator\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/URLAuthenticationChallenge+SSL.swift",
@@ -73441,126 +75860,161 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 219,
+      "offset": 330,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 226,
+      "offset": 402,
       "length": 10,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 238,
+      "offset": 480,
       "length": 11,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 219,
+      "offset": 506,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 523,
+      "length": 8,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 13,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 564,
+      "length": 14,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 506,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 523,
+      "length": 8,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 541,
+      "length": 13,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 564,
+      "length": 14,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4495,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 226,
-      "length": 10,
+      "offset": 4502,
+      "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 238,
-      "length": 11,
+      "offset": 4508,
+      "length": 5,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2483,
+      "offset": 4495,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2490,
+      "offset": 4502,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2496,
+      "offset": 4508,
       "length": 5,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2483,
+      "offset": 4584,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2490,
+      "offset": 4591,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2496,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2572,
+      "offset": 4584,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2579,
+      "offset": 4591,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2572,
-      "length": 5,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2579,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2637,
+      "offset": 4649,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Protocols\/InAppStoryDelegate.swift",
       "kind": "IntegerLiteral",
-      "offset": 2637,
+      "offset": 4649,
       "length": 4,
       "value": "1"
     },
@@ -73616,56 +76070,56 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1338,
+      "offset": 1352,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "Array",
-      "offset": 1574,
+      "offset": 1588,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "Dictionary",
-      "offset": 1641,
+      "offset": 1655,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "Dictionary",
-      "offset": 1707,
+      "offset": 1721,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "Array",
-      "offset": 1766,
+      "offset": 1780,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2026,
+      "offset": 2040,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10953,
+      "offset": 11730,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14256,
+      "offset": 15033,
       "length": 1,
       "value": "0"
     },
@@ -73728,14 +76182,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 18101,
+      "offset": 18089,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Delegates\/StoryViewCollectionDelegate.swift",
       "kind": "BooleanLiteral",
-      "offset": 19990,
+      "offset": 19978,
       "length": 5,
       "value": "false"
     },
@@ -74622,11 +77076,11 @@
       "value": "1"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CustomScheme\/StoryAssetsSchemeHandler.swift",
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CustomScheme\/AssetsSchemeHandler.swift",
       "kind": "StringLiteral",
-      "offset": 134,
-      "length": 24,
-      "value": "\"InAppStorySDK.StoryAssetsSchemeHandler\""
+      "offset": 136,
+      "length": 19,
+      "value": "\"InAppStorySDK.AssetsSchemeHandler\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/DataCompression.swift",
@@ -74960,154 +77414,175 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1420,
+      "offset": 1429,
+      "length": 16,
+      "value": "\"inappmessaging\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1470,
+      "length": 38,
+      "value": "\"inappmessaging\/message\/{{messageID}}\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1525,
       "length": 24,
       "value": "\"game\/{{gameID}}\/launch\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1465,
+      "offset": 1570,
       "length": 36,
       "value": "\"game\/{{gameID}}\/instance-user-data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1524,
+      "offset": 1629,
       "length": 24,
       "value": "\"game\/{{gameID}}\/logger\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1572,
+      "offset": 1677,
       "length": 14,
       "value": "\"game\/preload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
+      "offset": 1719,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1677,
+      "offset": 1782,
       "length": 10,
       "value": "\"serverID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1724,
+      "offset": 1829,
       "length": 12,
       "value": "\"slideIndex\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1772,
+      "offset": 1877,
       "length": 8,
       "value": "\"expand\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1814,
+      "offset": 1919,
       "length": 6,
       "value": "\"tags\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1854,
+      "offset": 1959,
       "length": 6,
       "value": "\"test\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1894,
+      "offset": 1999,
       "length": 6,
       "value": "\"once\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1936,
+      "offset": 2041,
       "length": 8,
       "value": "\"feedID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1979,
+      "offset": 2084,
       "length": 7,
       "value": "\"limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2024,
+      "offset": 2129,
       "length": 10,
       "value": "\"favorite\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2070,
+      "offset": 2175,
       "length": 8,
       "value": "\"fields\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2112,
+      "offset": 2217,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2153,
+      "offset": 2258,
       "length": 7,
       "value": "\"value\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2196,
+      "offset": 2301,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2248,
+      "offset": 2353,
       "length": 10,
       "value": "\"src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2294,
+      "offset": 2399,
       "length": 8,
       "value": "\"gameID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2341,
+      "offset": 2446,
+      "length": 11,
+      "value": "\"messageID\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 2496,
       "length": 10,
       "value": "\"demoMode\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2392,
+      "offset": 2547,
       "length": 16,
       "value": "\"hasFeatureWebp\""
     },
@@ -75226,91 +77701,105 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1420,
+      "offset": 1429,
+      "length": 16,
+      "value": "\"inappmessaging\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1470,
+      "length": 38,
+      "value": "\"inappmessaging\/message\/{{messageID}}\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1525,
       "length": 24,
       "value": "\"game\/{{gameID}}\/launch\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1465,
+      "offset": 1570,
       "length": 36,
       "value": "\"game\/{{gameID}}\/instance-user-data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1524,
+      "offset": 1629,
       "length": 24,
       "value": "\"game\/{{gameID}}\/logger\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1572,
+      "offset": 1677,
       "length": 14,
       "value": "\"game\/preload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
+      "offset": 1719,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5406,
+      "offset": 5844,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6587,
+      "offset": 7025,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 6648,
+      "offset": 7086,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6819,
+      "offset": 7257,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 7036,
+      "offset": 7474,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7079,
+      "offset": 7517,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22761,
+      "offset": 23403,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25040,
+      "offset": 25682,
       "length": 5,
       "value": "false"
     },
@@ -75443,203 +77932,217 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5548,
+      "offset": 5556,
       "length": 16,
       "value": "\"SessionFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5618,
+      "offset": 5634,
       "length": 14,
       "value": "\"StoryFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5686,
+      "offset": 5710,
       "length": 21,
       "value": "\"CurrentStoryFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5761,
+      "offset": 5793,
+      "length": 21,
+      "value": "\"InAppMessageFailure\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
+      "kind": "StringLiteral",
+      "offset": 5876,
+      "length": 28,
+      "value": "\"CurrentInAppMessageFailure\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
+      "kind": "StringLiteral",
+      "offset": 5966,
       "length": 16,
       "value": "\"NetworkFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5831,
+      "offset": 6044,
       "length": 16,
       "value": "\"RequestFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5918,
+      "offset": 6131,
       "length": 14,
       "value": "\"JSConsoleLog\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5982,
+      "offset": 6195,
       "length": 15,
       "value": "\"JSConsoleInfo\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6047,
+      "offset": 6260,
       "length": 16,
       "value": "\"JSConsoleDebug\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6113,
+      "offset": 6326,
       "length": 18,
       "value": "\"JSConsoleWarning\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6181,
+      "offset": 6394,
       "length": 16,
       "value": "\"JSConsoleError\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Dictionary",
-      "offset": 7197,
+      "offset": 7411,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Dictionary",
-      "offset": 7267,
+      "offset": 7481,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7721,
+      "offset": 7935,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7761,
+      "offset": 7975,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7801,
+      "offset": 8015,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7841,
+      "offset": 8055,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7866,
+      "offset": 8080,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7887,
+      "offset": 8101,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 8566,
+      "offset": 8780,
       "length": 12,
       "value": "\"EditorIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8908,
+      "offset": 9122,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8920,
+      "offset": 9134,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8941,
+      "offset": 9155,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8953,
+      "offset": 9167,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9009,
+      "offset": 9223,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9017,
+      "offset": 9231,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9070,
+      "offset": 9284,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9078,
+      "offset": 9292,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Array",
-      "offset": 9127,
+      "offset": 9341,
       "length": 6,
       "value": "[0, 1]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9168,
+      "offset": 9382,
       "length": 5,
       "value": "200.0"
     },
@@ -76400,6 +78903,20 @@
       "value": "\"?unrecognized?\""
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 302,
+      "length": 3,
+      "value": "0.8"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 441,
+      "length": 4,
+      "value": "0.35"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/OnboardingsAPI.swift",
       "kind": "StringLiteral",
       "offset": 226,
@@ -76479,7 +78996,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/StoryService.swift",
       "kind": "BooleanLiteral",
-      "offset": 20781,
+      "offset": 21367,
       "length": 5,
       "value": "false"
     },
@@ -76575,6 +79092,27 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Download\/IAMManager.swift",
+      "kind": "Array",
+      "offset": 274,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Download\/IAMManager.swift",
+      "kind": "Array",
+      "offset": 332,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Download\/IAMManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5518,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
       "kind": "Array",
       "offset": 661,
@@ -76583,10 +79121,10 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 3891,
-      "length": 1,
-      "value": "0"
+      "kind": "Array",
+      "offset": 1004,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphonesimulator\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",

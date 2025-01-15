@@ -318,6 +318,10 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionRight = 1,
   ClosePositionBottomLeft = 2,
   ClosePositionBottomRight = 3,
+  ClosePositionLeading = 4,
+  ClosePositionTrailing = 5,
+  ClosePositionLeadingBottom = 6,
+  ClosePositionTrailingBottom = 7,
 };
 
 
@@ -407,6 +411,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -429,6 +435,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
@@ -489,6 +496,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
+
+
 
 
 
