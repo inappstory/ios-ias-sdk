@@ -12,6 +12,55 @@ Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
 All documentation with code samples has been moved to [docs.inappstory.com](https://docs.inappstory.com/sdk-guides/ios/how-to-get-started.html)
 
+## Instalation
+
+### CocoaPods
+
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects.
+Follow instructions on their website for seamless installation.
+To integrate InAppStory into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+# UIKit
+use_frameworks!
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.25.0-RC3'
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate InAppStory into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+# UIKit
+github "inappstory/ios-ias-sdk" ~> 1.25.0-RC3
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but InAppStory does support its use on supported platforms.
+
+Once you have your Swift package set up, adding InAppStory as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+//UIKit
+dependencies: [
+    .package(url: "https://github.com/inappstory/IAS-iOS-SPM.git", .exact("1.25.0-RC3"))
+]
+```
+
+### XCode SPM installation
+Alternatively, you can add an InAppStory via XCode:
+
+1. First click on the project;
+2. Select "*Add Package Dependencies...*";
+3. In the "*Enter Package URL*" field, specify the URL of this repository;
+4. Select package ias-ios-spm;
+5. Set "*Dependecy rule*" to "*Exact Version*" and set *"1.25.0-RC3"*;
+6. Click the "*Add Package*" button and wait for the installation to take place.
+
+
+## Changes
+
 ### 1.25.0-RC3
 
 - display storis and games from *PopUp* and *BottomSheet* in IAM;
