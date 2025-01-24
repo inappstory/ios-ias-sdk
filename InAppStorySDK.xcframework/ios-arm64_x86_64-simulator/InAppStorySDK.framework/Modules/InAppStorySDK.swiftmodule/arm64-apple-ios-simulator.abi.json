@@ -45464,6 +45464,116 @@
           },
           {
             "kind": "Var",
+            "name": "sign",
+            "printedName": "sign",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK8SettingsV4signSSSgvp",
+            "mangledName": "$s13InAppStorySDK8SettingsV4signSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK8SettingsV4signSSSgvg",
+                "mangledName": "$s13InAppStorySDK8SettingsV4signSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK8SettingsV4signSSSgvs",
+                "mangledName": "$s13InAppStorySDK8SettingsV4signSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK8SettingsV4signSSSgvM",
+                "mangledName": "$s13InAppStorySDK8SettingsV4signSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "tags",
             "printedName": "tags",
             "children": [
@@ -45570,7 +45680,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(userID:tags:placeholders:imagesPlaceholders:lang:)",
+            "printedName": "init(userID:sign:tags:placeholders:imagesPlaceholders:lang:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -45583,6 +45693,21 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -45658,8 +45783,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13InAppStorySDK8SettingsV6userID4tags12placeholders18imagesPlaceholders4langACSS_SaySSGSDyS2SGAJSSSgtcfc",
-            "mangledName": "$s13InAppStorySDK8SettingsV6userID4tags12placeholders18imagesPlaceholders4langACSS_SaySSGSDyS2SGAJSSSgtcfc",
+            "usr": "s:13InAppStorySDK8SettingsV6userID4sign4tags12placeholders18imagesPlaceholders4langACSS_SSSgSaySSGSDyS2SGAlJtcfc",
+            "mangledName": "$s13InAppStorySDK8SettingsV6userID4sign4tags12placeholders18imagesPlaceholders4langACSS_SSSgSaySSGSDyS2SGAlJtcfc",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl"
@@ -71049,14 +71174,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 9,
-      "value": "\"1.24.11\""
+      "value": "\"1.24.12\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 6,
-      "value": "\"3460\""
+      "value": "\"3466\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -75303,14 +75428,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22761,
+      "offset": 22855,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25040,
+      "offset": 25134,
       "length": 5,
       "value": "false"
     },
@@ -75513,133 +75638,133 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Dictionary",
-      "offset": 7197,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
-      "kind": "Dictionary",
       "offset": 7267,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
+      "kind": "Dictionary",
+      "offset": 7337,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7721,
+      "offset": 7840,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7761,
+      "offset": 7880,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7801,
+      "offset": 7920,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7841,
+      "offset": 7960,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7866,
+      "offset": 7985,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7887,
+      "offset": 8006,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 8566,
+      "offset": 8685,
       "length": 12,
       "value": "\"EditorIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8908,
+      "offset": 9027,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8920,
+      "offset": 9039,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8941,
+      "offset": 9060,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 8953,
+      "offset": 9072,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9009,
+      "offset": 9128,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9017,
+      "offset": 9136,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9070,
+      "offset": 9189,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9078,
+      "offset": 9197,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Array",
-      "offset": 9127,
+      "offset": 9246,
       "length": 6,
       "value": "[0, 1]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9168,
+      "offset": 9287,
       "length": 5,
       "value": "200.0"
     },
