@@ -261,6 +261,7 @@ extension CoreFoundation.CGRect {
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
   public func preloadInAppMessages(complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func preloadInAppMessagesBy(ids: Swift.Array<Swift.String>?, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
@@ -291,6 +292,7 @@ extension InAppStorySDK.InAppStory {
 }
 extension InAppStorySDK.InAppStory {
   public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -772,11 +774,12 @@ public struct WidgetStory {
 }
 public struct Settings : Swift.Equatable {
   public var userID: Swift.String
+  public var sign: Swift.String?
   public var tags: Swift.Array<Swift.String> {
     get
     set
   }
-  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
+  public init(userID: Swift.String, sign: Swift.String? = nil, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
