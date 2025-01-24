@@ -95,11 +95,12 @@ public struct WidgetStory {
 }
 public struct Settings : Swift.Equatable {
   public var userID: Swift.String
+  public var sign: Swift.String?
   public var tags: Swift.Array<Swift.String> {
     get
     set
   }
-  public init(userID: Swift.String, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
+  public init(userID: Swift.String, sign: Swift.String? = nil, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK_SwiftUI.Settings, rhs: InAppStorySDK_SwiftUI.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
