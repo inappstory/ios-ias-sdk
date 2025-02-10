@@ -97,6 +97,13 @@ public struct EntryOD : Swift.Equatable {
   }
   public static func == (lhs: InAppStorySDK.EntryOD, rhs: InAppStorySDK.EntryOD) -> Swift.Bool
 }
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppMessagesAPI {
+  @_spi(IAS_API) public func preloadInAppMessages(complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  @_spi(IAS_API) public func preloadInAppMessagesBy(ids: Swift.Array<Swift.String>?, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  @_spi(IAS_API) public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) @objc deinit
+}
 extension InAppStorySDK.Archive {
   final public func extract(_ entry: InAppStorySDK.Entry, to url: Foundation.URL, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
   final public func extract(_ entry: InAppStorySDK.Entry, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
@@ -853,6 +860,7 @@ final public class Archive : Swift.Sequence {
   @_spi(IAS_API) final public let favoritesAPI: InAppStorySDK.FavoritesAPI
   @_spi(IAS_API) final public let singleStoryAPI: InAppStorySDK.SingleStoryAPI
   @_spi(IAS_API) final public let onboardingsAPI: InAppStorySDK.OnboardingsAPI
+  @_spi(IAS_API) final public let inappmessagesAPI: InAppStorySDK.InAppMessagesAPI
   @_spi(IAS_API) final public let stackFeedAPI: InAppStorySDK.StackFeedAPI
   @_spi(IAS_API) final public let gamesAPI: InAppStorySDK.GamesAPI
   @_spi(IAS_API) final public let callbacksAPI: InAppStorySDK.CallbacksAPI
@@ -1487,7 +1495,7 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
-  public init(userID: Swift.String, sign: Swift.String? = nil, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String> = [:], imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String> = [:], lang: Swift.String? = nil)
+  public init(userID: Swift.String, sign: Swift.String? = nil, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {

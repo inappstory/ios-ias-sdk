@@ -429,6 +429,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 
 
 
+
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
 
@@ -941,6 +942,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 

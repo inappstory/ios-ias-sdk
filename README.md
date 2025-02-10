@@ -6,7 +6,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.25.0-RC5         | 3543          | >= 11.0     |
+| 1.25.0-RC6         | 3551          | >= 11.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -23,7 +23,7 @@ To integrate InAppStory into your Xcode project using CocoaPods, specify it in y
 ```ruby
 # UIKit
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.25.0-RC5'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.25.0-RC6'
 ```
 
 ### Carthage
@@ -32,7 +32,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag 
 
 ```ogdl
 # UIKit
-github "inappstory/ios-ias-sdk" ~> 1.25.0-RC5
+github "inappstory/ios-ias-sdk" ~> 1.25.0-RC6
 ```
 
 ### Swift Package Manager
@@ -44,7 +44,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 ```swift
 //UIKit
 dependencies: [
-    .package(url: "https://github.com/inappstory/IAS-iOS-SPM.git", .exact("1.25.0-RC5"))
+    .package(url: "https://github.com/inappstory/IAS-iOS-SPM.git", .exact("1.25.0-RC6"))
 ]
 ```
 
@@ -60,6 +60,11 @@ Alternatively, you can add an InAppStory via XCode:
 
 
 ## Changes
+
+### 1.25.0-RC6
+
+- display all types IAM on iPad;
+- fix widget statistic sends;
 
 ### 1.25.0-RC5
 
