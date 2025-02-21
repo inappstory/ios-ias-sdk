@@ -262,6 +262,7 @@ extension InAppStorySDK.InAppStory {
   public func preloadGames()
   public func preloadInAppMessages(complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public func preloadInAppMessagesBy(ids: Swift.Array<Swift.String>?, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)

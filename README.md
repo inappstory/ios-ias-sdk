@@ -6,7 +6,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.25.0-RC6         | 3551          | >= 11.0     |
+| 1.25.0-RC7         | 3559          | >= 11.0     |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
@@ -23,7 +23,7 @@ To integrate InAppStory into your Xcode project using CocoaPods, specify it in y
 ```ruby
 # UIKit
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.25.0-RC6'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.25.0-RC7'
 ```
 
 ### Carthage
@@ -32,7 +32,7 @@ pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag 
 
 ```ogdl
 # UIKit
-github "inappstory/ios-ias-sdk" ~> 1.25.0-RC6
+github "inappstory/ios-ias-sdk" ~> 1.25.0-RC7
 ```
 
 ### Swift Package Manager
@@ -44,7 +44,7 @@ Once you have your Swift package set up, adding InAppStory as a dependency is as
 ```swift
 //UIKit
 dependencies: [
-    .package(url: "https://github.com/inappstory/IAS-iOS-SPM.git", .exact("1.25.0-RC6"))
+    .package(url: "https://github.com/inappstory/IAS-iOS-SPM.git", .exact("1.25.0-RC7"))
 ]
 ```
 
@@ -55,11 +55,16 @@ Alternatively, you can add an InAppStory via XCode:
 2. Select "*Add Package Dependencies...*";
 3. In the "*Enter Package URL*" field, specify the URL of this repository;
 4. Select package ias-ios-spm;
-5. Set "*Dependecy rule*" to "*Exact Version*" and set *"1.25.0-RC5"*;
+5. Set "*Dependecy rule*" to "*Exact Version*" and set *"1.25.0-RC7"*;
 6. Click the "*Add Package*" button and wait for the installation to take place.
 
 
 ## Changes
+
+### 1.25.0-RC7
+
+- added work with IAM display limits;
+- added `logout` method for safer user zeroing;
 
 ### 1.25.0-RC6
 
@@ -92,12 +97,22 @@ Alternatively, you can add an InAppStory via XCode:
 
 - Added InAppMessages (IAM) functionality. For more detailed documentation, see [In-App-Messages](https://docs.inappstory.com/sdk-guides/ios/in-app-messaging.html)
   
-#####To open IAM added method:
+##### To open IAM added method:
 ``` Swift
 func showInAppMessageWith(id: <String>, onlyPreloaded: <Bool>, completion: ((_ show: Bool) -> Void)?)
 ```
 
-#####To preload IAM added method:
+##### To open IAM by event added method:
+``` Swift
+func showInAppMessageWith(event: <String>, onlyPreloaded: <Bool>, completion: ((_ show: Bool) -> Void)?)
+```
+
+##### To preload IAM added method:
 ``` Swift
 func preloadInAppMessages(complete: @escaping (Result<Bool, Error>) -> Void)
+```
+
+##### To preload IAM with list of ids, added method:
+``` Swift
+func preloadInAppMessagesBy(ids: Array<String>?, complete: @escaping (Result<Bool, Error>) -> Void) {
 ```

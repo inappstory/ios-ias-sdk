@@ -18093,6 +18093,131 @@
           },
           {
             "kind": "Function",
+            "name": "logOut",
+            "printedName": "logOut(tags:placeholders:imagesPlaceholders:complete:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0abC0C6logOut4tags12placeholders18imagesPlaceholders8completeySaySSGSg_SDyS2SGSgALyycSgtF",
+            "mangledName": "$s13InAppStorySDK0abC0C6logOut4tags12placeholders18imagesPlaceholders8completeySaySSGSg_SDyS2SGSgALyycSgtF",
+            "moduleName": "InAppStorySDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "clearMemory",
             "printedName": "clearMemory()",
             "children": [
@@ -73447,135 +73572,156 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 2652,
+      "offset": 2753,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 2999,
+      "offset": 3100,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 3129,
+      "offset": 3230,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3271,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3613,
+      "offset": 3759,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3648,
+      "offset": 3794,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3840,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3742,
+      "offset": 3888,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3790,
+      "offset": 3936,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3905,
+      "offset": 4051,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3948,
+      "offset": 4094,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4035,
+      "offset": 4181,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3613,
+      "offset": 4233,
+      "length": 11,
+      "value": "\"has_limit\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 3759,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3648,
+      "offset": 3794,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3840,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3742,
+      "offset": 3888,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3790,
+      "offset": 3936,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3905,
+      "offset": 4051,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3948,
+      "offset": 4094,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4035,
+      "offset": 4181,
       "length": 12,
       "value": "\"updated_at\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 4233,
+      "length": 11,
+      "value": "\"has_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
@@ -73993,7 +74139,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 71855,
+      "offset": 72683,
       "length": 2,
       "value": "[]"
     },
@@ -74177,14 +74323,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.25.0-RC6\""
+      "value": "\"1.25.0-RC7\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3551\""
+      "value": "\"3559\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -74553,49 +74699,49 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 32774,
+      "offset": 33620,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 32826,
+      "offset": 33672,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 33393,
+      "offset": 34239,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 33445,
+      "offset": 34291,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 49366,
+      "offset": 50212,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 54316,
+      "offset": 55162,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 57136,
+      "offset": 57572,
       "length": 5,
       "value": "false"
     },
@@ -75441,113 +75587,99 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
-      "kind": "IntegerLiteral",
-      "offset": 994,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1023,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1124,
+      "offset": 1116,
       "length": 20,
       "value": "\"splashLottieScreen\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1243,
+      "offset": 1235,
       "length": 13,
       "value": "\"downloadUrl\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1310,
+      "offset": 1302,
       "length": 13,
       "value": "\"archiveSize\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1355,
+      "offset": 1347,
       "length": 13,
       "value": "\"archiveSha1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1400,
+      "offset": 1392,
       "length": 19,
       "value": "\"canTryReloadCount\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1451,
+      "offset": 1443,
       "length": 13,
       "value": "\"loggerLevel\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1124,
+      "offset": 1116,
       "length": 20,
       "value": "\"splashLottieScreen\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1243,
+      "offset": 1235,
       "length": 13,
       "value": "\"downloadUrl\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1310,
+      "offset": 1302,
       "length": 13,
       "value": "\"archiveSize\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1355,
+      "offset": 1347,
       "length": 13,
       "value": "\"archiveSha1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1400,
+      "offset": 1392,
       "length": 19,
       "value": "\"canTryReloadCount\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1451,
+      "offset": 1443,
       "length": 13,
       "value": "\"loggerLevel\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1884,
+      "offset": 1876,
       "length": 19,
       "value": "\"durationMinimalMs\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/SingleGame.swift",
       "kind": "StringLiteral",
-      "offset": 1884,
+      "offset": 1876,
       "length": 19,
       "value": "\"durationMinimalMs\""
     },
@@ -78284,161 +78416,168 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1597,
+      "offset": 1610,
+      "length": 30,
+      "value": "\"inappmessaging\/message-limit\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1657,
       "length": 24,
       "value": "\"game\/{{gameID}}\/launch\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1642,
+      "offset": 1702,
       "length": 36,
       "value": "\"game\/{{gameID}}\/instance-user-data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1701,
+      "offset": 1761,
       "length": 24,
       "value": "\"game\/{{gameID}}\/logger\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1749,
+      "offset": 1809,
       "length": 14,
       "value": "\"game\/preload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1791,
+      "offset": 1851,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1854,
+      "offset": 1914,
       "length": 10,
       "value": "\"serverID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1901,
+      "offset": 1961,
       "length": 12,
       "value": "\"slideIndex\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1949,
+      "offset": 2009,
       "length": 8,
       "value": "\"expand\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1991,
+      "offset": 2051,
       "length": 6,
       "value": "\"tags\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2031,
+      "offset": 2091,
       "length": 6,
       "value": "\"test\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2071,
+      "offset": 2131,
       "length": 6,
       "value": "\"once\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2113,
+      "offset": 2173,
       "length": 8,
       "value": "\"feedID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2156,
+      "offset": 2216,
       "length": 7,
       "value": "\"limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2201,
+      "offset": 2261,
       "length": 10,
       "value": "\"favorite\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2247,
+      "offset": 2307,
       "length": 8,
       "value": "\"fields\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2289,
+      "offset": 2349,
       "length": 6,
       "value": "\"data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2330,
+      "offset": 2390,
       "length": 7,
       "value": "\"value\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2373,
+      "offset": 2433,
       "length": 12,
       "value": "\"session_id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2425,
+      "offset": 2485,
       "length": 10,
       "value": "\"src_list\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2471,
+      "offset": 2531,
       "length": 8,
       "value": "\"gameID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2518,
+      "offset": 2578,
       "length": 11,
       "value": "\"messageID\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2568,
+      "offset": 2628,
       "length": 10,
       "value": "\"demoMode\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 2619,
+      "offset": 2679,
       "length": 16,
       "value": "\"hasFeatureWebp\""
     },
@@ -78578,91 +78717,98 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1597,
+      "offset": 1610,
+      "length": 30,
+      "value": "\"inappmessaging\/message-limit\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
+      "kind": "StringLiteral",
+      "offset": 1657,
       "length": 24,
       "value": "\"game\/{{gameID}}\/launch\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1642,
+      "offset": 1702,
       "length": 36,
       "value": "\"game\/{{gameID}}\/instance-user-data\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1701,
+      "offset": 1761,
       "length": 24,
       "value": "\"game\/{{gameID}}\/logger\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1749,
+      "offset": 1809,
       "length": 14,
       "value": "\"game\/preload\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 1791,
+      "offset": 1851,
       "length": 19,
       "value": "\"ugc\/upload-server\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 5916,
+      "offset": 5976,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7097,
+      "offset": 7157,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7158,
+      "offset": 7218,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7329,
+      "offset": 7389,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 7546,
+      "offset": 7606,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7589,
+      "offset": 7649,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23561,
+      "offset": 23621,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25840,
+      "offset": 25900,
       "length": 5,
       "value": "false"
     },
