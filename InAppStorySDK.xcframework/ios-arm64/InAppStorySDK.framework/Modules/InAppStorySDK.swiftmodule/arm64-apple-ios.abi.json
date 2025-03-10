@@ -26197,6 +26197,16 @@
       },
       {
         "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -73572,154 +73582,154 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 2753,
+      "offset": 2775,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 3100,
+      "offset": 3122,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 3230,
+      "offset": 3252,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "BooleanLiteral",
-      "offset": 3271,
+      "offset": 3293,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3759,
+      "offset": 3781,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3794,
+      "offset": 3816,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3840,
+      "offset": 3862,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3888,
+      "offset": 3910,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3936,
+      "offset": 3958,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4051,
+      "offset": 4073,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4094,
+      "offset": 4116,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4181,
+      "offset": 4203,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4233,
+      "offset": 4255,
       "length": 11,
       "value": "\"has_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3759,
+      "offset": 3781,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3794,
+      "offset": 3816,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3840,
+      "offset": 3862,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3888,
+      "offset": 3910,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3936,
+      "offset": 3958,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4051,
+      "offset": 4073,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4094,
+      "offset": 4116,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4181,
+      "offset": 4203,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4233,
+      "offset": 4255,
       "length": 11,
       "value": "\"has_limit\""
     },
@@ -74061,71 +74071,78 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
+      "kind": "Array",
+      "offset": 1156,
+      "length": 415,
+      "value": "[\"gameLoaded\", \"gameShouldForegroundCallback\", \"gameComplete\", \"openUrl\", \"event\", \"share\", \"sendApiRequest\", \"gameInstanceGetLocalData\", \"gameInstanceSetLocalData\", \"showGoodsWidget\", \"vibrate\", \"haptic\", \"reloadGameReader\", \"gameLoadFailed\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\", \"initUserAccelerationSensor\", \"startUserAccelerationSensor\", \"stopUserAccelerationSensor\"]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "StringLiteral",
-      "offset": 1626,
+      "offset": 2100,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1746,
+      "offset": 2220,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1792,
+      "offset": 2266,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1831,
+      "offset": 2305,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1871,
+      "offset": 2345,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1915,
+      "offset": 2389,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1949,
+      "offset": 2423,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1990,
+      "offset": 2527,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2225,
+      "offset": 2762,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 2742,
+      "offset": 3279,
       "length": 2,
       "value": "[]"
     },
@@ -74139,7 +74156,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 72683,
+      "offset": 72840,
       "length": 2,
       "value": "[]"
     },
@@ -74323,14 +74340,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.25.0-RC8\""
+      "value": "\"1.25.0-RC9\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3561\""
+      "value": "\"3575\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -78801,14 +78818,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 23621,
+      "offset": 23620,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25900,
+      "offset": 25899,
       "length": 5,
       "value": "false"
     },

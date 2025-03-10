@@ -7,6 +7,7 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
+import CoreMotion
 import DeveloperToolsSupport
 import Foundation
 import ImageIO
