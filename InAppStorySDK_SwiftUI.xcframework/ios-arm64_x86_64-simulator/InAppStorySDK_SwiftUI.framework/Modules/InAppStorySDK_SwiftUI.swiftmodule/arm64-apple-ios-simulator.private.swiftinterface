@@ -269,6 +269,32 @@ public struct GameStoryData {
   public var slideData: InAppStorySDK_SwiftUI.SlideData?
   public var gameID: Swift.String?
 }
+public enum IASLogLevel {
+  case all
+  case initializ
+  case network
+  case reader
+  case js
+  case profiling
+  case cache
+  public static func == (a: InAppStorySDK_SwiftUI.IASLogLevel, b: InAppStorySDK_SwiftUI.IASLogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct IASLogObject {
+  public var message: Swift.String?
+  public var warning: Swift.String?
+  public var error: Swift.String?
+  public var cURL: Swift.String?
+  public var data: InAppStorySDK_SwiftUI.IASLogData
+}
+public struct IASLogData {
+  public var level: InAppStorySDK_SwiftUI.IASLogLevel
+  public var function: Swift.String
+  public var line: Swift.Int
+}
 public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK_SwiftUI.StoryData>)
@@ -393,6 +419,10 @@ public struct PhoneFormat {
   public var id: Swift.String
   public init(id: Swift.String)
   @objc deinit
+}
+public protocol IASLoggerProtocol {
+  var level: Swift.Array<InAppStorySDK_SwiftUI.IASLogLevel> { get set }
+  func log(object: InAppStorySDK_SwiftUI.IASLogObject)
 }
 extension SwiftUI.View {
   public func onboardingStories(feed: Swift.String? = nil, limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
@@ -670,6 +700,7 @@ extension Foundation.FileManager {
     get
   }
   public var isLoggingEnabled: Swift.Bool
+  public var logger: any InAppStorySDK_SwiftUI.IASLoggerProtocol
   public var isDeviceIDEnabled: Swift.Bool
   public var customShare: ((InAppStorySDK_SwiftUI.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)?
   public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
@@ -1904,6 +1935,8 @@ extension InAppStorySDK_SwiftUI.ShowStoryAction : Swift.RawRepresentable {}
 extension InAppStorySDK_SwiftUI.CloseStoryAction : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.CloseStoryAction : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CloseStoryAction : Swift.RawRepresentable {}
+extension InAppStorySDK_SwiftUI.IASLogLevel : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.IASLogLevel : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CompressionMethod : Swift.Equatable {}
