@@ -12806,6 +12806,92 @@
           },
           {
             "kind": "Var",
+            "name": "logger",
+            "printedName": "logger",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASLoggerProtocol",
+                "printedName": "any InAppStorySDK.IASLoggerProtocol",
+                "usr": "s:13InAppStorySDK17IASLoggerProtocolP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvp",
+            "mangledName": "$s13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLoggerProtocol",
+                    "printedName": "any InAppStorySDK.IASLoggerProtocol",
+                    "usr": "s:13InAppStorySDK17IASLoggerProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvg",
+                "mangledName": "$s13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLoggerProtocol",
+                    "printedName": "any InAppStorySDK.IASLoggerProtocol",
+                    "usr": "s:13InAppStorySDK17IASLoggerProtocolP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvs",
+                "mangledName": "$s13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvM",
+                "mangledName": "$s13InAppStorySDK0abC0C6loggerAA17IASLoggerProtocol_pvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isDeviceIDEnabled",
             "printedName": "isDeviceIDEnabled",
             "children": [
@@ -21202,6 +21288,182 @@
         "moduleName": "InAppStorySDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IASLoggerProtocol",
+        "printedName": "IASLoggerProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "level",
+            "printedName": "level",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[InAppStorySDK.IASLogLevel]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvp",
+            "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvp",
+            "moduleName": "InAppStorySDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[InAppStorySDK.IASLogLevel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvg",
+                "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvg",
+                "moduleName": "InAppStorySDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.IASLoggerProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK.IASLoggerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[InAppStorySDK.IASLogLevel]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvs",
+                "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvs",
+                "moduleName": "InAppStorySDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.IASLoggerProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK.IASLoggerProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvM",
+                "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP5levelSayAA11IASLogLevelOGvM",
+                "moduleName": "InAppStorySDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.IASLoggerProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK.IASLoggerProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "log",
+            "printedName": "log(object:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IASLogObject",
+                "printedName": "InAppStorySDK.IASLogObject",
+                "usr": "s:13InAppStorySDK12IASLogObjectV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK17IASLoggerProtocolP3log6objectyAA12IASLogObjectV_tF",
+            "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP3log6objectyAA12IASLogObjectV_tF",
+            "moduleName": "InAppStorySDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK.IASLoggerProtocol>",
+            "sugared_genericSig": "<Self where Self : InAppStorySDK.IASLoggerProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13InAppStorySDK17IASLoggerProtocolP",
+        "mangledName": "$s13InAppStorySDK17IASLoggerProtocolP",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl"
         ]
       },
       {
@@ -49571,6 +49833,1199 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "IASLogLevel",
+        "printedName": "IASLogLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO3allyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO3allyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "initializ",
+            "printedName": "initializ",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO9initializyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO9initializyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "network",
+            "printedName": "network",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO7networkyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO7networkyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "reader",
+            "printedName": "reader",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO6readeryA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO6readeryA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "js",
+            "printedName": "js",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO2jsyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO2jsyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "profiling",
+            "printedName": "profiling",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO9profilingyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO9profilingyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Var",
+            "name": "cache",
+            "printedName": "cache",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.IASLogLevel.Type) -> InAppStorySDK.IASLogLevel",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.IASLogLevel.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IASLogLevel",
+                        "printedName": "InAppStorySDK.IASLogLevel",
+                        "usr": "s:13InAppStorySDK11IASLogLevelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK11IASLogLevelO5cacheyA2CmF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO5cacheyA2CmF",
+            "moduleName": "InAppStorySDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IASLogLevel",
+                "printedName": "InAppStorySDK.IASLogLevel",
+                "usr": "s:13InAppStorySDK11IASLogLevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IASLogLevel",
+                "printedName": "InAppStorySDK.IASLogLevel",
+                "usr": "s:13InAppStorySDK11IASLogLevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK11IASLogLevelO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO2eeoiySbAC_ACtFZ",
+            "moduleName": "InAppStorySDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK11IASLogLevelO9hashValueSivp",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO9hashValueSivp",
+            "moduleName": "InAppStorySDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK11IASLogLevelO9hashValueSivg",
+                "mangledName": "$s13InAppStorySDK11IASLogLevelO9hashValueSivg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK11IASLogLevelO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s13InAppStorySDK11IASLogLevelO4hash4intoys6HasherVz_tF",
+            "moduleName": "InAppStorySDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13InAppStorySDK11IASLogLevelO",
+        "mangledName": "$s13InAppStorySDK11IASLogLevelO",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IASLogObject",
+        "printedName": "IASLogObject",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12IASLogObjectV7messageSSSgvp",
+            "mangledName": "$s13InAppStorySDK12IASLogObjectV7messageSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7messageSSSgvg",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7messageSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7messageSSSgvs",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7messageSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7messageSSSgvM",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7messageSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "warning",
+            "printedName": "warning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12IASLogObjectV7warningSSSgvp",
+            "mangledName": "$s13InAppStorySDK12IASLogObjectV7warningSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7warningSSSgvg",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7warningSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7warningSSSgvs",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7warningSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV7warningSSSgvM",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV7warningSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12IASLogObjectV5errorSSSgvp",
+            "mangledName": "$s13InAppStorySDK12IASLogObjectV5errorSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV5errorSSSgvg",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV5errorSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV5errorSSSgvs",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV5errorSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV5errorSSSgvM",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV5errorSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cURL",
+            "printedName": "cURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12IASLogObjectV4cURLSSSgvp",
+            "mangledName": "$s13InAppStorySDK12IASLogObjectV4cURLSSSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4cURLSSSgvg",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4cURLSSSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4cURLSSSgvs",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4cURLSSSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4cURLSSSgvM",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4cURLSSSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASLogData",
+                "printedName": "InAppStorySDK.IASLogData",
+                "usr": "s:13InAppStorySDK10IASLogDataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvp",
+            "mangledName": "$s13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogData",
+                    "printedName": "InAppStorySDK.IASLogData",
+                    "usr": "s:13InAppStorySDK10IASLogDataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvg",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogData",
+                    "printedName": "InAppStorySDK.IASLogData",
+                    "usr": "s:13InAppStorySDK10IASLogDataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvs",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvM",
+                "mangledName": "$s13InAppStorySDK12IASLogObjectV4dataAA0E4DataVvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13InAppStorySDK12IASLogObjectV",
+        "mangledName": "$s13InAppStorySDK12IASLogObjectV",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IASLogData",
+        "printedName": "IASLogData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "level",
+            "printedName": "level",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASLogLevel",
+                "printedName": "InAppStorySDK.IASLogLevel",
+                "usr": "s:13InAppStorySDK11IASLogLevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvp",
+            "mangledName": "$s13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvg",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IASLogLevel",
+                    "printedName": "InAppStorySDK.IASLogLevel",
+                    "usr": "s:13InAppStorySDK11IASLogLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvs",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvM",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV5levelAA0E5LevelOvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "function",
+            "printedName": "function",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK10IASLogDataV8functionSSvp",
+            "mangledName": "$s13InAppStorySDK10IASLogDataV8functionSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV8functionSSvg",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV8functionSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV8functionSSvs",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV8functionSSvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV8functionSSvM",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV8functionSSvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "line",
+            "printedName": "line",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK10IASLogDataV4lineSivp",
+            "mangledName": "$s13InAppStorySDK10IASLogDataV4lineSivp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV4lineSivg",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV4lineSivg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV4lineSivs",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV4lineSivs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK10IASLogDataV4lineSivM",
+                "mangledName": "$s13InAppStorySDK10IASLogDataV4lineSivM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13InAppStorySDK10IASLogDataV",
+        "mangledName": "$s13InAppStorySDK10IASLogDataV",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "IASEvent",
         "printedName": "IASEvent",
         "children": [
@@ -59699,16 +61154,6 @@
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "InAppStorySDK",
         "declAttributes": [
@@ -71020,7 +72465,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 71849,
+      "offset": 72148,
       "length": 2,
       "value": "[]"
     },
@@ -71139,7 +72584,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/Game.swift",
       "kind": "Array",
-      "offset": 3233,
+      "offset": 3242,
       "length": 2,
       "value": "[]"
     },
@@ -71190,14 +72635,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 9,
-      "value": "\"1.24.15\""
+      "value": "\"1.24.16\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 6,
-      "value": "\"3482\""
+      "value": "\"3490\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -71482,119 +72927,119 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8528,
+      "offset": 8590,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 10754,
+      "offset": 10816,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10986,
+      "offset": 11048,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11055,
+      "offset": 11117,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11137,
+      "offset": 11199,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11212,
+      "offset": 11274,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 11353,
+      "offset": 11415,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 11976,
+      "offset": 12038,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12145,
+      "offset": 12207,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12300,
+      "offset": 12362,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 12401,
+      "offset": 12463,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 12597,
+      "offset": 12659,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 30708,
+      "offset": 30770,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 30760,
+      "offset": 30822,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 31327,
+      "offset": 31389,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 31379,
+      "offset": 31441,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 47097,
+      "offset": 46986,
       "length": 5,
       "value": "false"
     },
@@ -71895,21 +73340,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 22939,
+      "offset": 22971,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 25236,
+      "offset": 25268,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 55067,
+      "offset": 55451,
       "length": 4,
       "value": "true"
     },
@@ -75444,14 +76889,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 22855,
+      "offset": 23521,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25134,
+      "offset": 25800,
       "length": 5,
       "value": "false"
     },
@@ -76599,14 +78044,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/StoryService.swift",
       "kind": "StringLiteral",
-      "offset": 6268,
+      "offset": 6953,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/StoryService.swift",
       "kind": "BooleanLiteral",
-      "offset": 20781,
+      "offset": 21884,
       "length": 5,
       "value": "false"
     },
@@ -76711,7 +78156,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3891,
+      "offset": 3961,
       "length": 1,
       "value": "0"
     },

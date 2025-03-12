@@ -222,6 +222,7 @@ extension CoreFoundation.CGRect {
     get
   }
   public var isLoggingEnabled: Swift.Bool
+  public var logger: any InAppStorySDK.IASLoggerProtocol
   public var isDeviceIDEnabled: Swift.Bool
   public var customShare: ((InAppStorySDK.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)?
   public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
@@ -365,6 +366,10 @@ extension InAppStorySDK.StoryUGCView {
   @_Concurrency.MainActor(unsafe) public func refresh()
   @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
+}
+public protocol IASLoggerProtocol {
+  var level: Swift.Array<InAppStorySDK.IASLogLevel> { get set }
+  func log(object: InAppStorySDK.IASLogObject)
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   var sku: Swift.String! { get set }
@@ -833,6 +838,32 @@ public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
   public var gameID: Swift.String?
 }
+public enum IASLogLevel {
+  case all
+  case initializ
+  case network
+  case reader
+  case js
+  case profiling
+  case cache
+  public static func == (a: InAppStorySDK.IASLogLevel, b: InAppStorySDK.IASLogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct IASLogObject {
+  public var message: Swift.String?
+  public var warning: Swift.String?
+  public var error: Swift.String?
+  public var cURL: Swift.String?
+  public var data: InAppStorySDK.IASLogData
+}
+public struct IASLogData {
+  public var level: InAppStorySDK.IASLogLevel
+  public var function: Swift.String
+  public var line: Swift.Int
+}
 public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK.StoryData>)
@@ -1032,3 +1063,5 @@ extension InAppStorySDK.ShowStoryAction : Swift.RawRepresentable {}
 extension InAppStorySDK.CloseStoryAction : Swift.Equatable {}
 extension InAppStorySDK.CloseStoryAction : Swift.Hashable {}
 extension InAppStorySDK.CloseStoryAction : Swift.RawRepresentable {}
+extension InAppStorySDK.IASLogLevel : Swift.Equatable {}
+extension InAppStorySDK.IASLogLevel : Swift.Hashable {}
