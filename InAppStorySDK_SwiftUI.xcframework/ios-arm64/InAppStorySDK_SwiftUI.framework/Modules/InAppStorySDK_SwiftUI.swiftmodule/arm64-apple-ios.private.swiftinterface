@@ -277,6 +277,8 @@ public enum IASLogLevel {
   case js
   case profiling
   case cache
+  case storyReader
+  case storyView
   public static func == (a: InAppStorySDK_SwiftUI.IASLogLevel, b: InAppStorySDK_SwiftUI.IASLogLevel) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -396,6 +398,7 @@ public enum IASEvent {
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setAnimationData(_ data: Foundation.Data?)
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setMinTime(_ time: Swift.Int)
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func finishAnimation(with complete: @escaping () -> Swift.Void)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func resetProgress()
 }
 @_spi(Private) public protocol Reorderable {
   associatedtype OrderElement : Swift.Equatable
@@ -502,6 +505,7 @@ extension Foundation.URL {
   @_spi(Private) public class func assetPatch(fileName: Swift.String) -> Swift.String
   @_spi(Private) public class func createCatcheIfNeeded() -> Swift.Bool
   @_spi(Private) public class func isValidItem(atPath path: Swift.String, size: Swift.Int, sha1: Swift.String) -> Swift.Bool
+  @_spi(Private) public class func isValidItem(atPath path: Swift.String, sha1: Swift.String) -> Swift.Bool
   @_spi(Private) public class func folderSize(folderPath: Swift.String) -> Swift.Int
   @_spi(Private) public func adoptUnzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil) throws
   @_spi(Private) public class func createFolderIfNeeded(folderPath: Swift.String) -> Swift.Bool
@@ -1487,6 +1491,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   @_spi(Private) @objc func setAnimationData(_ data: Foundation.Data?)
   @_spi(Private) @objc func setMinTime(_ time: Swift.Int)
   @_spi(Private) @objc func finishAnimation(with complete: @escaping () -> Swift.Void)
+  @_spi(Private) @objc func resetProgress()
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class AppearanceAPI {
   @_spi(IAS_API) public var favoritesCount: Swift.Int {

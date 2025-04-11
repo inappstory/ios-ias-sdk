@@ -343,6 +343,7 @@ SWIFT_PROTOCOL("_TtP21InAppStorySDK_SwiftUI25LottiePlaceholderProtocol_")
 - (void)setAnimationData:(NSData * _Nullable)data;
 - (void)setMinTime:(NSInteger)time;
 - (void)finishAnimationWith:(void (^ _Nonnull)(void))complete;
+- (void)resetProgress;
 @end
 
 
@@ -350,6 +351,7 @@ SWIFT_PROTOCOL("_TtP21InAppStorySDK_SwiftUI25LottiePlaceholderProtocol_")
 - (void)setAnimationData:(NSData * _Nullable)data;
 - (void)setMinTime:(NSInteger)time;
 - (void)finishAnimationWith:(void (^ _Nonnull)(void))complete;
+- (void)resetProgress;
 @end
 
 
@@ -392,6 +394,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

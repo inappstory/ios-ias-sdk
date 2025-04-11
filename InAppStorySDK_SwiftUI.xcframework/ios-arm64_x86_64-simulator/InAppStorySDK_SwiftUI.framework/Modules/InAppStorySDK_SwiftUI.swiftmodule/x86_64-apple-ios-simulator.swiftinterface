@@ -185,6 +185,8 @@ public enum IASLogLevel {
   case js
   case profiling
   case cache
+  case storyReader
+  case storyView
   public static func == (a: InAppStorySDK_SwiftUI.IASLogLevel, b: InAppStorySDK_SwiftUI.IASLogLevel) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
