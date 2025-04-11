@@ -8,6 +8,7 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
+import CoreMotion
 import DeveloperToolsSupport
 import Foundation
 import ImageIO
@@ -85,6 +86,8 @@ public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
+public let InAppMessageFailure: Foundation.Notification.Name
+public let CurrentInAppMessageFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public let RequestFailure: Foundation.Notification.Name
 public struct WidgetStory {
@@ -127,7 +130,7 @@ public struct TimersGradient {
   public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
 }
 public enum StoryType : Swift.String {
-  case story, storyUGC
+  case story, storyUGC, iam
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -135,7 +138,7 @@ public enum StoryType : Swift.String {
   }
 }
 public enum StorySource : Swift.String {
-  case single, onboarding, list, favorite
+  case single, onboarding, list, favorite, inAppMessages
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -182,6 +185,7 @@ public enum IASLogLevel {
   case initializ
   case network
   case reader
+  case iam
   case js
   case profiling
   case cache
@@ -202,6 +206,10 @@ public struct IASLogData {
   public var level: InAppStorySDK_SwiftUI.IASLogLevel
   public var function: Swift.String
   public var line: Swift.Int
+}
+public struct InAppMessageData {
+  public var id: Swift.String?
+  public var campaign: Swift.String?
 }
 public enum IASEvent {
   public enum Story {
@@ -225,9 +233,17 @@ public enum IASEvent {
     case eventGame(gameData: InAppStorySDK_SwiftUI.GameStoryData, name: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
     case gameFailure(gameData: InAppStorySDK_SwiftUI.GameStoryData, message: Swift.String)
   }
+  public enum IAMessage {
+    case preloaded(messages: Swift.Array<InAppStorySDK_SwiftUI.InAppMessageData>)
+    case show(iamData: InAppStorySDK_SwiftUI.InAppMessageData)
+    case close(iamData: InAppStorySDK_SwiftUI.InAppMessageData)
+    case clickOnButton(iamData: InAppStorySDK_SwiftUI.InAppMessageData, link: Swift.String)
+    case widgetEvent(iamData: InAppStorySDK_SwiftUI.InAppMessageData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
+  }
   public enum Failure {
     case sessionFailure(message: Swift.String)
     case storyFailure(message: Swift.String)
+    case inAppMessageFailure(message: Swift.String)
     case currentStoryFailure(message: Swift.String)
     case networkFailure(message: Swift.String)
     case requestFailure(message: Swift.String, statusCode: Swift.Int)
@@ -426,6 +442,9 @@ extension Foundation.FileManager {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK_SwiftUI.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol, _ storyType: InAppStorySDK_SwiftUI.StoriesType?) -> Swift.Void)?
+  public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
+  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
   public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
@@ -434,6 +453,7 @@ extension Foundation.FileManager {
   public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)?
   public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
   public var storiesEvent: (InAppStorySDK_SwiftUI.IASEvent.Story) -> Swift.Void
+  public var inAppMessagesEvent: (InAppStorySDK_SwiftUI.IASEvent.IAMessage) -> Swift.Void
   public var gameEvent: (InAppStorySDK_SwiftUI.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK_SwiftUI.IASEvent.Failure) -> Swift.Void
   public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK_SwiftUI.StackFeedObject?) -> Swift.Void)?
@@ -447,6 +467,8 @@ extension Foundation.FileManager {
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func preloadGames()
+  public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: [Swift.String]? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
@@ -474,6 +496,10 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK_SwiftUI.InAppStoryDelegate, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+}
+extension InAppStorySDK_SwiftUI.InAppStory {
+  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -610,7 +636,18 @@ extension Foundation.Data {
   public static func decompress(size: Swift.Int64, bufferSize: Swift.Int, skipCRC32: Swift.Bool, provider: (_ position: Swift.Int64, _ size: Swift.Int) throws -> Foundation.Data, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK_SwiftUI.CRC32
 }
 @objc public enum ClosePosition : Swift.Int {
-  case left, right, bottomLeft, bottomRight
+  @available(*, unavailable, renamed: "leading")
+  case left
+  @available(*, unavailable, renamed: "trailing")
+  case right
+  @available(*, unavailable, renamed: "leadingBottom")
+  case bottomLeft
+  @available(*, unavailable, renamed: "trailingBottom")
+  case bottomRight
+  case leading
+  case trailing
+  case leadingBottom
+  case trailingBottom
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
