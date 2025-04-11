@@ -318,6 +318,10 @@ typedef SWIFT_ENUM(NSInteger, ClosePosition, open) {
   ClosePositionRight = 1,
   ClosePositionBottomLeft = 2,
   ClosePositionBottomRight = 3,
+  ClosePositionLeading = 4,
+  ClosePositionTrailing = 5,
+  ClosePositionLeadingBottom = 6,
+  ClosePositionTrailingBottom = 7,
 };
 
 
@@ -343,6 +347,7 @@ SWIFT_PROTOCOL("_TtP13InAppStorySDK25LottiePlaceholderProtocol_")
 - (void)setAnimationData:(NSData * _Nullable)data;
 - (void)setMinTime:(NSInteger)time;
 - (void)finishAnimationWith:(void (^ _Nonnull)(void))complete;
+- (void)resetProgress;
 @end
 
 
@@ -350,6 +355,7 @@ SWIFT_PROTOCOL("_TtP13InAppStorySDK25LottiePlaceholderProtocol_")
 - (void)setAnimationData:(NSData * _Nullable)data;
 - (void)setMinTime:(NSInteger)time;
 - (void)finishAnimationWith:(void (^ _Nonnull)(void))complete;
+- (void)resetProgress;
 @end
 
 
@@ -407,11 +413,15 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -429,6 +439,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
@@ -489,6 +500,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
+
+
 
 
 

@@ -7,6 +7,7 @@ import CommonCrypto
 import Compression
 import CoreFoundation
 import CoreHaptics
+import CoreMotion
 import DeveloperToolsSupport
 import Foundation
 import ImageIO
@@ -96,6 +97,12 @@ public struct EntryOD : Swift.Equatable {
     get
   }
   public static func == (lhs: InAppStorySDK.EntryOD, rhs: InAppStorySDK.EntryOD) -> Swift.Bool
+}
+@_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppMessagesAPI {
+  @_spi(IAS_API) public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: Swift.Array<Swift.String>? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  @_spi(IAS_API) public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) @objc deinit
 }
 extension InAppStorySDK.Archive {
   final public func extract(_ entry: InAppStorySDK.Entry, to url: Foundation.URL, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
@@ -215,6 +222,7 @@ extension InAppStorySDK.Archive {
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setAnimationData(_ data: Foundation.Data?)
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func setMinTime(_ time: Swift.Int)
   @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func finishAnimation(with complete: @escaping () -> Swift.Void)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) @objc dynamic public func resetProgress()
 }
 @_spi(Private) public struct VibrateSettings : Swift.Codable {
   @_spi(Private) public var pattern: Swift.Array<Swift.Int>
@@ -288,6 +296,7 @@ extension CoreFoundation.CGRect {
   @_spi(Private) public class func assetPatch(fileName: Swift.String) -> Swift.String
   @_spi(Private) public class func createCatcheIfNeeded() -> Swift.Bool
   @_spi(Private) public class func isValidItem(atPath path: Swift.String, size: Swift.Int, sha1: Swift.String) -> Swift.Bool
+  @_spi(Private) public class func isValidItem(atPath path: Swift.String, sha1: Swift.String) -> Swift.Bool
   @_spi(Private) public class func folderSize(folderPath: Swift.String) -> Swift.Int
   @_spi(Private) public func adoptUnzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil) throws
   @_spi(Private) public class func createFolderIfNeeded(folderPath: Swift.String) -> Swift.Bool
@@ -316,6 +325,10 @@ extension CoreFoundation.CGRect {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
     @_spi(Private) get
   }
+}
+@_spi(Private) extension UIKit.UIView {
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public func roundTopCorners(radius: CoreFoundation.CGFloat)
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public func roundAllCorners(radius: CoreFoundation.CGFloat)
 }
 @_spi(Private) extension Swift.String {
   @_spi(Private) public func md5() -> Swift.String
@@ -496,6 +509,9 @@ extension CoreFoundation.CGRect {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
+  public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
+  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
   public var minimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
@@ -504,6 +520,7 @@ extension CoreFoundation.CGRect {
   public var goodsInsetForSection: (() -> UIKit.UIEdgeInsets)?
   public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
   public var storiesEvent: (InAppStorySDK.IASEvent.Story) -> Swift.Void
+  public var inAppMessagesEvent: (InAppStorySDK.IASEvent.IAMessage) -> Swift.Void
   public var gameEvent: (InAppStorySDK.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK.IASEvent.Failure) -> Swift.Void
   public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)?
@@ -517,6 +534,8 @@ extension CoreFoundation.CGRect {
 }
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
+  public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: [Swift.String]? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
@@ -544,6 +563,10 @@ extension InAppStorySDK.InAppStory {
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+}
+extension InAppStorySDK.InAppStory {
+  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -844,6 +867,7 @@ final public class Archive : Swift.Sequence {
   @_spi(IAS_API) final public let favoritesAPI: InAppStorySDK.FavoritesAPI
   @_spi(IAS_API) final public let singleStoryAPI: InAppStorySDK.SingleStoryAPI
   @_spi(IAS_API) final public let onboardingsAPI: InAppStorySDK.OnboardingsAPI
+  @_spi(IAS_API) final public let inappmessagesAPI: InAppStorySDK.InAppMessagesAPI
   @_spi(IAS_API) final public let stackFeedAPI: InAppStorySDK.StackFeedAPI
   @_spi(IAS_API) final public let gamesAPI: InAppStorySDK.GamesAPI
   @_spi(IAS_API) final public let callbacksAPI: InAppStorySDK.CallbacksAPI
@@ -910,7 +934,18 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
   @_spi(Private) public func dispositionAndCredential() -> InAppStorySDK.ChallengedDisposition
 }
 @objc public enum ClosePosition : Swift.Int {
-  case left, right, bottomLeft, bottomRight
+  @available(*, unavailable, renamed: "leading")
+  case left
+  @available(*, unavailable, renamed: "trailing")
+  case right
+  @available(*, unavailable, renamed: "leadingBottom")
+  case bottomLeft
+  @available(*, unavailable, renamed: "trailingBottom")
+  case bottomRight
+  case leading
+  case trailing
+  case leadingBottom
+  case trailingBottom
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1450,6 +1485,8 @@ public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
+public let InAppMessageFailure: Foundation.Notification.Name
+public let CurrentInAppMessageFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public let RequestFailure: Foundation.Notification.Name
 public struct WidgetStory {
@@ -1492,7 +1529,7 @@ public struct TimersGradient {
   public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
 }
 public enum StoryType : Swift.String {
-  case story, storyUGC
+  case story, storyUGC, iam
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1500,7 +1537,7 @@ public enum StoryType : Swift.String {
   }
 }
 public enum StorySource : Swift.String {
-  case single, onboarding, list, favorite
+  case single, onboarding, list, favorite, inAppMessages
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1547,6 +1584,7 @@ public enum IASLogLevel {
   case initializ
   case network
   case reader
+  case iam
   case js
   case profiling
   case cache
@@ -1567,6 +1605,10 @@ public struct IASLogData {
   public var level: InAppStorySDK.IASLogLevel
   public var function: Swift.String
   public var line: Swift.Int
+}
+public struct InAppMessageData {
+  public var id: Swift.String?
+  public var campaign: Swift.String?
 }
 public enum IASEvent {
   public enum Story {
@@ -1590,9 +1632,17 @@ public enum IASEvent {
     case eventGame(gameData: InAppStorySDK.GameStoryData, name: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
     case gameFailure(gameData: InAppStorySDK.GameStoryData, message: Swift.String)
   }
+  public enum IAMessage {
+    case preloaded(messages: Swift.Array<InAppStorySDK.InAppMessageData>)
+    case show(iamData: InAppStorySDK.InAppMessageData)
+    case close(iamData: InAppStorySDK.InAppMessageData)
+    case clickOnButton(iamData: InAppStorySDK.InAppMessageData, link: Swift.String)
+    case widgetEvent(iamData: InAppStorySDK.InAppMessageData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
+  }
   public enum Failure {
     case sessionFailure(message: Swift.String)
     case storyFailure(message: Swift.String)
+    case inAppMessageFailure(message: Swift.String)
     case currentStoryFailure(message: Swift.String)
     case networkFailure(message: Swift.String)
     case requestFailure(message: Swift.String, statusCode: Swift.Int)
@@ -1624,6 +1674,14 @@ public enum IASEvent {
     @_spi(Private) get
   }
 }
+@_spi(Private) extension UIKit.UIDevice {
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public static var topSafeArea: CoreFoundation.CGFloat {
+    @_spi(Private) get
+  }
+  @_spi(Private) @_Concurrency.MainActor(unsafe) public static var bottomSafeArea: CoreFoundation.CGFloat {
+    @_spi(Private) get
+  }
+}
 @available(*, unavailable, renamed: "DownloadPlaceholderProtocol")
 public protocol GamePlaceholderProtocol : UIKit.UIView {
   func setProgress(progress: Swift.Double)
@@ -1635,6 +1693,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   @_spi(Private) @objc func setAnimationData(_ data: Foundation.Data?)
   @_spi(Private) @objc func setMinTime(_ time: Swift.Int)
   @_spi(Private) @objc func finishAnimation(with complete: @escaping () -> Swift.Void)
+  @_spi(Private) @objc func resetProgress()
 }
 @_spi(Private) extension UIKit.UIImageView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func downloadedFrom(url: Foundation.URL, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit, withViewTag tag: Swift.Int)
@@ -1742,6 +1801,9 @@ extension UIKit.UICollectionViewFlowLayout {
 }
 @_spi(Private) extension Swift.Array where Element : InAppStorySDK.Reorderable {
   @_spi(Private) public func reorder(by preferredOrder: [Element.OrderElement]) -> [Element]
+}
+@_spi(Private) extension Swift.Array {
+  @_spi(Private) public static func isArraysSimilar<T>(_ arr1: Swift.Array<T>, _ arr2: Swift.Array<T>) -> Swift.Bool where T : Swift.Hashable
 }
 @_spi(Private) public protocol Reorderable {
   associatedtype OrderElement : Swift.Equatable
