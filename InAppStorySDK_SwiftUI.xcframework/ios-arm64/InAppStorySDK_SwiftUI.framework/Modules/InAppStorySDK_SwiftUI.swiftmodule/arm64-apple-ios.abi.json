@@ -77565,7 +77565,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
       "kind": "Array",
-      "offset": 1004,
+      "offset": 979,
       "length": 2,
       "value": "[]"
     },
@@ -77607,7 +77607,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/EditorDownloadService.swift",
       "kind": "IntegerLiteral",
-      "offset": 4432,
+      "offset": 5018,
       "length": 1,
       "value": "0"
     },
@@ -77929,14 +77929,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3368,
+      "offset": 3892,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StatisticManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5095,
+      "offset": 5619,
       "length": 5,
       "value": "false"
     },
@@ -79224,7 +79224,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 74735,
+      "offset": 74759,
       "length": 2,
       "value": "[]"
     },
@@ -79632,14 +79632,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.25.0\""
+      "value": "\"1.25.1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3596\""
+      "value": "\"3602\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -81737,98 +81737,98 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 224,
+      "offset": 227,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 269,
+      "offset": 272,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 314,
+      "offset": 317,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 359,
+      "offset": 362,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 404,
+      "offset": 407,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 449,
+      "offset": 452,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 494,
+      "offset": 497,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "Dictionary",
-      "offset": 557,
+      "offset": 560,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 648,
+      "offset": 651,
       "length": 8,
       "value": "\"params\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 701,
+      "offset": 704,
       "length": 4,
       "value": "\"cb\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 790,
+      "offset": 793,
       "length": 15,
       "value": "\"profiling_key\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 648,
+      "offset": 651,
       "length": 8,
       "value": "\"params\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 701,
+      "offset": 704,
       "length": 4,
       "value": "\"cb\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/GameRequest.swift",
       "kind": "StringLiteral",
-      "offset": 790,
+      "offset": 793,
       "length": 15,
       "value": "\"profiling_key\""
     },
@@ -83466,49 +83466,49 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7157,
+      "offset": 7203,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7218,
+      "offset": 7264,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7389,
+      "offset": 7435,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 7606,
+      "offset": 7607,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7649,
+      "offset": 7650,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 24286,
+      "offset": 24452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 26565,
+      "offset": 26731,
       "length": 5,
       "value": "false"
     },
