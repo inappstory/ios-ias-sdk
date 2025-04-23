@@ -132,6 +132,7 @@ extension InAppStorySDK_SwiftUI.Archive {
   @_spi(IAS_API) public var scrollUpdate: InAppStorySDK_SwiftUI.ScrollHandler?
   @_spi(IAS_API) public init(feed: Swift.String = "default", isFavorite: Swift.Bool = false)
   @_spi(IAS_API) public func setNewFeed(_ feed: Swift.String)
+  @_spi(IAS_API) public func refresh(_ feed: Swift.String? = nil)
   @_spi(IAS_API) @objc deinit
 }
 @_spi(IAS_API) extension InAppStorySDK_SwiftUI.StoryListAPI {
@@ -452,7 +453,7 @@ public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppMessagesAPI {
   @_spi(IAS_API) public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: Swift.Array<Swift.String>? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   @_spi(IAS_API) public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
-  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
   @_spi(IAS_API) @objc deinit
 }
 @_Concurrency.MainActor(unsafe) public struct StoryListUGCView : SwiftUI.View {
