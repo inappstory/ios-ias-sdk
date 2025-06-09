@@ -395,7 +395,10 @@ extension CoreFoundation.CGRect {
     get
     set
   }
-  @_spi(QAApp) public var isStatisticDisabled: Swift.Bool
+  @_spi(QAApp) public var isStatisticDisabled: Swift.Bool {
+    get
+    set
+  }
   @_spi(QAApp) public var isNativeFontsEnable: Swift.Bool
   public var settings: InAppStorySDK.Settings? {
     get
@@ -1433,6 +1436,7 @@ public let AppendCacheResponse: Foundation.Notification.Name
   }
   @_spi(Private) public var testKey: Swift.String?
   @_spi(Private) public var sandBox: Swift.Bool
+  @_spi(Private) public var isSettingsChanging: Swift.Bool
   @_spi(Private) public var session: InAppStorySDK.Session?
   @_spi(Private) public var settings: InAppStorySDK.Settings? {
     @_spi(Private) get
