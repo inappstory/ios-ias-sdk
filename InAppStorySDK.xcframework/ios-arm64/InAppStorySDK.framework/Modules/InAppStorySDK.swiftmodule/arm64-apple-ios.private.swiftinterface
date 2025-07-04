@@ -466,6 +466,13 @@ extension CoreFoundation.CGRect {
   public var soundSelectedImage: UIKit.UIImage
   public var closeReaderImage: UIKit.UIImage
   public var refreshImage: UIKit.UIImage
+  public var likeIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var dislikeIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var favoriteIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var shareIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var soundIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var closeReaderIconView: () -> any InAppStorySDK.IconViewProtocol
+  public var refreshIconView: () -> any InAppStorySDK.IconViewProtocol
   @available(*, unavailable, renamed: "refreshImage", message: "Please use InAppStory.shared.refreshImage")
   public var refreshGoodsImage: UIKit.UIImage {
     get
@@ -575,6 +582,11 @@ extension InAppStorySDK.InAppStory {
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
   public func removeAllFavorites()
+}
+public typealias IconViewState = (selected: Swift.Bool, enabled: Swift.Bool)
+public protocol IconViewProtocol : UIKit.UIView {
+  func update(state: InAppStorySDK.IconViewState)
+  var isHighlighted: Swift.Bool { get set }
 }
 public func MD5(_ input: Swift.String) -> Swift.String
 @_hasMissingDesignatedInitializers final public class ConfigurationRepo {
