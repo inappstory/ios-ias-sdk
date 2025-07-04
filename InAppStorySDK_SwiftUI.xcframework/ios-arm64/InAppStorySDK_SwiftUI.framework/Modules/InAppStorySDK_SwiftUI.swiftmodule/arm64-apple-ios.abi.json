@@ -16554,6 +16554,163 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "IconViewProtocol",
+        "printedName": "IconViewProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(selected: Swift.Bool, enabled: Swift.Bool)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP6update5stateySb8selected_Sb7enabledt_tF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP6update5stateySb8selected_Sb7enabledt_tF",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK_SwiftUI.IconViewProtocol>",
+            "sugared_genericSig": "<Self where Self : InAppStorySDK_SwiftUI.IconViewProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isHighlighted",
+            "printedName": "isHighlighted",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP13isHighlightedSbvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "genericSig": "<τ_0_0 where τ_0_0 : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "sugared_genericSig": "<Self where Self : InAppStorySDK_SwiftUI.IconViewProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP",
+        "mangledName": "$s21InAppStorySDK_SwiftUI16IconViewProtocolP",
+        "moduleName": "InAppStorySDK_SwiftUI",
+        "genericSig": "<τ_0_0 : UIKit.UIView>",
+        "sugared_genericSig": "<Self : UIKit.UIView>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK_SwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -21612,6 +21769,861 @@
                 "declKind": "Accessor",
                 "usr": "s:21InAppStorySDK_SwiftUI0abC0C12refreshImageSo7UIImageCvM",
                 "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C12refreshImageSo7UIImageCvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "likeIconView",
+            "printedName": "likeIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C12likeIconViewAA0hI8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dislikeIconView",
+            "printedName": "dislikeIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15dislikeIconViewAA0hI8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "favoriteIconView",
+            "printedName": "favoriteIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C16favoriteIconViewAA0hI8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shareIconView",
+            "printedName": "shareIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13shareIconViewAA0hI8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "soundIconView",
+            "printedName": "soundIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C13soundIconViewAA0hI8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "closeReaderIconView",
+            "printedName": "closeReaderIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C19closeReaderIconViewAA0iJ8Protocol_pycvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "refreshIconView",
+            "printedName": "refreshIconView",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IconViewProtocol",
+                    "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> any InAppStorySDK_SwiftUI.IconViewProtocol",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IconViewProtocol",
+                        "printedName": "any InAppStorySDK_SwiftUI.IconViewProtocol",
+                        "usr": "s:21InAppStorySDK_SwiftUI16IconViewProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C15refreshIconViewAA0hI8Protocol_pycvM",
                 "moduleName": "InAppStorySDK_SwiftUI",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -31920,6 +32932,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK_SwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Function",
         "name": "MD5",
         "printedName": "MD5(_:)",
@@ -40295,6 +41317,16 @@
         "printedName": "MobileCoreServices",
         "declKind": "Import",
         "moduleName": "InAppStorySDK_SwiftUI"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK_SwiftUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -79366,77 +80398,77 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "StringLiteral",
-      "offset": 2120,
+      "offset": 2144,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2240,
+      "offset": 2264,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2286,
+      "offset": 2310,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2325,
+      "offset": 2349,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2365,
+      "offset": 2389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2409,
+      "offset": 2433,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2443,
+      "offset": 2467,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2547,
+      "offset": 2571,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2782,
+      "offset": 2806,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 3194,
+      "offset": 3222,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 3262,
+      "offset": 3290,
       "length": 2,
       "value": "[]"
     },
@@ -79450,7 +80482,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 75752,
+      "offset": 75886,
       "length": 2,
       "value": "[]"
     },
@@ -79695,42 +80727,42 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 996,
+      "offset": 1008,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Array",
-      "offset": 1178,
+      "offset": 1190,
       "length": 360,
       "value": "[\"storyLoaded\", \"storyRenderReady\", \"storyStarted\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1729,
+      "offset": 1741,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1776,
+      "offset": 1788,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1828,
+      "offset": 1840,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1876,
+      "offset": 1888,
       "length": 5,
       "value": "false"
     },
@@ -79865,14 +80897,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.25.8\""
+      "value": "\"1.25.9\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3664\""
+      "value": "\"3688\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -80115,175 +81147,175 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 7160,
+      "offset": 8973,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 7529,
+      "offset": 9343,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8138,
+      "offset": 9952,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 8317,
+      "offset": 10131,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 8475,
+      "offset": 10289,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 8901,
+      "offset": 10715,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 9003,
+      "offset": 10817,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 11546,
+      "offset": 13360,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11778,
+      "offset": 13657,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11847,
+      "offset": 13726,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 11929,
+      "offset": 13808,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 12004,
+      "offset": 13883,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 12189,
+      "offset": 14068,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 13027,
+      "offset": 14906,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 13196,
+      "offset": 15075,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 13351,
+      "offset": 15230,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 13452,
+      "offset": 15331,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13648,
+      "offset": 15527,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 37720,
+      "offset": 39677,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 37772,
+      "offset": 39729,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 38339,
+      "offset": 40296,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 38391,
+      "offset": 40348,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 55481,
+      "offset": 57438,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 60729,
+      "offset": 62686,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 63437,
+      "offset": 65394,
       "length": 5,
       "value": "false"
     },
@@ -80556,28 +81588,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 6113,
+      "offset": 6201,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 6120,
+      "offset": 6208,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "Array",
-      "offset": 6247,
+      "offset": 6335,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "Array",
-      "offset": 6308,
+      "offset": 6396,
       "length": 551,
       "value": "[\"storyClick\", \"storyLoaded\", \"storyRenderReady\", \"storyStarted\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"updateTimeline\", \"showSingleStory\", \"storyShowSlide\", \"storyShowNextSlide\", \"storyShowNext\", \"storyShowPrev\", \"storyShowTextInput\", \"closeStory\", \"writeToClipboard\", \"share\", \"shareSlideScreenshotCb\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGameReader\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"verticalSwipeGesture\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
@@ -80591,28 +81623,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 9586,
+      "offset": 9674,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 20944,
+      "offset": 21095,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 23221,
+      "offset": 23419,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 53519,
+      "offset": 53219,
       "length": 4,
       "value": "true"
     },
@@ -80783,6 +81815,13 @@
       "offset": 494,
       "length": 4,
       "value": "16.0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/CustomIconButton.swift",
+      "kind": "StringLiteral",
+      "offset": 119,
+      "length": 16,
+      "value": "\"InAppStorySDK_SwiftUI.CustomIconButton\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/MD5\/MD5.swift",
@@ -82752,6 +83791,34 @@
       "value": "20"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/IASIconView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 161,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/IASIconView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 199,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/IASIconView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 231,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/IASIconView.swift",
+      "kind": "StringLiteral",
+      "offset": 109,
+      "length": 11,
+      "value": "\"InAppStorySDK_SwiftUI.IASIconView\""
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/SwiftUI\/ViewModel\/DelegatesModel.swift",
       "kind": "Dictionary",
       "offset": 295,
@@ -83769,14 +84836,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 25117,
+      "offset": 25123,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 27396,
+      "offset": 27402,
       "length": 5,
       "value": "false"
     },

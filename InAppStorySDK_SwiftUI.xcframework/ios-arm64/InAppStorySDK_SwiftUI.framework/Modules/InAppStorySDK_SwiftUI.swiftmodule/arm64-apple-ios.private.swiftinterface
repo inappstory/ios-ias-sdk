@@ -488,6 +488,11 @@ extension InAppStorySDK_SwiftUI.StoryListUGCView {
   @_Concurrency.MainActor(unsafe) public func setStoryCell(customCell: any InAppStorySDK_SwiftUI.StoryCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
   @_Concurrency.MainActor(unsafe) public func setEditorCell(customCell: any InAppStorySDK_SwiftUI.EditorCellProtocol) -> InAppStorySDK_SwiftUI.StoryListUGCView
 }
+public typealias IconViewState = (selected: Swift.Bool, enabled: Swift.Bool)
+public protocol IconViewProtocol : UIKit.UIView {
+  func update(state: InAppStorySDK_SwiftUI.IconViewState)
+  var isHighlighted: Swift.Bool { get set }
+}
 extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK_SwiftUI.CompressionMethod = .none, progress: Foundation.Progress? = nil) throws
   public func unzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
@@ -700,6 +705,13 @@ extension Foundation.FileManager {
   public var soundSelectedImage: UIKit.UIImage
   public var closeReaderImage: UIKit.UIImage
   public var refreshImage: UIKit.UIImage
+  public var likeIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var dislikeIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var favoriteIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var shareIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var soundIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var closeReaderIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
+  public var refreshIconView: () -> any InAppStorySDK_SwiftUI.IconViewProtocol
   @available(*, unavailable, renamed: "refreshImage", message: "Please use InAppStory.shared.refreshImage")
   public var refreshGoodsImage: UIKit.UIImage {
     get
