@@ -876,8 +876,23 @@ final public class Archive : Swift.Sequence {
   public typealias Element = InAppStorySDK.Entry
   public typealias Iterator = Swift.AnyIterator<InAppStorySDK.Entry>
 }
+@_spi(IAS_API) public enum ExternalPlatforms : Swift.String {
+  @_spi(IAS_API) case base
+  @_spi(IAS_API) case flutter
+  @_spi(IAS_API) case reactNative
+  @_spi(IAS_API) case kmp
+  @_spi(IAS_API) public init?(rawValue: Swift.String)
+  @_spi(IAS_API) public typealias RawValue = Swift.String
+  @_spi(IAS_API) public var rawValue: Swift.String {
+    @_spi(IAS_API) get
+  }
+}
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppStoryAPI {
   @_spi(IAS_API) public static let shared: InAppStorySDK.InAppStoryAPI
+  @_spi(IAS_API) public var plaform: InAppStorySDK.ExternalPlatforms {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
   @_spi(IAS_API) final public let settingsAPI: InAppStorySDK.SettingsAPI
   @_spi(IAS_API) final public let appearanceAPI: InAppStorySDK.AppearanceAPI
   @_spi(IAS_API) final public let favoritesAPI: InAppStorySDK.FavoritesAPI
@@ -1933,6 +1948,9 @@ extension InAppStorySDK.Archive.ArchiveError : Swift.Hashable {}
 extension InAppStorySDK.Archive.AccessMode : Swift.Equatable {}
 extension InAppStorySDK.Archive.AccessMode : Swift.Hashable {}
 extension InAppStorySDK.Archive.AccessMode : Swift.RawRepresentable {}
+@_spi(IAS_API) extension InAppStorySDK.ExternalPlatforms : Swift.Equatable {}
+@_spi(IAS_API) extension InAppStorySDK.ExternalPlatforms : Swift.Hashable {}
+@_spi(IAS_API) extension InAppStorySDK.ExternalPlatforms : Swift.RawRepresentable {}
 extension InAppStorySDK.ClosePosition : Swift.Equatable {}
 extension InAppStorySDK.ClosePosition : Swift.Hashable {}
 extension InAppStorySDK.ClosePosition : Swift.RawRepresentable {}
