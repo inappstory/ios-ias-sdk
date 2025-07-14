@@ -133,6 +133,304 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ExternalPlatforms",
+        "printedName": "ExternalPlatforms",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "base",
+            "printedName": "base",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK_SwiftUI.ExternalPlatforms.Type) -> InAppStorySDK_SwiftUI.ExternalPlatforms",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExternalPlatforms",
+                        "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                        "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO4baseyA2CmF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO4baseyA2CmF",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "spi_group_names": [
+              "IAS_API"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "flutter",
+            "printedName": "flutter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK_SwiftUI.ExternalPlatforms.Type) -> InAppStorySDK_SwiftUI.ExternalPlatforms",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExternalPlatforms",
+                        "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                        "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO7flutteryA2CmF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO7flutteryA2CmF",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "spi_group_names": [
+              "IAS_API"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reactNative",
+            "printedName": "reactNative",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK_SwiftUI.ExternalPlatforms.Type) -> InAppStorySDK_SwiftUI.ExternalPlatforms",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExternalPlatforms",
+                        "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                        "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO11reactNativeyA2CmF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO11reactNativeyA2CmF",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "spi_group_names": [
+              "IAS_API"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "kmp",
+            "printedName": "kmp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK_SwiftUI.ExternalPlatforms.Type) -> InAppStorySDK_SwiftUI.ExternalPlatforms",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExternalPlatforms",
+                        "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                        "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO3kmpyA2CmF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO3kmpyA2CmF",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "spi_group_names": [
+              "IAS_API"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueACSgSS_tcfc",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueACSgSS_tcfc",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "implicit": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueSSvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueSSvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "implicit": true,
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueSSvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO8rawValueSSvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO",
+        "mangledName": "$s21InAppStorySDK_SwiftUI17ExternalPlatformsO",
+        "moduleName": "InAppStorySDK_SwiftUI",
+        "declAttributes": [
+          "AccessControl",
+          "SPIAccessControl"
+        ],
+        "spi_group_names": [
+          "IAS_API"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "InAppStoryAPI",
         "printedName": "InAppStoryAPI",
         "children": [
@@ -191,6 +489,105 @@
                   "IAS_API"
                 ],
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plaform",
+            "printedName": "plaform",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExternalPlatforms",
+                "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExternalPlatforms",
+                    "printedName": "InAppStorySDK_SwiftUI.ExternalPlatforms",
+                    "usr": "s:21InAppStorySDK_SwiftUI17ExternalPlatformsO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0abC3APIC7plaformAA17ExternalPlatformsOvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -78772,6 +79169,62 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 181,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 9,
+      "value": "\"Flutter\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 236,
+      "length": 13,
+      "value": "\"ReactNative\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 265,
+      "length": 5,
+      "value": "\"KMP\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 181,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 9,
+      "value": "\"Flutter\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 236,
+      "length": 13,
+      "value": "\"ReactNative\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppStoryAPI.swift",
+      "kind": "StringLiteral",
+      "offset": 265,
+      "length": 5,
+      "value": "\"KMP\""
+    },
+    {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/EditorDownloadService.swift",
       "kind": "StringLiteral",
       "offset": 241,
@@ -80896,426 +81349,426 @@
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 352,
-      "length": 8,
-      "value": "\"1.25.9\""
+      "length": 9,
+      "value": "\"1.25.10\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 402,
+      "offset": 403,
       "length": 6,
-      "value": "\"3688\""
+      "value": "\"3692\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1112,
+      "offset": 1113,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1168,
+      "offset": 1169,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1218,
+      "offset": 1219,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1414,
+      "offset": 1415,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 1871,
+      "offset": 1872,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Array",
-      "offset": 2873,
+      "offset": 2874,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 3048,
+      "offset": 3049,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 3101,
+      "offset": 3102,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3149,
+      "offset": 3150,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3404,
+      "offset": 3405,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3852,
+      "offset": 3853,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 3951,
+      "offset": 3952,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4046,
+      "offset": 4047,
       "length": 4,
       "value": "12.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4124,
+      "offset": 4125,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4427,
+      "offset": 4428,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4521,
+      "offset": 4522,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4569,
+      "offset": 4570,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 4617,
+      "offset": 4618,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 4924,
+      "offset": 4925,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5417,
+      "offset": 5418,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5429,
+      "offset": 5430,
       "length": 4,
       "value": "0.50"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 5482,
+      "offset": 5483,
       "length": 5,
       "value": "200.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5602,
+      "offset": 5603,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5725,
+      "offset": 5726,
       "length": 14,
       "value": "\"likeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5851,
+      "offset": 5852,
       "length": 9,
       "value": "\"dislike\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5980,
+      "offset": 5981,
       "length": 17,
       "value": "\"dislikeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6110,
+      "offset": 6111,
       "length": 10,
       "value": "\"bookmark\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6240,
+      "offset": 6241,
       "length": 18,
       "value": "\"bookmarkSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6368,
+      "offset": 6369,
       "length": 7,
       "value": "\"share\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6493,
+      "offset": 6494,
       "length": 15,
       "value": "\"shareSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6618,
+      "offset": 6619,
       "length": 7,
       "value": "\"sound\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6743,
+      "offset": 6744,
       "length": 15,
       "value": "\"soundSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6879,
+      "offset": 6880,
       "length": 11,
       "value": "\"closeIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 7002,
+      "offset": 7003,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 8973,
+      "offset": 8974,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 9343,
+      "offset": 9344,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 9952,
+      "offset": 9954,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10131,
+      "offset": 10133,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10289,
+      "offset": 10291,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 10715,
+      "offset": 10717,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 10817,
+      "offset": 10819,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 13360,
+      "offset": 13420,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13657,
+      "offset": 13717,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13726,
+      "offset": 13786,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13808,
+      "offset": 13868,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13883,
+      "offset": 13943,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 14068,
+      "offset": 14128,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 14906,
+      "offset": 14966,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15075,
+      "offset": 15135,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15230,
+      "offset": 15290,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15331,
+      "offset": 15391,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 15527,
+      "offset": 15587,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 39677,
+      "offset": 39737,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 39729,
+      "offset": 39789,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 40296,
+      "offset": 40356,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 40348,
+      "offset": 40408,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 57438,
+      "offset": 57498,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 62686,
+      "offset": 62746,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 65394,
+      "offset": 65454,
       "length": 5,
       "value": "false"
     },

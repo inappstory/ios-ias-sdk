@@ -41,8 +41,23 @@ extension InAppStorySDK_SwiftUI.Archive {
     get
   }
 }
+@_spi(IAS_API) public enum ExternalPlatforms : Swift.String {
+  @_spi(IAS_API) case base
+  @_spi(IAS_API) case flutter
+  @_spi(IAS_API) case reactNative
+  @_spi(IAS_API) case kmp
+  @_spi(IAS_API) public init?(rawValue: Swift.String)
+  @_spi(IAS_API) public typealias RawValue = Swift.String
+  @_spi(IAS_API) public var rawValue: Swift.String {
+    @_spi(IAS_API) get
+  }
+}
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppStoryAPI {
   @_spi(IAS_API) public static let shared: InAppStorySDK_SwiftUI.InAppStoryAPI
+  @_spi(IAS_API) public var plaform: InAppStorySDK_SwiftUI.ExternalPlatforms {
+    @_spi(IAS_API) get
+    @_spi(IAS_API) set
+  }
   @_spi(IAS_API) final public let settingsAPI: InAppStorySDK_SwiftUI.SettingsAPI
   @_spi(IAS_API) final public let appearanceAPI: InAppStorySDK_SwiftUI.AppearanceAPI
   @_spi(IAS_API) final public let favoritesAPI: InAppStorySDK_SwiftUI.FavoritesAPI
@@ -2002,6 +2017,9 @@ public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
 @_spi(UGC) extension InAppStorySDK_SwiftUI.Editor {
   @_spi(UGC) public func getEditorWith(_ complete: @escaping InAppStorySDK_SwiftUI.EditorDownloadComplete)
 }
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.ExternalPlatforms : Swift.Equatable {}
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.ExternalPlatforms : Swift.Hashable {}
+@_spi(IAS_API) extension InAppStorySDK_SwiftUI.ExternalPlatforms : Swift.RawRepresentable {}
 extension InAppStorySDK_SwiftUI.StoryType : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.StoryType : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.StoryType : Swift.RawRepresentable {}
