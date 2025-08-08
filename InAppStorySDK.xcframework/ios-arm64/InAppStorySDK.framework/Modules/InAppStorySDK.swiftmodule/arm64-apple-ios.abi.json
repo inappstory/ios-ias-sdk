@@ -77456,7 +77456,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 75807,
+      "offset": 77062,
       "length": 2,
       "value": "[]"
     },
@@ -77647,14 +77647,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 9,
-      "value": "\"1.25.12\""
+      "value": "\"1.25.13\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 403,
       "length": 6,
-      "value": "\"3712\""
+      "value": "\"3718\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -82265,56 +82265,56 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7048,
+      "offset": 7168,
       "length": 38,
       "value": "\"LayoutDirectionDidChangeNotification\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7871,
+      "offset": 7991,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 7932,
+      "offset": 8052,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8103,
+      "offset": 8223,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 8275,
+      "offset": 8395,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8318,
+      "offset": 8438,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 27084,
+      "offset": 27204,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 29363,
+      "offset": 29483,
       "length": 5,
       "value": "false"
     },
