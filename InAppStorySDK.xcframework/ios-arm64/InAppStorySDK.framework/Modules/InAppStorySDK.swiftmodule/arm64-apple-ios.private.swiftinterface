@@ -176,7 +176,9 @@ public typealias BannersDidScrollType = (_ index: Swift.Int) -> Swift.Void
     get
     set
   }
-  @_Concurrency.MainActor @preconcurrency public init(id: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
+  @available(*, unavailable, renamed: "init(placeID:appearance:frame:)")
+  @_Concurrency.MainActor @preconcurrency convenience public init(id: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
+  @_Concurrency.MainActor @preconcurrency public init(placeID: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @objc deinit
 }
 extension InAppStorySDK.IASBannersView {
@@ -522,6 +524,10 @@ extension CoreFoundation.CGRect {
     set
   }
   public var imagesPlaceholders: [Swift.String : Swift.String] {
+    get
+    set
+  }
+  public var options: [Swift.String : Swift.String] {
     get
     set
   }
@@ -1549,6 +1555,9 @@ public let IASBannersFailure: Foundation.Notification.Name
 public let CurrentInAppMessageFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public let RequestFailure: Foundation.Notification.Name
+public struct OptionsKeys {
+  public static let POS: Swift.String
+}
 public struct WidgetStory {
   public let id: Swift.String
   public let title: Swift.String
@@ -1562,7 +1571,7 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
-  public init(userID: Swift.String, sign: Swift.String? = nil, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, lang: Swift.String? = nil)
+  public init(userID: Swift.String, sign: Swift.String? = nil, anonymous: Swift.Bool = false, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, lang: Swift.String? = nil)
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
@@ -1645,6 +1654,7 @@ public enum IASLogLevel {
   case network
   case reader
   case iam
+  case banner
   case js
   case profiling
   case cache
