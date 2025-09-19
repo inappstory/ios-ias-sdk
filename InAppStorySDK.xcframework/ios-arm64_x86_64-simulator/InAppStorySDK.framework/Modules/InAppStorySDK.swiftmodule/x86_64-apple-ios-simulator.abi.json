@@ -80191,6 +80191,13 @@
       "value": "0.8"
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Delegates\/Transitions\/BottomSheetTransitionDelegate.swift",
+      "kind": "BooleanLiteral",
+      "offset": 328,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Entry+ZIP64.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
@@ -80683,154 +80690,161 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 1153,
+      "offset": 1154,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1524,
+      "offset": 1525,
       "length": 15,
       "value": "\"content_ratio\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1571,
+      "offset": 1572,
       "length": 12,
       "value": "\"background\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1615,
+      "offset": 1616,
       "length": 10,
       "value": "\"backdrop\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1657,
+      "offset": 1658,
       "length": 15,
       "value": "\"corner_radius\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1704,
+      "offset": 1705,
       "length": 14,
       "value": "\"close_button\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1750,
+      "offset": 1751,
       "length": 23,
       "value": "\"close_button_position\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1805,
+      "offset": 1806,
       "length": 20,
       "value": "\"horizontal_padding\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 1857,
+      "offset": 1858,
       "length": 16,
       "value": "\"animation_type\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 3431,
+      "offset": 3432,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 3778,
+      "offset": 3779,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "IntegerLiteral",
-      "offset": 3908,
+      "offset": 3950,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "BooleanLiteral",
-      "offset": 3949,
+      "offset": 3991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4437,
+      "offset": 4479,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4472,
+      "offset": 4514,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4518,
+      "offset": 4560,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4566,
+      "offset": 4608,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4614,
+      "offset": 4656,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4729,
+      "offset": 4771,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4772,
+      "offset": 4814,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4859,
+      "offset": 4901,
+      "length": 15,
+      "value": "\"disable_close\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
+      "kind": "StringLiteral",
+      "offset": 4956,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 4911,
+      "offset": 5008,
       "length": 11,
       "value": "\"has_limit\""
     },
@@ -81570,6 +81584,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/IAMReader.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12494,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/Game.swift",
       "kind": "BooleanLiteral",
       "offset": 235,
@@ -81976,18 +81997,25 @@
       "value": "16.0"
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Delegates\/Transitions\/ModalTransitionDelegate.swift",
+      "kind": "BooleanLiteral",
+      "offset": 392,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.26.0 RC2\""
+      "value": "\"1.26.0 RC3\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3813\""
+      "value": "\"3817\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
@@ -83468,15 +83496,22 @@
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetPresentationController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 404,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetPresentationController.swift",
       "kind": "FloatLiteral",
-      "offset": 426,
+      "offset": 475,
       "length": 4,
       "value": "0.35"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/BottomSheet\/IAMBottomSheetPresentationController.swift",
       "kind": "FloatLiteral",
-      "offset": 466,
+      "offset": 515,
       "length": 3,
       "value": "0.8"
     },
@@ -86786,22 +86821,29 @@
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 392,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
       "kind": "FloatLiteral",
-      "offset": 414,
+      "offset": 463,
       "length": 4,
       "value": "0.35"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
       "kind": "FloatLiteral",
-      "offset": 454,
+      "offset": 503,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
       "kind": "FloatLiteral",
-      "offset": 494,
+      "offset": 543,
       "length": 4,
       "value": "16.0"
     },
