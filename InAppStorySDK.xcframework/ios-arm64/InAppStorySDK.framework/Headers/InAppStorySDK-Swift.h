@@ -388,6 +388,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
 SWIFT_CLASS("_TtC13InAppStorySDK14IASBannersView")
 @interface IASBannersView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 

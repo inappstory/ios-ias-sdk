@@ -4876,6 +4876,33 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InAppStorySDK@objc(cs)IASBannersView(im)layoutSubviews",
+            "mangledName": "$s13InAppStorySDK14IASBannersViewC14layoutSubviewsyyF",
+            "moduleName": "InAppStorySDK",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(frame:)",
@@ -20593,6 +20620,62 @@
             "declKind": "Func",
             "usr": "s:13InAppStorySDK0abC0C07preloadaB8Messages3ids4tags8completeySaySSGSg_AIys6ResultOySbs5Error_pGctF",
             "mangledName": "$s13InAppStorySDK0abC0C07preloadaB8Messages3ids4tags8completeySaySSGSg_AIys6ResultOySbs5Error_pGctF",
+            "moduleName": "InAppStorySDK",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preloadBanners",
+            "printedName": "preloadBanners(placeID:complete:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.Bool, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.Bool, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK0abC0C14preloadBanners7placeID8completeySS_ys6ResultOySbs5Error_pGctF",
+            "mangledName": "$s13InAppStorySDK0abC0C14preloadBanners7placeID8completeySS_ys6ResultOySbs5Error_pGctF",
             "moduleName": "InAppStorySDK",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -48771,6 +48854,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -59433,6 +59526,77 @@
                 "declKind": "EnumElement",
                 "usr": "s:13InAppStorySDK8IASEventO9IASBannerO13bannersLoadedyAESSSg_tcAEmF",
                 "mangledName": "$s13InAppStorySDK8IASEventO9IASBannerO13bannersLoadedyAESSSg_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
+                "name": "preloaded",
+                "printedName": "preloaded",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IASBanner.Type) -> (Swift.String, [InAppStorySDK.IASBannerData]) -> InAppStorySDK.IASEvent.IASBanner",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, [InAppStorySDK.IASBannerData]) -> InAppStorySDK.IASEvent.IASBanner",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IASBanner",
+                            "printedName": "InAppStorySDK.IASEvent.IASBanner",
+                            "usr": "s:13InAppStorySDK8IASEventO9IASBannerO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(placeID: Swift.String, banners: [InAppStorySDK.IASBannerData])",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[InAppStorySDK.IASBannerData]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "IASBannerData",
+                                    "printedName": "InAppStorySDK.IASBannerData",
+                                    "usr": "s:13InAppStorySDK13IASBannerDataV"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IASBanner.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IASBanner",
+                            "printedName": "InAppStorySDK.IASEvent.IASBanner",
+                            "usr": "s:13InAppStorySDK8IASEventO9IASBannerO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IASBannerO9preloadedyAESS_SayAA0F4DataVGtcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IASBannerO9preloadedyAESS_SayAA0F4DataVGtcAEmF",
                 "moduleName": "InAppStorySDK"
               },
               {
@@ -80438,14 +80602,14 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "StringLiteral",
-      "offset": 1205,
+      "offset": 1459,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "StringLiteral",
-      "offset": 1399,
+      "offset": 1653,
       "length": 9,
       "value": "\"default\""
     },
@@ -82008,14 +82172,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.26.0 RC3\""
+      "value": "\"1.26.0 RC4\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3817\""
+      "value": "\"3819\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
@@ -82405,49 +82569,49 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 41301,
+      "offset": 44026,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 41353,
+      "offset": 44078,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 41920,
+      "offset": 44645,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 41972,
+      "offset": 44697,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 60212,
+      "offset": 62937,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 65773,
+      "offset": 68498,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 69394,
+      "offset": 72119,
       "length": 5,
       "value": "false"
     },
@@ -86048,6 +86212,41 @@
       "offset": 31383,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "Dictionary",
+      "offset": 383,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "Array",
+      "offset": 437,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "StringLiteral",
+      "offset": 498,
+      "length": 39,
+      "value": "\"com.inappstory.IASBannersManager.sync\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "Dictionary",
+      "offset": 636,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7720,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/PhoneNumberFormatter\/PhoneFormatter.swift",

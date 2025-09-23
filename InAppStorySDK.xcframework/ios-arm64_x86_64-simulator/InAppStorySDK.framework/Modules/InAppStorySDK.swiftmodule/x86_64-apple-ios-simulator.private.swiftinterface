@@ -180,6 +180,7 @@ public typealias BannersDidScrollType = (_ index: Swift.Int) -> Swift.Void
   @_Concurrency.MainActor @preconcurrency convenience public init(id: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @_Concurrency.MainActor @preconcurrency public init(placeID: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
 }
 extension InAppStorySDK.IASBannersView {
   @_Concurrency.MainActor @preconcurrency public func create()
@@ -579,6 +580,7 @@ extension CoreFoundation.CGRect {
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
   public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: [Swift.String]? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func preloadBanners(placeID: Swift.String, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
   public func clearMemory()
   public func clearCache()
@@ -1721,6 +1723,7 @@ public enum IASEvent {
   }
   public enum IASBanner {
     case bannersLoaded(placeID: Swift.String? = nil)
+    case preloaded(placeID: Swift.String, banners: Swift.Array<InAppStorySDK.IASBannerData>)
     case clickOnButton(bannerData: InAppStorySDK.IASBannerData, link: Swift.String)
     case widgetEvent(bannerData: InAppStorySDK.IASBannerData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
   }
