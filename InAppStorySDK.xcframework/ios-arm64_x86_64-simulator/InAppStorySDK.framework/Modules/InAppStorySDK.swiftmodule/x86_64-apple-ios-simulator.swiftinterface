@@ -987,6 +987,7 @@ public enum IASEvent {
   public enum IASBanner {
     case bannersLoaded(placeID: Swift.String? = nil)
     case preloaded(placeID: Swift.String, banners: Swift.Array<InAppStorySDK.IASBannerData>)
+    case show(bannerData: InAppStorySDK.IASBannerData)
     case clickOnButton(bannerData: InAppStorySDK.IASBannerData, link: Swift.String)
     case widgetEvent(bannerData: InAppStorySDK.IASBannerData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
   }

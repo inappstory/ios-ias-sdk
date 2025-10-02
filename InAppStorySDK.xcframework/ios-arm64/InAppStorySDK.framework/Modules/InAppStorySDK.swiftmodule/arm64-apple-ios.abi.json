@@ -1820,6 +1820,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -59601,6 +59611,63 @@
               },
               {
                 "kind": "Var",
+                "name": "show",
+                "printedName": "show",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.IASEvent.IASBanner.Type) -> (InAppStorySDK.IASBannerData) -> InAppStorySDK.IASEvent.IASBanner",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.IASBannerData) -> InAppStorySDK.IASEvent.IASBanner",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IASBanner",
+                            "printedName": "InAppStorySDK.IASEvent.IASBanner",
+                            "usr": "s:13InAppStorySDK8IASEventO9IASBannerO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(bannerData: InAppStorySDK.IASBannerData)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IASBannerData",
+                                "printedName": "InAppStorySDK.IASBannerData",
+                                "usr": "s:13InAppStorySDK13IASBannerDataV"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "InAppStorySDK.IASEvent.IASBanner.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IASBanner",
+                            "printedName": "InAppStorySDK.IASEvent.IASBanner",
+                            "usr": "s:13InAppStorySDK8IASEventO9IASBannerO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:13InAppStorySDK8IASEventO9IASBannerO4showyAeA0F4DataV_tcAEmF",
+                "mangledName": "$s13InAppStorySDK8IASEventO9IASBannerO4showyAeA0F4DataV_tcAEmF",
+                "moduleName": "InAppStorySDK"
+              },
+              {
+                "kind": "Var",
                 "name": "clickOnButton",
                 "printedName": "clickOnButton",
                 "children": [
@@ -80208,6 +80275,20 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Statistic\/Helpers\/IASBannerVisibilityTracker.swift",
+      "kind": "StringLiteral",
+      "offset": 195,
+      "length": 13,
+      "value": "\"cellDidShow\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Statistic\/Helpers\/IASBannerVisibilityTracker.swift",
+      "kind": "Array",
+      "offset": 421,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Archive+Reading.swift",
       "kind": "BooleanLiteral",
       "offset": 1152,
@@ -81015,7 +81096,7 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 852,
+      "offset": 1172,
       "length": 5,
       "value": "false"
     },
@@ -82172,14 +82253,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.26.0 RC5\""
+      "value": "\"1.26.0 RC7\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3821\""
+      "value": "\"3835\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
@@ -84886,42 +84967,42 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1574,
+      "offset": 1620,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1676,
+      "offset": 1719,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1723,
+      "offset": 1766,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1775,
+      "offset": 1818,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1823,
+      "offset": 1866,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "Array",
-      "offset": 2668,
+      "offset": 2711,
       "length": 412,
       "value": "[\"storyLoaded\", \"storyRenderReady\", \"storyStarted\", \"updateTimeline\", \"storyShowNext\", \"storyShowPrev\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
@@ -85719,7 +85800,7 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Helpers\/AtomicArray.swift",
       "kind": "IntegerLiteral",
-      "offset": 613,
+      "offset": 819,
       "length": 1,
       "value": "1"
     },
@@ -87161,7 +87242,7 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/Elements\/IASBannersCollectionView.swift",
       "kind": "Array",
-      "offset": 343,
+      "offset": 408,
       "length": 2,
       "value": "[]"
     },
@@ -87369,168 +87450,168 @@
       "value": "[]"
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 729,
       "length": 10,
       "value": "\"AgreeBtn\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 863,
       "length": 9,
       "value": "\"BackBtn\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1007,
       "length": 17,
       "value": "\"CameraCellImage\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1154,
       "length": 12,
       "value": "\"EditorIcon\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1294,
       "length": 11,
       "value": "\"FlipArrow\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1431,
       "length": 10,
       "value": "\"PhotoBtn\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1579,
       "length": 16,
       "value": "\"StartRecordBtn\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1731,
       "length": 15,
       "value": "\"StopRecordBtn\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1872,
       "length": 10,
       "value": "\"bookmark\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2024,
       "length": 18,
       "value": "\"bookmarkSelected\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2170,
       "length": 11,
       "value": "\"closeIcon\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2305,
       "length": 9,
       "value": "\"dislike\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2454,
       "length": 17,
       "value": "\"dislikeSelected\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2601,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2739,
       "length": 10,
       "value": "\"gradient\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2882,
       "length": 14,
       "value": "\"gradient_top\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3014,
       "length": 6,
       "value": "\"like\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3154,
       "length": 14,
       "value": "\"likeSelected\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3300,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3433,
       "length": 7,
       "value": "\"share\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3576,
       "length": 15,
       "value": "\"shareSelected\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3711,
       "length": 7,
       "value": "\"sound\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3854,
       "length": 15,
       "value": "\"soundSelected\""
     },
     {
-      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3998,
       "length": 12,
