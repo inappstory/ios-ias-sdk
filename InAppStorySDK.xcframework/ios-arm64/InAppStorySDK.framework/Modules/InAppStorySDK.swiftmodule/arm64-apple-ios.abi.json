@@ -4287,6 +4287,256 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IASVideoPlayerLayer",
+        "printedName": "IASVideoPlayerLayer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASVideoPlayerLayer",
+                "printedName": "InAppStorySDK.IASVideoPlayerLayer",
+                "usr": "c:@M@InAppStorySDK@objc(cs)IASVideoPlayerLayer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InAppStorySDK@objc(cs)IASVideoPlayerLayer(im)init",
+            "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerCACycfc",
+            "moduleName": "InAppStorySDK",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(layer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASVideoPlayerLayer",
+                "printedName": "InAppStorySDK.IASVideoPlayerLayer",
+                "usr": "c:@M@InAppStorySDK@objc(cs)IASVideoPlayerLayer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InAppStorySDK@objc(cs)IASVideoPlayerLayer(im)initWithLayer:",
+            "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerC5layerACyp_tcfc",
+            "moduleName": "InAppStorySDK",
+            "overriding": true,
+            "objc_name": "initWithLayer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK19IASVideoPlayerLayerC4play3urly10Foundation3URLV_tF",
+            "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerC4play3urly10Foundation3URLV_tF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK19IASVideoPlayerLayerC4stopyyF",
+            "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerC4stopyyF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "restart",
+            "printedName": "restart()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK19IASVideoPlayerLayerC7restartyyF",
+            "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerC7restartyyF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InAppStorySDK@objc(cs)IASVideoPlayerLayer",
+        "mangledName": "$s13InAppStorySDK19IASVideoPlayerLayerC",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)AVSampleBufferDisplayLayer",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "AVFoundation.AVSampleBufferDisplayLayer",
+          "QuartzCore.CALayer",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4887,6 +5137,33 @@
           },
           {
             "kind": "Function",
+            "name": "didMoveToWindow",
+            "printedName": "didMoveToWindow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InAppStorySDK@objc(cs)IASBannersView(im)didMoveToWindow",
+            "mangledName": "$s13InAppStorySDK14IASBannersViewC15didMoveToWindowyyF",
+            "moduleName": "InAppStorySDK",
+            "overriding": true,
+            "objc_name": "didMoveToWindow",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "layoutSubviews",
             "printedName": "layoutSubviews()",
             "children": [
@@ -5208,6 +5485,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -6134,6 +6418,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -6781,6 +7072,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "LottiePlaceholderProtocol",
             "printedName": "LottiePlaceholderProtocol",
             "usr": "c:@M@InAppStorySDK@objc(pl)LottiePlaceholderProtocol",
@@ -6823,6 +7121,23 @@
         "kind": "Import",
         "name": "AudioToolbox",
         "printedName": "AudioToolbox",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "InAppStorySDK"
       },
@@ -25296,6 +25611,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -28217,6 +28539,13 @@
                 "printedName": "Sendable",
                 "usr": "s:s8SendableP",
                 "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
               }
             ]
           },
@@ -30332,6 +30661,13 @@
                 "printedName": "Sendable",
                 "usr": "s:s8SendableP",
                 "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
               }
             ]
           },
@@ -33333,6 +33669,23 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
       },
       {
         "kind": "Import",
@@ -36637,6 +36990,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -38537,6 +38897,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -46352,6 +46719,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -47783,6 +48157,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -48763,6 +49144,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -66701,6 +67089,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -70428,6 +70823,7 @@
         "intro_tvOS": "9.0",
         "intro_watchOS": "2.0",
         "declAttributes": [
+          "AddressableForDependencies",
           "Frozen",
           "Available",
           "Available",
@@ -70793,6 +71189,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sequence",
             "printedName": "Sequence",
             "children": [
@@ -71098,6 +71501,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -71357,6 +71767,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -72725,6 +73142,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -73820,6 +74244,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "_ExpressibleByBuiltinStringLiteral",
+            "printedName": "_ExpressibleByBuiltinStringLiteral",
+            "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
+            "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -73904,6 +74335,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
             "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
             "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
@@ -73915,13 +74353,6 @@
             "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
             "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
             "mangledName": "$ss51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ExpressibleByBuiltinStringLiteral",
-            "printedName": "_ExpressibleByBuiltinStringLiteral",
-            "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
-            "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
           },
           {
             "kind": "Conformance",
@@ -74548,6 +74979,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           },
           {
             "kind": "Conformance",
@@ -76989,6 +77427,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SIMDScalar",
             "printedName": "SIMDScalar",
             "children": [
@@ -77159,6 +77604,35 @@
             ],
             "usr": "s:7SwiftUI18_FormatSpecifiableP",
             "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "NetworkFixedWidthInteger",
+            "printedName": "NetworkFixedWidthInteger",
+            "usr": "s:7Network0A17FixedWidthIntegerP",
+            "mangledName": "$s7Network0A17FixedWidthIntegerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AtomicRepresentable",
+            "printedName": "AtomicRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AtomicRepresentation",
+                "printedName": "AtomicRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "_Atomic8BitStorage",
+                    "printedName": "Synchronization._Atomic8BitStorage",
+                    "usr": "s:15Synchronization18_Atomic8BitStorageV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:15Synchronization19AtomicRepresentableP",
+            "mangledName": "$s15Synchronization19AtomicRepresentableP"
           }
         ]
       },
@@ -77304,6 +77778,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -77622,6 +78103,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -77843,6 +78331,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -78532,6 +79027,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -79518,6 +80020,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Encodable",
             "printedName": "Encodable",
             "usr": "s:SE",
@@ -79536,35 +80045,6 @@
             "printedName": "_HasContiguousBytes",
             "usr": "s:s19_HasContiguousBytesP",
             "mangledName": "$ss19_HasContiguousBytesP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
           },
           {
             "kind": "Conformance",
@@ -79659,6 +80139,49 @@
             ],
             "usr": "s:10Foundation26DecodableWithConfigurationP",
             "mangledName": "$s10Foundation26DecodableWithConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Content",
+            "printedName": "Content",
+            "usr": "s:So17CMSampleBufferRefa9CoreMediaE7ContentP",
+            "mangledName": "$sSo17CMSampleBufferRefa9CoreMediaE7ContentP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContentWithFormatDescription",
+            "printedName": "ContentWithFormatDescription",
+            "usr": "s:So17CMSampleBufferRefa9CoreMediaE28ContentWithFormatDescriptionP",
+            "mangledName": "$sSo17CMSampleBufferRefa9CoreMediaE28ContentWithFormatDescriptionP"
           }
         ]
       },
@@ -80172,6 +80695,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "_ExpressibleByImageLiteral",
             "printedName": "_ExpressibleByImageLiteral",
             "usr": "s:s26_ExpressibleByImageLiteralP",
@@ -80443,6 +80973,20 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Elements\/LoopPlayer\/IASVideoPlayerLayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 615,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Elements\/LoopPlayer\/IASVideoPlayerLayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 654,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Entry+ZIP64.swift",
       "kind": "IntegerLiteral",
       "offset": 709,
@@ -80682,17 +81226,31 @@
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1455,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "StringLiteral",
-      "offset": 1459,
+      "offset": 1582,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "StringLiteral",
-      "offset": 1653,
+      "offset": 1776,
       "length": 9,
       "value": "\"default\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
+      "kind": "FloatLiteral",
+      "offset": 13838,
+      "length": 3,
+      "value": "1.0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Data+Serialization.swift",
@@ -81530,8 +82088,22 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 77202,
+      "offset": 77238,
       "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/LocalCacheManager.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 29,
+      "value": "\"com.localCacheManager.queue\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/LocalCacheManager.swift",
+      "kind": "Dictionary",
+      "offset": 831,
+      "length": 3,
       "value": "[]"
     },
     {
@@ -82253,14 +82825,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 12,
-      "value": "\"1.26.0 RC7\""
+      "value": "\"1.26.0 RC8\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 6,
-      "value": "\"3835\""
+      "value": "\"3845\""
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/InAppStory.swift",
@@ -83049,42 +83621,42 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 92632,
+      "offset": 92682,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 92638,
+      "offset": 92688,
       "length": 6,
       "value": "1000.0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 92894,
+      "offset": 92944,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 92967,
+      "offset": 93017,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "FloatLiteral",
-      "offset": 92973,
+      "offset": 93023,
       "length": 6,
       "value": "1000.0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "IntegerLiteral",
-      "offset": 93229,
+      "offset": 93279,
       "length": 1,
       "value": "1"
     },
@@ -84104,6 +84676,20 @@
       "value": "\"KMP\""
     },
     {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Elements\/LoopPlayer\/IASVideoPlayer.swift",
+      "kind": "StringLiteral",
+      "offset": 211,
+      "length": 28,
+      "value": "\"IASVideoPlayer.ReaderQueue\""
+    },
+    {
+      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Elements\/LoopPlayer\/IASVideoPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 309,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Model\/Editor.swift",
       "kind": "StringLiteral",
       "offset": 183,
@@ -84749,43 +85335,29 @@
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
-      "kind": "Dictionary",
-      "offset": 1655,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
-      "kind": "Dictionary",
-      "offset": 1721,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "Array",
-      "offset": 1780,
+      "offset": 1646,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2040,
+      "offset": 1906,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 12292,
+      "offset": 12158,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 15595,
+      "offset": 15461,
       "length": 1,
       "value": "0"
     },
@@ -87339,50 +87911,36 @@
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
-      "kind": "Dictionary",
-      "offset": 1230,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
-      "kind": "Dictionary",
-      "offset": 1296,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "Array",
-      "offset": 1361,
+      "offset": 1227,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1633,
+      "offset": 1499,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2057,
+      "offset": 1923,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 11132,
+      "offset": 10998,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14435,
+      "offset": 14301,
       "length": 1,
       "value": "0"
     },
@@ -87396,7 +87954,7 @@
     {
       "filePath": "\/Users\/stpashik\/Documents\/XCodeProject\/InAppStory\/InAppStory\/Classes\/Reader\/CustomScheme\/VODAssetsSchemeHandler.swift",
       "kind": "Dictionary",
-      "offset": 2501,
+      "offset": 2522,
       "length": 3,
       "value": "[]"
     },
@@ -87450,168 +88008,168 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 729,
       "length": 10,
       "value": "\"AgreeBtn\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 863,
       "length": 9,
       "value": "\"BackBtn\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1007,
       "length": 17,
       "value": "\"CameraCellImage\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1154,
       "length": 12,
       "value": "\"EditorIcon\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1294,
       "length": 11,
       "value": "\"FlipArrow\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1431,
       "length": 10,
       "value": "\"PhotoBtn\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1579,
       "length": 16,
       "value": "\"StartRecordBtn\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1731,
       "length": 15,
       "value": "\"StopRecordBtn\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1872,
       "length": 10,
       "value": "\"bookmark\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2024,
       "length": 18,
       "value": "\"bookmarkSelected\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2170,
       "length": 11,
       "value": "\"closeIcon\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2305,
       "length": 9,
       "value": "\"dislike\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2454,
       "length": 17,
       "value": "\"dislikeSelected\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2601,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2739,
       "length": 10,
       "value": "\"gradient\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2882,
       "length": 14,
       "value": "\"gradient_top\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3014,
       "length": 6,
       "value": "\"like\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3154,
       "length": 14,
       "value": "\"likeSelected\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3300,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3433,
       "length": 7,
       "value": "\"share\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3576,
       "length": 15,
       "value": "\"shareSelected\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3711,
       "length": 7,
       "value": "\"sound\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3854,
       "length": 15,
       "value": "\"soundSelected\""
     },
     {
-      "filePath": "\/Users\/stpashik\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/var\/root\/Library\/Developer\/Xcode\/DerivedData\/InAppStorySDK-eximnkqmsvrhijdbdyosvtinoyzn\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 3998,
       "length": 12,

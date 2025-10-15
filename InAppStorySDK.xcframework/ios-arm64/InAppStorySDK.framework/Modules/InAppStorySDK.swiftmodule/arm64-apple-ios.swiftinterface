@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name InAppStorySDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name InAppStorySDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFoundation
 import AudioToolbox
 import CommonCrypto
@@ -31,7 +31,9 @@ public struct Entry : Swift.Equatable {
     case file
     case directory
     case symlink
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -84,12 +86,30 @@ public struct EntryOD : Swift.Equatable {
   public static func == (lhs: InAppStorySDK.EntryOD, rhs: InAppStorySDK.EntryOD) -> Swift.Bool
 }
 extension InAppStorySDK.Archive {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func extract(_ entry: InAppStorySDK.Entry, to url: Foundation.URL, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func extract(_ entry: InAppStorySDK.Entry, bufferSize: Swift.Int = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
+  #endif
 }
 extension InAppStorySDK.ArchiveOD {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func extract(_ entry: InAppStorySDK.EntryOD, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func extract(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
+  #endif
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  @objc deinit
+}
+extension InAppStorySDK.IASVideoPlayerLayer {
+  final public func play(url: Foundation.URL)
+  final public func stop()
+  final public func restart()
 }
 public typealias BannersDidUpdatedType = (_ isContent: Swift.Bool, _ count: Swift.Int, _ listHeight: CoreFoundation.CGFloat) -> Swift.Void
 public typealias BannerOnActionType = (_ target: Swift.String) -> Swift.Void
@@ -108,6 +128,7 @@ public typealias BannersDidScrollType = (_ index: Swift.Int) -> Swift.Void
   @_Concurrency.MainActor @preconcurrency convenience public init(id: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @_Concurrency.MainActor @preconcurrency public init(placeID: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
 }
 extension InAppStorySDK.IASBannersView {
@@ -119,16 +140,24 @@ extension InAppStorySDK.IASBannersView {
   @_Concurrency.MainActor @preconcurrency public func pause()
   @_Concurrency.MainActor @preconcurrency public func resume()
 }
-public typealias FILEPointer = Swift.UnsafeMutablePointer<_stdio.FILE>
+public typealias FILEPointer = Swift.UnsafeMutablePointer<_DarwinFoundation2.FILE>
 extension InAppStorySDK.Archive {
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
   final public func addEntry(with path: Swift.String, relativeTo baseURL: Foundation.URL, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.UInt32, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
   final public func addEntry(with path: Swift.String, fileURL: Foundation.URL, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.UInt32, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int64` for `uncompressedSize` and provider `position`. `Int` for `bufferSize`.")
   final public func addEntry(with path: Swift.String, type: InAppStorySDK.Entry.EntryType, uncompressedSize: Swift.UInt32, modificationDate: Foundation.Date = Date(), permissions: Swift.UInt16? = nil, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.Int = defaultWriteChunkSize, progress: Foundation.Progress? = nil, provider: (_ position: Swift.Int, _ size: Swift.Int) throws -> Foundation.Data) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
   final public func remove(_ entry: InAppStorySDK.Entry, bufferSize: Swift.UInt32, progress: Foundation.Progress? = nil) throws
+  #endif
 }
 public struct PhoneFormat {
   public let phoneFormat: Swift.String
@@ -153,10 +182,12 @@ extension CoreFoundation.CGRect {
   public static var frameworkInfo: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var settings: InAppStorySDK.Settings? {
     get
     set
   }
+  #endif
   public var appVersion: Swift.String?
   public var appBuild: Swift.String?
   public var favoritesCount: Swift.Int {
@@ -293,50 +324,82 @@ extension CoreFoundation.CGRect {
   public var gameEvent: (InAppStorySDK.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK.IASEvent.Failure) -> Swift.Void
   public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)?
+  #if compiler(>=5.3) && $NonescapableTypes
   public func initWith(serviceKey: Swift.String, testKey: Swift.String? = nil, settings: InAppStorySDK.Settings? = nil)
+  #endif
   public func setTags(_ tags: Swift.Array<Swift.String>)
   public func addTags(_ addedTags: Swift.Array<Swift.String>)
   public func removeTags(_ removingTags: Swift.Array<Swift.String>)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getWidgetStories(complete: @escaping (Swift.Array<InAppStorySDK.WidgetStory>?) -> Swift.Void)
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: [Swift.String]? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func preloadBanners(placeID: Swift.String, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
+  #endif
   public func clearMemory()
   public func clearCache()
   public func closeReader(complete: @escaping () -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getStackFeed(feed: Swift.String? = nil, complete: @escaping (InAppStorySDK.StackFeedResult) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showStackReader(with stackList: InAppStorySDK.StackFeedObject, with panelSettings: InAppStorySDK.PanelSettings? = nil, showing: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
 }
 extension InAppStorySDK.InAppStory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
   public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
 }
 extension InAppStorySDK.InAppStory {
   public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
 }
 extension InAppStorySDK.InAppStory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func openGame(with game: InAppStorySDK.Game, from presentingViewController: UIKit.UIViewController? = nil, notificationInfo: Swift.Dictionary<Swift.String, Any>? = nil, complete: ((_ opened: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
   public func closeGame()
 }
 extension InAppStorySDK.InAppStory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "showStory(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
   public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  #endif
 }
 extension InAppStorySDK.InAppStory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -430,7 +493,9 @@ public protocol IASLoggerProtocol {
   func log(object: InAppStorySDK.IASLogObject)
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   var sku: Swift.String! { get set }
+  #endif
 }
 @objc public class GoodObject : ObjectiveC.NSObject, InAppStorySDK.GoodsObjectProtocol {
   public var sku: Swift.String!
@@ -438,15 +503,21 @@ public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   public var subtitle: Swift.String?
   public var imageURL: Foundation.URL?
   public var price: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, renamed: "oldPrice")
   public var discount: Swift.String? {
     get
     set
   }
+  #endif
   public var oldPrice: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, unavailable, renamed: "init(sku:title:subtitle:imageURL:price:oldPrice:)")
   public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, discount: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(sku: Swift.String, title: Swift.String?, subtitle: Swift.String?, imageURL: Foundation.URL?, price: Swift.String?, oldPrice: Swift.String?)
+  #endif
   @objc deinit
 }
 @available(*, unavailable, message: "SDK is phasing out the use of delegates and moving towards the use of closures. More info can be found in the migration guide for version 1.22.x documentation. Migration guide: https://docs.inappstory.com/sdk-guides/ios/migrations.html#migration-to-inappstory-closures-sdk-v1-22-0")
@@ -457,8 +528,12 @@ public protocol GoodsDelegateFlowLayout : ObjectiveC.NSObjectProtocol {
 }
 public protocol StoryCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   static var nib: UIKit.UINib? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var storyID: Swift.String! { get set }
+  #endif
   func setTitle(_ text: Swift.String)
   func setImageURL(_ url: Foundation.URL)
   func setVideoURL(_ url: Foundation.URL)
@@ -489,7 +564,9 @@ public let defaultWriteChunkSizeOD: Swift.UInt32
 public enum CompressionMethodOD : Swift.UInt16 {
   case none
   case deflate
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt16)
+  #endif
   public typealias RawValue = Swift.UInt16
   public var rawValue: Swift.UInt16 {
     get
@@ -514,7 +591,9 @@ final public class ArchiveOD : Swift.Sequence {
     case create
     case read
     case update
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.UInt)
+    #endif
     public typealias RawValue = Swift.UInt
     public var rawValue: Swift.UInt {
       get
@@ -522,13 +601,19 @@ final public class ArchiveOD : Swift.Sequence {
   }
   final public let url: Foundation.URL
   final public let accessMode: InAppStorySDK.ArchiveOD.AccessModeOD
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(url: Foundation.URL, accessMode mode: InAppStorySDK.ArchiveOD.AccessModeOD, preferredEncoding: Swift.String.Encoding? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(data: Foundation.Data = Data(), accessMode mode: InAppStorySDK.ArchiveOD.AccessModeOD, preferredEncoding: Swift.String.Encoding? = nil)
+  #endif
   @objc deinit
   final public func makeIterator() -> Swift.AnyIterator<InAppStorySDK.EntryOD>
+  #if compiler(>=5.3) && $NonescapableTypes
   final public subscript(path: Swift.String) -> InAppStorySDK.EntryOD? {
     get
   }
+  #endif
   public typealias Element = InAppStorySDK.EntryOD
   public typealias Iterator = Swift.AnyIterator<InAppStorySDK.EntryOD>
 }
@@ -567,7 +652,9 @@ final public class Archive : Swift.Sequence {
     case create
     case read
     case update
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.UInt)
+    #endif
     public typealias RawValue = Swift.UInt
     public var rawValue: Swift.UInt {
       get
@@ -575,19 +662,27 @@ final public class Archive : Swift.Sequence {
   }
   final public let url: Foundation.URL
   final public let accessMode: InAppStorySDK.Archive.AccessMode
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(url: Foundation.URL, accessMode mode: InAppStorySDK.Archive.AccessMode, preferredEncoding: Swift.String.Encoding? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(data: Foundation.Data = Data(), accessMode mode: InAppStorySDK.Archive.AccessMode, preferredEncoding: Swift.String.Encoding? = nil)
+  #endif
   @objc deinit
   final public func makeIterator() -> Swift.AnyIterator<InAppStorySDK.Entry>
+  #if compiler(>=5.3) && $NonescapableTypes
   final public subscript(path: Swift.String) -> InAppStorySDK.Entry? {
     get
   }
+  #endif
   public typealias Element = InAppStorySDK.Entry
   public typealias Iterator = Swift.AnyIterator<InAppStorySDK.Entry>
 }
 public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   static var nib: UIKit.UINib? { get }
+  #endif
 }
 @objc public enum ClosePosition : Swift.Int {
   @available(*, unavailable, renamed: "leading")
@@ -602,7 +697,9 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
   case trailing
   case leadingBottom
   case trailingBottom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -610,7 +707,9 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
 }
 @objc public enum ScrollStyle : Swift.Int {
   case flat, cover, cube, depth
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -618,7 +717,9 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
 }
 @objc public enum PresentationStyle : Swift.Int {
   case crossDissolve, modal, zoom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -626,7 +727,9 @@ public protocol EditorCellProtocol : UIKit.UICollectionViewCell {
 }
 @objc public enum Quality : Swift.Int {
   case medium, high
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -688,13 +791,17 @@ public enum ListDirection {
   @_Concurrency.MainActor @preconcurrency final public func goodsItemClick(with sku: Swift.String)
   @_Concurrency.MainActor @preconcurrency final public func close()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public enum CompressionMethod : Swift.UInt16 {
   case none
   case deflate
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt16)
+  #endif
   public typealias RawValue = Swift.UInt16
   public var rawValue: Swift.UInt16 {
     get
@@ -715,9 +822,15 @@ extension Foundation.Data {
   public static func decompress(size: Swift.Int, bufferSize: Swift.Int, skipCRC32: Swift.Bool, provider: (_ position: Swift.Int, _ size: Swift.Int) throws -> Foundation.Data, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
 }
 extension InAppStorySDK.ArchiveOD {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addEntry(with path: Swift.String, relativeTo baseURL: Foundation.URL, compressionMethod: InAppStorySDK.CompressionMethodOD = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSizeOD, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addEntry(with path: Swift.String, type: InAppStorySDK.Entry.EntryType, uncompressedSize: Swift.UInt32, modificationDate: Foundation.Date = Date(), permissions: Swift.UInt16? = nil, compressionMethod: InAppStorySDK.CompressionMethodOD = .none, bufferSize: Swift.UInt32 = defaultWriteChunkSizeOD, progress: Foundation.Progress? = nil, provider: (_ position: Swift.Int64, _ size: Swift.Int) throws -> Foundation.Data) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func remove(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, progress: Foundation.Progress? = nil) throws
+  #endif
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class CSPhoneFormattedTextField : UIKit.UITextField {
   @_Concurrency.MainActor @preconcurrency public var isSelectable: Swift.Bool
@@ -726,48 +839,84 @@ extension InAppStorySDK.ArchiveOD {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var prefix: Swift.String? {
     get
     set
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var delegate: (any UIKit.UITextFieldDelegate)? {
     @objc get
     @objc set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var textDidChangeBlock: ((_ textField: UIKit.UITextField?) -> Swift.Void)? {
     get
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func phoneNumber() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func phoneNumberWithoutPrefix() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var formattedText: Swift.String? {
     get
     set
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  #endif
   @objc deinit
 }
 extension InAppStorySDK.Archive {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addEntry(with path: Swift.String, relativeTo baseURL: Foundation.URL, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.Int = defaultWriteChunkSize, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addEntry(with path: Swift.String, fileURL: Foundation.URL, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.Int = defaultWriteChunkSize, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addEntry(with path: Swift.String, type: InAppStorySDK.Entry.EntryType, uncompressedSize: Swift.Int64, modificationDate: Foundation.Date = Date(), permissions: Swift.UInt16? = nil, compressionMethod: InAppStorySDK.CompressionMethod = .none, bufferSize: Swift.Int = defaultWriteChunkSize, progress: Foundation.Progress? = nil, provider: (_ position: Swift.Int64, _ size: Swift.Int) throws -> Foundation.Data) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func remove(_ entry: InAppStorySDK.Entry, bufferSize: Swift.Int = defaultReadChunkSize, progress: Foundation.Progress? = nil) throws
+  #endif
 }
 extension Foundation.FileManager {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK.CompressionMethodOD = .none, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func unzipItemOD(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
+  #endif
 }
 extension InAppStorySDK.Archive {
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
   final public func extract(_ entry: InAppStorySDK.Entry, to url: Foundation.URL, bufferSize: Swift.UInt32, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
   final public func extract(_ entry: InAppStorySDK.Entry, bufferSize: Swift.UInt32, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
+  #endif
 }
 extension Foundation.FileManager {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK.CompressionMethod = .none, progress: Foundation.Progress? = nil) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func unzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
+  #endif
 }
 extension Foundation.URL {
   public func isContained(in parentDirectoryURL: Foundation.URL) -> Swift.Bool
@@ -836,7 +985,9 @@ public struct Settings : Swift.Equatable {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(userID: Swift.String, sign: Swift.String? = nil, anonymous: Swift.Bool = false, tags: Swift.Array<Swift.String> = [String](), placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, lang: Swift.String? = nil)
+  #endif
   public static func == (lhs: InAppStorySDK.Settings, rhs: InAppStorySDK.Settings) -> Swift.Bool
 }
 public struct PanelSettings {
@@ -850,7 +1001,9 @@ public struct SharingObject {
   public let images: Swift.Array<UIKit.UIImage>?
   public let link: Swift.String?
   public let payload: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(text: Swift.String?, images: Swift.Array<UIKit.UIImage>?, link: Swift.String?, payload: Swift.String?)
+  #endif
 }
 public struct EditorCellSettings {
 }
@@ -864,7 +1017,9 @@ public struct TimersGradient {
 }
 public enum StoryType : Swift.String {
   case story, storyUGC, iam, banner
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -872,7 +1027,9 @@ public enum StoryType : Swift.String {
 }
 public enum StorySource : Swift.String {
   case single, onboarding, list, favorite, inAppMessages
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -880,7 +1037,9 @@ public enum StorySource : Swift.String {
 }
 public enum ShowStoryAction : Swift.String {
   case open, tap, swipe, auto, custom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -888,7 +1047,9 @@ public enum ShowStoryAction : Swift.String {
 }
 public enum CloseStoryAction : Swift.String {
   case swipe, click, auto, custom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1090,7 +1251,9 @@ extension InAppStorySDK.Archive {
 }
 extension InAppStorySDK.StoryView {
   @_Concurrency.MainActor @preconcurrency public func create()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func refresh(newFeed: Swift.String? = nil, newTags: Swift.Array<Swift.String>? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func collectVisibleAreaData()
   @_Concurrency.MainActor @preconcurrency public func updateVisibleArea()
 }
@@ -1100,28 +1263,42 @@ extension UIKit.UICollectionViewFlowLayout {
   }
 }
 extension InAppStorySDK.ArchiveOD {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public var data: Foundation.Data? {
     get
   }
+  #endif
 }
 extension InAppStorySDK.Archive {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public var data: Foundation.Data? {
     get
   }
+  #endif
 }
 public protocol FavoriteCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   static var nib: UIKit.UINib? { get }
+  #endif
   var favoritesCount: Swift.Int { get set }
   func setHighlight(_ value: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   func setImages(_ urls: Swift.Array<Foundation.URL?>)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setImagesColors(_ colors: Swift.Array<UIKit.UIColor?>)
+  #endif
   func setBackgroundColor(_ color: UIKit.UIColor)
 }
 public protocol GoodsCellProtocol : UIKit.UICollectionViewCell {
   static var reuseIdentifier: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   static var nib: UIKit.UINib? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setGoodObject(_ object: (any InAppStorySDK.GoodsObjectProtocol)!)
+  #endif
 }
 extension InAppStorySDK.Entry.EntryType : Swift.Equatable {}
 extension InAppStorySDK.Entry.EntryType : Swift.Hashable {}
