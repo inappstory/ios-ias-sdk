@@ -277,6 +277,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
@@ -392,6 +393,28 @@ SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+/// AVPlayerLayer-like class for playing video without audio.
+/// Wraps <code>AVSampleBufferDisplayLayer</code> and uses <code>IASVideoPlayer</code> under the hood.
+/// Automatically responds to application lifecycle events:
+/// <ul>
+///   <li>
+///     when going to the background — stops playback;
+///   </li>
+///   <li>
+///     when returning to the active state — restarts.
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtC13InAppStorySDK19IASVideoPlayerLayer")
+@interface IASVideoPlayerLayer : AVSampleBufferDisplayLayer
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithLayer:(id _Nonnull)layer OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
@@ -805,6 +828,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AVFoundation;
 @import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
@@ -920,6 +944,28 @@ SWIFT_CLASS("_TtC13InAppStorySDK10GoodObject")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+/// AVPlayerLayer-like class for playing video without audio.
+/// Wraps <code>AVSampleBufferDisplayLayer</code> and uses <code>IASVideoPlayer</code> under the hood.
+/// Automatically responds to application lifecycle events:
+/// <ul>
+///   <li>
+///     when going to the background — stops playback;
+///   </li>
+///   <li>
+///     when returning to the active state — restarts.
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtC13InAppStorySDK19IASVideoPlayerLayer")
+@interface IASVideoPlayerLayer : AVSampleBufferDisplayLayer
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithLayer:(id _Nonnull)layer OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+
 
 
 SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
