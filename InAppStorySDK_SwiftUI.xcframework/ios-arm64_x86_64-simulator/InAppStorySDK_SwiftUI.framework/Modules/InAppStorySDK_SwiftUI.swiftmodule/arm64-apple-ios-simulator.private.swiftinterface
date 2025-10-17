@@ -1397,6 +1397,16 @@ extension UIKit.UICollectionViewFlowLayout {
     @objc get
   }
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  @objc deinit
+}
+extension InAppStorySDK_SwiftUI.IASVideoPlayerLayer {
+  final public func play(url: Foundation.URL)
+  final public func stop()
+  final public func restart()
+}
 @_spi(Private) extension Swift.KeyedDecodingContainer {
   @_spi(Private) public func decodeWrapper<T>(key: K, defaultValue: T) throws -> T where T : Swift.Decodable
 }
