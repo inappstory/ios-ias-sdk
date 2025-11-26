@@ -90,6 +90,35 @@ extension InAppStorySDK.ArchiveOD {
   final public func extract(_ entry: InAppStorySDK.EntryOD, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> InAppStorySDK.CRC32
   final public func extract(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
 }
+public typealias BannersDidUpdatedType = ((_ isContent: Swift.Bool, _ count: Swift.Int, _ listHeight: CoreFoundation.CGFloat) -> Swift.Void)
+public typealias BannerOnActionType = ((_ target: Swift.String) -> Swift.Void)
+public typealias BannersDidScrollType = ((_ index: Swift.Int) -> Swift.Void)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IASBannersView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var bannersDidUpdated: InAppStorySDK.BannersDidUpdatedType?
+  @_Concurrency.MainActor(unsafe) public var onActionWith: InAppStorySDK.BannerOnActionType? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var bannersDidScroll: InAppStorySDK.BannersDidScrollType? {
+    get
+    set
+  }
+  @available(*, unavailable, renamed: "init(placeID:appearance:frame:)")
+  @_Concurrency.MainActor(unsafe) convenience public init(id: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
+  @_Concurrency.MainActor(unsafe) public init(placeID: Swift.String = "default", appearance: InAppStorySDK.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+}
+extension InAppStorySDK.IASBannersView {
+  @_Concurrency.MainActor(unsafe) public func create()
+  @_Concurrency.MainActor(unsafe) public func refresh()
+  @_Concurrency.MainActor(unsafe) public func showNext()
+  @_Concurrency.MainActor(unsafe) public func showPrevious()
+  @_Concurrency.MainActor(unsafe) public func showBannerWith(index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func pause()
+  @_Concurrency.MainActor(unsafe) public func resume()
+}
 public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
 extension InAppStorySDK.Archive {
   @available(*, deprecated, message: "Please use `Int` for `bufferSize`.")
@@ -248,6 +277,9 @@ extension CoreFoundation.CGRect {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
+  public var productCartUpdate: ((_ offer: InAppStorySDK.ProductCartOffer, _ complete: @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
+  public var productCartClicked: (() -> Swift.Void)?
+  public var productCartGetState: ((_ complete: @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
   public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
   public var inAppMessageWillShow: (() -> Swift.Void)?
   public var inAppMessageDidClose: (() -> Swift.Void)?
@@ -260,6 +292,7 @@ extension CoreFoundation.CGRect {
   public var goodsMinimumLineSpacingForSection: (() -> CoreFoundation.CGFloat)?
   public var storiesEvent: (InAppStorySDK.IASEvent.Story) -> Swift.Void
   public var inAppMessagesEvent: (InAppStorySDK.IASEvent.IAMessage) -> Swift.Void
+  public var iasBannerEvent: (InAppStorySDK.IASEvent.IASBanner) -> Swift.Void
   public var gameEvent: (InAppStorySDK.IASEvent.Game) -> Swift.Void
   public var failureEvent: (InAppStorySDK.IASEvent.Failure) -> Swift.Void
   public var stackFeedUpdate: ((_ newStackObject: InAppStorySDK.StackFeedObject?) -> Swift.Void)?
@@ -274,6 +307,7 @@ extension CoreFoundation.CGRect {
 extension InAppStorySDK.InAppStory {
   public func preloadGames()
   public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: [Swift.String]? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
+  public func preloadBanners(placeID: Swift.String, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
   public func logOut(tags: Swift.Array<Swift.String>? = nil, placeholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, imagesPlaceholders: Swift.Dictionary<Swift.String, Swift.String>? = nil, complete: (() -> Swift.Void)? = nil)
   public func clearMemory()
   public func clearCache()
@@ -298,10 +332,6 @@ extension InAppStorySDK.InAppStory {
 extension InAppStorySDK.InAppStory {
   public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
   public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @available(*, deprecated, renamed: "showStory(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
   public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
@@ -397,6 +427,16 @@ extension InAppStorySDK.StoryUGCView {
 public protocol IASLoggerProtocol {
   var level: Swift.Array<InAppStorySDK.IASLogLevel> { get set }
   func log(object: InAppStorySDK.IASLogObject)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  @objc deinit
+}
+extension InAppStorySDK.IASVideoPlayerLayer {
+  final public func play(url: Foundation.URL)
+  final public func stop()
+  final public func restart()
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   var sku: Swift.String! { get set }
@@ -660,16 +700,6 @@ public enum ListDirection {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
-  @objc override dynamic public init()
-  @objc override dynamic public init(layer: Any)
-  @objc deinit
-}
-extension InAppStorySDK.IASVideoPlayerLayer {
-  final public func play(url: Foundation.URL)
-  final public func stop()
-  final public func restart()
-}
 public enum CompressionMethod : Swift.UInt16 {
   case none
   case deflate
@@ -795,6 +825,7 @@ public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
 public let InAppMessageFailure: Foundation.Notification.Name
+public let IASBannersFailure: Foundation.Notification.Name
 public let CurrentInAppMessageFailure: Foundation.Notification.Name
 public let NetworkFailure: Foundation.Notification.Name
 public let RequestFailure: Foundation.Notification.Name
@@ -841,7 +872,7 @@ public struct TimersGradient {
   public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
 }
 public enum StoryType : Swift.String {
-  case story, storyUGC, iam
+  case story, storyUGC, iam, banner
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -891,12 +922,41 @@ public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
   public var gameID: Swift.String?
 }
+public struct ProductCartOffer : Swift.Codable {
+  public let offerId: Swift.String
+  public let groupId: Swift.String?
+  public let name: Swift.String?
+  public let description: Swift.String?
+  public let url: Swift.String?
+  public let coverUrl: Swift.String?
+  public let imageUrls: [Swift.String]
+  public let currency: Swift.String?
+  public let price: Swift.String?
+  public let oldPrice: Swift.String?
+  public let adult: Swift.Bool?
+  public let availability: Swift.Int
+  public let size: Swift.String?
+  public let color: Swift.String?
+  public let quantity: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ProductCart : Swift.Codable {
+  public let offers: [InAppStorySDK.ProductCartOffer]
+  public let price: Swift.String
+  public let oldPrice: Swift.String?
+  public let priceCurrency: Swift.String
+  public init(offers: [InAppStorySDK.ProductCartOffer], price: Swift.String, oldPrice: Swift.String?, priceCurrency: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum IASLogLevel {
   case all
   case initializ
   case network
   case reader
   case iam
+  case banner
   case js
   case profiling
   case cache
@@ -921,6 +981,21 @@ public struct IASLogData {
 public struct InAppMessageData {
   public var id: Swift.String?
   public var campaign: Swift.String?
+}
+public struct InAppMessageSlideData {
+  public var iamData: InAppStorySDK.InAppMessageData?
+  public var index: Swift.Int
+  public var payload: Swift.String?
+}
+public struct IASBannerData {
+  public var id: Swift.String?
+}
+public struct IASBannersAppearance {
+  public let shouldLoop: Swift.Bool
+  public let sideInset: CoreFoundation.CGFloat
+  public let interItemSpacing: CoreFoundation.CGFloat
+  public let cornerRadius: CoreFoundation.CGFloat
+  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
 }
 public enum IASEvent {
   public enum Story {
@@ -947,14 +1022,23 @@ public enum IASEvent {
   public enum IAMessage {
     case preloaded(messages: Swift.Array<InAppStorySDK.InAppMessageData>)
     case show(iamData: InAppStorySDK.InAppMessageData)
+    case showSlide(iamSlideData: InAppStorySDK.InAppMessageSlideData)
     case close(iamData: InAppStorySDK.InAppMessageData)
     case clickOnButton(iamData: InAppStorySDK.InAppMessageData, link: Swift.String)
     case widgetEvent(iamData: InAppStorySDK.InAppMessageData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
+  }
+  public enum IASBanner {
+    case bannersLoaded(placeID: Swift.String? = nil)
+    case preloaded(placeID: Swift.String, banners: Swift.Array<InAppStorySDK.IASBannerData>)
+    case show(bannerData: InAppStorySDK.IASBannerData)
+    case clickOnButton(bannerData: InAppStorySDK.IASBannerData, link: Swift.String)
+    case widgetEvent(bannerData: InAppStorySDK.IASBannerData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
   }
   public enum Failure {
     case sessionFailure(message: Swift.String)
     case storyFailure(message: Swift.String)
     case inAppMessageFailure(message: Swift.String)
+    case bannersFailure(message: Swift.String)
     case currentStoryFailure(message: Swift.String)
     case networkFailure(message: Swift.String)
     case requestFailure(message: Swift.String, statusCode: Swift.Int)
