@@ -395,6 +395,22 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10GoodObject")
 @end
 
 
+SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14IASBannersView")
+@interface IASBannersView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)didMoveToWindow;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+
+
 /// AVPlayerLayer-like class for playing video without audio.
 /// Wraps <code>AVSampleBufferDisplayLayer</code> and uses <code>IASVideoPlayer</code> under the hood.
 /// Automatically responds to application lifecycle events:
@@ -444,6 +460,8 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 
