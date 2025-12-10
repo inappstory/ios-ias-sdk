@@ -275,9 +275,11 @@ public struct IASBannerData {
 public struct IASBannersAppearance {
   public let shouldLoop: Swift.Bool
   public let sideInset: CoreFoundation.CGFloat
+  public let leadingInset: CoreFoundation.CGFloat
+  public let trailingInset: CoreFoundation.CGFloat
   public let interItemSpacing: CoreFoundation.CGFloat
   public let cornerRadius: CoreFoundation.CGFloat
-  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
+  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
 }
 public enum IASEvent {
   public enum Story {

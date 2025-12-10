@@ -455,6 +455,8 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 
 
 
+
+
 SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1006,6 +1008,8 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 @interface InAppStory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 
