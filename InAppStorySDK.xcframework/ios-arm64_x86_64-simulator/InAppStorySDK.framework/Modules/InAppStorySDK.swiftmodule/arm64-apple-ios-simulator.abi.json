@@ -58865,6 +58865,94 @@
           },
           {
             "kind": "Var",
+            "name": "leadingInset",
+            "printedName": "leadingInset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK20IASBannersAppearanceV12leadingInset14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV12leadingInset12CoreGraphics7CGFloatVvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK20IASBannersAppearanceV12leadingInset14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV12leadingInset12CoreGraphics7CGFloatVvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trailingInset",
+            "printedName": "trailingInset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK20IASBannersAppearanceV13trailingInset14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV13trailingInset12CoreGraphics7CGFloatVvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK20IASBannersAppearanceV13trailingInset14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV13trailingInset12CoreGraphics7CGFloatVvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "interItemSpacing",
             "printedName": "interItemSpacing",
             "children": [
@@ -58954,7 +59042,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(shouldLoop:sideInset:interItemSpacing:cornerRadius:)",
+            "printedName": "init(shouldLoop:sideInset:leadingInset:trailingInset:interItemSpacing:cornerRadius:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -58978,6 +59066,36 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "CGFloat",
                 "printedName": "CoreGraphics.CGFloat",
                 "hasDefaultArg": true,
@@ -58992,8 +59110,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13InAppStorySDK20IASBannersAppearanceV10shouldLoop9sideInset16interItemSpacing12cornerRadiusACSb_14CoreFoundation7CGFloatVA2Jtcfc",
-            "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV10shouldLoop9sideInset16interItemSpacing12cornerRadiusACSb_12CoreGraphics7CGFloatVA2Jtcfc",
+            "usr": "s:13InAppStorySDK20IASBannersAppearanceV10shouldLoop9sideInset07leadingJ008trailingJ016interItemSpacing12cornerRadiusACSb_14CoreFoundation7CGFloatVALSgAm2Ltcfc",
+            "mangledName": "$s13InAppStorySDK20IASBannersAppearanceV10shouldLoop9sideInset07leadingJ008trailingJ016interItemSpacing12cornerRadiusACSb_12CoreGraphics7CGFloatVALSgAm2Ltcfc",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -69606,6 +69724,670 @@
                 "declKind": "Accessor",
                 "usr": "s:13InAppStorySDK12CallbacksAPIC11customShareyAA13SharingObjectV_ySbctcSgvM",
                 "mangledName": "$s13InAppStorySDK12CallbacksAPIC11customShareyAA13SharingObjectV_ySbctcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "SPIAccessControl"
+                ],
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productCartUpdate",
+            "printedName": "productCartUpdate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(InAppStorySDK.ProductCartOffer, (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ())",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProductCartOffer",
+                            "printedName": "InAppStorySDK.ProductCartOffer",
+                            "usr": "s:13InAppStorySDK16ProductCartOfferV"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Result",
+                                "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProductCart",
+                                    "printedName": "InAppStorySDK.ProductCart",
+                                    "usr": "s:13InAppStorySDK11ProductCartV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Error",
+                                    "printedName": "any Swift.Error",
+                                    "usr": "s:s5ErrorP"
+                                  }
+                                ],
+                                "usr": "s:s6ResultO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvp",
+            "mangledName": "$s13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl",
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(InAppStorySDK.ProductCartOffer, (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProductCartOffer",
+                                "printedName": "InAppStorySDK.ProductCartOffer",
+                                "usr": "s:13InAppStorySDK16ProductCartOfferV"
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Result",
+                                    "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "ProductCart",
+                                        "printedName": "InAppStorySDK.ProductCart",
+                                        "usr": "s:13InAppStorySDK11ProductCartV"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "Error",
+                                        "printedName": "any Swift.Error",
+                                        "usr": "s:s5ErrorP"
+                                      }
+                                    ],
+                                    "usr": "s:s6ResultO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvg",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvg",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(InAppStorySDK.ProductCartOffer, @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(InAppStorySDK.ProductCartOffer, (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ())",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProductCartOffer",
+                                "printedName": "InAppStorySDK.ProductCartOffer",
+                                "usr": "s:13InAppStorySDK16ProductCartOfferV"
+                              },
+                              {
+                                "kind": "TypeFunc",
+                                "name": "Function",
+                                "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Void",
+                                    "printedName": "()"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Result",
+                                    "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "ProductCart",
+                                        "printedName": "InAppStorySDK.ProductCart",
+                                        "usr": "s:13InAppStorySDK11ProductCartV"
+                                      },
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "Error",
+                                        "printedName": "any Swift.Error",
+                                        "usr": "s:s5ErrorP"
+                                      }
+                                    ],
+                                    "usr": "s:s6ResultO"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvs",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvs",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvM",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC17productCartUpdateyAA07ProductH5OfferV_ys6ResultOyAA0jH0Vs5Error_pGctcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "SPIAccessControl"
+                ],
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productCartClicked",
+            "printedName": "productCartClicked",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvp",
+            "mangledName": "$s13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvg",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvg",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvs",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvs",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvM",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC18productCartClickedyycSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "SPIAccessControl"
+                ],
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productCartGetState",
+            "printedName": "productCartGetState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Result",
+                            "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProductCart",
+                                "printedName": "InAppStorySDK.ProductCart",
+                                "usr": "s:13InAppStorySDK11ProductCartV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:s6ResultO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvp",
+            "mangledName": "$s13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Result",
+                                "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProductCart",
+                                    "printedName": "InAppStorySDK.ProductCart",
+                                    "usr": "s:13InAppStorySDK11ProductCartV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Error",
+                                    "printedName": "any Swift.Error",
+                                    "usr": "s:s5ErrorP"
+                                  }
+                                ],
+                                "usr": "s:s6ResultO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvg",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvg",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(@escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Result",
+                                "printedName": "Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProductCart",
+                                    "printedName": "InAppStorySDK.ProductCart",
+                                    "usr": "s:13InAppStorySDK11ProductCartV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Error",
+                                    "printedName": "any Swift.Error",
+                                    "usr": "s:s5ErrorP"
+                                  }
+                                ],
+                                "usr": "s:s6ResultO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvs",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvs",
+                "moduleName": "InAppStorySDK",
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvM",
+                "mangledName": "$s13InAppStorySDK12CallbacksAPIC19productCartGetStateyys6ResultOyAA07ProductH0Vs5Error_pGccSgvM",
                 "moduleName": "InAppStorySDK",
                 "implicit": true,
                 "declAttributes": [
@@ -81219,42 +82001,42 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "FloatLiteral",
-      "offset": 2280,
+      "offset": 2511,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2216,
+      "offset": 2447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 14973,
+      "offset": 15269,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 20742,
+      "offset": 21038,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "IntegerLiteral",
-      "offset": 22015,
+      "offset": 22311,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/Reader.swift",
       "kind": "BooleanLiteral",
-      "offset": 24583,
+      "offset": 24993,
       "length": 4,
       "value": "true"
     },
@@ -81296,7 +82078,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 14812,
+      "offset": 15649,
       "length": 3,
       "value": "1.0"
     },
@@ -82775,14 +83557,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.26.0\""
+      "value": "\"1.26.1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3876\""
+      "value": "\"3882\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -82941,289 +83723,303 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5671,
+      "offset": 5684,
       "length": 6,
       "value": "\"like\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5794,
+      "offset": 5764,
       "length": 14,
       "value": "\"likeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 5920,
+      "offset": 5847,
       "length": 9,
       "value": "\"dislike\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6049,
+      "offset": 5933,
       "length": 17,
       "value": "\"dislikeSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6179,
+      "offset": 6020,
       "length": 10,
       "value": "\"bookmark\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6309,
+      "offset": 6107,
       "length": 18,
       "value": "\"bookmarkSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6437,
+      "offset": 6192,
       "length": 7,
       "value": "\"share\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6562,
+      "offset": 6274,
       "length": 15,
       "value": "\"shareSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6687,
+      "offset": 6356,
       "length": 7,
       "value": "\"sound\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6812,
+      "offset": 6438,
       "length": 15,
       "value": "\"soundSelected\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 6948,
+      "offset": 6531,
       "length": 11,
       "value": "\"closeIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 7071,
+      "offset": 6611,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 9042,
+      "offset": 8539,
       "length": 13,
       "value": "\"refreshIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 9412,
+      "offset": 8866,
       "length": 12,
       "value": "\"goodsClose\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 10022,
+      "offset": 9420,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10201,
+      "offset": 9599,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10359,
+      "offset": 9757,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 10518,
+      "offset": 9916,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 10922,
+      "offset": 10320,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 11024,
+      "offset": 10422,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 14066,
+      "offset": 13464,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14363,
+      "offset": 13761,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14432,
+      "offset": 13830,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14514,
+      "offset": 13912,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14589,
+      "offset": 13987,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14658,
+      "offset": 14056,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 14843,
+      "offset": 14241,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 14889,
+      "offset": 14287,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 15729,
+      "offset": 15127,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15898,
+      "offset": 15296,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 16053,
+      "offset": 15451,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 16154,
+      "offset": 15552,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 16350,
+      "offset": 15748,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 44381,
+      "offset": 38957,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 44433,
+      "offset": 39009,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 45000,
+      "offset": 39576,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 45052,
+      "offset": 39628,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 62569,
+      "offset": 55494,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 64898,
+      "offset": 57823,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 68592,
+      "offset": 60707,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 72316,
+      "offset": 63542,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
+      "kind": "StringLiteral",
+      "offset": 80066,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
+      "kind": "StringLiteral",
+      "offset": 81576,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Elements\/IASIconView.swift",
@@ -83647,10 +84443,10 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Helpers\/KeyValueObserver.swift",
-      "kind": "StringLiteral",
-      "offset": 284,
-      "length": 18,
-      "value": "\"KeyValueObserver\""
+      "kind": "IntegerLiteral",
+      "offset": 302,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Helpers\/KeyValueObserver.swift",
@@ -83774,28 +84570,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Layouts\/InfiniteCenteredLayout.swift",
       "kind": "BooleanLiteral",
-      "offset": 6870,
+      "offset": 10996,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Layouts\/InfiniteCenteredLayout.swift",
       "kind": "BooleanLiteral",
-      "offset": 8345,
+      "offset": 12103,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Layouts\/InfiniteCenteredLayout.swift",
       "kind": "BooleanLiteral",
-      "offset": 8867,
+      "offset": 12228,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Layouts\/InfiniteCenteredLayout.swift",
       "kind": "BooleanLiteral",
-      "offset": 9420,
+      "offset": 13307,
       "length": 4,
       "value": "true"
     },
@@ -87855,7 +88651,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8574,
+      "offset": 8614,
       "length": 1,
       "value": "0"
     },
@@ -88212,28 +89008,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 14067,
+      "offset": 14142,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 14110,
+      "offset": 14185,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 14159,
+      "offset": 14327,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 14204,
+      "offset": 14372,
       "length": 4,
       "value": "16.0"
     },
@@ -89145,6 +89941,13 @@
       "kind": "Array",
       "offset": 1984,
       "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/Collection\/IASBannersCollectionView.swift",
+      "kind": "Dictionary",
+      "offset": 2302,
+      "length": 3,
       "value": "[]"
     },
     {

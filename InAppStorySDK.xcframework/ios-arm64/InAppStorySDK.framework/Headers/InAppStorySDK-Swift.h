@@ -455,6 +455,8 @@ SWIFT_CLASS("_TtC13InAppStorySDK10InAppStory")
 
 
 
+
+
 SWIFT_CLASS("_TtC13InAppStorySDK14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
