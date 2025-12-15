@@ -329,6 +329,7 @@ public struct ProductCartOffer : Swift.Codable {
   public let size: Swift.String?
   public let color: Swift.String?
   public let quantity: Swift.Int
+  public init(offerId: Swift.String, groupId: Swift.String? = nil, name: Swift.String? = nil, description: Swift.String? = nil, url: Swift.String? = nil, coverUrl: Swift.String? = nil, imageUrls: [Swift.String] = [], currency: Swift.String? = nil, price: Swift.String? = nil, oldPrice: Swift.String? = nil, adult: Swift.Bool? = nil, availability: Swift.Int = 1, size: Swift.String? = nil, color: Swift.String? = nil, quantity: Swift.Int)
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
