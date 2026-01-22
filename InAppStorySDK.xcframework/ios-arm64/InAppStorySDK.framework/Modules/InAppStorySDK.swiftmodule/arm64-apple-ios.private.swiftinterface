@@ -100,8 +100,8 @@ public struct EntryOD : Swift.Equatable {
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class InAppMessagesAPI {
   @_spi(IAS_API) public func preloadInAppMessages(ids: Swift.Array<Swift.String>? = nil, tags: Swift.Array<Swift.String>? = nil, complete: @escaping (Swift.Result<Swift.Bool, any Swift.Error>) -> Swift.Void)
-  @_spi(IAS_API) public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
-  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(IAS_API) public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
+  @_spi(IAS_API) public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
   @_spi(IAS_API) @objc deinit
 }
 extension InAppStorySDK.Archive {
@@ -192,8 +192,8 @@ extension InAppStorySDK.IASBannersView {
   @_Concurrency.MainActor(unsafe) public func resume()
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class SingleStoryAPI {
-  @_spi(IAS_API) public func showStory(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @_spi(IAS_API) public func showStoryOnce(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) public func showStory(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
+  @_spi(IAS_API) public func showStoryOnce(with storyID: Swift.String, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
   @_spi(IAS_API) @objc deinit
 }
 public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
@@ -542,6 +542,7 @@ extension CoreFoundation.CGRect {
   public var logger: any InAppStorySDK.IASLoggerProtocol
   public var isDeviceIDEnabled: Swift.Bool
   public var customShare: ((InAppStorySDK.SharingObject, @escaping ((Swift.Bool) -> Swift.Void)) -> Swift.Void)?
+  @available(*, deprecated, message: "The gameComplete callback has been deprecated and will be removed in upcoming releases.")
   public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
   public var gameReaderWillShow: (() -> Swift.Void)?
   public var gameReaderDidClose: (() -> Swift.Void)?
@@ -594,9 +595,8 @@ extension InAppStorySDK.InAppStory {
   public func showStackReader(with stackList: InAppStorySDK.StackFeedObject, with panelSettings: InAppStorySDK.PanelSettings? = nil, showing: @escaping (_ show: Swift.Bool) -> Swift.Void)
 }
 extension InAppStorySDK.InAppStory {
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  @available(*, unavailable, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @discardableResult
+  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
 }
 extension InAppStorySDK.InAppStory {
   public func present(controller presentingViewController: UIKit.UIViewController, for presentationStyle: UIKit.UIModalPresentationStyle = .overCurrentContext, with transitionStyle: UIKit.UIModalTransitionStyle = .coverVertical)
@@ -606,12 +606,16 @@ extension InAppStorySDK.InAppStory {
   public func closeGame()
 }
 extension InAppStorySDK.InAppStory {
-  public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @discardableResult
+  public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
+  @discardableResult
+  public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
 }
 extension InAppStorySDK.InAppStory {
-  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
-  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @discardableResult
+  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
+  @discardableResult
+  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -1477,7 +1481,8 @@ extension Foundation.URL {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
-  @_spi(IAS_API) public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)? {
+  @_spi(IAS_API) @available(*, deprecated, message: "The gameComplete callback has been deprecated and will be removed in upcoming releases.")
+  public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)? {
     @_spi(IAS_API) get
     @_spi(IAS_API) set
   }
@@ -1557,7 +1562,6 @@ public let ClickOnShareStory: Foundation.Notification.Name
 public let StoryWidgetEvent: Foundation.Notification.Name
 public let StartGame: Foundation.Notification.Name
 public let CloseGame: Foundation.Notification.Name
-public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
@@ -1688,6 +1692,12 @@ public struct ProductCart : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers final public class CancellationToken {
+  final public let id: Swift.String
+  @discardableResult
+  final public func cancel() -> Swift.Bool
+  @objc deinit
+}
 public enum IASLogLevel {
   case all
   case initializ
@@ -1755,7 +1765,6 @@ public enum IASEvent {
   public enum Game {
     case startGame(gameData: InAppStorySDK.GameStoryData)
     case closeGame(gameData: InAppStorySDK.GameStoryData)
-    case finishGame(gameData: InAppStorySDK.GameStoryData, result: Swift.Dictionary<Swift.String, Any>)
     case eventGame(gameData: InAppStorySDK.GameStoryData, name: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
     case gameFailure(gameData: InAppStorySDK.GameStoryData, message: Swift.String)
   }
@@ -1836,7 +1845,7 @@ public protocol DownloadPlaceholderProtocol : UIKit.UIView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func downloadedFrom(link: Swift.String, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit, withViewTag tag: Swift.Int)
 }
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class OnboardingsAPI {
-  @_spi(IAS_API) public func showOnboarding(feed: Swift.String = "onboarding", limit: Swift.Int = 0, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @_spi(IAS_API) public func showOnboarding(feed: Swift.String = "onboarding", limit: Swift.Int = 0, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
   @_spi(IAS_API) @objc deinit
 }
 @_spi(Private) extension Foundation.Timer {

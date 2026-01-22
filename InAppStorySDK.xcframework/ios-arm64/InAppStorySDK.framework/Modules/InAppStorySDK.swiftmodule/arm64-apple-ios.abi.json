@@ -1586,8 +1586,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -1631,8 +1640,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
-            "mangledName": "$s13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
+            "usr": "s:13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith2id13onlyPreloaded10completionAA17CancellationTokenCSgSS_SbySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith2id13onlyPreloaded10completionAA17CancellationTokenCSgSS_SbySbcSgtF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -1650,8 +1659,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -1718,8 +1736,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith5event13onlyPreloaded4tags10completionySS_SbSaySSGSgySbcSgtF",
-            "mangledName": "$s13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith5event13onlyPreloaded4tags10completionySS_SbSaySSGSgySbcSgtF",
+            "usr": "s:13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith5event13onlyPreloaded4tags10completionAA17CancellationTokenCSgSS_SbSaySSGSgySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0aB11MessagesAPIC04showaB11MessageWith5event13onlyPreloaded4tags10completionAA17CancellationTokenCSgSS_SbSaySSGSgySbcSgtF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -5093,8 +5111,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -5137,8 +5164,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK06SingleC3APIC04showC04withAE8completeySS_AA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK06SingleC3APIC04showC04withAE8completeySS_AA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK06SingleC3APIC04showC04withAE8completeAA17CancellationTokenCSgSS_AA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK06SingleC3APIC04showC04withAE8completeAA17CancellationTokenCSgSS_AA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -5156,8 +5183,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -5200,8 +5236,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK06SingleC3APIC04showC4Once4withAE8completeySS_AA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK06SingleC3APIC04showC4Once4withAE8completeySS_AA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK06SingleC3APIC04showC4Once4withAE8completeAA17CancellationTokenCSgSS_AA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK06SingleC3APIC04showC4Once4withAE8completeAA17CancellationTokenCSgSS_AA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -15677,10 +15713,12 @@
             "usr": "s:13InAppStorySDK0abC0C12gameCompleteySS_SDySSypGSgSSSgtcSgvp",
             "mangledName": "$s13InAppStorySDK0abC0C12gameCompleteySS_SDySSypGSgSSSgtcSgvp",
             "moduleName": "InAppStorySDK",
+            "deprecated": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -15879,7 +15917,11 @@
                 "usr": "s:13InAppStorySDK0abC0C12gameCompleteySS_SDySSypGSgSSSgtcSgvM",
                 "mangledName": "$s13InAppStorySDK0abC0C12gameCompleteySS_SDySSypGSgSSSgtcSgvM",
                 "moduleName": "InAppStorySDK",
+                "deprecated": true,
                 "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -21299,8 +21341,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21380,9 +21431,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C15showOnboardings4feed5limit4from4withAH8completeySS_SiSo16UIViewControllerCSaySSGSgAA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK0abC0C15showOnboardings4feed5limit4from4withAH8completeySS_SiSo16UIViewControllerCSaySSGSgAA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK0abC0C15showOnboardings4feed5limit4from4withAH8completeAA17CancellationTokenCSgSS_SiSo16UIViewControllerCSaySSGSgAA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK0abC0C15showOnboardings4feed5limit4from4withAH8completeAA17CancellationTokenCSgSS_SiSo16UIViewControllerCSaySSGSgAA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -21546,8 +21600,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21596,9 +21659,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C04showC4Once4with4fromAE8completeySS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK0abC0C04showC4Once4with4fromAE8completeySS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK0abC0C04showC4Once4with4fromAE8completeAA17CancellationTokenCSgSS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK0abC0C04showC4Once4with4fromAE8completeAA17CancellationTokenCSgSS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -21609,8 +21675,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21659,9 +21734,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C04showC04with4fromAE8completeySS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK0abC0C04showC04with4fromAE8completeySS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK0abC0C04showC04with4fromAE8completeAA17CancellationTokenCSgSS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK0abC0C04showC04with4fromAE8completeAA17CancellationTokenCSgSS_So16UIViewControllerCAA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -21672,8 +21750,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21717,9 +21804,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
-            "mangledName": "$s13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionySS_SbySbcSgtF",
+            "usr": "s:13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionAA17CancellationTokenCSgSS_SbySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0abC0C04showaB11MessageWith2id13onlyPreloaded10completionAA17CancellationTokenCSgSS_SbySbcSgtF",
             "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -21730,8 +21820,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21798,9 +21897,12 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK0abC0C04showaB11MessageWith5event13onlyPreloaded4tags10completionySS_SbSaySSGSgySbcSgtF",
-            "mangledName": "$s13InAppStorySDK0abC0C04showaB11MessageWith5event13onlyPreloaded4tags10completionySS_SbSaySSGSgySbcSgtF",
+            "usr": "s:13InAppStorySDK0abC0C04showaB11MessageWith5event13onlyPreloaded4tags10completionAA17CancellationTokenCSgSS_SbSaySSGSgySbcSgtF",
+            "mangledName": "$s13InAppStorySDK0abC0C04showaB11MessageWith5event13onlyPreloaded4tags10completionAA17CancellationTokenCSgSS_SbSaySSGSgySbcSgtF",
             "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "DiscardableResult"
+            ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
@@ -46869,8 +46971,10 @@
             "usr": "s:13InAppStorySDK8GamesAPIC12gameCompleteySS_SDySSypGSgSSSgtcSgvp",
             "mangledName": "$s13InAppStorySDK8GamesAPIC12gameCompleteySS_SDySSypGSgSSSgtcSgvp",
             "moduleName": "InAppStorySDK",
+            "deprecated": true,
             "declAttributes": [
-              "SPIAccessControl"
+              "SPIAccessControl",
+              "Available"
             ],
             "isFromExtension": true,
             "spi_group_names": [
@@ -47077,9 +47181,11 @@
                 "usr": "s:13InAppStorySDK8GamesAPIC12gameCompleteySS_SDySSypGSgSSSgtcSgvM",
                 "mangledName": "$s13InAppStorySDK8GamesAPIC12gameCompleteySS_SDySSypGSgSSSgtcSgvM",
                 "moduleName": "InAppStorySDK",
+                "deprecated": true,
                 "implicit": true,
                 "declAttributes": [
-                  "SPIAccessControl"
+                  "SPIAccessControl",
+                  "Available"
                 ],
                 "isFromExtension": true,
                 "spi_group_names": [
@@ -50561,51 +50667,6 @@
             "declKind": "Accessor",
             "usr": "s:13InAppStorySDK9CloseGameSo18NSNotificationNameavg",
             "mangledName": "$s13InAppStorySDK9CloseGameSo18NSNotificationNameavg",
-            "moduleName": "InAppStorySDK",
-            "implicit": true,
-            "accessorKind": "get"
-          }
-        ]
-      },
-      {
-        "kind": "Var",
-        "name": "FinishGame",
-        "printedName": "FinishGame",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Name",
-            "printedName": "Foundation.NSNotification.Name",
-            "usr": "c:@T@NSNotificationName"
-          }
-        ],
-        "declKind": "Var",
-        "usr": "s:13InAppStorySDK10FinishGameSo18NSNotificationNameavp",
-        "mangledName": "$s13InAppStorySDK10FinishGameSo18NSNotificationNameavp",
-        "moduleName": "InAppStorySDK",
-        "declAttributes": [
-          "HasInitialValue",
-          "HasStorage",
-          "AccessControl"
-        ],
-        "isLet": true,
-        "hasStorage": true,
-        "accessors": [
-          {
-            "kind": "Accessor",
-            "name": "Get",
-            "printedName": "Get()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Name",
-                "printedName": "Foundation.NSNotification.Name",
-                "usr": "c:@T@NSNotificationName"
-              }
-            ],
-            "declKind": "Accessor",
-            "usr": "s:13InAppStorySDK10FinishGameSo18NSNotificationNameavg",
-            "mangledName": "$s13InAppStorySDK10FinishGameSo18NSNotificationNameavg",
             "moduleName": "InAppStorySDK",
             "implicit": true,
             "accessorKind": "get"
@@ -57047,6 +57108,94 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "CancellationToken",
+        "printedName": "CancellationToken",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK17CancellationTokenC2idSSvp",
+            "mangledName": "$s13InAppStorySDK17CancellationTokenC2idSSvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK17CancellationTokenC2idSSvg",
+                "mangledName": "$s13InAppStorySDK17CancellationTokenC2idSSvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "cancel",
+            "printedName": "cancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13InAppStorySDK17CancellationTokenC6cancelSbyF",
+            "mangledName": "$s13InAppStorySDK17CancellationTokenC6cancelSbyF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:13InAppStorySDK17CancellationTokenC",
+        "mangledName": "$s13InAppStorySDK17CancellationTokenC",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "AccessControl",
+          "Final",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
         "name": "IASLogLevel",
         "printedName": "IASLogLevel",
         "children": [
@@ -60281,82 +60430,6 @@
                 "declKind": "EnumElement",
                 "usr": "s:13InAppStorySDK8IASEventO4GameO05closeF0yAeA0fC4DataV_tcAEmF",
                 "mangledName": "$s13InAppStorySDK8IASEventO4GameO05closeF0yAeA0fC4DataV_tcAEmF",
-                "moduleName": "InAppStorySDK"
-              },
-              {
-                "kind": "Var",
-                "name": "finishGame",
-                "printedName": "finishGame",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(InAppStorySDK.IASEvent.Game.Type) -> (InAppStorySDK.GameStoryData, [Swift.String : Any]) -> InAppStorySDK.IASEvent.Game",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(InAppStorySDK.GameStoryData, [Swift.String : Any]) -> InAppStorySDK.IASEvent.Game",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Game",
-                            "printedName": "InAppStorySDK.IASEvent.Game",
-                            "usr": "s:13InAppStorySDK8IASEventO4GameO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(gameData: InAppStorySDK.GameStoryData, result: [Swift.String : Any])",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "GameStoryData",
-                                "printedName": "InAppStorySDK.GameStoryData",
-                                "usr": "s:13InAppStorySDK04GameC4DataV"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Dictionary",
-                                "printedName": "[Swift.String : Any]",
-                                "children": [
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "String",
-                                    "printedName": "Swift.String",
-                                    "usr": "s:SS"
-                                  },
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "ProtocolComposition",
-                                    "printedName": "Any"
-                                  }
-                                ],
-                                "usr": "s:SD"
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "InAppStorySDK.IASEvent.Game.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Game",
-                            "printedName": "InAppStorySDK.IASEvent.Game",
-                            "usr": "s:13InAppStorySDK8IASEventO4GameO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:13InAppStorySDK8IASEventO4GameO06finishF0yAeA0fC4DataV_SDySSypGtcAEmF",
-                "mangledName": "$s13InAppStorySDK8IASEventO4GameO06finishF0yAeA0fC4DataV_SDySSypGtcAEmF",
                 "moduleName": "InAppStorySDK"
               },
               {
@@ -64453,8 +64526,17 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "Optional",
+                "printedName": "InAppStorySDK.CancellationToken?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CancellationToken",
+                    "printedName": "InAppStorySDK.CancellationToken",
+                    "usr": "s:13InAppStorySDK17CancellationTokenC"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -64528,8 +64610,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:13InAppStorySDK14OnboardingsAPIC14showOnboarding4feed5limit4withAG8completeySS_SiSaySSGSgAA13PanelSettingsVSgySbctF",
-            "mangledName": "$s13InAppStorySDK14OnboardingsAPIC14showOnboarding4feed5limit4withAG8completeySS_SiSaySSGSgAA13PanelSettingsVSgySbctF",
+            "usr": "s:13InAppStorySDK14OnboardingsAPIC14showOnboarding4feed5limit4withAG8completeAA17CancellationTokenCSgSS_SiSaySSGSgAA13PanelSettingsVSgySbctF",
+            "mangledName": "$s13InAppStorySDK14OnboardingsAPIC14showOnboarding4feed5limit4withAG8completeAA17CancellationTokenCSgSS_SiSaySSGSgAA13PanelSettingsVSgySbctF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "AccessControl",
@@ -81976,7 +82058,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/InAppMessagesAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 957,
+      "offset": 1002,
       "length": 5,
       "value": "false"
     },
@@ -82298,7 +82380,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 15496,
+      "offset": 16151,
       "length": 3,
       "value": "1.0"
     },
@@ -83495,7 +83577,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 77294,
+      "offset": 77635,
       "length": 2,
       "value": "[]"
     },
@@ -83600,7 +83682,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 12431,
+      "offset": 14191,
       "length": 5,
       "value": "false"
     },
@@ -83777,14 +83859,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.26.5\""
+      "value": "\"1.27.0\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3898\""
+      "value": "\"4002\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -84083,161 +84165,147 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 13464,
+      "offset": 13594,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13761,
+      "offset": 13891,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13830,
+      "offset": 13960,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13912,
+      "offset": 14042,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 13987,
+      "offset": 14117,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 14056,
+      "offset": 14186,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "FloatLiteral",
-      "offset": 14241,
+      "offset": 14371,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 14287,
+      "offset": 14417,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 15127,
+      "offset": 15257,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15296,
+      "offset": 15426,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15451,
+      "offset": 15581,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 15552,
+      "offset": 15682,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "Dictionary",
-      "offset": 15748,
+      "offset": 15878,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 38957,
+      "offset": 39424,
       "length": 12,
       "value": "\"onboarding\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "IntegerLiteral",
-      "offset": 39009,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
-      "kind": "StringLiteral",
-      "offset": 39576,
-      "length": 12,
-      "value": "\"onboarding\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
-      "kind": "IntegerLiteral",
-      "offset": 39628,
+      "offset": 39476,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 55494,
+      "offset": 56781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 57823,
+      "offset": 59632,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 60707,
+      "offset": 63466,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 63542,
+      "offset": 66490,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 80062,
+      "offset": 84986,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 81572,
+      "offset": 86496,
       "length": 2,
       "value": "\"\""
     },
@@ -89018,273 +89086,280 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5445,
-      "length": 12,
-      "value": "\"FinishGame\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
-      "kind": "StringLiteral",
-      "offset": 5556,
+      "offset": 5498,
       "length": 16,
       "value": "\"SessionFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5634,
+      "offset": 5576,
       "length": 14,
       "value": "\"StoryFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5710,
+      "offset": 5652,
       "length": 21,
       "value": "\"CurrentStoryFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5793,
+      "offset": 5735,
       "length": 21,
       "value": "\"InAppMessageFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5876,
+      "offset": 5818,
       "length": 16,
       "value": "\"BannersFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 5954,
+      "offset": 5896,
       "length": 28,
       "value": "\"CurrentInAppMessageFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6044,
+      "offset": 5986,
       "length": 16,
       "value": "\"NetworkFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6122,
+      "offset": 6064,
       "length": 16,
       "value": "\"RequestFailure\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6224,
+      "offset": 6166,
       "length": 5,
       "value": "\"pos\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6301,
+      "offset": 6243,
       "length": 14,
       "value": "\"JSConsoleLog\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6365,
+      "offset": 6307,
       "length": 15,
       "value": "\"JSConsoleInfo\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6430,
+      "offset": 6372,
       "length": 16,
       "value": "\"JSConsoleDebug\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6496,
+      "offset": 6438,
       "length": 18,
       "value": "\"JSConsoleWarning\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 6564,
+      "offset": 6506,
       "length": 16,
       "value": "\"JSConsoleError\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 7611,
+      "offset": 7553,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8510,
+      "offset": 8452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8550,
+      "offset": 8492,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8590,
+      "offset": 8532,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8630,
+      "offset": 8572,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8655,
+      "offset": 8597,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 8676,
+      "offset": 8618,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "StringLiteral",
-      "offset": 9355,
+      "offset": 9297,
       "length": 12,
       "value": "\"EditorIcon\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9697,
+      "offset": 9639,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9709,
+      "offset": 9651,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9730,
+      "offset": 9672,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9742,
+      "offset": 9684,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9798,
+      "offset": 9740,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9806,
+      "offset": 9748,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9859,
+      "offset": 9801,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9867,
+      "offset": 9809,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Array",
-      "offset": 9916,
+      "offset": 9858,
       "length": 6,
       "value": "[0, 1]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 9957,
+      "offset": 9899,
       "length": 5,
       "value": "200.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "Array",
-      "offset": 12715,
+      "offset": 12657,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 12911,
+      "offset": 12853,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 15192,
+      "offset": 13990,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
+      "kind": "BooleanLiteral",
+      "offset": 14032,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
+      "kind": "BooleanLiteral",
+      "offset": 15585,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15235,
+      "offset": 15628,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15377,
+      "offset": 15770,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15422,
+      "offset": 15815,
       "length": 4,
       "value": "16.0"
     },
