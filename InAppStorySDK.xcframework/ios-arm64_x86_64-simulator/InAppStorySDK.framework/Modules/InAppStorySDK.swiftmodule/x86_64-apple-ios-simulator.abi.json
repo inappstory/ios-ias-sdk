@@ -64406,6 +64406,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -82298,7 +82308,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 16151,
+      "offset": 16344,
       "length": 3,
       "value": "1.0"
     },
@@ -83777,14 +83787,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.26.6\""
+      "value": "\"1.26.7\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"3904\""
+      "value": "\"3910\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -85612,6 +85622,13 @@
       "offset": 284,
       "length": 15,
       "value": "\"Not Reachable\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/ReachabilityService.swift",
+      "kind": "StringLiteral",
+      "offset": 728,
+      "length": 40,
+      "value": "\"com.inappstory.reachability.monitoring\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation_old\/ArchiveOD.swift",
@@ -88836,21 +88853,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 30574,
+      "offset": 31007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 33188,
+      "offset": 33621,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 34104,
+      "offset": 34537,
       "length": 5,
       "value": "false"
     },
@@ -90043,6 +90060,20 @@
       "offset": 3142,
       "length": 16,
       "value": "\"?unrecognized?\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Helpers\/AtomicDictionary.swift",
+      "kind": "IntegerLiteral",
+      "offset": 279,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Helpers\/AtomicDictionary.swift",
+      "kind": "Dictionary",
+      "offset": 439,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/Transitions\/Modal\/IAMModalPresentationController.swift",
