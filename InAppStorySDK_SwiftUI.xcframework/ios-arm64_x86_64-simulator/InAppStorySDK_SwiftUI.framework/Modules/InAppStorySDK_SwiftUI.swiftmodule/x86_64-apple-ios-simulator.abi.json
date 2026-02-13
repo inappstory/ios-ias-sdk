@@ -15285,6 +15285,167 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "placeID",
+            "printedName": "placeID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI13IASBannerDataV7placeIDSSSgvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:placeID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "IASBannerData",
+                "printedName": "InAppStorySDK_SwiftUI.IASBannerData",
+                "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21InAppStorySDK_SwiftUI13IASBannerDataV2id7placeIDACSSSg_AFtcfc",
+            "mangledName": "$s21InAppStorySDK_SwiftUI13IASBannerDataV2id7placeIDACSSSg_AFtcfc",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Struct",
@@ -52489,13 +52650,41 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(InAppStorySDK_SwiftUI.NetworkError.Type) -> InAppStorySDK_SwiftUI.NetworkError",
+                "printedName": "(InAppStorySDK_SwiftUI.NetworkError.Type) -> (Swift.String?) -> InAppStorySDK_SwiftUI.NetworkError",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "NetworkError",
-                    "printedName": "InAppStorySDK_SwiftUI.NetworkError",
-                    "usr": "s:21InAppStorySDK_SwiftUI12NetworkErrorO"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?) -> InAppStorySDK_SwiftUI.NetworkError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkError",
+                        "printedName": "InAppStorySDK_SwiftUI.NetworkError",
+                        "usr": "s:21InAppStorySDK_SwiftUI12NetworkErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(message: Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -52514,9 +52703,12 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:21InAppStorySDK_SwiftUI12NetworkErrorO4gameyA2CmF",
-            "mangledName": "$s21InAppStorySDK_SwiftUI12NetworkErrorO4gameyA2CmF",
+            "usr": "s:21InAppStorySDK_SwiftUI12NetworkErrorO4gameyACSSSg_tcACmF",
+            "mangledName": "$s21InAppStorySDK_SwiftUI12NetworkErrorO4gameyACSSSg_tcACmF",
             "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "spi_group_names": [
               "Private"
             ]
@@ -86727,28 +86919,28 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 15585,
+      "offset": 15737,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15628,
+      "offset": 15780,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15770,
+      "offset": 15922,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15815,
+      "offset": 15967,
       "length": 4,
       "value": "16.0"
     },
@@ -87770,7 +87962,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 8614,
+      "offset": 8632,
       "length": 1,
       "value": "0"
     },
@@ -87840,7 +88032,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 1172,
+      "offset": 1202,
       "length": 5,
       "value": "false"
     },
@@ -87952,7 +88144,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 77635,
+      "offset": 77659,
       "length": 2,
       "value": "[]"
     },
@@ -88465,14 +88657,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.27.1\""
+      "value": "\"1.27.2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4004\""
+      "value": "\"4010\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -88883,35 +89075,35 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 59632,
+      "offset": 60074,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 63466,
+      "offset": 63908,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "BooleanLiteral",
-      "offset": 66490,
+      "offset": 66932,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 84986,
+      "offset": 85502,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 86496,
+      "offset": 87012,
       "length": 2,
       "value": "\"\""
     },
@@ -89471,35 +89663,35 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1774,
+      "offset": 1804,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1821,
+      "offset": 1851,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1873,
+      "offset": 1903,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1921,
+      "offset": 1951,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/IASBannerContentView.swift",
       "kind": "Array",
-      "offset": 2766,
+      "offset": 2796,
       "length": 412,
       "value": "[\"storyLoaded\", \"storyRenderReady\", \"storyStarted\", \"updateTimeline\", \"storyShowNext\", \"storyShowPrev\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
@@ -91753,14 +91945,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/Collection\/IASBannersCollectionView.swift",
       "kind": "Array",
-      "offset": 1984,
+      "offset": 2010,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/Collection\/IASBannersCollectionView.swift",
       "kind": "Dictionary",
-      "offset": 2302,
+      "offset": 2328,
       "length": 3,
       "value": "[]"
     },
@@ -92677,98 +92869,98 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 6937,
+      "offset": 7100,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7006,
+      "offset": 7169,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 8119,
+      "offset": 8282,
       "length": 38,
       "value": "\"LayoutDirectionDidChangeNotification\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 8975,
+      "offset": 9138,
       "length": 33,
       "value": "\"com.inappstory.network.delegate\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9153,
+      "offset": 9316,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9295,
+      "offset": 9458,
       "length": 30,
       "value": "\"com.inappstory.network.state\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9362,
+      "offset": 9525,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9423,
+      "offset": 9586,
       "length": 37,
       "value": "\"https:\/\/api.test.inappstory.com\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9594,
+      "offset": 9757,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 9766,
+      "offset": 9929,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9809,
+      "offset": 9972,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 31016,
+      "offset": 31179,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 33630,
+      "offset": 33793,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 34546,
+      "offset": 34709,
       "length": 5,
       "value": "false"
     },
@@ -94028,7 +94220,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 16344,
+      "offset": 16385,
       "length": 3,
       "value": "1.0"
     },
