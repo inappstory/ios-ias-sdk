@@ -381,6 +381,8 @@ public struct InAppMessageSlideData {
 }
 public struct IASBannerData {
   public var id: Swift.String?
+  public var placeID: Swift.String?
+  public init(id: Swift.String? = nil, placeID: Swift.String? = nil)
 }
 public struct IASBannersAppearance {
   public let shouldLoop: Swift.Bool
@@ -1510,7 +1512,7 @@ public let AppendCacheResponse: Foundation.Notification.Name
   @_spi(Private) case task
   @_spi(Private) case once
   @_spi(Private) case file
-  @_spi(Private) case game
+  @_spi(Private) case game(message: Swift.String?)
   @_spi(Private) case editor(reason: Swift.String)
 }
 @_spi(Private) public typealias EditorDownloadComplete = (Swift.Result<Swift.String, InAppStorySDK_SwiftUI.NetworkError>) -> Swift.Void
