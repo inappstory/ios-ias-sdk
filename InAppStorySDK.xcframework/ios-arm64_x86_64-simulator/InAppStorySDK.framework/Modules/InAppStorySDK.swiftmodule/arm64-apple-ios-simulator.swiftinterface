@@ -101,16 +101,6 @@ extension InAppStorySDK.ArchiveOD {
   final public func extract(_ entry: InAppStorySDK.EntryOD, bufferSize: Swift.UInt32 = defaultReadChunkSizeOD, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> InAppStorySDK.CRC32
   #endif
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
-  @objc override dynamic public init()
-  @objc override dynamic public init(layer: Any)
-  @objc deinit
-}
-extension InAppStorySDK.IASVideoPlayerLayer {
-  final public func play(url: Foundation.URL)
-  final public func stop()
-  final public func restart()
-}
 public typealias BannersDidUpdatedType = (_ isContent: Swift.Bool, _ count: Swift.Int, _ listHeight: CoreFoundation.CGFloat) -> Swift.Void
 public typealias BannerOnActionType = (_ target: Swift.String) -> Swift.Void
 public typealias BannersDidScrollType = (_ index: Swift.Int) -> Swift.Void
@@ -297,6 +287,7 @@ extension CoreFoundation.CGRect {
   public var logger: any InAppStorySDK.IASLoggerProtocol
   public var isDeviceIDEnabled: Swift.Bool
   public var customShare: ((InAppStorySDK.SharingObject, @escaping (Swift.Bool) -> Swift.Void) -> Swift.Void)?
+  @available(*, deprecated, message: "The gameComplete callback has been deprecated and will be removed in upcoming releases.")
   public var gameComplete: ((_ data: Swift.String, _ result: Swift.Dictionary<Swift.String, Any>?, _ url: Swift.String?) -> Swift.Void)?
   public var gameReaderWillShow: (() -> Swift.Void)?
   public var gameReaderDidClose: (() -> Swift.Void)?
@@ -308,8 +299,11 @@ extension CoreFoundation.CGRect {
   public var editorCellDidSelect: (() -> Swift.Void)?
   public var getGoodsObject: ((_ skus: Swift.Array<Swift.String>, _ complete: @escaping InAppStorySDK.GoodsComplete) -> Swift.Void)?
   public var goodItemSelected: ((_ item: any InAppStorySDK.GoodsObjectProtocol, _ storyType: InAppStorySDK.StoriesType?) -> Swift.Void)?
+  public var productCartUpdate: ((_ offer: InAppStorySDK.ProductCartOffer, _ complete: @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
+  public var productCartClicked: (() -> Swift.Void)?
+  public var productCartGetState: ((_ complete: @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
   public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
-  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageWillShow: ((_ id: Swift.String, _ event: Swift.String?, _ presentType: InAppStorySDK.IAMPresentType) -> UIKit.UIView?)?
   public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
@@ -361,11 +355,8 @@ extension InAppStorySDK.InAppStory {
 }
 extension InAppStorySDK.InAppStory {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, unavailable, renamed: "showOnboardings(feed:limit:from:with:with:complete:)")
-  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @discardableResult
+  public func showOnboardings(feed: Swift.String = "onboarding", limit: Swift.Int = 0, from target: UIKit.UIViewController, with tags: [Swift.String]? = nil, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
   #endif
 }
 extension InAppStorySDK.InAppStory {
@@ -379,26 +370,22 @@ extension InAppStorySDK.InAppStory {
 }
 extension InAppStorySDK.InAppStory {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @discardableResult
+  public func showStoryOnce(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, deprecated, renamed: "showStory(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @available(*, unavailable, renamed: "showSingle(with:from:with:complete:)")
-  public func showSingle(with id: Swift.String, from target: UIKit.UIViewController, delegate: any InAppStorySDK.InAppStoryDelegate, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void)
+  @discardableResult
+  public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK.CancellationToken?
   #endif
 }
 extension InAppStorySDK.InAppStory {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @discardableResult
+  public func showInAppMessageWith(id: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil)
+  @discardableResult
+  public func showInAppMessageWith(event: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
   #endif
 }
 extension InAppStorySDK.InAppStory {
@@ -491,6 +478,16 @@ extension InAppStorySDK.StoryUGCView {
 public protocol IASLoggerProtocol {
   var level: Swift.Array<InAppStorySDK.IASLogLevel> { get set }
   func log(object: InAppStorySDK.IASLogObject)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class IASVideoPlayerLayer : AVFoundation.AVSampleBufferDisplayLayer {
+  @objc override dynamic public init()
+  @objc override dynamic public init(layer: Any)
+  @objc deinit
+}
+extension InAppStorySDK.IASVideoPlayerLayer {
+  final public func play(url: Foundation.URL)
+  final public func stop()
+  final public func restart()
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -960,7 +957,6 @@ public let ClickOnShareStory: Foundation.Notification.Name
 public let StoryWidgetEvent: Foundation.Notification.Name
 public let StartGame: Foundation.Notification.Name
 public let CloseGame: Foundation.Notification.Name
-public let FinishGame: Foundation.Notification.Name
 public let SessionFailure: Foundation.Notification.Name
 public let StoryFailure: Foundation.Notification.Name
 public let CurrentStoryFailure: Foundation.Notification.Name
@@ -1074,6 +1070,45 @@ public struct GameStoryData {
   public var slideData: InAppStorySDK.SlideData?
   public var gameID: Swift.String?
 }
+public struct ProductCartOffer : Swift.Codable {
+  public let offerId: Swift.String
+  public let groupId: Swift.String?
+  public let name: Swift.String?
+  public let description: Swift.String?
+  public let url: Swift.String?
+  public let coverUrl: Swift.String?
+  public let imageUrls: [Swift.String]
+  public let currency: Swift.String?
+  public let price: Swift.String?
+  public let oldPrice: Swift.String?
+  public let adult: Swift.Bool?
+  public let availability: Swift.Int
+  public let size: Swift.String?
+  public let color: Swift.String?
+  public let quantity: Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(offerId: Swift.String, groupId: Swift.String? = nil, name: Swift.String? = nil, description: Swift.String? = nil, url: Swift.String? = nil, coverUrl: Swift.String? = nil, imageUrls: [Swift.String] = [], currency: Swift.String? = nil, price: Swift.String? = nil, oldPrice: Swift.String? = nil, adult: Swift.Bool? = nil, availability: Swift.Int = 1, size: Swift.String? = nil, color: Swift.String? = nil, quantity: Swift.Int)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ProductCart : Swift.Codable {
+  public let offers: [InAppStorySDK.ProductCartOffer]
+  public let price: Swift.String
+  public let oldPrice: Swift.String?
+  public let priceCurrency: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(offers: [InAppStorySDK.ProductCartOffer], price: Swift.String, oldPrice: Swift.String?, priceCurrency: Swift.String)
+  #endif
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class CancellationToken {
+  final public let id: Swift.String
+  @discardableResult
+  final public func cancel() -> Swift.Bool
+  @objc deinit
+}
 public enum IASLogLevel {
   case all
   case initializ
@@ -1106,15 +1141,41 @@ public struct InAppMessageData {
   public var id: Swift.String?
   public var campaign: Swift.String?
 }
+public struct InAppMessageSlideData {
+  public var iamData: InAppStorySDK.InAppMessageData?
+  public var index: Swift.Int
+  public var payload: Swift.String?
+}
 public struct IASBannerData {
   public var id: Swift.String?
+  public var placeID: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(id: Swift.String? = nil, placeID: Swift.String? = nil)
+  #endif
 }
 public struct IASBannersAppearance {
   public let shouldLoop: Swift.Bool
   public let sideInset: CoreFoundation.CGFloat
+  public let leadingInset: CoreFoundation.CGFloat
+  public let trailingInset: CoreFoundation.CGFloat
   public let interItemSpacing: CoreFoundation.CGFloat
   public let cornerRadius: CoreFoundation.CGFloat
-  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
+  #endif
+}
+public enum IAMPresentType : Swift.Int, Swift.Codable {
+  case bottomSheet
+  case popUp
+  case fullScreen
+  case toast
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public enum IASEvent {
   public enum Story {
@@ -1134,13 +1195,13 @@ public enum IASEvent {
   public enum Game {
     case startGame(gameData: InAppStorySDK.GameStoryData)
     case closeGame(gameData: InAppStorySDK.GameStoryData)
-    case finishGame(gameData: InAppStorySDK.GameStoryData, result: Swift.Dictionary<Swift.String, Any>)
     case eventGame(gameData: InAppStorySDK.GameStoryData, name: Swift.String, payload: Swift.Dictionary<Swift.String, Any>)
     case gameFailure(gameData: InAppStorySDK.GameStoryData, message: Swift.String)
   }
   public enum IAMessage {
     case preloaded(messages: Swift.Array<InAppStorySDK.InAppMessageData>)
     case show(iamData: InAppStorySDK.InAppMessageData)
+    case showSlide(iamSlideData: InAppStorySDK.InAppMessageSlideData)
     case close(iamData: InAppStorySDK.InAppMessageData)
     case clickOnButton(iamData: InAppStorySDK.InAppMessageData, link: Swift.String)
     case widgetEvent(iamData: InAppStorySDK.InAppMessageData, name: Swift.String, data: Swift.Dictionary<Swift.String, Any>?)
@@ -1349,3 +1410,6 @@ extension InAppStorySDK.CloseStoryAction : Swift.Hashable {}
 extension InAppStorySDK.CloseStoryAction : Swift.RawRepresentable {}
 extension InAppStorySDK.IASLogLevel : Swift.Equatable {}
 extension InAppStorySDK.IASLogLevel : Swift.Hashable {}
+extension InAppStorySDK.IAMPresentType : Swift.Equatable {}
+extension InAppStorySDK.IAMPresentType : Swift.Hashable {}
+extension InAppStorySDK.IAMPresentType : Swift.RawRepresentable {}
