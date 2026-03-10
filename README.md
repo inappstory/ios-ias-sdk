@@ -23,7 +23,7 @@ To integrate InAppStory into your Xcode project using CocoaPods, specify it in y
 ```ruby
 # UIKit
 use_frameworks!
-pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.26.0-RC1'
+pod 'InAppStory', :git => 'https://github.com/inappstory/ios-ias-sdk.git', :tag => '1.28.0-RC1'
 ```
 
 ### XCode SPM installation
