@@ -5321,6 +5321,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "MobileCoreServices",
         "printedName": "MobileCoreServices",
         "declKind": "Import",
@@ -82604,63 +82614,63 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 459,
+      "offset": 505,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1010,
+      "offset": 1056,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1179,
+      "offset": 1225,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Array",
-      "offset": 1298,
+      "offset": 1344,
       "length": 384,
       "value": "[\"storyRenderReady\", \"onCardLoadingStateChange\", \"storyStarted\", \"onEvent\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1873,
+      "offset": 1919,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1920,
+      "offset": 1966,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1972,
+      "offset": 2018,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2020,
+      "offset": 2066,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "StringLiteral",
-      "offset": 280,
+      "offset": 326,
       "length": 14,
       "value": "\"InAppStorySDK.IAMContentView\""
     },
@@ -82803,6 +82813,62 @@
       "offset": 2471,
       "length": 12,
       "value": "\"updated_at\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 697,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "StringLiteral",
+      "offset": 787,
+      "length": 39,
+      "value": "\"com.inappstory.game.resources.service\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "Dictionary",
+      "offset": 896,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "Dictionary",
+      "offset": 966,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "StringLiteral",
+      "offset": 1010,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1132,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1172,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameDownloader\/Download\/GameResourcesDownloader.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1255,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/Upload\/UploadManager.swift",
@@ -84069,14 +84135,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.27.5\""
+      "value": "\"1.27.6\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4026\""
+      "value": "\"4034\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -88099,14 +88165,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/ProfilingManager.swift",
       "kind": "Dictionary",
-      "offset": 1560,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/ProfilingManager.swift",
-      "kind": "Dictionary",
-      "offset": 1645,
+      "offset": 1648,
       "length": 3,
       "value": "[]"
     },
@@ -89128,21 +89187,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 31179,
+      "offset": 31710,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 33793,
+      "offset": 34324,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 34709,
+      "offset": 35240,
       "length": 5,
       "value": "false"
     },
