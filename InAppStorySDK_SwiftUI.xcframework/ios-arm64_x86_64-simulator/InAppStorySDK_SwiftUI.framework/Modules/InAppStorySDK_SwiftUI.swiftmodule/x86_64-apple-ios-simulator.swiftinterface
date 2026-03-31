@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK_SwiftUI
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InAppStorySDK_SwiftUI
 import AVFoundation
 import AudioToolbox
 import Combine
@@ -42,6 +42,7 @@ extension InAppStorySDK_SwiftUI.Archive {
     get
   }
 }
+@available(iOS 15.0, *)
 @_Concurrency.MainActor(unsafe) public struct IASBannersListView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public init(id: Swift.String? = nil, appearance: InAppStorySDK_SwiftUI.IASBannersAppearance = .init())
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
@@ -290,6 +291,17 @@ public struct IASBannersAppearance {
   public let cornerRadius: CoreFoundation.CGFloat
   public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
 }
+public enum IAMPresentType : Swift.Int, Swift.Codable {
+  case bottomSheet
+  case popUp
+  case fullScreen
+  case toast
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK_SwiftUI.StoryData>)
@@ -359,13 +371,19 @@ public protocol IASLoggerProtocol {
   var level: Swift.Array<InAppStorySDK_SwiftUI.IASLogLevel> { get set }
   func log(object: InAppStorySDK_SwiftUI.IASLogObject)
 }
+@available(iOS 15.0, *)
 extension SwiftUI.View {
   public func onboardingStories(feed: Swift.String = "onboarding", limit: Swift.Int = 0, tags: [Swift.String]? = nil, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, cancellationToken: SwiftUI.Binding<InAppStorySDK_SwiftUI.CancellationToken?>? = nil, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
   public func singleStory(storyID: Swift.String, once: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isPresented: SwiftUI.Binding<Swift.Bool>, cancellationToken: SwiftUI.Binding<InAppStorySDK_SwiftUI.CancellationToken?>? = nil, willAppear: (() -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, onAction: ((_ target: Swift.String, _ type: InAppStorySDK_SwiftUI.ActionType) -> Swift.Void)? = nil, goodsObjects: ((_ skus: Swift.Array<Swift.String>, _ complete: (Swift.Result<Swift.Array<any InAppStorySDK_SwiftUI.GoodsObjectProtocol>, InAppStorySDK_SwiftUI.GoodsFailure>) -> Swift.Void) -> Swift.Void)? = nil, selectGoodsItem: ((_ item: any InAppStorySDK_SwiftUI.GoodsObjectProtocol) -> Swift.Void)? = nil) -> some SwiftUI.View
   
+  public func inAppMessageContainer() -> some SwiftUI.View
+  
+  public func inAppMessageContainer(id containerID: Swift.String) -> some SwiftUI.View
+  
 }
 public typealias FILEPointer = Swift.UnsafeMutablePointer<Darwin.FILE>
+@available(iOS 15.0, *)
 @_Concurrency.MainActor(unsafe) public struct StoryListUGCView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public init(filter: Swift.Dictionary<Swift.String, Any>, isEditorEnabled: Swift.Bool = false, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
@@ -424,6 +442,14 @@ extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK_SwiftUI.CompressionMethodOD = .none, progress: Foundation.Progress? = nil) throws
   public func unzipItemOD(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, preferredEncoding: Swift.String.Encoding? = nil) throws
 }
+@available(iOS 15.0, *)
+extension InAppStorySDK_SwiftUI.InAppStory {
+  @discardableResult
+  public func showIAMWith(id messageID: Swift.String, inContainer containerID: Swift.String = IAMDefaultContainerID, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
+  @discardableResult
+  public func showIAMWith(event: Swift.String, inContainer containerID: Swift.String = IAMDefaultContainerID, onlyPreloaded: Swift.Bool = false, tags: [Swift.String]? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
+}
+public let IAMDefaultContainerID: Swift.String
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static var shared: InAppStorySDK_SwiftUI.InAppStory
   public static let VersionSDK: Swift.String
@@ -560,7 +586,7 @@ extension Foundation.FileManager {
   public var productCartClicked: (() -> Swift.Void)?
   public var productCartGetState: ((_ complete: @escaping (Swift.Result<InAppStorySDK_SwiftUI.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
   public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
-  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageWillShow: ((_ id: Swift.String, _ event: Swift.String?, _ presentType: InAppStorySDK_SwiftUI.IAMPresentType) -> UIKit.UIView?)?
   public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
@@ -615,9 +641,9 @@ extension InAppStorySDK_SwiftUI.InAppStory {
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   @discardableResult
-  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
+  public func showInAppMessageWith(id: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
   @discardableResult
-  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
+  public func showInAppMessageWith(event: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -632,6 +658,7 @@ public enum ScrollListDirection {
     get
   }
 }
+@available(iOS 15.0, *)
 @_Concurrency.MainActor(unsafe) public struct StoryListView : SwiftUI.View {
   @_Concurrency.MainActor(unsafe) public init(feed: Swift.String? = nil, isFavorite: Swift.Bool = false, panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, isEditorEnabled: Swift.Bool = false, refresh: SwiftUI.Binding<Swift.Bool> = .constant(false))
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
@@ -1299,6 +1326,9 @@ extension InAppStorySDK_SwiftUI.CloseStoryAction : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CloseStoryAction : Swift.RawRepresentable {}
 extension InAppStorySDK_SwiftUI.IASLogLevel : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.IASLogLevel : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.IAMPresentType : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.IAMPresentType : Swift.Hashable {}
+extension InAppStorySDK_SwiftUI.IAMPresentType : Swift.RawRepresentable {}
 extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CompressionMethod : Swift.Equatable {}

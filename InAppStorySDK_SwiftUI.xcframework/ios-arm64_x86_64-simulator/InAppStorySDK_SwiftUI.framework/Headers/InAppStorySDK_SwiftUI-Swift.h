@@ -457,12 +457,12 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 
 
 
+
 SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
@@ -482,6 +482,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK_SwiftUI)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
@@ -1028,12 +1029,12 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI10InAppStory")
 
 
 
+
 SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 
@@ -1053,6 +1054,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 @interface NetworkService (SWIFT_EXTENSION(InAppStorySDK_SwiftUI)) <NSURLSessionDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
 @end
+
 
 
 
