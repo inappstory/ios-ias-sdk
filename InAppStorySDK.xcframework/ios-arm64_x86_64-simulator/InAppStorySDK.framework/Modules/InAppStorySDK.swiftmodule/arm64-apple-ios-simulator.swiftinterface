@@ -283,7 +283,7 @@ extension CoreFoundation.CGRect {
   public var productCartClicked: (() -> Swift.Void)?
   public var productCartGetState: ((_ complete: @escaping (Swift.Result<InAppStorySDK.ProductCart, any Swift.Error>) -> Swift.Void) -> Swift.Void)?
   public var inAppMessagesDidUpdated: ((_ isContent: Swift.Bool) -> Swift.Void)?
-  public var inAppMessageWillShow: (() -> Swift.Void)?
+  public var inAppMessageWillShow: ((_ id: Swift.String, _ event: Swift.String?, _ presentType: InAppStorySDK.IAMPresentType) -> UIKit.UIView?)?
   public var inAppMessageDidClose: (() -> Swift.Void)?
   public var sizeForItem: (() -> CoreFoundation.CGSize)?
   public var insetForSection: (() -> UIKit.UIEdgeInsets)?
@@ -338,9 +338,9 @@ extension InAppStorySDK.InAppStory {
 }
 extension InAppStorySDK.InAppStory {
   @discardableResult
-  public func showInAppMessageWith(id: Swift.String, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
+  public func showInAppMessageWith(id: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
   @discardableResult
-  public func showInAppMessageWith(event: Swift.String, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
+  public func showInAppMessageWith(event: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, tags: Swift.Array<Swift.String>? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK.CancellationToken?
 }
 extension InAppStorySDK.InAppStory {
   public func removeFromFavorite(with storyID: Swift.String)
@@ -1012,6 +1012,17 @@ public struct IASBannersAppearance {
   public let cornerRadius: CoreFoundation.CGFloat
   public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
 }
+public enum IAMPresentType : Swift.Int, Swift.Codable {
+  case bottomSheet
+  case popUp
+  case fullScreen
+  case toast
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 public enum IASEvent {
   public enum Story {
     case storiesLoaded(feed: Swift.String? = nil, stories: Swift.Array<InAppStorySDK.StoryData>)
@@ -1229,3 +1240,6 @@ extension InAppStorySDK.CloseStoryAction : Swift.Hashable {}
 extension InAppStorySDK.CloseStoryAction : Swift.RawRepresentable {}
 extension InAppStorySDK.IASLogLevel : Swift.Equatable {}
 extension InAppStorySDK.IASLogLevel : Swift.Hashable {}
+extension InAppStorySDK.IAMPresentType : Swift.Equatable {}
+extension InAppStorySDK.IAMPresentType : Swift.Hashable {}
+extension InAppStorySDK.IAMPresentType : Swift.RawRepresentable {}
