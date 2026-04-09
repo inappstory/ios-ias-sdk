@@ -1081,6 +1081,7 @@ extension InAppStorySDK.Archive {
   final public func totalUnitCountForReading(_ entry: InAppStorySDK.Entry) -> Swift.Int64
   final public func totalUnitCountForAddingItem(at url: Foundation.URL) -> Swift.Int64
 }
+public typealias StoryViewRefreshCompletion = (_ isContent: Swift.Bool, _ storyType: InAppStorySDK.StoriesType, _ error: InAppStorySDK.IASEvent.Failure?) -> Swift.Void
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StoryView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var isFavoriteView: Swift.Bool
   @_Concurrency.MainActor(unsafe) weak public var target: UIKit.UIViewController? {
@@ -1157,8 +1158,8 @@ extension InAppStorySDK.Archive {
   @objc deinit
 }
 extension InAppStorySDK.StoryView {
-  @_Concurrency.MainActor(unsafe) public func create()
-  @_Concurrency.MainActor(unsafe) public func refresh(newFeed: Swift.String? = nil, newTags: Swift.Array<Swift.String>? = nil)
+  @_Concurrency.MainActor(unsafe) public func create(completion: InAppStorySDK.StoryViewRefreshCompletion? = nil)
+  @_Concurrency.MainActor(unsafe) public func refresh(newFeed: Swift.String? = nil, newTags: Swift.Array<Swift.String>? = nil, completion: InAppStorySDK.StoryViewRefreshCompletion? = nil)
   @_Concurrency.MainActor(unsafe) public func collectVisibleAreaData()
   @_Concurrency.MainActor(unsafe) public func updateVisibleArea()
 }

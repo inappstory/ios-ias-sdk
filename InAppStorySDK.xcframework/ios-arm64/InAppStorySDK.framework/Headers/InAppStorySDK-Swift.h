@@ -540,6 +540,7 @@ SWIFT_CLASS("_TtC13InAppStorySDK9StoryView")
 
 
 
+
 @interface UICollectionViewFlowLayout (SWIFT_EXTENSION(InAppStorySDK))
 @property (nonatomic, readonly) BOOL flipsHorizontallyInOppositeLayoutDirection;
 @end
