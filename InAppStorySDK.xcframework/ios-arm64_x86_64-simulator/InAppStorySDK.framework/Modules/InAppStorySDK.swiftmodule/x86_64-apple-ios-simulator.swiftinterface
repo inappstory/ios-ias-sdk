@@ -148,7 +148,7 @@ extension CoreFoundation.CGRect {
   }
 }
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
-  public static var shared: InAppStorySDK.InAppStory
+  public static let shared: InAppStorySDK.InAppStory
   public static let VersionSDK: Swift.String
   public static let BuildSDK: Swift.String
   public static var frameworkInfo: Swift.String {
