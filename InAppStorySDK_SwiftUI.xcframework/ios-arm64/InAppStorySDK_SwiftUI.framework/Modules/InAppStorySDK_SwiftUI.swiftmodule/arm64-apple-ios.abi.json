@@ -21805,6 +21805,7 @@
               "AccessControl",
               "RawDocComment"
             ],
+            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -21829,56 +21830,6 @@
                   "Final"
                 ],
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "InAppStory",
-                    "printedName": "InAppStorySDK_SwiftUI.InAppStory",
-                    "usr": "c:@M@InAppStorySDK_SwiftUI@objc(cs)InAppStory"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21InAppStorySDK_SwiftUI0abC0C6sharedACvsZ",
-                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C6sharedACvsZ",
-                "moduleName": "InAppStorySDK_SwiftUI",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21InAppStorySDK_SwiftUI0abC0C6sharedACvMZ",
-                "mangledName": "$s21InAppStorySDK_SwiftUI0abC0C6sharedACvMZ",
-                "moduleName": "InAppStorySDK_SwiftUI",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -90790,14 +90741,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.28.2\""
+      "value": "\"1.28.3\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4176\""
+      "value": "\"4178\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
