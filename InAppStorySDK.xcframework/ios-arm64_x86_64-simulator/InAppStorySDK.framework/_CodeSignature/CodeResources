@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/InAppStorySDK-Swift.h</key>
 		<data>
-		uoxkxOHwpAi67Efx/ShpPn3ifq4=
+		bhWJSFxJXZ+aBoVYiwFaq8zbitw=
 		</data>
 		<key>Headers/InAppStorySDK.h</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XO4EoBwtI2MsqQnylRy+oL8yA5k=
+		mKWBWaWnJ83orFqTD32Qj0ZDWTI=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		sjUil7OS9JjKssPRDoVeWGG6+yU=
+		UF4z+DjYLtu1VwREW/opkfHbjnI=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MHPcrEU8KrAif020/utG/WKfH64=
+		WmQdyxyARCH8td125WzKa/bRcys=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		sjUil7OS9JjKssPRDoVeWGG6+yU=
+		UF4z+DjYLtu1VwREW/opkfHbjnI=
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/InAppStorySDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		D0BvYePnExhzIvlFKyY8M+KIrLE=
+		2okKIOp/c7fyngzG+5dteprPzEk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -178,7 +178,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MNYWmhfjEROkGqPps/HomiYJThjJXJqBGXW+QFWT8O4=
+			N8XXD2TdcopAjSsCegODjP5gyC/BvWGh9JneE25OVxU=
 			</data>
 		</dict>
 		<key>Headers/InAppStorySDK.h</key>
@@ -192,7 +192,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uFi+RPbnkM+Eq42Vn6xlfnLOh0/Fcz+wWBO6A/dGyN8=
+			v5nEWO0iK0hjg3T+dcMW7PwyYn52Vnk6vsZB9iv4QkI=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -220,14 +220,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H8LX4jFdAdmb4IJ8P51mpGhbhKXy8Yosh1b7QxjZJr4=
+			35B5Cx/H73DCbhpgoyspMhXsp5wIbzuYsBh7rmRBj/w=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uFi+RPbnkM+Eq42Vn6xlfnLOh0/Fcz+wWBO6A/dGyN8=
+			v5nEWO0iK0hjg3T+dcMW7PwyYn52Vnk6vsZB9iv4QkI=
 			</data>
 		</dict>
 		<key>Modules/InAppStorySDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -255,7 +255,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AwO1X/OTkOuVfaj2MSXej0mm/ijDkx4M4CJK7sP4Mzs=
+			3swcrsgjYaI2Nf7WeT7qdTIXAjrnHPGM41Tzaepmvos=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
