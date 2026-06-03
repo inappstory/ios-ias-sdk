@@ -82015,7 +82015,7 @@
           {
             "kind": "Function",
             "name": "inAppMessageContainer",
-            "printedName": "inAppMessageContainer()",
+            "printedName": "inAppMessageContainer(ignoreSafeArea:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -82029,11 +82029,18 @@
                     "usr": "s:7SwiftUI4ViewP"
                   }
                 ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainerQryF",
-            "mangledName": "$s7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainerQryF",
+            "usr": "s:7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer14ignoreSafeAreaQrSb_tF",
+            "mangledName": "$s7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer14ignoreSafeAreaQrSb_tF",
             "moduleName": "InAppStorySDK_SwiftUI",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
             "sugared_genericSig": "<Self where Self : SwiftUI.View>",
@@ -82046,7 +82053,7 @@
           {
             "kind": "Function",
             "name": "inAppMessageContainer",
-            "printedName": "inAppMessageContainer(id:)",
+            "printedName": "inAppMessageContainer(id:ignoreSafeArea:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -82066,11 +82073,18 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer2idQrSS_tF",
-            "mangledName": "$s7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer2idQrSS_tF",
+            "usr": "s:7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer2id14ignoreSafeAreaQrSS_SbtF",
+            "mangledName": "$s7SwiftUI4ViewP014InAppStorySDK_aB0E02inE16MessageContainer2id14ignoreSafeAreaQrSS_SbtF",
             "moduleName": "InAppStorySDK_SwiftUI",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
             "sugared_genericSig": "<Self where Self : SwiftUI.View>",
@@ -89934,35 +89948,49 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "Array",
-      "offset": 437,
+      "offset": 432,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "Array",
-      "offset": 489,
+      "offset": 485,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "Array",
+      "offset": 537,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "StringLiteral",
-      "offset": 550,
+      "offset": 598,
       "length": 39,
       "value": "\"com.inappstory.IASBannersManager.sync\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "Dictionary",
-      "offset": 688,
+      "offset": 736,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 950,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 10647,
+      "offset": 11034,
       "length": 1,
       "value": "0"
     },
@@ -90144,7 +90172,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 79217,
+      "offset": 79226,
       "length": 2,
       "value": "[]"
     },
@@ -90313,6 +90341,20 @@
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/SwiftUI\/Extension\/InAppStoryUI.swift",
       "kind": "BooleanLiteral",
       "offset": 3373,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/SwiftUI\/Extension\/InAppStoryUI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5098,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/SwiftUI\/Extension\/InAppStoryUI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5932,
       "length": 5,
       "value": "false"
     },
@@ -90755,14 +90797,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.28.5\""
+      "value": "\"1.28.6\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4192\""
+      "value": "\"4198\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -96598,21 +96640,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10103,
+      "offset": 10290,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10309,
+      "offset": 10496,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 18358,
+      "offset": 18545,
       "length": 3,
       "value": "1.0"
     },
