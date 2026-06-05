@@ -475,6 +475,7 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14NetworkService")
 
 
 
+
 @class NSURLAuthenticationChallenge;
 @class NSURLCredential;
 

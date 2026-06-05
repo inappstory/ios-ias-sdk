@@ -667,6 +667,7 @@ extension InAppStorySDK_SwiftUI.IASVideoPlayerLayer {
   @_spi(Private) public class func folderSize(folderPath: Swift.String) -> Swift.Int
   @_spi(Private) public func adoptUnzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil) throws
   @_spi(Private) public class func createFolderIfNeeded(folderPath: Swift.String) -> Swift.Bool
+  @_spi(Private) public class func removeBaseLayoutFiles()
 }
 extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: InAppStorySDK_SwiftUI.CompressionMethodOD = .none, progress: Foundation.Progress? = nil) throws
