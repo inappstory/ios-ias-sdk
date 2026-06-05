@@ -332,6 +332,7 @@ extension CoreFoundation.CGRect {
   @_spi(Private) public class func folderSize(folderPath: Swift.String) -> Swift.Int
   @_spi(Private) public func adoptUnzipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, progress: Foundation.Progress? = nil) throws
   @_spi(Private) public class func createFolderIfNeeded(folderPath: Swift.String) -> Swift.Bool
+  @_spi(Private) public class func removeBaseLayoutFiles()
 }
 @_spi(Private) extension UIKit.UIView {
   @_spi(Private) @_Concurrency.MainActor(unsafe) public func applyTransform(withScale scale: CoreFoundation.CGFloat, anchorPoint: CoreFoundation.CGPoint)
