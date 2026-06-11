@@ -992,6 +992,9 @@ public struct IASLogData {
 public struct InAppMessageData {
   public var id: Swift.String?
   public var campaign: Swift.String?
+  public var messageType: Swift.String?
+  public var event: Swift.String?
+  public init(id: Swift.String? = nil, campaign: Swift.String? = nil, messageType: InAppStorySDK.IAMPresentType? = nil, event: Swift.String? = nil)
 }
 public struct InAppMessageSlideData {
   public var iamData: InAppStorySDK.InAppMessageData?
