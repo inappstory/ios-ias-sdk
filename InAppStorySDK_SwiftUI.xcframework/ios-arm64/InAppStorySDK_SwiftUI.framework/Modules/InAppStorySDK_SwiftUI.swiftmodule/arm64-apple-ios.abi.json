@@ -14903,6 +14903,307 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Var",
+            "name": "messageType",
+            "printedName": "messageType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV11messageTypeSSSgvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "event",
+            "printedName": "event",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvp",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvp",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvg",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvg",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvs",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvs",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvM",
+                "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV5eventSSSgvM",
+                "moduleName": "InAppStorySDK_SwiftUI",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:campaign:messageType:event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InAppMessageData",
+                "printedName": "InAppStorySDK_SwiftUI.InAppMessageData",
+                "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "InAppStorySDK_SwiftUI.IAMPresentType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IAMPresentType",
+                    "printedName": "InAppStorySDK_SwiftUI.IAMPresentType",
+                    "usr": "s:21InAppStorySDK_SwiftUI14IAMPresentTypeO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21InAppStorySDK_SwiftUI0aB11MessageDataV2id8campaign11messageType5eventACSSSg_AhA010IAMPresentL0OSgAHtcfc",
+            "mangledName": "$s21InAppStorySDK_SwiftUI0aB11MessageDataV2id8campaign11messageType5eventACSSSg_AhA010IAMPresentL0OSgAHtcfc",
+            "moduleName": "InAppStorySDK_SwiftUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Struct",
@@ -88025,8 +88326,22 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 834,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
       "kind": "Array",
-      "offset": 1101,
+      "offset": 903,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/StoryAssetsManager.swift",
+      "kind": "Array",
+      "offset": 1221,
       "length": 2,
       "value": "[]"
     },
@@ -88838,112 +89153,112 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "BooleanLiteral",
-      "offset": 15737,
+      "offset": 16115,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15780,
+      "offset": 16158,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15922,
+      "offset": 16300,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "FloatLiteral",
-      "offset": 15967,
+      "offset": 16345,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16369,
+      "offset": 16747,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16388,
+      "offset": 16766,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16412,
+      "offset": 16790,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16431,
+      "offset": 16809,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16369,
+      "offset": 16747,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16388,
+      "offset": 16766,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16412,
+      "offset": 16790,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16431,
+      "offset": 16809,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16369,
+      "offset": 16747,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16388,
+      "offset": 16766,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16412,
+      "offset": 16790,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/PublicObjects.swift",
       "kind": "IntegerLiteral",
-      "offset": 16431,
+      "offset": 16809,
       "length": 1,
       "value": "4"
     },
@@ -89580,154 +89895,154 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6454,
+      "offset": 6521,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6489,
+      "offset": 6556,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6535,
+      "offset": 6602,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6583,
+      "offset": 6650,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6631,
+      "offset": 6698,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6689,
+      "offset": 6756,
       "length": 27,
       "value": "\"layout_template_variables\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6785,
+      "offset": 6852,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6828,
+      "offset": 6895,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6915,
+      "offset": 6982,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6970,
+      "offset": 7037,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 7022,
+      "offset": 7089,
       "length": 11,
       "value": "\"has_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6454,
+      "offset": 6521,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6489,
+      "offset": 6556,
       "length": 15,
       "value": "\"campaign_name\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6535,
+      "offset": 6602,
       "length": 17,
       "value": "\"has_placeholder\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6583,
+      "offset": 6650,
       "length": 17,
       "value": "\"frequency_limit\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6631,
+      "offset": 6698,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6689,
+      "offset": 6756,
       "length": 27,
       "value": "\"layout_template_variables\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6785,
+      "offset": 6852,
       "length": 12,
       "value": "\"display_to\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6828,
+      "offset": 6895,
       "length": 14,
       "value": "\"display_from\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6915,
+      "offset": 6982,
       "length": 15,
       "value": "\"disable_close\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 6970,
+      "offset": 7037,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Model\/IAMessage.swift",
       "kind": "StringLiteral",
-      "offset": 7022,
+      "offset": 7089,
       "length": 11,
       "value": "\"has_limit\""
     },
@@ -90112,7 +90427,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 9960,
+      "offset": 9882,
       "length": 1,
       "value": "0"
     },
@@ -90546,105 +90861,105 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 505,
+      "offset": 541,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "StringLiteral",
-      "offset": 850,
+      "offset": 886,
       "length": 52,
       "value": "\"{\"safeAreaInsetTop\":0,\"safeAreaInsetBottom\":0}\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1134,
+      "offset": 1170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1277,
+      "offset": 1313,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1323,
+      "offset": 1359,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Dictionary",
-      "offset": 1524,
+      "offset": 1560,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Dictionary",
-      "offset": 1629,
+      "offset": 1665,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2074,
+      "offset": 2110,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Array",
-      "offset": 2316,
+      "offset": 2352,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2482,
+      "offset": 2518,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "Array",
-      "offset": 2601,
-      "length": 410,
-      "value": "[\"storyRenderReady\", \"onCardLoadingStateChange\", \"storyStarted\", \"onEvent\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"onVerticalScrollChange\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
+      "offset": 2637,
+      "length": 434,
+      "value": "[\"storyRenderReady\", \"onCardLoadingStateChange\", \"storyStarted\", \"onEvent\", \"storyClick\", \"storySetLocalData\", \"storyGetLocalData\", \"storySendData\", \"showSingleStory\", \"closeStory\", \"writeToClipboard\", \"storyFreezeUI\", \"storyStatisticEvent\", \"openGame\", \"emptySwipeUp\", \"sendApiRequest\", \"onVerticalScrollChange\", \"verticalSwipeGesture\", \"vibrate\", \"haptic\", \"logHandler\", \"infoHandler\", \"debugHandler\", \"warnHandler\", \"errorHandler\"]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3202,
+      "offset": 3262,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3249,
+      "offset": 3309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3301,
+      "offset": 3361,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/IAMReader\/IAMContentView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3349,
+      "offset": 3409,
       "length": 5,
       "value": "false"
     },
@@ -90961,14 +91276,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.29.0\""
+      "value": "\"1.29.1\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4306\""
+      "value": "\"4314\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -91407,14 +91722,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 87980,
+      "offset": 88239,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
-      "offset": 89490,
+      "offset": 89749,
       "length": 2,
       "value": "\"\""
     },
@@ -91757,21 +92072,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 24236,
+      "offset": 25098,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 26599,
+      "offset": 27461,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Reader\/CurrentStoryView.swift",
       "kind": "BooleanLiteral",
-      "offset": 56886,
+      "offset": 57044,
       "length": 4,
       "value": "true"
     },
@@ -93535,14 +93850,14 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 11500,
+      "offset": 11732,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/CacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14803,
+      "offset": 15035,
       "length": 1,
       "value": "0"
     },
@@ -94585,7 +94900,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Elements\/Collection\/IASBannersCollectionView.swift",
       "kind": "Array",
-      "offset": 19105,
+      "offset": 19113,
       "length": 2,
       "value": "[]"
     },
@@ -96916,7 +97231,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 18559,
+      "offset": 18488,
       "length": 3,
       "value": "1.0"
     },
