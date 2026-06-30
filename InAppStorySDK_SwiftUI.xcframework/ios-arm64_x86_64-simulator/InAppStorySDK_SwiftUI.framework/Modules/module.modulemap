@@ -1,7 +1,7 @@
 framework module InAppStorySDK_SwiftUI {
   umbrella header "InAppStorySDK_SwiftUI.h"
-
   export *
+
   module * { export * }
 }
 
