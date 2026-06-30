@@ -1679,12 +1679,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2139,6 +2139,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -2645,7 +2652,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Decoder",
-                "printedName": "Swift.Decoder",
+                "printedName": "any Swift.Decoder",
                 "usr": "s:s7DecoderP"
               }
             ],
@@ -2673,7 +2680,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Encoder",
-                "printedName": "Swift.Encoder",
+                "printedName": "any Swift.Encoder",
                 "usr": "s:s7EncoderP"
               }
             ],
@@ -11017,12 +11024,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "InAppStorySDK.GoodsCellProtocol?",
+                "printedName": "(any InAppStorySDK.GoodsCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "GoodsCellProtocol",
-                    "printedName": "InAppStorySDK.GoodsCellProtocol",
+                    "printedName": "any InAppStorySDK.GoodsCellProtocol",
                     "usr": "s:13InAppStorySDK17GoodsCellProtocolP"
                   }
                 ],
@@ -11049,12 +11056,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.GoodsCellProtocol?",
+                    "printedName": "(any InAppStorySDK.GoodsCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "GoodsCellProtocol",
-                        "printedName": "InAppStorySDK.GoodsCellProtocol",
+                        "printedName": "any InAppStorySDK.GoodsCellProtocol",
                         "usr": "s:13InAppStorySDK17GoodsCellProtocolP"
                       }
                     ],
@@ -11081,12 +11088,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.GoodsCellProtocol?",
+                    "printedName": "(any InAppStorySDK.GoodsCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "GoodsCellProtocol",
-                        "printedName": "InAppStorySDK.GoodsCellProtocol",
+                        "printedName": "any InAppStorySDK.GoodsCellProtocol",
                         "usr": "s:13InAppStorySDK17GoodsCellProtocolP"
                       }
                     ],
@@ -11128,12 +11135,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "InAppStorySDK.PlaceholderProtocol?",
+                "printedName": "(any InAppStorySDK.PlaceholderProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "PlaceholderProtocol",
-                    "printedName": "InAppStorySDK.PlaceholderProtocol",
+                    "printedName": "any InAppStorySDK.PlaceholderProtocol",
                     "usr": "s:13InAppStorySDK19PlaceholderProtocolP"
                   }
                 ],
@@ -11159,12 +11166,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.PlaceholderProtocol?",
+                    "printedName": "(any InAppStorySDK.PlaceholderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "PlaceholderProtocol",
-                        "printedName": "InAppStorySDK.PlaceholderProtocol",
+                        "printedName": "any InAppStorySDK.PlaceholderProtocol",
                         "usr": "s:13InAppStorySDK19PlaceholderProtocolP"
                       }
                     ],
@@ -11191,12 +11198,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.PlaceholderProtocol?",
+                    "printedName": "(any InAppStorySDK.PlaceholderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "PlaceholderProtocol",
-                        "printedName": "InAppStorySDK.PlaceholderProtocol",
+                        "printedName": "any InAppStorySDK.PlaceholderProtocol",
                         "usr": "s:13InAppStorySDK19PlaceholderProtocolP"
                       }
                     ],
@@ -11238,12 +11245,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "InAppStorySDK.DownloadPlaceholderProtocol?",
+                "printedName": "(any InAppStorySDK.DownloadPlaceholderProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "DownloadPlaceholderProtocol",
-                    "printedName": "InAppStorySDK.DownloadPlaceholderProtocol",
+                    "printedName": "any InAppStorySDK.DownloadPlaceholderProtocol",
                     "usr": "s:13InAppStorySDK27DownloadPlaceholderProtocolP"
                   }
                 ],
@@ -11269,12 +11276,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.DownloadPlaceholderProtocol?",
+                    "printedName": "(any InAppStorySDK.DownloadPlaceholderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DownloadPlaceholderProtocol",
-                        "printedName": "InAppStorySDK.DownloadPlaceholderProtocol",
+                        "printedName": "any InAppStorySDK.DownloadPlaceholderProtocol",
                         "usr": "s:13InAppStorySDK27DownloadPlaceholderProtocolP"
                       }
                     ],
@@ -11301,12 +11308,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.DownloadPlaceholderProtocol?",
+                    "printedName": "(any InAppStorySDK.DownloadPlaceholderProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "DownloadPlaceholderProtocol",
-                        "printedName": "InAppStorySDK.DownloadPlaceholderProtocol",
+                        "printedName": "any InAppStorySDK.DownloadPlaceholderProtocol",
                         "usr": "s:13InAppStorySDK27DownloadPlaceholderProtocolP"
                       }
                     ],
@@ -11459,12 +11466,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "InAppStorySDK.GoodsDelegateFlowLayout?",
+                "printedName": "(any InAppStorySDK.GoodsDelegateFlowLayout)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "GoodsDelegateFlowLayout",
-                    "printedName": "InAppStorySDK.GoodsDelegateFlowLayout",
+                    "printedName": "any InAppStorySDK.GoodsDelegateFlowLayout",
                     "usr": "s:13InAppStorySDK23GoodsDelegateFlowLayoutP"
                   }
                 ],
@@ -11491,12 +11498,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.GoodsDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.GoodsDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "GoodsDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.GoodsDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.GoodsDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK23GoodsDelegateFlowLayoutP"
                       }
                     ],
@@ -11523,12 +11530,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.GoodsDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.GoodsDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "GoodsDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.GoodsDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.GoodsDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK23GoodsDelegateFlowLayoutP"
                       }
                     ],
@@ -13800,12 +13807,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                    "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -13815,7 +13822,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                        "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -13834,7 +13841,7 @@
                           {
                             "kind": "TypeFunc",
                             "name": "Function",
-                            "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                            "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -13844,17 +13851,17 @@
                               {
                                 "kind": "TypeNominal",
                                 "name": "Result",
-                                "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Array",
-                                    "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                    "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "GoodsObjectProtocol",
-                                        "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                        "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                         "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                       }
                                     ],
@@ -13898,12 +13905,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -13913,7 +13920,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -13932,7 +13939,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -13942,17 +13949,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -13997,12 +14004,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -14012,7 +14019,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -14031,7 +14038,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -14041,17 +14048,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -14111,12 +14118,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
+                "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
+                    "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -14126,12 +14133,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "GoodsObjectProtocol",
-                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                           },
                           {
@@ -14175,12 +14182,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -14190,12 +14197,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -14240,12 +14247,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -14255,12 +14262,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType?)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -15796,7 +15803,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "InAppStoryDelegate",
-                "printedName": "InAppStorySDK.InAppStoryDelegate",
+                "printedName": "any InAppStorySDK.InAppStoryDelegate",
                 "usr": "s:13InAppStorySDK0abC8DelegateP"
               },
               {
@@ -16085,7 +16092,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "InAppStoryDelegate",
-                "printedName": "InAppStorySDK.InAppStoryDelegate",
+                "printedName": "any InAppStorySDK.InAppStoryDelegate",
                 "usr": "s:13InAppStorySDK0abC8DelegateP"
               },
               {
@@ -16513,7 +16520,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "InAppStorySDK.InAppStoryDelegate?"
+                "printedName": "(any InAppStorySDK.InAppStoryDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -16522,8 +16529,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -16538,12 +16545,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.InAppStoryDelegate?",
+                    "printedName": "(any InAppStorySDK.InAppStoryDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "InAppStoryDelegate",
-                        "printedName": "InAppStorySDK.InAppStoryDelegate",
+                        "printedName": "any InAppStorySDK.InAppStoryDelegate",
                         "usr": "s:13InAppStorySDK0abC8DelegateP"
                       }
                     ],
@@ -16570,12 +16577,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.InAppStoryDelegate?",
+                    "printedName": "(any InAppStorySDK.InAppStoryDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "InAppStoryDelegate",
-                        "printedName": "InAppStorySDK.InAppStoryDelegate",
+                        "printedName": "any InAppStorySDK.InAppStoryDelegate",
                         "usr": "s:13InAppStorySDK0abC8DelegateP"
                       }
                     ],
@@ -16617,7 +16624,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?"
+                "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?"
               }
             ],
             "declKind": "Var",
@@ -16626,8 +16633,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -16642,12 +16649,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryViewDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.StoryViewDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK0C22ViewDelegateFlowLayoutP"
                       }
                     ],
@@ -16674,12 +16681,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryViewDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.StoryViewDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK0C22ViewDelegateFlowLayoutP"
                       }
                     ],
@@ -16730,8 +16737,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -16825,12 +16832,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.EditorCellProtocol?",
+                "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "EditorCellProtocol",
-                    "printedName": "InAppStorySDK.EditorCellProtocol",
+                    "printedName": "any InAppStorySDK.EditorCellProtocol",
                     "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                   }
                 ],
@@ -16843,8 +16850,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -16857,12 +16864,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.EditorCellProtocol?",
+                    "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "EditorCellProtocol",
-                        "printedName": "InAppStorySDK.EditorCellProtocol",
+                        "printedName": "any InAppStorySDK.EditorCellProtocol",
                         "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                       }
                     ],
@@ -16889,12 +16896,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.EditorCellProtocol?",
+                    "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "EditorCellProtocol",
-                        "printedName": "InAppStorySDK.EditorCellProtocol",
+                        "printedName": "any InAppStorySDK.EditorCellProtocol",
                         "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                       }
                     ],
@@ -16936,12 +16943,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.StoryCellProtocol?",
+                "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "StoryCellProtocol",
-                    "printedName": "InAppStorySDK.StoryCellProtocol",
+                    "printedName": "any InAppStorySDK.StoryCellProtocol",
                     "usr": "s:13InAppStorySDK0C12CellProtocolP"
                   }
                 ],
@@ -16954,8 +16961,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -16968,12 +16975,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.StoryCellProtocol?",
+                    "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryCellProtocol",
-                        "printedName": "InAppStorySDK.StoryCellProtocol",
+                        "printedName": "any InAppStorySDK.StoryCellProtocol",
                         "usr": "s:13InAppStorySDK0C12CellProtocolP"
                       }
                     ],
@@ -17000,12 +17007,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.StoryCellProtocol?",
+                    "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryCellProtocol",
-                        "printedName": "InAppStorySDK.StoryCellProtocol",
+                        "printedName": "any InAppStorySDK.StoryCellProtocol",
                         "usr": "s:13InAppStorySDK0C12CellProtocolP"
                       }
                     ],
@@ -17098,8 +17105,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -17185,8 +17192,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -17304,9 +17311,9 @@
             "mangledName": "$s13InAppStorySDK0C7UGCViewC17storiesDidUpdatedySb_AA11StoriesTypeOtcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -17498,8 +17505,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -17683,9 +17690,9 @@
             "mangledName": "$s13InAppStorySDK0C7UGCViewC19storyReaderWillShowyAA11StoriesTypeOcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -17830,9 +17837,9 @@
             "mangledName": "$s13InAppStorySDK0C7UGCViewC19storyReaderDidCloseyAA11StoriesTypeOcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -17977,8 +17984,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18122,8 +18129,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18276,8 +18283,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -18410,12 +18417,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                    "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -18425,7 +18432,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                        "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18444,7 +18451,7 @@
                           {
                             "kind": "TypeFunc",
                             "name": "Function",
-                            "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                            "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -18454,17 +18461,17 @@
                               {
                                 "kind": "TypeNominal",
                                 "name": "Result",
-                                "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Array",
-                                    "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                    "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "GoodsObjectProtocol",
-                                        "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                        "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                         "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                       }
                                     ],
@@ -18494,9 +18501,9 @@
             "mangledName": "$s13InAppStorySDK0C7UGCViewC14getGoodsObjectySaySSG_ys6ResultOySayAA0gH8Protocol_pGAA0G7FailureOGctcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -18509,12 +18516,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18524,7 +18531,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -18543,7 +18550,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -18553,17 +18560,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -18608,12 +18615,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18623,7 +18630,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -18642,7 +18649,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -18652,17 +18659,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -18722,12 +18729,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                    "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -18737,12 +18744,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "GoodsObjectProtocol",
-                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                           },
                           {
@@ -18764,9 +18771,9 @@
             "mangledName": "$s13InAppStorySDK0C7UGCViewC16goodItemSelectedyAA19GoodsObjectProtocol_p_AA11StoriesTypeOtcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -18779,12 +18786,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18794,12 +18801,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -18836,12 +18843,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18851,12 +18858,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -18938,8 +18945,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -19086,8 +19093,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -19233,8 +19240,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -19380,8 +19387,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -19722,6 +19729,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -27509,7 +27523,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Decoder",
-                "printedName": "Swift.Decoder",
+                "printedName": "any Swift.Decoder",
                 "usr": "s:s7DecoderP"
               }
             ],
@@ -27540,7 +27554,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Encoder",
-                "printedName": "Swift.Encoder",
+                "printedName": "any Swift.Encoder",
                 "usr": "s:s7EncoderP"
               }
             ],
@@ -27756,7 +27770,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Decoder",
-                "printedName": "Swift.Decoder",
+                "printedName": "any Swift.Decoder",
                 "usr": "s:s7DecoderP"
               }
             ],
@@ -27812,7 +27826,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Encoder",
-                "printedName": "Swift.Encoder",
+                "printedName": "any Swift.Encoder",
                 "usr": "s:s7EncoderP"
               }
             ],
@@ -27926,7 +27940,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Decoder",
-                "printedName": "Swift.Decoder",
+                "printedName": "any Swift.Decoder",
                 "usr": "s:s7DecoderP"
               }
             ],
@@ -27957,7 +27971,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Encoder",
-                "printedName": "Swift.Encoder",
+                "printedName": "any Swift.Encoder",
                 "usr": "s:s7EncoderP"
               }
             ],
@@ -30120,7 +30134,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -30130,17 +30144,17 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Array",
-                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "GoodsObjectProtocol",
-                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                           }
                         ],
@@ -30181,7 +30195,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "GoodsObjectProtocol",
-                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
               },
               {
@@ -30320,7 +30334,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -30330,17 +30344,17 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Result",
-                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Array",
-                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "GoodsObjectProtocol",
-                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                           }
                         ],
@@ -30380,7 +30394,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "GoodsObjectProtocol",
-                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
               },
               {
@@ -31335,6 +31349,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -31691,9 +31712,9 @@
             "mangledName": "$s13InAppStorySDK25CSPhoneFormattedTextFieldC12isSelectableSbvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -31778,9 +31799,9 @@
             "mangledName": "$s13InAppStorySDK25CSPhoneFormattedTextFieldC6configAA17ConfigurationRepoCvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "Final",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -32083,12 +32104,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "UIKit.UITextFieldDelegate?",
+                "printedName": "(any UIKit.UITextFieldDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "UITextFieldDelegate",
-                    "printedName": "UIKit.UITextFieldDelegate",
+                    "printedName": "any UIKit.UITextFieldDelegate",
                     "usr": "c:objc(pl)UITextFieldDelegate"
                   }
                 ],
@@ -32117,12 +32138,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "UIKit.UITextFieldDelegate?",
+                    "printedName": "(any UIKit.UITextFieldDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "UITextFieldDelegate",
-                        "printedName": "UIKit.UITextFieldDelegate",
+                        "printedName": "any UIKit.UITextFieldDelegate",
                         "usr": "c:objc(pl)UITextFieldDelegate"
                       }
                     ],
@@ -32154,12 +32175,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "UIKit.UITextFieldDelegate?",
+                    "printedName": "(any UIKit.UITextFieldDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "UITextFieldDelegate",
-                        "printedName": "UIKit.UITextFieldDelegate",
+                        "printedName": "any UIKit.UITextFieldDelegate",
                         "usr": "c:objc(pl)UITextFieldDelegate"
                       }
                     ],
@@ -32637,6 +32658,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -34097,7 +34125,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Decoder",
-                "printedName": "Swift.Decoder",
+                "printedName": "any Swift.Decoder",
                 "usr": "s:s7DecoderP"
               }
             ],
@@ -34122,7 +34150,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Encoder",
-                "printedName": "Swift.Encoder",
+                "printedName": "any Swift.Encoder",
                 "usr": "s:s7EncoderP"
               }
             ],
@@ -36781,7 +36809,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "InAppStorySDK.InAppStoryDelegate?"
+                "printedName": "(any InAppStorySDK.InAppStoryDelegate)?"
               }
             ],
             "declKind": "Var",
@@ -36790,8 +36818,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -36806,12 +36834,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.InAppStoryDelegate?",
+                    "printedName": "(any InAppStorySDK.InAppStoryDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "InAppStoryDelegate",
-                        "printedName": "InAppStorySDK.InAppStoryDelegate",
+                        "printedName": "any InAppStorySDK.InAppStoryDelegate",
                         "usr": "s:13InAppStorySDK0abC8DelegateP"
                       }
                     ],
@@ -36838,12 +36866,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.InAppStoryDelegate?",
+                    "printedName": "(any InAppStorySDK.InAppStoryDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "InAppStoryDelegate",
-                        "printedName": "InAppStorySDK.InAppStoryDelegate",
+                        "printedName": "any InAppStorySDK.InAppStoryDelegate",
                         "usr": "s:13InAppStorySDK0abC8DelegateP"
                       }
                     ],
@@ -36885,7 +36913,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?"
+                "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?"
               }
             ],
             "declKind": "Var",
@@ -36894,8 +36922,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -36910,12 +36938,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryViewDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.StoryViewDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK0C22ViewDelegateFlowLayoutP"
                       }
                     ],
@@ -36942,12 +36970,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout?",
+                    "printedName": "(any InAppStorySDK.StoryViewDelegateFlowLayout)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryViewDelegateFlowLayout",
-                        "printedName": "InAppStorySDK.StoryViewDelegateFlowLayout",
+                        "printedName": "any InAppStorySDK.StoryViewDelegateFlowLayout",
                         "usr": "s:13InAppStorySDK0C22ViewDelegateFlowLayoutP"
                       }
                     ],
@@ -36998,9 +37026,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC010isFavoriteE0Sbvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37085,8 +37113,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "ReferenceOwnership",
               "AccessControl"
             ],
@@ -37180,12 +37208,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.EditorCellProtocol?",
+                "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "EditorCellProtocol",
-                    "printedName": "InAppStorySDK.EditorCellProtocol",
+                    "printedName": "any InAppStorySDK.EditorCellProtocol",
                     "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                   }
                 ],
@@ -37198,8 +37226,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37212,12 +37240,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.EditorCellProtocol?",
+                    "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "EditorCellProtocol",
-                        "printedName": "InAppStorySDK.EditorCellProtocol",
+                        "printedName": "any InAppStorySDK.EditorCellProtocol",
                         "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                       }
                     ],
@@ -37244,12 +37272,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.EditorCellProtocol?",
+                    "printedName": "(any InAppStorySDK.EditorCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "EditorCellProtocol",
-                        "printedName": "InAppStorySDK.EditorCellProtocol",
+                        "printedName": "any InAppStorySDK.EditorCellProtocol",
                         "usr": "s:13InAppStorySDK18EditorCellProtocolP"
                       }
                     ],
@@ -37291,12 +37319,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.StoryCellProtocol?",
+                "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "StoryCellProtocol",
-                    "printedName": "InAppStorySDK.StoryCellProtocol",
+                    "printedName": "any InAppStorySDK.StoryCellProtocol",
                     "usr": "s:13InAppStorySDK0C12CellProtocolP"
                   }
                 ],
@@ -37309,8 +37337,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37323,12 +37351,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.StoryCellProtocol?",
+                    "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryCellProtocol",
-                        "printedName": "InAppStorySDK.StoryCellProtocol",
+                        "printedName": "any InAppStorySDK.StoryCellProtocol",
                         "usr": "s:13InAppStorySDK0C12CellProtocolP"
                       }
                     ],
@@ -37355,12 +37383,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.StoryCellProtocol?",
+                    "printedName": "(any InAppStorySDK.StoryCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "StoryCellProtocol",
-                        "printedName": "InAppStorySDK.StoryCellProtocol",
+                        "printedName": "any InAppStorySDK.StoryCellProtocol",
                         "usr": "s:13InAppStorySDK0C12CellProtocolP"
                       }
                     ],
@@ -37402,12 +37430,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.FavoriteCellProtocol?",
+                "printedName": "(any InAppStorySDK.FavoriteCellProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "FavoriteCellProtocol",
-                    "printedName": "InAppStorySDK.FavoriteCellProtocol",
+                    "printedName": "any InAppStorySDK.FavoriteCellProtocol",
                     "usr": "s:13InAppStorySDK20FavoriteCellProtocolP"
                   }
                 ],
@@ -37420,8 +37448,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37434,12 +37462,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.FavoriteCellProtocol?",
+                    "printedName": "(any InAppStorySDK.FavoriteCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "FavoriteCellProtocol",
-                        "printedName": "InAppStorySDK.FavoriteCellProtocol",
+                        "printedName": "any InAppStorySDK.FavoriteCellProtocol",
                         "usr": "s:13InAppStorySDK20FavoriteCellProtocolP"
                       }
                     ],
@@ -37466,12 +37494,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ImplicitlyUnwrappedOptional",
-                    "printedName": "InAppStorySDK.FavoriteCellProtocol?",
+                    "printedName": "(any InAppStorySDK.FavoriteCellProtocol)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "FavoriteCellProtocol",
-                        "printedName": "InAppStorySDK.FavoriteCellProtocol",
+                        "printedName": "any InAppStorySDK.FavoriteCellProtocol",
                         "usr": "s:13InAppStorySDK20FavoriteCellProtocolP"
                       }
                     ],
@@ -37572,8 +37600,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37675,8 +37703,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37761,8 +37789,8 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC9directionAA13ListDirectionOvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -37880,9 +37908,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC17storiesDidUpdatedySb_AA11StoriesTypeOtcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38074,8 +38102,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38259,9 +38287,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC19storyReaderWillShowyAA11StoriesTypeOcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -38406,9 +38434,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC19storyReaderDidCloseyAA11StoriesTypeOcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -38553,8 +38581,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38698,8 +38726,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38852,8 +38880,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -38986,12 +39014,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                    "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -39001,7 +39029,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                        "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -39020,7 +39048,7 @@
                           {
                             "kind": "TypeFunc",
                             "name": "Function",
-                            "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                            "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -39030,17 +39058,17 @@
                               {
                                 "kind": "TypeNominal",
                                 "name": "Result",
-                                "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Array",
-                                    "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                    "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "GoodsObjectProtocol",
-                                        "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                        "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                         "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                       }
                                     ],
@@ -39070,9 +39098,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC14getGoodsObjectySaySSG_ys6ResultOySayAA0gH8Protocol_pGAA0G7FailureOGctcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -39085,12 +39113,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -39100,7 +39128,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -39119,7 +39147,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -39129,17 +39157,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -39184,12 +39212,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "(([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
+                    "printedName": "(([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "([Swift.String], @escaping (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
+                        "printedName": "([Swift.String], @escaping (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -39199,7 +39227,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "([Swift.String], (Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
+                            "printedName": "([Swift.String], (Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ())",
                             "children": [
                               {
                                 "kind": "TypeNominal",
@@ -39218,7 +39246,7 @@
                               {
                                 "kind": "TypeFunc",
                                 "name": "Function",
-                                "printedName": "(Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
+                                "printedName": "(Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>) -> ()",
                                 "children": [
                                   {
                                     "kind": "TypeNominal",
@@ -39228,17 +39256,17 @@
                                   {
                                     "kind": "TypeNominal",
                                     "name": "Result",
-                                    "printedName": "Swift.Result<[InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
+                                    "printedName": "Swift.Result<[any InAppStorySDK.GoodsObjectProtocol], InAppStorySDK.GoodsFailure>",
                                     "children": [
                                       {
                                         "kind": "TypeNominal",
                                         "name": "Array",
-                                        "printedName": "[InAppStorySDK.GoodsObjectProtocol]",
+                                        "printedName": "[any InAppStorySDK.GoodsObjectProtocol]",
                                         "children": [
                                           {
                                             "kind": "TypeNominal",
                                             "name": "GoodsObjectProtocol",
-                                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                                           }
                                         ],
@@ -39298,12 +39326,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                    "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -39313,12 +39341,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "GoodsObjectProtocol",
-                            "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                            "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                             "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                           },
                           {
@@ -39340,9 +39368,9 @@
             "mangledName": "$s13InAppStorySDK0C4ViewC16goodItemSelectedyAA19GoodsObjectProtocol_p_AA11StoriesTypeOtcSgvp",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -39355,12 +39383,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -39370,12 +39398,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -39412,12 +39440,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "((InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
+                    "printedName": "((any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ())?",
                     "children": [
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
+                        "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -39427,12 +39455,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Tuple",
-                            "printedName": "(InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
+                            "printedName": "(any InAppStorySDK.GoodsObjectProtocol, InAppStorySDK.StoriesType)",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "GoodsObjectProtocol",
-                                "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                                "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                                 "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                               },
                               {
@@ -39514,8 +39542,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "RawDocComment"
             ],
@@ -39662,8 +39690,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -39809,8 +39837,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -39956,8 +39984,8 @@
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl"
             ],
             "hasStorage": true,
@@ -40330,6 +40358,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -41284,12 +41319,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "InAppStorySDK.GoodsObjectProtocol?",
+                "printedName": "(any InAppStorySDK.GoodsObjectProtocol)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "GoodsObjectProtocol",
-                    "printedName": "InAppStorySDK.GoodsObjectProtocol",
+                    "printedName": "any InAppStorySDK.GoodsObjectProtocol",
                     "usr": "s:13InAppStorySDK19GoodsObjectProtocolP"
                   }
                 ],
@@ -41326,6 +41361,34 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
       },
       {
         "kind": "TypeDecl",
@@ -41825,33 +41888,19 @@
         "usr": "s:10Foundation4DataV",
         "mangledName": "$s10Foundation4DataV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
         "declAttributes": [
-          "Frozen"
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
         ],
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSData",
-                    "printedName": "Foundation.NSData",
-                    "usr": "c:objc(cs)NSData"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -42244,24 +42293,25 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSData",
+                    "printedName": "Foundation.NSData",
+                    "usr": "c:objc(cs)NSData"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -42287,6 +42337,27 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -42298,6 +42369,41 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -42392,6 +42498,16 @@
         "usr": "s:10Foundation10URLRequestV",
         "mangledName": "$s10Foundation10URLRequestV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -42709,6 +42825,28 @@
           },
           {
             "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSValue",
+                    "printedName": "Foundation.NSValue",
+                    "usr": "c:objc(cs)NSValue"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "CustomReflectable",
             "printedName": "CustomReflectable",
             "usr": "s:s17CustomReflectableP",
@@ -42744,25 +42882,67 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "Animatable",
+            "printedName": "Animatable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "AnimatableData",
+                "printedName": "AnimatableData",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSValue",
-                    "printedName": "Foundation.NSValue",
-                    "usr": "c:objc(cs)NSValue"
+                    "name": "AnimatablePair",
+                    "printedName": "SwiftUI.AnimatablePair<SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>, SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimatablePair",
+                        "printedName": "SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ],
+                        "usr": "s:7SwiftUI14AnimatablePairV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimatablePair",
+                        "printedName": "SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ],
+                        "usr": "s:7SwiftUI14AnimatablePairV"
+                      }
+                    ],
+                    "usr": "s:7SwiftUI14AnimatablePairV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:7SwiftUI10AnimatableP",
+            "mangledName": "$s7SwiftUI10AnimatableP"
           }
         ]
       },
@@ -44006,6 +44186,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -44589,6 +44776,7 @@
         "mangledName": "$sSS",
         "moduleName": "Swift",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
@@ -45111,6 +45299,41 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -47834,6 +48057,28 @@
             ],
             "usr": "s:s21_ObjectiveCBridgeableP",
             "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_FormatSpecifiable",
+            "printedName": "_FormatSpecifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_Arg",
+                "printedName": "_Arg",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI18_FormatSpecifiableP",
+            "mangledName": "$s7SwiftUI18_FormatSpecifiableP"
           }
         ]
       },
@@ -47898,7 +48143,9 @@
         "declAttributes": [
           "Available",
           "ObjC",
+          "SynthesizedProtocol",
           "NonSendable",
+          "Sendable",
           "Dynamic"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -47908,6 +48155,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -48184,6 +48438,16 @@
         "usr": "s:10Foundation3URLV",
         "mangledName": "$s10Foundation3URLV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
         "isExternal": true,
         "conformances": [
           {
@@ -48292,6 +48556,41 @@
             "printedName": "_ExpressibleByFileReferenceLiteral",
             "usr": "s:s34_ExpressibleByFileReferenceLiteralP",
             "mangledName": "$ss34_ExpressibleByFileReferenceLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -48896,6 +49195,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -49290,6 +49596,7 @@
         "genericSig": "<τ_0_0>",
         "sugared_genericSig": "<Element>",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
@@ -49808,48 +50115,39 @@
           },
           {
             "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContiguousBytes",
+            "printedName": "ContiguousBytes",
+            "usr": "s:10Foundation15ContiguousBytesP",
+            "mangledName": "$s10Foundation15ContiguousBytesP"
           },
           {
             "kind": "Conformance",
@@ -49895,39 +50193,48 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "Regions",
+                "printedName": "Regions",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ContiguousBytes",
-            "printedName": "ContiguousBytes",
-            "usr": "s:10Foundation15ContiguousBytesP",
-            "mangledName": "$s10Foundation15ContiguousBytesP"
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
           }
         ]
       },
@@ -51619,7 +51926,7 @@
       "kind": "StringLiteral",
       "offset": 4706,
       "length": 6,
-      "value": "\"3086\""
+      "value": "\"3088\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -54776,7 +55083,7 @@
       "kind": "IntegerLiteral",
       "offset": 403,
       "length": 2,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation_old\/ArchiveOD+Writing.swift",
@@ -54790,7 +55097,7 @@
       "kind": "IntegerLiteral",
       "offset": 403,
       "length": 1,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation_old\/ArchiveOD+Writing.swift",
@@ -54804,7 +55111,7 @@
       "kind": "IntegerLiteral",
       "offset": 403,
       "length": 1,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation_old\/ArchiveOD+Writing.swift",
@@ -54825,7 +55132,7 @@
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 2,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Archive+Writing.swift",
@@ -54839,7 +55146,7 @@
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 1,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Archive+Writing.swift",
@@ -54853,7 +55160,7 @@
       "kind": "IntegerLiteral",
       "offset": 391,
       "length": 1,
-      "value": "1"
+      "value": "-1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/DataCompression\/ZIPFoundation\/Archive+Writing.swift",
@@ -56415,6 +56722,174 @@
       "offset": 4640,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 729,
+      "length": 10,
+      "value": "\"AgreeBtn\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 863,
+      "length": 9,
+      "value": "\"BackBtn\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1007,
+      "length": 17,
+      "value": "\"CameraCellImage\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1154,
+      "length": 12,
+      "value": "\"EditorIcon\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1294,
+      "length": 11,
+      "value": "\"FlipArrow\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1431,
+      "length": 10,
+      "value": "\"PhotoBtn\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1579,
+      "length": 16,
+      "value": "\"StartRecordBtn\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1731,
+      "length": 15,
+      "value": "\"StopRecordBtn\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1872,
+      "length": 10,
+      "value": "\"bookmark\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2024,
+      "length": 18,
+      "value": "\"bookmarkSelected\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2170,
+      "length": 11,
+      "value": "\"closeIcon\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2305,
+      "length": 9,
+      "value": "\"dislike\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2454,
+      "length": 17,
+      "value": "\"dislikeSelected\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2601,
+      "length": 12,
+      "value": "\"goodsClose\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2739,
+      "length": 10,
+      "value": "\"gradient\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2882,
+      "length": 14,
+      "value": "\"gradient_top\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3014,
+      "length": 6,
+      "value": "\"like\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3154,
+      "length": 14,
+      "value": "\"likeSelected\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3300,
+      "length": 13,
+      "value": "\"refreshIcon\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3433,
+      "length": 7,
+      "value": "\"share\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3576,
+      "length": 15,
+      "value": "\"shareSelected\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3711,
+      "length": 7,
+      "value": "\"sound\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3854,
+      "length": 15,
+      "value": "\"soundSelected\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/DerivedData\/Build\/Intermediates.noindex\/ArchiveIntermediates\/InAppStorySDK\/IntermediateBuildFilesPath\/InAppStorySDK.build\/Release-iphoneos\/InAppStorySDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3998,
+      "length": 12,
+      "value": "\"sound_list\""
     }
   ]
 }
