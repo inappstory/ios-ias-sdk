@@ -3478,6 +3478,204 @@
           },
           {
             "kind": "Var",
+            "name": "storiesUpdateFailure",
+            "printedName": "storiesUpdateFailure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String, Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvp",
+            "mangledName": "$s13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvp",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "SPIAccessControl"
+            ],
+            "spi_group_names": [
+              "IAS_API"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvg",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvg",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvs",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvs",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvM",
+                "mangledName": "$s13InAppStorySDK0C7ListAPIC20storiesUpdateFailureySS_SStcSgvM",
+                "moduleName": "InAppStorySDK",
+                "implicit": true,
+                "spi_group_names": [
+                  "IAS_API"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "favoritesUpdate",
             "printedName": "favoritesUpdate",
             "children": [
@@ -84088,91 +84286,91 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 718,
+      "offset": 818,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 779,
+      "offset": 879,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 839,
+      "offset": 939,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 903,
+      "offset": 1003,
       "length": 9,
       "value": "\"#000000\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 969,
+      "offset": 1069,
       "length": 9,
       "value": "\"#000000\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 1029,
+      "offset": 1129,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 1087,
+      "offset": 1187,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 1314,
+      "offset": 1414,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 1373,
+      "offset": 1473,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 1432,
+      "offset": 1532,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "Array",
-      "offset": 2339,
+      "offset": 2513,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "StringLiteral",
-      "offset": 2393,
+      "offset": 2567,
       "length": 9,
       "value": "\"default\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/API\/StoryListAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 2423,
+      "offset": 2597,
       "length": 5,
       "value": "false"
     },
@@ -84354,21 +84552,21 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10290,
+      "offset": 10556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "BooleanLiteral",
-      "offset": 10496,
+      "offset": 10762,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/IASBannersView.swift",
       "kind": "FloatLiteral",
-      "offset": 18488,
+      "offset": 18845,
       "length": 3,
       "value": "1.0"
     },
@@ -85802,43 +86000,50 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2384,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2383,
+      "offset": 2428,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2417,
+      "offset": 2462,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "IntegerLiteral",
-      "offset": 2521,
+      "offset": 2566,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2756,
+      "offset": 2801,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 3172,
+      "offset": 3217,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 3240,
+      "offset": 3285,
       "length": 2,
       "value": "[]"
     },
@@ -85852,7 +86057,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 79226,
+      "offset": 78843,
       "length": 2,
       "value": "[]"
     },
@@ -86267,14 +86472,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.29.1\""
+      "value": "\"1.29.2\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4314\""
+      "value": "\"4318\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -91522,77 +91727,77 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9274,
+      "offset": 9332,
       "length": 33,
       "value": "\"com.inappstory.network.delegate\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9452,
+      "offset": 9510,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9594,
+      "offset": 9652,
       "length": 30,
       "value": "\"com.inappstory.network.state\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9661,
+      "offset": 9719,
       "length": 31,
       "value": "\"https:\/\/api.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "StringLiteral",
-      "offset": 9722,
+      "offset": 9780,
       "length": 36,
       "value": "\"https:\/\/api.test.inappstory.ru\/v2\/\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9892,
+      "offset": 9950,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "Array",
-      "offset": 10064,
+      "offset": 10122,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 10107,
+      "offset": 10165,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 32619,
+      "offset": 32677,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 35233,
+      "offset": 35291,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Service\/NetworkService.swift",
       "kind": "BooleanLiteral",
-      "offset": 36149,
+      "offset": 36207,
       "length": 5,
       "value": "false"
     },
@@ -91633,29 +91838,36 @@
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 581,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "StringLiteral",
-      "offset": 598,
+      "offset": 641,
       "length": 39,
       "value": "\"com.inappstory.IASBannersManager.sync\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "Dictionary",
-      "offset": 736,
+      "offset": 779,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 950,
+      "offset": 993,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Banners\/Download\/IASBannersManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 9882,
+      "offset": 11386,
       "length": 1,
       "value": "0"
     },
