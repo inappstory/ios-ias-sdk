@@ -140,6 +140,7 @@ extension InAppStorySDK_SwiftUI.Archive {
 }
 @_spi(IAS_API) public typealias StoryUpdateHandler = (_ data: InAppStorySDK_SwiftUI.StoryCellData) -> Swift.Void
 @_spi(IAS_API) public typealias StoriesListUpdateHandler = (_ list: Swift.Array<InAppStorySDK_SwiftUI.StoryCellData>, _ favorite: Swift.Array<InAppStorySDK_SwiftUI.SimpleFavoriteData>?, _ feed: Swift.String) -> Swift.Void
+@_spi(IAS_API) public typealias StoriesUpdateFailure = (_ feedId: Swift.String, _ reason: Swift.String) -> Swift.Void
 @_spi(IAS_API) public typealias FavoriteUpdateHandler = (_ data: Swift.Array<InAppStorySDK_SwiftUI.SimpleFavoriteData>?) -> Swift.Void
 @_spi(IAS_API) public typealias ScrollHandler = (_ index: Swift.Int) -> Swift.Void
 @_spi(IAS_API) @_hasMissingDesignatedInitializers public class StoryCellData {
@@ -166,6 +167,7 @@ extension InAppStorySDK_SwiftUI.Archive {
   }
   @_spi(IAS_API) public var storyUpdate: InAppStorySDK_SwiftUI.StoryUpdateHandler?
   @_spi(IAS_API) public var storyListUpdate: InAppStorySDK_SwiftUI.StoriesListUpdateHandler?
+  @_spi(IAS_API) public var storiesUpdateFailure: InAppStorySDK_SwiftUI.StoriesUpdateFailure?
   @_spi(IAS_API) public var favoritesUpdate: InAppStorySDK_SwiftUI.FavoriteUpdateHandler?
   @_spi(IAS_API) public var scrollUpdate: InAppStorySDK_SwiftUI.ScrollHandler?
   @_spi(IAS_API) public init(feed: Swift.String = "default", isFavorite: Swift.Bool = false)
