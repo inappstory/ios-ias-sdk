@@ -4,7 +4,7 @@ A library for embedding stories into an application with customization.
 
 | InAppStory version | Build version | iOS version |
 |--------------------|---------------|-------------|
-| 1.29.2 | 4316 | >= 15.0 |
+| 1.29.3 | 4320 | >= 15.0 |
 
 Version of the library can be obtained from the parameter `InAppStory.buildInfo`
 
