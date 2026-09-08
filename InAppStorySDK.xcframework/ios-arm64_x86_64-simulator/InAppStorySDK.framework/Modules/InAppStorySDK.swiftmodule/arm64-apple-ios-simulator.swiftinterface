@@ -1061,6 +1061,7 @@ public struct StoryData {
   public var type: InAppStorySDK.StoryType
   public var source: InAppStorySDK.StorySource
   public var payload: Swift.Dictionary<Swift.String, Swift.String>?
+  public var extraFields: Swift.Dictionary<Swift.String, Swift.String>?
 }
 public struct SlideData {
   public var storyData: InAppStorySDK.StoryData?
@@ -1143,8 +1144,9 @@ public struct InAppMessageData {
   public var campaign: Swift.String?
   public var messageType: Swift.String?
   public var event: Swift.String?
+  public var extraFields: Swift.Dictionary<Swift.String, Swift.String>?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String? = nil, campaign: Swift.String? = nil, messageType: InAppStorySDK.IAMPresentType? = nil, event: Swift.String? = nil)
+  public init(id: Swift.String? = nil, campaign: Swift.String? = nil, messageType: InAppStorySDK.IAMPresentType? = nil, event: Swift.String? = nil, extraFields: Swift.Dictionary<Swift.String, Swift.String>? = nil)
   #endif
 }
 public struct InAppMessageSlideData {
@@ -1155,8 +1157,9 @@ public struct InAppMessageSlideData {
 public struct IASBannerData {
   public var id: Swift.String?
   public var placeID: Swift.String?
+  public var extraFields: Swift.Dictionary<Swift.String, Swift.String>?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(id: Swift.String? = nil, placeID: Swift.String? = nil)
+  public init(id: Swift.String? = nil, placeID: Swift.String? = nil, extraFields: Swift.Dictionary<Swift.String, Swift.String>? = nil)
   #endif
 }
 public struct IASBannersAppearance {
