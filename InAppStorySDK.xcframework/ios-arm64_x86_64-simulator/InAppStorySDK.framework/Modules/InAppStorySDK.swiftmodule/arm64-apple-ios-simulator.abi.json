@@ -47963,6 +47963,13 @@
       },
       {
         "kind": "Import",
+        "name": "UniformTypeIdentifiers",
+        "printedName": "UniformTypeIdentifiers",
+        "declKind": "Import",
+        "moduleName": "InAppStorySDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -67525,6 +67532,694 @@
             "declKind": "EnumElement",
             "usr": "s:13InAppStorySDK5ModelO14iPhone14ProMaxyA2CmF",
             "mangledName": "$s13InAppStorySDK5ModelO14iPhone14ProMaxyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone15",
+            "printedName": "iPhone15",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO8iPhone15yA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO8iPhone15yA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone15Plus",
+            "printedName": "iPhone15Plus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO12iPhone15PlusyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO12iPhone15PlusyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone15Pro",
+            "printedName": "iPhone15Pro",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO11iPhone15ProyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO11iPhone15ProyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone15ProMax",
+            "printedName": "iPhone15ProMax",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO14iPhone15ProMaxyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO14iPhone15ProMaxyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone16",
+            "printedName": "iPhone16",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO8iPhone16yA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO8iPhone16yA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone16Plus",
+            "printedName": "iPhone16Plus",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO12iPhone16PlusyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO12iPhone16PlusyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone16Pro",
+            "printedName": "iPhone16Pro",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO11iPhone16ProyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO11iPhone16ProyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone16ProMax",
+            "printedName": "iPhone16ProMax",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO14iPhone16ProMaxyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO14iPhone16ProMaxyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone16e",
+            "printedName": "iPhone16e",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO9iPhone16eyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO9iPhone16eyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone17",
+            "printedName": "iPhone17",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO8iPhone17yA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO8iPhone17yA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone17Pro",
+            "printedName": "iPhone17Pro",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO11iPhone17ProyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO11iPhone17ProyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone17ProMax",
+            "printedName": "iPhone17ProMax",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO14iPhone17ProMaxyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO14iPhone17ProMaxyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone17e",
+            "printedName": "iPhone17e",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO9iPhone17eyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO9iPhone17eyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhoneAir",
+            "printedName": "iPhoneAir",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO9iPhoneAiryA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO9iPhoneAiryA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone18Pro",
+            "printedName": "iPhone18Pro",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO11iPhone18ProyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO11iPhone18ProyA2CmF",
+            "moduleName": "InAppStorySDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "spi_group_names": [
+              "Private"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "iPhone18ProMax",
+            "printedName": "iPhone18ProMax",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InAppStorySDK.Model.Type) -> InAppStorySDK.Model",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Model",
+                    "printedName": "InAppStorySDK.Model",
+                    "usr": "s:13InAppStorySDK5ModelO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InAppStorySDK.Model.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Model",
+                        "printedName": "InAppStorySDK.Model",
+                        "usr": "s:13InAppStorySDK5ModelO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13InAppStorySDK5ModelO14iPhone18ProMaxyA2CmF",
+            "mangledName": "$s13InAppStorySDK5ModelO14iPhone18ProMaxyA2CmF",
             "moduleName": "InAppStorySDK",
             "declAttributes": [
               "RawDocComment"
@@ -88655,7 +89350,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/GameReader\/GameReader.swift",
       "kind": "Array",
-      "offset": 82335,
+      "offset": 82494,
       "length": 2,
       "value": "[]"
     },
@@ -89518,14 +90213,14 @@
       "kind": "StringLiteral",
       "offset": 352,
       "length": 8,
-      "value": "\"1.29.7\""
+      "value": "\"1.29.8\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 6,
-      "value": "\"4340\""
+      "value": "\"4342\""
     },
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/InAppStory.swift",
@@ -94689,7 +95384,119 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
       "kind": "StringLiteral",
-      "offset": 3133,
+      "offset": 3129,
+      "length": 11,
+      "value": "\"iPhone 15\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3180,
+      "length": 16,
+      "value": "\"iPhone 15 Plus\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3236,
+      "length": 15,
+      "value": "\"iPhone 15 Pro\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3291,
+      "length": 19,
+      "value": "\"iPhone 15 Pro Max\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3350,
+      "length": 11,
+      "value": "\"iPhone 16\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3401,
+      "length": 16,
+      "value": "\"iPhone 16 Plus\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3457,
+      "length": 15,
+      "value": "\"iPhone 16 Pro\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3512,
+      "length": 19,
+      "value": "\"iPhone 16 Pro Max\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3571,
+      "length": 12,
+      "value": "\"iPhone 16e\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3623,
+      "length": 11,
+      "value": "\"iPhone 17\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3674,
+      "length": 15,
+      "value": "\"iPhone 17 Pro\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3729,
+      "length": 19,
+      "value": "\"iPhone 17 Pro Max\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3788,
+      "length": 12,
+      "value": "\"iPhone 17e\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3840,
+      "length": 12,
+      "value": "\"iPhone Air\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3893,
+      "length": 15,
+      "value": "\"iPhone 18 Pro\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 3949,
+      "length": 19,
+      "value": "\"iPhone 18 Pro Max\""
+    },
+    {
+      "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Extensions\/UIDevice+CS.swift",
+      "kind": "StringLiteral",
+      "offset": 4012,
       "length": 16,
       "value": "\"?unrecognized?\""
     },
@@ -95032,7 +95839,7 @@
     {
       "filePath": "\/Volumes\/workspace\/repository\/InAppStory\/Classes\/Managers\/BannerCacheManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16001,
+      "offset": 14035,
       "length": 1,
       "value": "0"
     },
