@@ -390,6 +390,8 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14IASBannersView")
 @interface IASBannersView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)didMoveToWindow;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
 - (void)layoutSubviews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -867,6 +869,8 @@ SWIFT_CLASS("_TtC21InAppStorySDK_SwiftUI14IASBannersView")
 @interface IASBannersView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)didMoveToWindow;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (CGSize)sizeThatFits:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
 - (void)layoutSubviews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end

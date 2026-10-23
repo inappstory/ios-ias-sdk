@@ -172,7 +172,16 @@ public struct TimersGradient {
   public var endPoint: CoreFoundation.CGPoint
   public var locations: Swift.Array<Swift.Double>
   public var height: Swift.Double
-  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.1)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
+  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.0), UIColor(white: 0.0, alpha: 0.3)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0, 1], height: Swift.Double = 200.0)
+}
+public struct BottomPanelGradient {
+  public var colors: Swift.Array<UIKit.UIColor>
+  public var startPoint: CoreFoundation.CGPoint
+  public var endPoint: CoreFoundation.CGPoint
+  public var locations: Swift.Array<Swift.Double>
+  public var height: Swift.Double
+  public init(colors: Swift.Array<UIKit.UIColor> = [UIColor(white: 0.0, alpha: 0.3),
+                                          UIColor(white: 0.0, alpha: 0.0)], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), locations: Swift.Array<Swift.Double> = [0.0, 1.0], height: Swift.Double = 200.0)
 }
 public enum StoryType : Swift.String {
   case story, storyUGC, iam, banner
@@ -325,14 +334,28 @@ public struct IASBannerData {
   #endif
 }
 public struct IASBannersAppearance {
+  public enum LayoutType : Swift.Hashable {
+    case horizontalCenterend
+    case verticalList
+    case tilesList
+    public static func == (a: InAppStorySDK_SwiftUI.IASBannersAppearance.LayoutType, b: InAppStorySDK_SwiftUI.IASBannersAppearance.LayoutType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let layoutType: InAppStorySDK_SwiftUI.IASBannersAppearance.LayoutType
+  public let maxBannersCount: Swift.Int?
   public let shouldLoop: Swift.Bool
   public let sideInset: CoreFoundation.CGFloat
   public let leadingInset: CoreFoundation.CGFloat
   public let trailingInset: CoreFoundation.CGFloat
   public let interItemSpacing: CoreFoundation.CGFloat
+  public let columnSpacing: CoreFoundation.CGFloat
+  public let rowSpacing: CoreFoundation.CGFloat
   public let cornerRadius: CoreFoundation.CGFloat
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0)
+  public init(layoutType: InAppStorySDK_SwiftUI.IASBannersAppearance.LayoutType = .horizontalCenterend, shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0, maxBannersCount: Swift.Int? = 20, columnSpacing: CoreFoundation.CGFloat? = nil, rowSpacing: CoreFoundation.CGFloat? = nil)
   #endif
 }
 public enum IAMPresentType : Swift.Int, Swift.Codable {
@@ -523,6 +546,7 @@ extension InAppStorySDK_SwiftUI.InAppStory {
 public let IAMDefaultContainerID: Swift.String
 @objc @_inheritsConvenienceInitializers public class InAppStory : ObjectiveC.NSObject {
   public static let shared: InAppStorySDK_SwiftUI.InAppStory
+  public var inputPresenter: (any InAppStorySDK_SwiftUI.InputPresenter)?
   public static let VersionSDK: Swift.String
   public static let BuildSDK: Swift.String
   public static var frameworkInfo: Swift.String {
@@ -612,6 +636,8 @@ public let IAMDefaultContainerID: Swift.String
   public var panelSettings: InAppStorySDK_SwiftUI.PanelSettings?
   public var goodCell: (any InAppStorySDK_SwiftUI.GoodsCellProtocol)?
   public var placeholderView: (any InAppStorySDK_SwiftUI.PlaceholderProtocol)?
+  public var placeholderIAMView: (any InAppStorySDK_SwiftUI.PlaceholderProtocol)?
+  public var placeholderBannerView: (any InAppStorySDK_SwiftUI.PlaceholderProtocol)?
   public var gamePlaceholderView: (any InAppStorySDK_SwiftUI.DownloadPlaceholderProtocol)?
   public var goodsView: InAppStorySDK_SwiftUI.CustomGoodsView?
   public var closeButtonPosition: InAppStorySDK_SwiftUI.ClosePosition
@@ -733,11 +759,19 @@ extension InAppStorySDK_SwiftUI.InAppStory {
   @discardableResult
   public func showStory(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK_SwiftUI.CancellationToken?
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func showStoryWithTargeting(with id: Swift.String, from target: UIKit.UIViewController, with panelSettings: InAppStorySDK_SwiftUI.PanelSettings? = nil, tags: [Swift.String]? = nil, complete: @escaping (_ show: Swift.Bool) -> Swift.Void) -> InAppStorySDK_SwiftUI.CancellationToken?
+  #endif
 }
 extension InAppStorySDK_SwiftUI.InAppStory {
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func showInAppMessageWith(id: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func showInAppMessageWithTargeting(id: Swift.String, targetView: UIKit.UIView? = nil, onlyPreloaded: Swift.Bool = false, tags: [Swift.String]? = nil, completion: ((_ show: Swift.Bool) -> Swift.Void)? = nil) -> InAppStorySDK_SwiftUI.CancellationToken?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
@@ -804,6 +838,33 @@ extension InAppStorySDK_SwiftUI.StoryListView {
   final public var defaultConfiguration: InAppStorySDK_SwiftUI.PhoneFormat
   final public func add(format: InAppStorySDK_SwiftUI.PhoneFormat)
   @objc deinit
+}
+public protocol InputPresenter : AnyObject {
+  func presentInput(request: InAppStorySDK_SwiftUI.InputRequest, from controller: UIKit.UIViewController, completion: @escaping (InAppStorySDK_SwiftUI.InputResult) -> Swift.Bool)
+  func dismissInput(completion: @escaping () -> Swift.Void)
+}
+public enum InputResult {
+  case submitted(Swift.String)
+  case cancelled
+}
+public struct InputRequest {
+  public enum InputType {
+    case text, email, telephone
+    public static func == (a: InAppStorySDK_SwiftUI.InputRequest.InputType, b: InAppStorySDK_SwiftUI.InputRequest.InputType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let type: InAppStorySDK_SwiftUI.InputRequest.InputType
+  public let title: Swift.String?
+  public let placeholder: Swift.String
+  public let buttonTitle: Swift.String
+  public let initialValue: Swift.String
+  public let characterLimit: Swift.Int
+  public let maxLines: Swift.Int
+  public func isValid(_ value: Swift.String) -> Swift.Bool
 }
 public protocol GoodsObjectProtocol : ObjectiveC.NSObjectProtocol {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -1476,6 +1537,10 @@ public typealias BannersDidScrollType = (_ index: Swift.Int) -> Swift.Void
   @_Concurrency.MainActor @preconcurrency public init(placeID: Swift.String = "default", appearance: InAppStorySDK_SwiftUI.IASBannersAppearance = .init(), frame: CoreFoundation.CGRect = .zero)
   @objc deinit
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func sizeThatFits(_ size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
 }
 extension InAppStorySDK_SwiftUI.IASBannersView {
@@ -1536,6 +1601,8 @@ extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.ScrollListDirection : Swift.Hashable {}
 @available(iOS 15.0, *)
 extension InAppStorySDK_SwiftUI.StoryListView : Swift.Sendable {}
+extension InAppStorySDK_SwiftUI.InputRequest.InputType : Swift.Equatable {}
+extension InAppStorySDK_SwiftUI.InputRequest.InputType : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CompressionMethod : Swift.Equatable {}
 extension InAppStorySDK_SwiftUI.CompressionMethod : Swift.Hashable {}
 extension InAppStorySDK_SwiftUI.CompressionMethod : Swift.RawRepresentable {}
