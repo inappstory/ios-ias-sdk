@@ -2076,11 +2076,15 @@ public struct IASBannersAppearance {
   public let leadingInset: CoreFoundation.CGFloat
   public let trailingInset: CoreFoundation.CGFloat
   public let interItemSpacing: CoreFoundation.CGFloat
+  public let columnCount: Swift.Int
   public let columnSpacing: CoreFoundation.CGFloat
   public let rowSpacing: CoreFoundation.CGFloat
   public let cornerRadius: CoreFoundation.CGFloat
   #if compiler(>=5.3) && $NonescapableTypes
   public init(layoutType: InAppStorySDK.IASBannersAppearance.LayoutType = .horizontalCenterend, shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0, maxBannersCount: Swift.Int? = 20, columnSpacing: CoreFoundation.CGFloat? = nil, rowSpacing: CoreFoundation.CGFloat? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(layoutType: InAppStorySDK.IASBannersAppearance.LayoutType = .horizontalCenterend, shouldLoop: Swift.Bool = true, sideInset: CoreFoundation.CGFloat = 0.0, leadingInset: CoreFoundation.CGFloat? = nil, trailingInset: CoreFoundation.CGFloat? = nil, interItemSpacing: CoreFoundation.CGFloat = 8.0, cornerRadius: CoreFoundation.CGFloat = 16.0, maxBannersCount: Swift.Int? = 20, columnSpacing: CoreFoundation.CGFloat? = nil, rowSpacing: CoreFoundation.CGFloat? = nil, columnCount: Swift.Int)
   #endif
 }
 public enum IAMPresentType : Swift.Int, Swift.Codable {
